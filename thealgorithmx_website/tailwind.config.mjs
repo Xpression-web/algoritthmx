@@ -11,6 +11,14 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        helvetica: ['Helvetica Neue'],
+      },
+      colors: {
+        'semi-white': 'rgba(255, 255, 255, 0.5)',
+        'semii-white': 'rgba(255, 255, 255, 0.5)',
+      },
     },
   },
   plugins: [],
