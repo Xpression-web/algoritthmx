@@ -38,6 +38,9 @@ body {
 .font-size-64{
   font-size: 64px;
 }
+.font-size-21{
+  font-size: 21px;
+}
 .font-size-30{
   font-size: 30px;
 }
@@ -47,8 +50,30 @@ body {
 .font-size-14{
   font-size: 14px;
 }
+.font-size-40{
+  font-size: 40px;
+}
+.font-size-100{
+  font-size: 100px;
+}
+.font-size-42{
+  font-size: 42px;
+}
+.font-size-56{
+  font-size: 56px;
+}
+.font-size-19{
+  font-size: 19px;
+}
+.font-size-20{
+  font-size: 20;
+}
+
 
 /* LINE HEIGHT */
+.algo-line-height-26{
+  line-height: 1.625rem;
+}
 .algo-line-height-64{
   line-height:4rem;
 }
@@ -60,6 +85,30 @@ body {
 }
 .algo-line-height-24{
   line-height: 1.5rem;
+}
+.algo-line-height-68{
+  line-height: 4.25rem;
+}
+.algo-line-height-60{
+  line-height: 3.75rem;
+}
+.algo-line-height-23{
+  line-height: 23px;
+}
+
+/* LETTER SPACING */
+.letter-spacing-60{
+  letter-spacing: 0.06em;
+}
+.letter-spacing-100{
+  letter-spacing: 0.1em;
+}
+.letter-spacing-8{
+  letter-spacing: 8px;
+}
+
+.gap-20{
+  gap: 20px;
 }
 
 

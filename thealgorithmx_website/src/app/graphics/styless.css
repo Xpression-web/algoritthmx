@@ -1,0 +1,51 @@
+@keyframes slideInLeft1 {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight1 {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.animate-slide-in-left1 {
+  animation: slideInLeft1 1s ease-out forwards;
+}
+
+.animate-slide-in-right1 {
+  animation: slideInRight1 1s ease-out forwards;
+}
+.custom-rounded-tr {
+    border-top-right-radius: 10rem; /* Adjust the radius as needed */
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .background {
+    background-color: rgba(255, 255, 255, 0.1)
+   }
+  

@@ -17,7 +17,7 @@ const Vision = () => {
     <div>
       {/* Section 1 */}
       <section className="flex items-center justify-center bg-black  py-8">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl px-4 w-full gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl w-full gap-4">
           <div className="flex-1 flex justify-center order-2 md:order-1">
             <img
               src="images/vision.webp"
@@ -38,7 +38,7 @@ const Vision = () => {
 
       {/* Section 2 */}
       <section className="flex items-center justify-center bg-black min-h-screen py-8 ">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl px-2 w-full gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl  w-full gap-4">
           <div className="flex-1 text-white px-4 order-1">
             <h2 className={`font-size-36 algo-line-height-1 ${monsterfont1.className} mb-4`}>
               Our Core Values
@@ -59,7 +59,7 @@ const Vision = () => {
 
       {/* Section 3 */}
       <section className="flex items-center justify-center bg-black min-h-screen py-8">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl px-4 w-full gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl  w-full gap-4">
           <div className="flex-1 flex justify-center order-2 md:order-1">
             <img
               src="images/Why.webp"
@@ -80,7 +80,7 @@ const Vision = () => {
 
       {/* Section 4 */}
       <section className="flex items-center justify-center bg-black min-h-screen py-8 ">
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl px-4 w-full gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl  w-full gap-4">
           <div className="flex-1 text-white px-4 order-1">
             <h2 className={`font-size-36 algo-line-height-1 ${monsterfont1.className} mb-4`}>
               Our Team
