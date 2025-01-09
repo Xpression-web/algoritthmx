@@ -11,29 +11,29 @@ const monsterfont = Montserrat({
   weight: "400",
 });
 
-
-const BrandingSection = () => {
+const GraphicsSection = () => {
   return (
     <div className="min-h-screen bg-black">
-      <div className="max-w-[1200px] mx-auto py-16">
-        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-0 ">
+      <div className="max-w-[1200px] mx-auto py-16 px-4">
+        <div className="flex flex-col md:flex-row md:items-center gap-8">
           {/* Left side - Image */}
           <div className="w-full md:w-1/2">
             <div className="relative">
               {/* Main Image */}
               <img
-                src="images/Branding.webp"
+                src="images/Graphics.webp"
                 alt="Branding process with color swatches"
-                className="w-[293px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
+                className="w-[290px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
               />
               {/* Rectangular Image */}
               <img
                 src="images/a3.png"
                 alt="Rectangular Branding Image"
-                className="w-[293px] h-auto shadow-lg mx-auto mt-4"
+                className="w-[290px] h-auto shadow-lg mx-auto mt-1"
               />
-              <div className="absolute bottom-[180px] left-7 flex items-center space-x-2 transform translate-y-1/2">
-                <div className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center">
+              {/* Explore Section - Centered */}
+              <div className="flex justify-center items-center mt-4 md:absolute md:bottom-[180px] md:left-7">
+                <div className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center mr-2">
                   <svg
                     className="w-4 h-4 text-white/60"
                     fill="none"
@@ -50,7 +50,7 @@ const BrandingSection = () => {
                 </div>
                 <a
                   href="#explore"
-                  className={`text-white font-size-20 letter-spacing-8 gap-20  ${monsterfont.className} tracking-widest text-lg hover:text-white transition`}
+                  className={`text-white font-size-20 letter-spacing-8 ${monsterfont.className} tracking-widest text-lg hover:text-white transition`}
                 >
                   EXPLORE
                 </a>
@@ -58,7 +58,7 @@ const BrandingSection = () => {
             </div>
           </div>
 
-          {/* Right side - Graphics and description */}
+          {/* Right side - BRANDING and description */}
           <div className="w-full md:w-1/2 flex flex-col md:items-start items-center text-center md:text-left">
             {/* Cylindrical image above branding (hidden on phones) */}
             <img
@@ -67,7 +67,7 @@ const BrandingSection = () => {
               className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
             />
             <h1
-              className={`text-4xl md:text-8xl ${monsterfont1.className}  bg-gradient-to-r  from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent font-light`}
+              className={`text-4xl md:text-8xl ${monsterfont1.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent font-light`}
             >
               BRANDING
             </h1>
@@ -76,7 +76,7 @@ const BrandingSection = () => {
         {/* Description below */}
         <div className="mt-8 md:mt-12">
           <p
-            className={`text-semi-white algo-line-height-34 font-size-34 ${monsterfont1.className} text-center`}
+            className={`text-semi-white description-text ${monsterfont1.className} text-center`}
           >
             AlgorithmX develops unforgettable brand identities that deeply connect with your target audience, boost brand awareness, and foster customer loyalty. Our brand-building services involve crafting brand narratives, logos, and guidelines to guarantee impactful messaging.
           </p>
@@ -86,4 +86,4 @@ const BrandingSection = () => {
   );
 };
 
-export default BrandingSection;
+export default GraphicsSection;

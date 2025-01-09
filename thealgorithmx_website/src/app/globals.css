@@ -66,8 +66,15 @@ body {
   font-size: 19px;
 }
 .font-size-20{
-  font-size: 20;
+  font-size: 20px;
 }
+.font-size-45{
+  font-size: 45px;
+}
+.font-size-78{
+  font-size: 78px;
+}
+
 
 
 /* LINE HEIGHT */
@@ -95,7 +102,21 @@ body {
 .algo-line-height-23{
   line-height: 23px;
 }
-
+.algo-line-height-48{
+  line-height: 48px;
+}
+.algo-line-height-74{
+  line-height: 74px;
+}
+.algo-line-height-21{
+  line-height: 21px;
+}
+.algo-line-height-50{
+  line-height: 50px;
+}
+.algo-line-height-1{
+  line-height: 1px;
+}
 /* LETTER SPACING */
 .letter-spacing-60{
   letter-spacing: 0.06em;

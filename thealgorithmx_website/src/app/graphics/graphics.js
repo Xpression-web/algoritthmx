@@ -7,10 +7,22 @@ const monsterfont = Montserrat({
   weight: "700",
 });
 
+
+
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "800",
+});
+const monsterfont2 = Montserrat({
+  subsets: ["latin"],
+  weight: "200",
+});
+
+
 const servicesData = [
   {
     id: 1,
-    title: ['DISPLAY', 'BANNERS'],
+    title: ['DISPLAY BANNERS'],
     description: 'AlgorithmX offers innovative banner design services that support your marketing efforts. Whether you need Static or dynamic HTML banners, we have got you covered.',
     image: 'images/Graphics.webp',
     textGradient: 'from-amber-600 to-amber-800'
@@ -54,13 +66,13 @@ const servicesData = [
 
 const FlipCard = ({ service }) => {
   return (
-    <div className="relative h-80 mb-10">
+    <div className="relative h-[390px] w-[370px] ">
       {/* Mobile Layout */}
       <div className="md:hidden h-full">
-        <div className="h-full bg-black p-6 flex flex-col items-center justify-center">
+        <div className="h-full bg-black  flex flex-col items-center justify-center">
           <div className="text-center">
             <h3 
-              className="text-3xl font-bold text-transparent bg-clip-text"
+              className={`font-size-45 algo-line-height-50 ${monsterfont.className} mt-9 text-transparent bg-clip-text `}
               style={{
                 backgroundImage: `url(${service.image})`,
                 backgroundSize: 'cover',
@@ -69,33 +81,34 @@ const FlipCard = ({ service }) => {
             >
               {service.title.join(' ')}
             </h3>
-            <p className="text-white/80 text-sm mt-4 mb-6">{service.description}</p>
-            <div className="w-full h-0.5 bg-white/20 mx-auto"></div>
+            <p className={`text-white/80 font-size-14 .algo-line-height-21 card-font  mt-12 px-6`}>{service.description}</p>
+            <div className="w-full h-0.5 bg-white/20 mt-14"></div>
           </div>
         </div>
       </div>
 
       {/* Desktop Flip Card Layout */}
-      <div className="hidden md:block h-full group [perspective:1000px]">
+      <div className="hidden md:block h-[360px] group [perspective:1000px]">
         <div className="relative h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
           {/* Front Side */}
-          <div className="absolute inset-0 [backface-visibility:hidden] bg-black p-8 flex items-center justify-center">
-            <div className="flex flex-col justify-center items-center">
-              {service.title.map((line, index) => (
-                <h3
-                  key={index}
-                  className="text-4xl font-bold text-transparent bg-clip-text"
-                  style={{
-                    backgroundImage: `url(${service.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                >
-                  {line}
-                </h3>
-              ))}
-            </div>
-          </div>
+    <div className="absolute inset-0 [backface-visibility:hidden] bg-black p-4 flex mt-9 px-5">
+    <div className="flex flex-col  max-w-[300px] mx-auto">
+    {service.title.map((line, index) => (
+      <h3
+        key={index}
+        className={`font-size-45 algo-line-height-50 ${monsterfont.className} text-transparent bg-clip-text `}
+        style={{
+          backgroundImage: `url(${service.image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {line}
+      </h3>
+    ))}
+  </div>
+</div>
+
 
           {/* Back Side */}
           <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
@@ -107,12 +120,12 @@ const FlipCard = ({ service }) => {
                   filter: 'brightness(0.4)',
                 }}
               />
-              <div className="relative z-10 flex items-center justify-center h-full p-8">
+              <div className="relative z-10  h-full px-7 ">
                 <div className="text-center text-white">
-                  <span className="text-2xl font-bold mb-4">
+                  <span className={`font-size-78  ${monsterfont.className}`}>
                     {String(service.id).padStart(2, '0')}
                   </span>
-                  <p className="text-lg mt-4">{service.description}</p>
+                  <p className={`font-size-14 .algo-line-height-21 card-font  mt-10`}>{service.description}</p>
                 </div>
               </div>
             </div>
@@ -148,8 +161,8 @@ const ServicesGrid = () => {
 
   return (
     <div className="min-h-screen bg-black p-8">
-      <div className="max-w-6xl mx-auto">
-        <div ref={headerRef} className="text-center mb-16 relative overflow-hidden">
+      <div className="max-w-[1100px] mx-auto">
+        <div ref={headerRef} className="text-center mb-12 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <span
               className={`mb-8 text-5xl md:text-8xl ${monsterfont.className} lg:text-8xl font-bold text-gray-600/20 transition-all duration-1000 transform
@@ -159,17 +172,16 @@ const ServicesGrid = () => {
             </span>
           </div>
 
-          <div className={`relative z-10 `}>
-            <h2 className="text-2xl md:text-3xl mt-12 text-white mb-2">
+            <h2 className={`font-size-40 .algo-line-height-48  ${monsterfont2.className} mt-6 md:mt-14 text-white`}>
               GRAPHICS
             </h2>
-            <h3 className="text-3xl md:text-4xl font-semibold text-white">
+            <h2 className={`font-size-40  ${monsterfont1.className} text-white -mt-2`} >
               SERVICES
-            </h3>
-          </div>
+            </h2>
+          
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {servicesData.map(service => (
             <FlipCard key={service.id} service={service} />
           ))}

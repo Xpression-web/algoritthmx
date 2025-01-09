@@ -1,4 +1,14 @@
 import React from 'react';
+import { Montserrat } from "next/font/google";
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "300",
+});
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const DesignProcess = () => {
   const steps = [
@@ -27,11 +37,12 @@ const DesignProcess = () => {
   return (
     <div className="min-h-screen h-full bg-black text-gray-300 p-8 ">
       <div className="max-w-6xl mx-auto">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl text-white mb-2">Dynamic Process For</h1>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">Creative Design Services</h2>
-      </div>
-
+        <div className="text-center mb-16">
+          <h1 className={`main-text ${monsterfont1.className} `}>Dynamic Process For</h1>
+          <h2 className={`main-text ${monsterfont.className}  text-white `}>
+            Creative Design Services
+          </h2>
+        </div>
 
         <div className="relative">
           {/* Vertical line */}
@@ -41,13 +52,13 @@ const DesignProcess = () => {
             <div key={index} className="relative pl-16 pb-16">
               {/* Timeline dot */}
               <div className="absolute left-0 w-8 h-8 bg-white  rounded-full flex items-center justify-center">
-                <span className="font-bold text-black">{step.number}</span>
+                <span className={`${monsterfont1.className} text-black`}>{step.number}</span>
               </div>
               
               {/* Content */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                <h3 className= {`${monsterfont.className} sub-title`}>{step.title}</h3>
+                <p className={`sub-description ${monsterfont1.className} text-semi-white`}>{step.description}</p>
               </div>
             </div>
           ))}

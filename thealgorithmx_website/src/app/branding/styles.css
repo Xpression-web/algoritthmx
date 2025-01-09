@@ -86,3 +86,25 @@
 .text-white-opacity-50 {
   color: rgba(255, 255, 255, 0.5);
 }
+.description-text {
+  font-size: 24px; /* Default font size for smaller devices */
+  line-height:34px ;
+  margin: 0 auto;
+  
+}
+
+/* Medium devices (e.g., tablets) */
+@media (min-width: 768px) {
+  .description-text {
+    font-size: 30px; /* Slightly larger for medium devices */
+    line-height: 34px;
+  }
+}
+
+/* Large devices (e.g., laptops/desktops) */
+@media (min-width: 1024px) {
+  .description-text {
+    font-size: 34px; /* Larger for bigger screens */
+    line-height: 34px;
+  }
+}
