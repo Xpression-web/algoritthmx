@@ -1,6 +1,6 @@
 import React from 'react';
 import { Montserrat } from "next/font/google";
-import './styless.css'
+
 
 const monsterfont1 = Montserrat({
   subsets: ["latin"],

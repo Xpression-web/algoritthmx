@@ -11,17 +11,17 @@ const monsterfont = Montserrat({
   weight: "400",
 });
 
-const GraphicsSection = () => {
+const VideoSection = () => {
   return (
     <div className="min-h-screen bg-black">
-      <div className="max-w-[1200px] mx-auto py-16 px-4">
-        <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="  md:max-w-[1200px] mx-auto py-16 px-4">
+        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-0">
           {/* Left side - Image */}
-          <div className="w-full md:w-1/2">
-            <div className="relative">
+          <div className="w-full md:w-1/2 ">
+            <div className="relative md:ml-16">
               {/* Main Image */}
               <img
-                src="images/Graphics.webp"
+                src="images/video.webp"
                 alt="Branding process with color swatches"
                 className="w-[290px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
               />
@@ -32,7 +32,7 @@ const GraphicsSection = () => {
                 className="w-[290px] h-auto shadow-lg mx-auto mt-1"
               />
               {/* Explore Section - Centered */}
-              <div className="flex justify-center items-center mt-4 md:absolute md:bottom-[180px] md:left-7">
+              <div className="flex justify-center items-center mt-4 md:absolute md:bottom-[180px] md:left-[-100]">
                 <div className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center mr-2">
                   <svg
                     className="w-4 h-4 text-white/60"
@@ -58,7 +58,7 @@ const GraphicsSection = () => {
             </div>
           </div>
 
-          {/* Right side - BRANDING and description */}
+          {/* Right side - Graphics and description */}
           <div className="w-full md:w-1/2 flex flex-col md:items-start items-center text-center md:text-left">
             {/* Cylindrical image above branding (hidden on phones) */}
             <img
@@ -69,16 +69,16 @@ const GraphicsSection = () => {
             <h1
               className={`text-4xl sm:4xl md:text-8xl ${monsterfont1.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent font-light`}
             >
-              BRANDING
+              VIDEO
             </h1>
           </div>
         </div>
         {/* Description below */}
         <div className="mt-8 md:mt-12">
           <p
-            className={`text-semi-white description-text ${monsterfont1.className} text-center`}
+            className={`text-semi-white description-text ${monsterfont1.className} mx-auto  text-center`}
           >
-            AlgorithmX develops unforgettable brand identities that deeply connect with your target audience, boost brand awareness, and foster customer loyalty. Our brand-building services involve crafting brand narratives, logos, and guidelines to guarantee impactful messaging.
+          Unlock the power of visual storytelling with our dynamic video production services. Our creative expertise extends from concept development and scripting to shooting and post-production.
           </p>
         </div>
       </div>
@@ -86,4 +86,4 @@ const GraphicsSection = () => {
   );
 };
 
-export default GraphicsSection;
+export default VideoSection;

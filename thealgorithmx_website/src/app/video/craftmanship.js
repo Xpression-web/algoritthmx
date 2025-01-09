@@ -1,0 +1,158 @@
+'use client'
+import React, { useEffect, useRef, useState } from 'react';
+import './styles.css';
+import { Montserrat } from 'next/font/google';
+
+const monsterfont = Montserrat({
+  subsets: ['latin'],
+  weight: '700',
+});
+const monsterfont1 = Montserrat({
+  subsets: ['latin'],
+  weight: '300',
+});
+const monsterfont2 = Montserrat({
+  subsets: ['latin'],
+  weight: '200',
+});
+
+const DevelopmentProcess = () => {
+  const [isInView, setIsInView] = useState(false);
+  const craftRef = useRef(null);
+
+  const steps = [
+    {
+      number: '01',
+      title: 'Get Ideas',
+      description: 'Every project commences with a brilliant concept.',
+      color: 'bg-green-400',
+    },
+    {
+      number: '02',
+      title: 'Discuss',
+      description: 'Your contributions are the most valuable assets for achieving success.',
+      color: 'bg-cyan-400',
+    },
+    {
+      number: '03',
+      title: 'Make Plan',
+      description: 'A carefully crafted execution plan guarantees punctual delivery.',
+      color: 'bg-red-400',
+    },
+    {
+      number: '04',
+      title: 'Production',
+      description: '"Lights, camera, action!"—This is where all the magic unfolds.',
+      color: 'bg-orange-400',
+    },
+    {
+      number: '05',
+      title: 'Post Production',
+      description: 'Where all elements are intricately woven together with creativity.',
+      color: 'bg-yellow-400',
+    },
+    {
+      number: '06',
+      title: 'Approval',
+      description: 'Your approval holds significant value for our entire team.',
+      color: 'bg-blue-400',
+    },
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isInView) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (craftRef.current) {
+      observer.observe(craftRef.current);
+    }
+
+    return () => {
+      if (craftRef.current) {
+        observer.unobserve(craftRef.current);
+      }
+    };
+  }, [isInView]);
+
+  return (
+    <div className="bg-black p-8">
+      <div className="max-w-[1100px] mx-auto mt-10">
+        <div className="text-center mb-16 relative overflow-hidden">
+          {/* Background "CRAFTMANSHIP" text */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <span
+              ref={craftRef}
+              className={`mb-8 main-craft ${monsterfont.className} font-bold text-gray-600/20 transform transition-transform duration-700 ${
+                isInView ? 'scale-110 opacity-100' : 'scale-75 opacity-0'
+              }`}
+              style={{ top: '-20px' }}
+            >
+              CRAFTMANSHIP
+            </span>
+          </div>
+
+          {/* Main titles */}
+          <div className="relative z-10">
+            <h2 className={`submain-craft ${monsterfont2.className} mt-14 text-white`}>
+              ALGORITHMX'S VIDEO
+            </h2>
+            <h3 className={`submain-craft ${monsterfont.className} text-white`}>
+              DEVELOPMENT PROCESS
+            </h3>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between">
+          {steps.map((step, index) => (
+            <div key={step.number} className={`relative flex-1`}>
+              {/* Border */}
+              <div className="p-[4px] ">
+                <div
+                  className={`${
+                    step.color
+                  } absolute md:top-0 md:right-0 md:w-1 md:h-[90%] w-full h-1 top-full right-0 mt-4 md:mt-2 md:mb-2 md:w-2 `}
+                />
+                <div className="p-4 mt-2 md:mt-0">
+                  <div className="flex items-center mb-2">
+                    <span className={`transform rotate-90 ${monsterfont1.className} step mr-2`}>
+                      STEP
+                    </span>
+                    <span className={`number1 ${monsterfont.className} text-white`}>
+                      {step.number}
+                    </span>
+                  </div>
+                  <h3
+                    className={`text-xl font-medium mb-2 ${monsterfont1.className} craft-title ${
+                      index === 0
+                        ? 'text-green-400'
+                        : index === 1
+                        ? 'text-cyan-400'
+                        : index === 2
+                        ? 'text-red-400'
+                        : index === 3
+                        ? 'text-orange-400'
+                        : index === 4
+                        ? 'text-yellow-400'
+                        : 'text-blue-400'
+                    }`}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-white craft-description">{step.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DevelopmentProcess;
