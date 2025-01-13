@@ -96,14 +96,14 @@ const VideoServices = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
-              key={service.id}
-              className={`service-card relative group rounded-lg p-7 transition-all duration-700 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] cursor-pointer  box-color transform
-                ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}
-              `}
-              style={{
-                transitionDelay: `${index * 150}ms`
-              }}
-            >
+            key={service.id}
+            className={`service-card1 relative group rounded-lg p-7 transition-all duration-700  box-color transform
+              ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}
+            `}
+            style={{
+              transitionDelay: `${index * 150}ms`,
+            }}
+          >
               <div className="absolute top-4 right-4 text-blue-500 number ">
                 {service.id}
               </div>

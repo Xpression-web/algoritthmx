@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './style.css';
 import { Montserrat } from "next/font/google";
 
 const monsterfont = Montserrat({
@@ -11,21 +11,28 @@ const monsterfont1 = Montserrat({
   weight: "300",
 });
 
+
 const TechnologyToolbox = () => {
   const tools = [
-    { id: 'ps', name: 'Premier Pro', image: 'images/Premiere-pro.png' },
-    { id: 'ai', name: 'Animate', image: 'images/Animate.png' },
-    { id: 'ae', name: 'After Effects', image: 'images/After-effects.png' },
-    { id: 'id', name: 'Auto Desk', image: 'images/Autodesk.png' },
-    { id: 'canva', name: 'Cinema 4D', image: 'images/Cinema-4D.png' },
-    { id: 'figma', name: 'Final Cut Pro', image: 'images/Final.png' },
-    { id: 'cs', name: 'Maya', image: 'images/maya.png'},
-    { id: 'stock', name: 'Moho', image: 'images/Moho.png' }
+    { id: 'ps', name: 'Adobe Font', image: 'images/Adobe-Font.png' },
+    { id: 'ai', name: 'Creative Cloud', image: 'images/creative-cloud.png' },
+    { id: 'ae', name: 'Ahrefs', image: 'images/Ahrefs.png' },
+    { id: 'id', name: 'ChatGPT', image: 'images/Chatgpt.png' },
+    { id: 'canva', name: 'Claude', image: 'images/Claude.png' },
+    { id: 'figma', name: 'Google Analytics', image: 'images/Google-Analytics.png' },
+    { id: 'cs', name: 'Google Font', image: 'images/Google-Font.png'},
+    { id: 'stock', name: 'Grammerly', image: 'images/Grammerly.png' },
+    { id: 'sketch', name: 'Hemingway Editor', image: 'images/Hemingway-Editor.png'},
+    { id: 'word', name: 'Microsoft Word', image: 'images/Microsoft-Word.png'},
+    { id: 'oa', name: 'Originality AI', image: 'images/Originality-AI.png'},
+    { id: 'per', name: 'Perplexity', image: 'images/Perplexity.png'},
+    { id: 'scr', name: 'Scrivener', image: 'images/Scrivener.png'},
+    { id: 'sem', name: 'SEMrush', image: 'images/SEMrush.png'},
   ];
 
   return (
     <div className="bg-black text-white py-8 px-2 sm:py-16 sm:px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h1 className={`toolbox-title text-center  ${monsterfont.className} mb-3 sm:mb-4`}>
           TECHNOLOGY TOOLBOX
         </h1>
@@ -33,14 +40,14 @@ const TechnologyToolbox = () => {
         <div className="w-12 h-1 bg-blue-500 mx-auto mb-4 sm:mb-8"></div>
         
         <p className={`text-semi-white text-center toolbox-description  ${monsterfont.className} mb-8 sm:mb-16 max-w-5xl mx-auto px-2`}>
-          Explore our comprehensive toolbox of cutting-edge graphics technologies designed to elevate your visual projects.
+        Versatile toolbox for creating compelling content across digital platforms and engaging diverse audiences effectively.
         </p>
-        <div className="container mx-auto flex justify-center items-center">
+        <div className="container justify-center justify-items-center margin1">
           <div className="grid grid-cols-4 gap-1">
             {tools.map((tool) => (
               <div
                 key={tool.id}
-                className="background rounded-lg  flex items-center hover:bg-gray-900 transition duration-300"
+                className="background rounded-lg  flex items-center hover:bg-[#545252] transition duration-300"
               >
                 {/* Flex container for image and text */}
                 <div className="flex w-full items-center toolbox  ">

@@ -37,7 +37,7 @@ const TechnologyToolbox = () => {
           Explore our comprehensive toolbox of cutting-edge graphics technologies designed to elevate your visual projects.
         </p>
         <div className="container justify-center justify-items-center margin1">
-          <div className="grid grid-cols-4 sm:gap-1">
+          <div className="grid grid-cols-4 gap-1">
             {tools.map((tool) => (
               <div
                 key={tool.id}
