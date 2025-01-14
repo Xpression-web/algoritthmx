@@ -28,7 +28,7 @@ const TechGrid = () => {
           setIsInView(true);
         }
       },
-      { threshold: 0.5 } // Trigger animation when 50% of the component is in view
+      { threshold: 0.2 } // Trigger animation when 50% of the component is in view
     );
 
     if (scalableRef.current) {
@@ -152,8 +152,7 @@ const TechGrid = () => {
             <div
             key={tech.title}
             className={`${
-              isInView ? tech.animationClass : ''
-            } ${tech.isGrey ? 'bg-gray-800' : 'bg-black'} w-full h-60 p-8 rounded-lg border border-gray-800 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform hover:translate-y-[-10px]`}
+              isInView ? tech.animationClass : ''} ${tech.isGrey ? 'bg-gray-800' : 'bg-black'} w-full h-60 p-8 rounded-lg border border-gray-800 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform hover:translate-y-[-5px] `}
           >
             <div className="text-blue-400 mb-4">{tech.icon}</div>
             <h3 className="text-white text-center text-sm font-bold">{tech.title}</h3>

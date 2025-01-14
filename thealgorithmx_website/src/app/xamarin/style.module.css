@@ -1,0 +1,38 @@
+.android-title {
+    line-height: 64px;
+    font-size: 84px;
+    padding-bottom: 10px;
+            }
+
+.android-description {
+    line-height: 34px;
+    font-size: 34px;
+}
+.and-title{
+    line-height: 68px;
+    font-size: 100px;
+  }
+  .and-subtitle{
+    font-size: 50px;
+    line-height: 68px;
+  }
+  .and-title2{
+    font-size: 24px;
+    line-height: 1.1;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+  .and-description{
+    font-size: 14px;
+    margin:15px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+@media (max-width: 768px) {
+    .android-title {
+    font-size: 52px;
+    }
+    .android-description {
+    font-size: 1.4rem;
+    }
+}

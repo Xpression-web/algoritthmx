@@ -1,5 +1,6 @@
 import React from 'react';
 import { Montserrat } from 'next/font/google';
+import './style.css';
 
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
@@ -40,8 +41,7 @@ const IndustriesGrid = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="relative borderd
-                        hover:cursor-pointer transition-all duration-300
+              className="relative borderd transition-all duration-300
                         flex  "
             >
               <span className="text-white industries">
