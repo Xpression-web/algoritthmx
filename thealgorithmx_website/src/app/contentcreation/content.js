@@ -65,7 +65,7 @@ export default function Content() {
             <div className="border-b-2 border-gray-300 my-4"></div>
           </div>
           <div className="mb-8">
-            <h2 className="scroll-title text-white">Editing & Proofreading
+            <h2 className="scroll-title text-white">Editing & Proofreading 
             </h2>
             <p className="scroll-description text-semi-white">
             AlgorithmX offers excellent proofreading services to ensure your content is consistently error-free.

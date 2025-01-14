@@ -141,6 +141,10 @@
   font-size: 14px;
   font-family:  'Open Sans', sans-serif;
 }
+.connect{
+  font-family:  Helvetica, sans-serif;
+  font-size: 16px;
+}
 
 /* Medium devices (e.g., tablets) */
 @media (min-width: 768px) {
