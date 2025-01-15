@@ -1,13 +1,13 @@
-.android-title {
+.react-title {
     line-height: 64px;
     font-size: 84px;
     padding-bottom: 10px;
-            }
-
-.android-description {
+}
+.react-description {
     line-height: 34px;
     font-size: 34px;
 }
+/* 3rd */
 .and-title{
     line-height: 68px;
     font-size: 64px;
@@ -28,24 +28,39 @@
     margin:15px 0;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .dynamic-title{
+  
+  .indus-card-figure {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #514f57;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.dynamic-title1{
     font-size: 42px;
     line-height: 1.1;
     padding-bottom: 30px;
   }
-  .dynamic-subtitle{
+  .dynamic-subtitle1{
     font-size: 18px;
     line-height: 1.3;
   }
-  .dynamic-description{
+  .dynamic-description1{
     font-size: 12px;
     padding-left: 24px;
   }
+
 @media (max-width: 768px) {
-    .android-title {
-    font-size: 52px;
+    .react-title {
+        line-height: 64px;
+        font-size: 84px;
+        padding-bottom: 10px;
     }
-    .android-description {
-    font-size: 1.4rem;
+    .react-description {
+        line-height: 34px;
+        font-size: 34px;
     }
 }

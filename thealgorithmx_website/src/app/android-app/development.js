@@ -15,7 +15,7 @@ const services = [
   {
     title: "Android App Development Consultation",
     description: "Android applications cater to a unique user base with specific expectations. Our Android application development company assists businesses in aligning their concerns with the distinct preferences of Android users. Our experienced app developers and consultants guide you in choosing the optimal Android platform and strategy.",
-    image: "/path/to/consultation-image.png", // Replace with the actual path
+    image: "images/consultation-image.png", // Replace with the actual path
     alt: "Consultation Icon",
   },
   {

@@ -13,7 +13,7 @@ const monsterfont = Montserrat ({
 
 const services = [
   {
-    title: "Xamarin App Development Consultation",
+    title: "Xamarin App  Consultation",
     description: "At our Xamarin application development company, we offer a comprehensive consultation service where we assess your business needs, highlight key requirements, and provide personalized guidance on building an effective and scalable Xamarin app.",
     image: "/path/to/consultation-image.png", // Replace with the actual path
     alt: "Consultation Icon",
@@ -53,7 +53,7 @@ const services = [
 const XamarinServicesGrid = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <h1 className={`${styles['and-title']} ${monsterfont1.className} text-center`}>
           Xamarin App
         </h1>
@@ -65,7 +65,7 @@ const XamarinServicesGrid = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-black rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group"
+              className="bg-black rounded-lg p-7 hover:bg-zinc-800 border border-zinc-800 group"
             >
               <img 
                 src={service.image} 

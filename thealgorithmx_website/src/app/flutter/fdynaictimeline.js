@@ -11,12 +11,13 @@ const monsterfont = Montserrat ({
   weight :"800",
 })
 
+
 const timelineSteps = [
   {
     number: "1",
     title: "Requirement Analysis",
     description:
-      "In this first stage, we conduct thorough discussions to understand the client’s vision and requirements. We then identify the competitors, target audience, and latest market trends in mobile app development for iOS and Android. Detailed documents are prepared listing the features and specifications according to which we set the entire project scope, including the timeline and budget.",
+      "At the beginning, we discuss, understand, and assess the requirements, vision, and goals of your business. We then identify the target audience and competitors to create a detailed document defining the unique value propositions of your Flutter app, its features and functionalities.",
     color: "text-red-500",
     dotColor: "bg-red-500",
   },
@@ -24,7 +25,7 @@ const timelineSteps = [
     number: "2",
     title: "Strategic Planning",
     description:
-      "At this stage, we evaluate the financial and technical workability of the project, which includes identifying potential challenges and devising required strategies to ensure easy iOS application development. We then set up a detailed project plan with clear deliverables. To track progress, we leverage project management tool.",
+      "At this stage, we evaluate the financial and technical workability of the project, which includes identifying potential challenges and devising required strategies to ensure easy Flutter app development. We then create a timeline of deliverables, and allocate resources that include development team, tools and technologies required for the project.",
     color: "text-red-400",
     dotColor: "bg-red-400",
   },
@@ -32,7 +33,7 @@ const timelineSteps = [
     number: "3",
     title: "Design Phase",
     description:
-      "During this phase, we refine the specifications for the iOS app, plan out the user experience, design mockups, establish the user interface design, and finally develop app prototypes that are ready to be passed on to our iOS app development solutions team.",
+      "As a leading Flutter app development company, we design detailed UI/UX solutions, creating user flows and customer journey maps. Our professional team designs interfaces to improve user experiences and make navigation effortless. Count on us to enhance your Flutter app’s aesthetics through attention to detail and a focus on the user’s needs.",
     color: "text-orange-500",
     dotColor: "bg-orange-500",
   },
@@ -40,15 +41,15 @@ const timelineSteps = [
     number: "4",
     title: "Development Stage",
     description:
-      "At this point, we carefully establish the iOS application structure, choose the appropriate back-end technology stack, frameworks, and libraries, implement the UI design, and integrate APIs smoothly in order to set up a robust system of continuous integration and continuous delivery (CI/CD).",
+      "AlgorithmX is one of the top Flutter app development companies, building powerful apps by combining Agile and Flutter. We utilize tools such as Flutter SDK and Android Studio to develop databases and APIs and implement security measures and UI designs. We provide updates every two weeks for your feedback without compromising on quality.",
     color: "text-orange-400",
     dotColor: "bg-orange-400",
   },
   {
     number: "5",
-    title: "Testing and QA",
+    title: "Testing",
     description:
-      "As an iOS app development agency, AlgorithmX performs rigorous manual and automated testing using tools like XCTest, XCUITest, and Appium to identify bugs in the early stage of development, conduct user acceptance testing (UAT) to gather real-user data, and test performance under load and stress testing.",
+      "At this stage, we perform rigorous manual and automated testing in every update using tools like flutter_test to ensure proper integration of individual components, functionality, and overall performance of the Flutter app. We conduct quality checks to fix any possible issues. Trust us for an exceptional user experience and resolving any challenge to deliver excellence in all areas of app creation.",
     color: "text-yellow-500",
     dotColor: "bg-yellow-500",
   },
@@ -56,19 +57,19 @@ const timelineSteps = [
     number: "6",
     title: "Release and Support",
     description:
-      "Upon thorough testing of the iOS app across several parameters, we will submit it to the App Store and monitor the entire release process. We keep adding new functions and features to the app using data from users’ feedback and analytics thus making it a smooth experience for people who use your app. ",
+      "In this phase, we launch your Flutter iOS app on the App Store and Flutter Android app on the Google Play Store. Our support is not just limited to launching; we are always there to help you with your ongoing maintenance needs and beyond by ensuring that your app is up-to-date and tailored for changing user expectations and market needs to thrive in the long run.",
     color: "text-yellow-400",
     dotColor: "bg-yellow-400",
   },
 ];
 
-const IosDevelopmentTimeline = () => {
+const FlutterDevelopmentTimeline = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="bg-black rounded-3xl p-8 md:p-12 border border-zinc-800">
           <h1 className={`${styles["dynamic-title1"]} ${monsterfont1.className} md:text-center `}>
-            Dynamic Approach to iOS App Development
+            Dynamic Approach to Flutter App Development
           </h1>
 
           <div className="relative">
@@ -131,7 +132,7 @@ const IosDevelopmentTimeline = () => {
                       
                       {/* Mobile Timeline */}
                       <div className="md:hidden relative my-4">
-                        <div className="w-full h-0.5 bg-gradient-to-r from-red-500 via-orange-500 to-orange-400"></div>
+                        <div className="w-full h-0.5 bg-gradient-to-r from-yellow-500 to-yellow-400"></div>
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
@@ -150,4 +151,4 @@ const IosDevelopmentTimeline = () => {
   );
 };
 
-export default IosDevelopmentTimeline;
+export default FlutterDevelopmentTimeline;

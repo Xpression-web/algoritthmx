@@ -1,4 +1,16 @@
 import React from 'react';
+import styles from "./style.module.css";
+import { Montserrat } from 'next/font/google';
+
+const monsterfont1 = Montserrat ({
+  subsets : ["latin"],
+  weight :"400",
+})
+const monsterfont = Montserrat ({
+  subsets : ["latin"],
+  weight :"800",
+})
+
 
 const timelineSteps = [
   {
@@ -54,9 +66,9 @@ const timelineSteps = [
 const XamarinDevelopmentTimeline = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="bg-black rounded-3xl p-8 md:p-12 border border-zinc-800">
-          <h1 className="and-title text-center mb-16">
+          <h1 className={`${styles["dynamic-title"]}  ${monsterfont1.className} md:text-center `}>
             Dynamic Approach to Xamarin App Development
           </h1>
 
@@ -80,16 +92,16 @@ const XamarinDevelopmentTimeline = () => {
                           </span>
                           <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                         </div>
-                        <h3 className="text-xl font-semibold">{step.title}</h3>
+                        <h3 className={`${styles["dynamic-subtitle"]} ${monsterfont.className}  `}>{step.title}</h3>
                       </div>
                       
                       {/* Mobile Timeline */}
                       <div className="md:hidden relative my-4">
-                        <div className="w-full h-0.5 bg-zinc-700"></div>
+                        <div className="w-full h-0.5 bg-gradient-to-r from-red-500 via-orange-500 to-orange-400 "></div>
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
-                      <div className="text-zinc-400 text-sm leading-relaxed mt-4 md:mt-12">
+                      <div className={` ${styles["dynamic-description"]}  ${monsterfont1.className} mt-4 md:mt-8 `}>
                         {step.description}
                       </div>
                     </div>
@@ -115,16 +127,16 @@ const XamarinDevelopmentTimeline = () => {
                           </span>
                           <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                         </div>
-                        <h3 className="text-xl font-semibold">{step.title}</h3>
+                        <h3 className={`${styles["dynamic-subtitle"]} ${monsterfont.className}  `}>{step.title}</h3>
                       </div>
                       
                       {/* Mobile Timeline */}
                       <div className="md:hidden relative my-4">
-                        <div className="w-full h-0.5 bg-zinc-700"></div>
+                        <div className="w-full h-0.5 bg-gradient-to-r from-yellow-500 to-yellow-400"></div>
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
-                      <div className="text-zinc-400 text-sm leading-relaxed mt-4 md:mt-12">
+                      <div className={` ${styles["dynamic-description"]}  ${monsterfont1.className} mt-4 md:mt-8 `}>
                         {step.description}
                       </div>
                     </div>
