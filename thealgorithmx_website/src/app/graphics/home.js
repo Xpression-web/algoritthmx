@@ -1,5 +1,5 @@
 import React from "react";
-import "./styless.css";
+import styles from "./styles.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont1 = Montserrat({
@@ -23,7 +23,7 @@ const GraphicsSection = () => {
               <img
                 src="images/Graphics.webp"
                 alt="Branding process with color swatches"
-                className="w-[290px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
+                className={`w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
               />
               {/* Rectangular Image */}
               <img
@@ -76,7 +76,7 @@ const GraphicsSection = () => {
         {/* Description below */}
         <div className="mt-8 md:mt-12">
           <p
-            className={`text-semi-white description-text ${monsterfont1.className} text-center`}
+            className={`text-semi-white ${styles["description-text"]} ${monsterfont1.className} text-center`}
           >
             At our leading graphic design company, ideas are transformed into visually striking graphics. AlgorithmX specializes in creating top-notch graphics for various platforms, including websites, social media, and marketing material that captivate your audience.
           </p>

@@ -13,6 +13,17 @@
       transform: translateY(0);
     }
   }
+  .scale-110 {
+    transform: scale(1.1);
+  }
+  
+  .opacity-100 {
+    opacity: 1;
+  }
+  
+  .scale-75 {
+    transform: scale(0.75);
+  }
   .custom-rounded {
     border-radius: 20px 30px 30px 20px; /* top-left, top-right, bottom-right, bottom-left */
   }

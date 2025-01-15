@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import styles from "./style.module.css";
 
 import { Montserrat } from "next/font/google";
 
@@ -24,7 +24,7 @@ const GraphicsSection = () => {
               <img
                 src="images/Graphics.webp"
                 alt="Branding process with color swatches"
-                className="w-[290px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
+                className={`w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
               />
               {/* Rectangular Image */}
               <img
@@ -77,7 +77,7 @@ const GraphicsSection = () => {
         {/* Description below */}
         <div className="mt-8 md:mt-12">
           <p
-            className={`text-semi-white description-text ${monsterfont1.className} text-center`}
+            className={`text-semi-white ${styles["description-text"]} ${monsterfont1.className} text-center`}
           >
             AlgorithmX develops unforgettable brand identities that deeply connect with your target audience, boost brand awareness, and foster customer loyalty. Our brand-building services involve crafting brand narratives, logos, and guidelines to guarantee impactful messaging.
           </p>

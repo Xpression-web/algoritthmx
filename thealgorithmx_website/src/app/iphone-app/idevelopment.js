@@ -1,6 +1,6 @@
 import React from 'react';
 import { Montserrat } from 'next/font/google';
-import './style.css'
+import styles from "./style.module.css";
 
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
@@ -54,10 +54,10 @@ const IosServicesGrid = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className={`and-title ${monsterfont1.className} text-center `}>
+        <h1 className={` ${styles["and-title"]} ${monsterfont1.className} text-center `}>
           iOS App
         </h1>
-        <h2 className={`and-subtitle ${monsterfont.className} text-center mb-12`}>
+        <h2 className={`${styles["and-subtitle"]} ${monsterfont.className} text-center mb-12`}>
           Development Services
         </h2>
         
@@ -70,12 +70,12 @@ const IosServicesGrid = () => {
               <img 
                 src={service.image} 
                 alt={service.alt} 
-                className=" object-contain rounded-lg indus-card-figure"
+                className={` object-contain rounded-lg  ${styles["indus-card-figure"]}  `}
               />
-              <h3 className="and-title2  transition-colors duration-300">
+              <h3 className={`${styles["and-title2"]}  transition-colors duration-300 `}>
                 {service.title}
               </h3>
-              <p className="text-semi-white and-description transition-colors duration-300">
+              <p className={`text-semi-white ${styles["and-description"]} transition-colors duration-300`}>
                 {service.description}
               </p>
             </div>

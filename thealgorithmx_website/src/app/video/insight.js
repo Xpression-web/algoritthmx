@@ -1,5 +1,6 @@
 import React from 'react';
 import { Montserrat } from "next/font/google";
+import styles from "./styles.module.css";
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
@@ -17,16 +18,16 @@ const InsightSection = () => {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between p-6 md:p-8 gap-4 md:gap-8">
           {/* Text content */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-            <h2 className={`insight ${monsterfont.className} text-white whitespace-nowrap`}>
+            <h2 className={`${styles["insight"]} ${monsterfont.className} text-white whitespace-nowrap`}>
               Get an Insight
             </h2>
-            <p className="insight-description text-semi-white max-w-2xl">
+            <p className={`${styles["insight-description"]} text-semi-white max-w-2xl`}>
               We assure you the consultation is completely free. Let us understand the depths of your Idea and get the suggestion on how you can proceed further about growing it.
             </p>
           </div>
           
           {/* Connect button */}
-          <button className="px-14 py-2 bg-black border border-gray-700 rounded-full text-white connect  ">
+          <button className={`px-14 py-2 bg-black border border-gray-700 rounded-full text-white ${styles["connect"]} `}>
             Connect
           </button>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Montserrat } from "next/font/google";
+import styles from "./styles.module.css";
+
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "300",
@@ -38,8 +40,8 @@ const DesignProcess = () => {
     <div className="min-h-screen h-full bg-black text-gray-300 p-8 ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className={`main-text ${monsterfont1.className} `}>Dynamic Process For</h1>
-          <h2 className={`main-text ${monsterfont.className}  text-white `}>
+          <h1 className={`${styles["main-text"]} ${monsterfont1.className} `}>Dynamic Process For</h1>
+          <h2 className={`${styles["main-text"]} ${monsterfont.className}  text-white `}>
             Creative Design Services
           </h2>
         </div>
@@ -57,8 +59,8 @@ const DesignProcess = () => {
               
               {/* Content */}
               <div>
-                <h3 className= {`${monsterfont.className} sub-title`}>{step.title}</h3>
-                <p className={`sub-description ${monsterfont1.className} text-semi-white`}>{step.description}</p>
+                <h3 className= {`${monsterfont.className} ${styles["sub-title"]}`}>{step.title}</h3>
+                <p className={`${styles["sub-description"]} ${monsterfont1.className} text-semi-white`}>{step.description}</p>
               </div>
             </div>
           ))}

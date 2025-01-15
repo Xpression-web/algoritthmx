@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import styles from "./style.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont1 = Montserrat({
@@ -27,7 +27,7 @@ const ContentSection = () => {
               <img
                 src="images/Content-Creation.webp"
                 alt="Branding process with color swatches"
-                className="w-[290px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
+                className={`w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}  `}
               />
               {/* Rectangular Image */}
               <img
@@ -72,12 +72,12 @@ const ContentSection = () => {
             />
           <div>
         <span
-          className={`title ${monsterfont2.className} tracking-wider bg-white-500 block`}
+          className={` ${styles["title"]} ${monsterfont2.className} tracking-wider bg-white-500 block`}
       >
     CONTENT
   </span>
   <span
-    className={`title ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
+    className={`  ${styles["title"]} ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
   >
     CREATION
   </span>
@@ -88,7 +88,7 @@ const ContentSection = () => {
         {/* Description below */}
         <div className="mt-8 md:mt-12">
           <p
-            className={`text-semi-white description-text ${monsterfont1.className} text-center`}
+            className={`text-semi-white  ${styles["description-text"]} ${monsterfont1.className} text-center`}
           >
           AlgorithmX excels in digital content creation services that engage your audience. Our content creation specialists produce high-quality content for various platforms and channels that align with your brand voice.
           </p>

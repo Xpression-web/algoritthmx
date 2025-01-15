@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import './style.css';
+import styles from "./style.module.css";
+
 const industries = [
   {
     id: 1,
@@ -11,8 +12,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-purple-light',
-    
+    borderColor: styles["border-purple-light"], // Correct reference to the imported class
   },
   {
     id: 2,
@@ -23,8 +23,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-yellow-light',
-    
+    borderColor: styles["border-yellow-light"], // Correct reference to the imported class
   },
   {
     id: 3,
@@ -35,8 +34,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-purple-light',
-   
+    borderColor: styles["border-purple-light"], // Correct reference to the imported class
   },
   {
     id: 4,
@@ -47,8 +45,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-red-light',
-   
+    borderColor: styles["border-red-light"], // Correct reference to the imported class
   },
   {
     id: 5,
@@ -59,8 +56,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-green-light',
-   
+    borderColor: styles["border-green-light"], // Correct reference to the imported class
   },
   {
     id: 6,
@@ -71,8 +67,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-blue-light ',
-   
+    borderColor: styles["border-blue-light"], // Correct reference to the imported class
   },
   {
     id: 7,
@@ -83,8 +78,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-orange-light',
-   
+    borderColor: styles["border-orange-light"], // Correct reference to the imported class
   },
   {
     id: 8,
@@ -95,8 +89,7 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-pink-light',
-   
+    borderColor: styles["border-pink-light"], // Correct reference to the imported class
   },
   {
     id: 9,
@@ -107,10 +100,10 @@ const industries = [
       </svg>
     ),
     color: 'text-purple-500',
-    borderColor: 'border-yellow-light',
-   
+    borderColor: styles["border-yellow-light"], // Correct reference to the imported class
   },
 ];
+
 
 const IndustriesGrid = () => {
   const handleClick = (industry) => {
@@ -131,14 +124,14 @@ const IndustriesGrid = () => {
               className="group relative flex items-center h-24 w-full"
             >
               {/* Icon Container */}
-              <div className={`absolute -left-1 z-10 icon-custom-rounded   p-4 bg-black ${industry.color} border-2 ${industry.borderColor} `}>
+              <div className={`absolute -left-1 z-10 ${styles["icon-custom-rounded"]}   p-4 bg-black ${industry.color} border-2 ${industry.borderColor} `}>
                 <div className={industry.color}>
                   {industry.iconSvg}
                 </div>
               </div>
               
               {/* Main Container */}
-              <div className={`w-full h-full ml-12 flex items-center  justify-center bg-black border-2 ${industry.borderColor} custom-rounded
+              <div className={`w-full h-full ml-12 flex items-center  justify-center bg-black border-2 ${industry.borderColor} ${styles["custom-rounded"]}
                transition-all duration-300  `}>
                 <span className="text-white text-xl ml-4">{industry.title}</span>
               </div>

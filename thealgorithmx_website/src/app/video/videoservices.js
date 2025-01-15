@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import './styles.css'
+import styles from "./styles.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont1 = Montserrat({
@@ -84,11 +84,11 @@ const VideoServices = () => {
     <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-6xl mx-auto" ref={scalableRef}>
         <div className="text-center mb-8 md:mb-16">
-          <h1 className={`text-white video ${monsterfont1.className} mb-4`}>
+          <h1 className={`text-white ${styles["video"]} ${monsterfont1.className} mb-4`}>
             OUR VIDEO SERVICES
           </h1>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className={`text-semi-white video-subtitle ${monsterfont2.className} max-w-4xl mx-auto`}>
+          <p className={`text-semi-white ${styles["video-subtitle"]} ${monsterfont2.className} max-w-4xl mx-auto`}>
             Professional video production services that engage audiences and elevate your brand&apos;s narrative effectively.
           </p>
         </div>
@@ -97,18 +97,18 @@ const VideoServices = () => {
           {services.map((service, index) => (
             <div
             key={service.id}
-            className={`service-card1 relative group rounded-lg p-7 transition-all duration-700  box-color transform
+            className={`${styles["service-card1"]} relative group rounded-lg p-7 transition-all duration-700  ${styles["box-color"]} transform
               ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}
             `}
             style={{
               transitionDelay: `${index * 150}ms`,
             }}
           >
-              <div className="absolute top-4 right-4 text-blue-500 number ">
+              <div className={`absolute top-4 right-4 text-blue-500 ${styles["number"]} `} >
                 {service.id}
               </div>
 
-              <h3 className={`video-title text-white  ${monsterfont3.className}  transition-colors duration-300`}>
+              <h3 className={`${styles["video-title"]} text-white  ${monsterfont3.className}  transition-colors duration-300`}>
                 {service.title}
               </h3>
               <div className="mb-6">
@@ -118,7 +118,7 @@ const VideoServices = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className="text-semi-white video-description ">
+              <p className={`text-semi-white ${styles["video-description"]}`}>
                 {service.description}
               </p>
             </div>

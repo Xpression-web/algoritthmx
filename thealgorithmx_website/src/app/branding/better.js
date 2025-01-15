@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import './styles.css';
+import styles from "./style.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont = Montserrat({
@@ -137,7 +137,7 @@ export default function MarketingFeatures() {
   return (
     <div className="bg-black min-h-screen w-full py-16 relative overflow-hidden">
       {/* Barcode Background Effect */}
-      <div className="absolute top-0 left-0 w-full h-32 flex justify-center items-center barcode-section">
+      <div className={`absolute top-0 left-0 w-full h-32 flex justify-center items-center barcode-section }`}>
         <div className={`flex space-x-4 transform transition-all duration-1000 ${isBarcodeVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
           {[...Array(26)].map((_, i) => (
             <div key={i} className="w-4 h-28 bg-[#151515]" />
@@ -161,7 +161,7 @@ export default function MarketingFeatures() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-8">
           {/* Left Column - Animate from left */}
-          <div className={`left-column flex flex-col gap-8 opacity-0 ${leftColumnVisible ? 'animate-slide-in-left' : ''} h-full`}>
+          <div className={`left-column flex flex-col gap-8 opacity-0 ${leftColumnVisible ? styles['animate-slide-in-left'] : ''} h-full`}>
             <div className="flex-1">
               <FeatureCard
                 Icon={Icons.Business}
@@ -201,7 +201,7 @@ export default function MarketingFeatures() {
           </div>
 
           {/* Right Column - Animate from right */}
-          <div className={`right-column flex flex-col gap-8 opacity-0 ${rightColumnVisible ? 'animate-slide-in-right' : ''} h-full`}>
+          <div className={`right-column flex flex-col gap-8 opacity-0 ${rightColumnVisible ? styles['animate-slide-in-right'] : ''} h-full`}>
             <div className="flex-1">
               <FeatureCard
                 Icon={Icons.Communication}

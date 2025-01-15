@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import './style.css';
+import styles from "./style.module.css";
 import { Montserrat } from 'next/font/google';
 
 // Montserrat fonts
@@ -61,7 +61,7 @@ const AppGrid = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <span
               ref={multifacetedRef}
-              className={`multi-title ${monsterfont.className} text-gray-600/20 select-none transform transition-transform duration-700 ${
+              className={` ${styles["multi-title"]} ${monsterfont.className} text-gray-600/20 select-none transform transition-transform duration-700 ${
                 isInView ? 'scale-110 opacity-100' : 'scale-75 opacity-0'
               }`}
             >
@@ -71,16 +71,16 @@ const AppGrid = () => {
 
           {/* Main titles */}
           <div className="relative z-10 mt-8">
-            <h2 className={`multi-subtitle ${monsterfont1.className} text-white`}>
+            <h2 className={` ${styles["multi-subtitle"]} ${monsterfont1.className} text-white`}>
               VARIETY OF APP
             </h2>
-            <h3 className={`multi-subtitle ${monsterfont.className} text-white`}>
+            <h3 className={` ${styles["multi-subtitle"]} ${monsterfont.className} text-white`}>
               WE DEVELOP
             </h3>
           </div>
         </div>
 
-        <div className="container1">
+        <div className={`${styles["container1"]}`}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
             {services.map((service, index) => (
               <div
@@ -96,7 +96,7 @@ const AppGrid = () => {
                   />
                 </div>
                 <h3
-                  className="multi-description mt-4"
+                  className={`${styles["multi-description"]}    mt-4 `} 
                   dangerouslySetInnerHTML={{ __html: service.title }}
                 />
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import styles from "./styles.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont1 = Montserrat({
@@ -23,7 +23,7 @@ const VideoSection = () => {
               <img
                 src="images/video.webp"
                 alt="Branding process with color swatches"
-                className="w-[290px] h-auto md:h-[400px] shadow-lg mx-auto custom-rounded-tr"
+                className={` w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
               />
               {/* Rectangular Image */}
               <img
@@ -76,7 +76,7 @@ const VideoSection = () => {
         {/* Description below */}
         <div className="mt-8 md:mt-12">
           <p
-            className={`text-semi-white description-text ${monsterfont1.className} mx-auto  text-center`}
+            className={`text-semi-white ${styles["description-text"]} ${monsterfont1.className} mx-auto  text-center`}
           >
           Unlock the power of visual storytelling with our dynamic video production services. Our creative expertise extends from concept development and scripting to shooting and post-production.
           </p>

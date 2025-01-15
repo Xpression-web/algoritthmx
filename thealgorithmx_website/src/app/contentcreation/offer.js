@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import './style.css'
+import styles from "./style.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont1 = Montserrat({
@@ -84,7 +84,7 @@ const Offer = () => {
     <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-6xl mx-auto" ref={scalableRef}>
         <div className="text-center mb-8 md:mb-16">
-          <h1 className={`text-white offer ${monsterfont1.className} mb-4`}>
+          <h1 className={`text-white  ${styles["offer"]} ${monsterfont1.className} mb-4`}>
             WHAT WE OFFER
           </h1>
         </div>
@@ -93,7 +93,7 @@ const Offer = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`service-card relative group rounded-lg p-7 transition-all duration-700  box-color transform
+              className={` ${styles["service-card"]} relative group rounded-lg p-7 transition-all duration-700   ${styles["box-color"]} transform
                 ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}
               `}
               style={{
@@ -104,7 +104,7 @@ const Offer = () => {
                 {service.id}
               </div>
 
-              <h3 className={`offer-title text-white ${monsterfont3.className} transition-colors duration-300`}>
+              <h3 className={` ${styles["offer-title"]} text-white ${monsterfont3.className} transition-colors duration-300`}>
                 {service.title}
               </h3>
               <div className="mb-6">
@@ -114,7 +114,7 @@ const Offer = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className="text-semi-white offer-description ">
+              <p className={`text-semi-white  ${styles["offer-description"]} `}>
                 {service.description}
               </p>
             </div>

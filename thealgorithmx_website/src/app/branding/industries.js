@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import './styles.css';
+import styles from "./style.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont = Montserrat({
@@ -21,73 +21,65 @@ const industries = [
   {
     id: 1,
     title: 'eCommerce',
-    iconImg:' ./images/shopping.png', // Replace with actual image path
-    color: 'text-purple-500',
-    borderColor: 'border-purple-light',
+    iconImg: './images/shopping.png', // Replace with actual image path
+    color: styles["text-purple-500"],
+    borderColor: styles["border-purple-light"],
   },
   {
     id: 2,
     title: 'Healthcare',
-    iconImg:' ./images/Healthcare.png',
-    color: 'text-purple-500',
-    borderColor: 'border-yellow-light',
-    
+    iconImg: './images/Healthcare.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-yellow-light"],
   },
   {
     id: 3,
     title: 'Media & Entertainment',
-    iconImg:' ./images/Media.png',
-    color: 'text-purple-500',
-    borderColor: 'border-purple-light',
-   
+    iconImg: './images/Media.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-purple-light"],
   },
   {
     id: 4,
-    title: 'Sports &    Gambling',
-    iconImg:' ./images/Sports.png',
-    color: 'text-purple-500',
-    borderColor: 'border-red-light',
-   
+    title: 'Sports & Gambling',
+    iconImg: './images/Sports.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-red-light"],
   },
   {
     id: 5,
     title: 'Business Services',
-    iconImg:' ./images/Business-Services-1.png',
-    color: 'text-purple-500',
-    borderColor: 'border-green-light',
-   
+    iconImg: './images/Business-Services-1.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-green-light"],
   },
   {
     id: 6,
     title: 'Real Estate',
-    iconImg:' ./images/Real-Estate.png',
-    color: 'text-purple-500',
-    borderColor: 'border-blue-light ',
-   
+    iconImg: './images/Real-Estate.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-blue-light"],
   },
   {
     id: 7,
     title: 'IT Services',
-    iconImg:' ./images/IT-Services.png',
-    color: 'text-purple-500',
-    borderColor: 'border-orange-light',
-   
+    iconImg: './images/IT-Services.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-orange-light"],
   },
   {
     id: 8,
     title: 'Social Media',
-    iconImg:' ./images/Social-Media.png',
-    color: 'text-purple-500',
-    borderColor: 'border-pink-light',
-   
+    iconImg: './images/Social-Media.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-pink-light"],
   },
   {
     id: 9,
     title: 'Music',
-    iconImg:' ./images/music.png',
-    color: 'text-purple-500',
-    borderColor: 'border-yellow-light',
-   
+    iconImg: './images/music.png',
+    color: styles["text-purple-500"],
+    borderColor: styles["border-yellow-light"],
   },
 ];
 
@@ -111,7 +103,7 @@ const IndustriesGrid = () => {
             >
               {/* Icon Container */}
               <div
-                className={`absolute left-2 z-10 icon-custom-rounded p-4 bg-black ${industry.color} border-2 ${industry.borderColor}`}
+                className={`absolute left-2 z-10 ${styles["icon-custom-rounded"]} p-4 bg-black ${industry.color} border-2 ${industry.borderColor}`}
               >
                 <img
                   src={industry.iconImg}
@@ -122,7 +114,7 @@ const IndustriesGrid = () => {
 
               {/* Main Container */}
               <div
-                className={`w-full h-full ml-12 flex items-center justify-center bg-black border-2 ${industry.borderColor} custom-rounded transition-all duration-300 `}
+                className={`w-full h-full ml-12 flex items-center justify-center bg-black border-2 ${industry.borderColor} ${styles["custom-rounded"]} transition-all duration-300 `}
               >
                 <span className={`text-white font-size-19 algo-line-height-23 ${monsterfont1.className} ml-4 max-w-[180px]`}>{industry.title}</span>
               </div>

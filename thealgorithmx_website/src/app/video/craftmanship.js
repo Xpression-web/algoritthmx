@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import './styles.css';
+import styles from "./styles.module.css";
 import { Montserrat } from 'next/font/google';
 
 const monsterfont = Montserrat({
@@ -88,7 +88,7 @@ const DevelopmentProcess = () => {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <span
               ref={craftRef}
-              className={`mb-8 main-craft ${monsterfont.className} font-bold text-gray-600/20 transform transition-transform duration-700 ${
+              className={`mb-8 ${styles["main-craft"]} ${monsterfont.className} font-bold text-gray-600/20 transform transition-transform duration-700 ${
                 isInView ? 'scale-110 opacity-100' : 'scale-75 opacity-0'
               }`}
               style={{ top: '-20px' }}
@@ -99,10 +99,10 @@ const DevelopmentProcess = () => {
 
           {/* Main titles */}
           <div className="relative z-10">
-            <h2 className={`submain-craft ${monsterfont2.className} mt-14 text-white`}>
+            <h2 className={`${styles["submain-craft"]} ${monsterfont2.className} mt-14 text-white`}>
               ALGORITHMX'S VIDEO
             </h2>
-            <h3 className={`submain-craft ${monsterfont.className} text-white`}>
+            <h3 className={`${styles["submain-craft"]} ${monsterfont.className} text-white`}>
               DEVELOPMENT PROCESS
             </h3>
           </div>
@@ -120,15 +120,15 @@ const DevelopmentProcess = () => {
                 />
                 <div className="p-4 mt-2 md:mt-0">
                   <div className="flex items-center mb-2">
-                    <span className={`transform rotate-90 ${monsterfont1.className} step mr-2`}>
+                    <span className={`transform rotate-90 ${monsterfont1.className} ${styles["step"]} mr-2`}>
                       STEP
                     </span>
-                    <span className={`number1 ${monsterfont.className} text-white`}>
+                    <span className={`${styles["number1"]} ${monsterfont.className} text-white`}>
                       {step.number}
                     </span>
                   </div>
                   <h3
-                    className={`text-xl font-medium mb-2 ${monsterfont1.className} craft-title ${
+                    className={`text-xl font-medium mb-2 ${monsterfont1.className} ${styles["craft-title"]} ${
                       index === 0
                         ? 'text-green-400'
                         : index === 1
@@ -144,7 +144,7 @@ const DevelopmentProcess = () => {
                   >
                     {step.title}
                   </h3>
-                  <p className="text-white craft-description">{step.description}</p>
+                  <p className={`text-white ${styles["craft-description"]} `}>{step.description}</p>
                 </div>
               </div>
             </div>

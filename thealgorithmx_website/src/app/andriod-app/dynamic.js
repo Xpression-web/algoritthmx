@@ -1,6 +1,6 @@
 import React from 'react';
 import { Montserrat } from 'next/font/google';
-import './style.css';
+import styles from "./style.module.css";
 
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
@@ -68,7 +68,7 @@ const DevelopmentTimeline = () => {
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="bg-black rounded-3xl p-8 md:p-12 border border-zinc-800">
-          <h1 className={`dynamic-title ${monsterfont1.className} md:text-center `}>
+          <h1 className={`${styles["dynamic-title"]}  ${monsterfont1.className} md:text-center `}>
             Dynamic Approach to Android App Development
           </h1>
 
@@ -92,7 +92,7 @@ const DevelopmentTimeline = () => {
                           </span>
                           <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                         </div>
-                        <h3 className={`dynamic-subtitle  ${monsterfont.className}  `}>{step.title}</h3>
+                        <h3 className={` ${styles["dynamic-subtitle"]}  ${monsterfont.className}  `}>{step.title}</h3>
                       </div>
                       
                       {/* Mobile Timeline */}
@@ -101,7 +101,7 @@ const DevelopmentTimeline = () => {
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
-                      <div className={`dynamic-description  ${monsterfont1.className} mt-4 md:mt-8 `}>
+                      <div className={` ${styles["dynamic-description"]}  ${monsterfont1.className} mt-4 md:mt-8 `}>
                         {step.description}
                       </div>
                     </div>
@@ -127,7 +127,7 @@ const DevelopmentTimeline = () => {
                           </span>
                           <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                         </div>
-                        <h3 className={`dynamic-subtitle  ${monsterfont.className}  `}>{step.title}</h3>
+                        <h3 className={`${styles["dynamic-subtitle"]}  ${monsterfont.className}  `}>{step.title}</h3>
                       </div>
                       
                       {/* Mobile Timeline */}
@@ -136,7 +136,7 @@ const DevelopmentTimeline = () => {
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
-                      <div className={`dynamic-description  ${monsterfont1.className} mt-4 md:mt-8 `}>
+                      <div className={`${styles["dynamic-description"]}  ${monsterfont1.className} mt-4 md:mt-8 `}>
                         {step.description}
                       </div>
                     </div>

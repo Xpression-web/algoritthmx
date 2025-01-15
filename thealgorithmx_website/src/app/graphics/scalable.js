@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import './styless.css';
+import styles from "./styles.module.css";
 import { Montserrat } from "next/font/google";
 
 const monsterfont = Montserrat({
@@ -91,9 +91,10 @@ export default function Scalable() {
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <span
               ref={scalableRef}
-              className={`mb-8 main-scalable transform transition-transform duration-700 ${monsterfont.className} ${
-                isInView ? 'scale-110 opacity-100' : 'scale-75 opacity-0'
+              className={`mb-8 ${styles["main-scalable"]} transform transition-transform duration-700 ${monsterfont.className} ${
+                isInView ? `${styles["scale-110"]} ${styles["opacity-100"]}` : `${styles["scale-75"]} ${styles["opacity-0"]}`
               }`}
+              
             >
               SCALABLE
             </span>
@@ -101,10 +102,10 @@ export default function Scalable() {
 
           {/* Main titles */}
           <div className="relative z-10">
-            <h2 className={`description ${monsterfont1.className} mt-6 md:mt-14 text-white`}>
+            <h2 className={` ${styles["description"]} ${monsterfont1.className} mt-6 md:mt-14 text-white`}>
               HOW WE
             </h2>
-            <h2 className={`description ${monsterfont.className} text-white -mt-2`}>
+            <h2 className={`${styles["description"]} ${monsterfont.className} text-white -mt-2`}>
               STAND OUT?
             </h2>
           </div>
@@ -121,9 +122,9 @@ export default function Scalable() {
                   className={`flex-1 ${
                     isInView
                       ? feature.mobileOrder === 1 || feature.mobileOrder === 4
-                        ? 'animate-slide-in-left'
+                        ? styles['animate-slide-in-left1']
                         : feature.mobileOrder === 3 || feature.mobileOrder === 6
-                        ? 'animate-slide-in-right'
+                        ? styles['animate-slide-in-right1']
                         : ''
                       : ''
                   }`}
@@ -159,15 +160,15 @@ export default function Scalable() {
 const FeatureCard = ({ imageSrc, title, description, isHighlighted, className }) => (
   <div
     className={`p-8 transition-transform duration-300 hover:-translate-y-2 text-center h-full flex flex-col justify-between ${
-      isHighlighted ? 'bg-black box-border' : 'bg-[#0f0f0f] black-box'
-    } ${className}`}
+      isHighlighted ? `bg-black ${styles['box-border']}` : `bg-[#0f0f0f] ${styles['black-box']}`}
+    ${className}`}
   >
     <div className="flex justify-center mb-4">
       <img src={imageSrc} alt={title} className="w-12 h-12" />
     </div>
     <div>
-      <h3 className={`text-white scale-title ${monsterfont.className} mb-4`}>{title}</h3>
-      <p className="text-semi-white scale-description">{description}</p>
+      <h3 className={`text-white ${styles["scale-title"]} ${monsterfont.className} mb-4`}>{title}</h3>
+      <p className={`text-semi-white ${styles["scale-description"]} `}>{description}</p>
     </div>
   </div>
 );

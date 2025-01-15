@@ -1,6 +1,6 @@
 import React from 'react';
 import { Montserrat } from 'next/font/google';
-import './style.css';
+import styles from "./style.module.css";
 
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
@@ -25,13 +25,13 @@ const IndustriesGrid = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className={`industries-title ${monsterfont1.className} text-white `}>
+          <h1 className={`  ${styles["industries-title"]} ${monsterfont1.className} text-white `}>
             Industries
           </h1>
-          <p className={`text-semi-white ${monsterfont1.className} industries-subtitle`}>
+          <p className={`text-semi-white ${monsterfont1.className} ${styles["industries-subtitle"]} `}>
             Designing Customized
           </p>
-          <p className={`text-semi-white ${monsterfont.className} industries-subtitle text-xl md:text-2xl font-semibold`}>
+          <p className={`text-semi-white ${monsterfont.className} ${styles["industries-subtitle"]} text-xl md:text-2xl font-semibold`}>
             Android Solutions
           </p>
         </div>
@@ -41,10 +41,10 @@ const IndustriesGrid = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="relative borderd transition-all duration-300
-                        flex  "
+              className={`relative ${styles["borderd"]} transition-all duration-300
+                        flex  `}
             >
-              <span className="text-white industries">
+              <span className={`text-white ${styles["industries"]} `}>
                 {industry}
               </span>
             </div>
