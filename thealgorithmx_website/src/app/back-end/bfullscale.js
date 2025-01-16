@@ -1,6 +1,49 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useRef, useState } from 'react';
+import styles from './style.module.css';
+import { Montserrat } from 'next/font/google';
+
+const monsterfont = Montserrat({
+  subsets: ['latin'],
+  weight: '400',
+});
+const monsterfont1 = Montserrat({
+  subsets: ['latin'],
+  weight: '300',
+});
+const monsterfont2 = Montserrat({
+  subsets: ['latin'],
+  weight: '100',
+});
+const monsterfont3 = Montserrat({
+  subsets: ['latin'],
+  weight: '600',
+});
 
 const BackWebDevServices = () => {
+  const [inView, setInView] = useState(false); // To track visibility
+  const ref = useRef(null); // Reference for the component
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); // Disconnect observer after triggering once
+        }
+      },
+      { threshold: 0.1 } // Trigger when 50% of the component is visible
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) observer.disconnect(); // Clean up observer
+    };
+  }, []);
+
   const services = [
     {
       icon: (
@@ -73,32 +116,39 @@ const BackWebDevServices = () => {
       description: 'Our leading custom back end development company, AlgorithmX, continuously and rapidly improves your website software by offering updates in a matter of days and providing new features every few weeks through streamlined DevOps practices.'
     },
   ];
+  
 
   return (
-    <div className="min-h-screen bg-black text-white p-6">
+    <div className="min-h-screen bg-black text-white p-6" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-blue-500 mb-4">HOW WE ENSURE</p>
-          <h1 className="text-4xl font-bold mb-2">FULL SCALE</h1>
-          <h2 className="text-4xl font-bold">WEB DEVELOPMENT</h2>
+          <p className={`${styles["tech-title"]} ${monsterfont1.className}  mb-4`}>HOW WE ENSURE</p>
+          <h1 className={`${styles["scale-subtitle"]} ${monsterfont.className} `}>FULL SCALE</h1>
+          <h2 className={`${styles["scale-subtitle"]} ${monsterfont2.className} `}>WEB DEVELOPMENT</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative p-6 bg-gradient-to-b from-black via-[#2a3b4e] to-black rounded-lg 
-           transition-all duration-300 group hover:shadow-[0px_0px_15px_5px_rgba(42,201,235,0.4)]
- overflow-hidden w-full h-80"
-
+              className={`relative p-6 bg-gradient-to-b from-black via-[#2a3b4e] to-black rounded-lg 
+              transition-all duration-300 group hover:shadow-[0px_0px_50px_15px_rgba(42,201,235,0.2)] overflow-hidden w-full h-80`}
             >
-              <div className="flex flex-col items-center justify-center h-full text-center ">
-                <div className="animate-slideDown mb-4">
+              <div className="flex flex-col items-center justify-center h-full text-center">
+                <div
+                  className={`${styles["animate-slideDown"]} mb-4 ${
+                    inView ? styles["start-animation"] : ""
+                  }`}
+                >
                   {service.icon}
                 </div>
-                <div className="animate-slideUp">
-                  <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-400 text-sm">{service.description}</p>
+                <div
+                  className={`${styles["animate-slideUp"]} ${
+                    inView ? styles["start-animation"] : ""
+                  }`}
+                >
+                  <h3 className={`${styles["scale-title"]} ${monsterfont3.className}  mb-4`}>{service.title}</h3>
+                  <p className={`${styles["scale-description"]}  `}>{service.description}</p>
                 </div>
               </div>
             </div>

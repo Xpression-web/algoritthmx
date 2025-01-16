@@ -8,41 +8,52 @@ const monsterfont = Montserrat({
   weight: "700",
 });
 
+
+const monsterfont1 = Montserrat({
+  subsets: ['latin'],
+  weight: '800',
+});
+
+const monsterfont2 = Montserrat({
+  subsets: ['latin'],
+  weight: '200',
+});
+
 const services = [
   {
     title: "Server-Side Scripting",
     description: "In order to manage dynamic content generation and communication with databases, our specialized back end developer develops server-side scripts using languages like Ruby, PHP, Python, or Node.js.",
-    image: "/path/to/consultation-image.png",
+    image: "images/Server.png",
     alt: "Consultation Icon",
   },
   {
     title: "Database Management",
     description: "Our back end development company utilizes technologies like PostgreSQL, MySQL, SQLite, or MongoDB to establish and administer databases to efficiently store web data and recover it.",
-    image: "/path/to/design-image.png",
+    image: "images/Database.png",
     alt: "Design Icon",
   },
   {
     title: "User Authentication and Authorization",
     description: "AlgorithmX offers an expert back end developer who uses encryption, hashing, and session handling techniques to develop user authentication and authorization systems in order to control access to website data and safeguard confidential information.",
-    image: "/path/to/custom-dev-image.png",
+    image: "images/User-Authentication.png",
     alt: "Custom Development Icon",
   },
   {
     title: "Web Services/API Development",
     description: "Our on demand back end web development solutions include building APIs and web services that facilitate communication between websites and other external systems, enabling third-party services integration or development of mobile applications.",
-    image: "/path/to/testing-image.png",
+    image: "images/Web-Services.png",
     alt: "Testing Icon",
   },
   {
     title: "Security and Compliance",
     description: "We enforce security measures to prevent frequent internet threats like cross-site scripting (XSS) and SQL injection and ensure adherence to data protection laws such as GDPR or HIPAA.",
-    image: "/path/to/deployment-image.png",
+    image: "images/Security.png",
     alt: "Deployment Icon",
   },
   {
     title: "Data Analysis and Insights",
     description: "As part of our back end development services, we employ data analysis and processing features leveraging techniques like data mining, machine learning algorithms, and predictive analytics to derive valuable insights from user engagement on websites in order to tailor content and make informed business choices.",
-    image: "/path/to/support-image.png",
+    image: "images/Data.png",
     alt: "Support Icon",
   },
 ];
@@ -83,16 +94,16 @@ const BackServicesGrid = () => {
               ref={enhancementsRef}
               className={` ${styles["enhancements-text"]}  ${monsterfont.className}  transform transition-transform duration-700 ${
                 isInView ? `${styles["scale-110"]} ${styles["opacity-100"]}` : `${styles["scale-75"]}`
-              }`}
+              }   `}
             >
               ENHANCEMENTS
             </span>
           </div>
 
           {/* Main Titles */}
-          <div className="relative z-10">
-            <h2 className="text-2xl md:text-3xl mt-12 text-white mb-2">ADVANCED</h2>
-            <h3 className="text-3xl md:text-4xl font-semibold text-white">INTEGRATIONS</h3>
+          <div className="relative z-10 mt-24">
+            <h2 className={` ${styles["multi-subtitle"]} ${monsterfont2.className} text-white`}>ADVANCED</h2>
+            <h3 className={` ${styles["multi-subtitle"]} ${monsterfont1.className} text-white`}>INTEGRATIONS</h3>
           </div>
         </div>
 
@@ -101,17 +112,17 @@ const BackServicesGrid = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-neutral-800 rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group"
+              className={`${styles["card"]} hover:bg-zinc-800 border border-zinc-800 group transition-colors duration-1000 ease-in-out `}
             >
               <img
                 src={service.image}
                 alt={service.alt}
-                className="h-12 w-12 object-contain rounded-lg mb-4"
+                className={`${styles["image1"]} object-contain `}
               />
-              <h3 className="text-xl font-semibold mb-4 transition-colors duration-300">
+              <h3 className={`${styles["card-title"]} mb-4 transition-colors duration-300 `}>
                 {service.title}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed transition-colors duration-300">
+              <p className={`${styles["card-description"]} transition-colors duration-300 `}>
                 {service.description}
               </p>
             </div>

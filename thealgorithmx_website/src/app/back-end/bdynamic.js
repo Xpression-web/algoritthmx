@@ -1,4 +1,21 @@
 import React from 'react';
+import styles from './style.module.css';
+import { Montserrat } from 'next/font/google';
+
+const monsterfont = Montserrat({
+  subsets: ['latin'],
+  weight: '700',
+});
+
+const monsterfont1 = Montserrat({
+  subsets: ['latin'],
+  weight: '400',
+});
+const monsterfont2 = Montserrat({
+  subsets: ['latin'],
+  weight: '700',
+});
+
 
 const BackDesignProcess = () => {
   const steps = [
@@ -38,12 +55,12 @@ const BackDesignProcess = () => {
     <div className="min-h-screen h-full bg-black text-gray-300 p-8 ">
       <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl text-white mb-2">Dynamic Process For</h1>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">Creative Design Services</h2>
+        <h1 className={` ${styles["dynamic-title"]} ${monsterfont1.className} text-white mb-2`}>Implementation</h1>
+        <h2 className={` ${styles["dynamic-title"]} ${monsterfont.className} text-white`}>Process</h2>
       </div>
 
 
-        <div className="relative">
+      <div className="relative">
           {/* Vertical line */}
           <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-yellow-500"></div>
 
@@ -51,13 +68,13 @@ const BackDesignProcess = () => {
             <div key={index} className="relative pl-16 pb-16">
               {/* Timeline dot */}
               <div className="absolute left-0 w-8 h-8 bg-white  rounded-full flex items-center justify-center">
-                <span className="font-bold text-black">{step.number}</span>
+                <span className={`${monsterfont1.className} text-black `}>{step.number}</span>
               </div>
               
               {/* Content */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                <h3 className={` ${styles["dynamic-subtitle"]} ${monsterfont2.className} text-white mb-4`}>{step.title}</h3>
+                <p className={` ${styles["dynamic-description"]} text-semi-white mb-2`}>{step.description}</p>
               </div>
             </div>
           ))}
