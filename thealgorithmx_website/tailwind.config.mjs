@@ -27,7 +27,7 @@ export default {
       colors: {
         'semi-white': 'rgba(255, 255, 255, 0.5)',
         'semii-white': 'rgba(255, 255, 255, 0.6)',
-        dark: '#0f0f0f',
+        'dark': '#0f0f0f',
         
       },
     },

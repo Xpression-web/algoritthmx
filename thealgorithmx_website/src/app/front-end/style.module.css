@@ -145,6 +145,7 @@ border-radius: 15px;
 }
 .tech-description{
   font-size: .8rem;
+  white-space: nowrap;
 }
 
 
@@ -153,6 +154,9 @@ border-radius: 15px;
   border: 1px solid #666;
   border-radius: 8px;
   transition: background-color 1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px; /* Adjust padding for desired spacing */
 }
 .box:hover {
   background-color: #000; /* Change to black on hover */
