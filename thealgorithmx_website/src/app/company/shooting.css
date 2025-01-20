@@ -121,3 +121,19 @@
     animation-delay: 2.75s;
     animation-duration: 2.75s;
 }
+/* Add this to your global styles (e.g., in styles.css or a module CSS file) */
+@keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  

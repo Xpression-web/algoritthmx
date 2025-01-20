@@ -1,4 +1,11 @@
 import React from 'react';
+import { Montserrat } from "next/font/google";
+import  style from './style.module.css'
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const DynamicSolutionsHero = () => {
   return (
@@ -9,7 +16,7 @@ const DynamicSolutionsHero = () => {
         
         {/* Main content */}
         <div className="px-8 py-16">
-          <h1 className="text-white text-4xl md:text-6xl font-bold mb-8 tracking-wide">
+          <h1 className={`${style["dynamic-text"]} ${monsterfont.className}`}>
             DYNAMIC SOLUTIONS
           </h1>
           
@@ -18,7 +25,7 @@ const DynamicSolutionsHero = () => {
 
 
           
-          <p className="text-gray-400 text-xl leading-relaxed max-w-3xl">
+          <p className={`max-w-3xl ${style["dyanmic-description"]} text-semi-white`}>
             Drive progress seamlessly. Transform your processes with agile ERP solutions 
             that elevate performance, enhance collaboration, and scale with your vision.
           </p>

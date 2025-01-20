@@ -28,7 +28,7 @@ export default function Content() {
   <div className="flex flex-col md:flex-col lg:flex-col space-y-2">
       <span className={`${styles["explore"]} ${monsterfont1.className} text-white`}>Explore Our</span>
       <div className="space-x-2">
-      <span className={`${styles["explore"]}${monsterfont.className} text-white`}>Content</span>
+      <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Content</span>
       </div>
       <div>
       <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Creation</span>

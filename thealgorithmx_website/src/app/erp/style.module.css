@@ -63,6 +63,32 @@
     padding: 4px;
     flex-shrink: 0;
 }
+/*7th*/
+.dev-title{
+  font-size: 17px;
+  line-height: 1.1;
+  font-family:   Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.dev-description{
+  font-size: 15px;
+  line-height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: white;
+}
+/*8th*/
+.dynamic-text{
+  font-size: 56px;
+  line-height: 50px;
+}
+.dynamic-description{
+  font-size: 16px;
+  line-height: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  
+}
 /* Optional: Styling for smaller mobile screens */
 @media (max-width: 768px) {
     .carousel-item {
