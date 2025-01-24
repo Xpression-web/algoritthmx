@@ -1,0 +1,35 @@
+.circle-style {
+    width: 20px;
+    height: 20px;
+    top: -29px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  @media (min-width: 640px) {
+    .circle-style {
+      top: -29px; /* Change for tablets */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .circle-style {
+      top: 3px; /* Change for desktops */
+    }
+  }
+  .negativemargin {
+    margin-top: -40px;
+  }
+  .your-scrollable-div {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+  }
+  
+  .your-scrollable-div::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .your-scrollable-div::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+  }

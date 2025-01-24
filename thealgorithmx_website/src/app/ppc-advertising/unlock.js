@@ -1,0 +1,100 @@
+    'use client';
+    import React, { useState, useEffect, useRef } from 'react';
+    import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+    import 'react-circular-progressbar/dist/styles.css';
+
+    const UnlockSuccess = () => {
+    const [percentages, setPercentages] = useState([79, 80, 65, 0]); // Set percentage only for 1st, 2nd, and 3rd items
+    const [visiblePercentages, setVisiblePercentages] = useState([0, 0, 0, 0]);
+    const [isVisible, setIsVisible] = useState(false);
+    const componentRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        ([entry]) => {
+            setIsVisible(entry.isIntersecting);
+        },
+        { threshold: 0.5 }
+        );
+
+        if (componentRef.current) {
+        observer.observe(componentRef.current);
+        }
+
+        return () => {
+        if (componentRef.current) {
+            observer.unobserve(componentRef.current);
+        }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isVisible) {
+        const animationInterval = setInterval(() => {
+            setVisiblePercentages((prev) =>
+            prev.map((current, index) =>
+                current < percentages[index]
+                ? Math.min(current + 5, percentages[index])
+                : current
+            )
+            );
+        }, 50);
+
+        return () => clearInterval(animationInterval);
+        }
+    }, [isVisible, percentages]);
+
+    const descriptions = [
+        'According to 79% of brands, PPC plays a significant role in impacting their business success.',
+        'Search ads increase top-of-mind brand awareness among consumers by 80%.',
+        'When searching for an item online, 64.6% of users click on Google Ads.',
+        'Global advertising expenditure is predicted to rise by 7.4% in 2024.',
+    ];
+
+    const image = 'images/social1.png'; // Ensure this path is correct for the 4th item
+
+    return (
+        <div
+        className="bg-black text-white py-12 px-6 flex flex-col items-center min-h-screen justify-center"
+        ref={componentRef}
+        >
+        <div className="max-w-[1200px] mx-auto">
+            <h1 className="text-3xl font-bold text-center mb-8">PPC Campaign Success</h1>
+            <p className="text-center mb-8">
+            Driving impactful results through effective PPC campaign management strategies.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {descriptions.map((description, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                {index === 3 ? (
+                    // Display image only for the 4th item
+                    <img
+                    src={image}
+                    alt="Global Ad Spending"
+                    className="w-32 h-32 object-contain mb-4"
+                    />
+                ) : (
+                    // Display CircularProgressbar for the rest
+                    <div className="w-32 h-32 mb-4">
+                    <CircularProgressbar
+                        value={visiblePercentages[index]}
+                        text={`${visiblePercentages[index]}%`}
+                        strokeWidth={10}
+                        styles={buildStyles({
+                        pathColor: '#3b82f6',
+                        textColor: '#fff',
+                        trailColor: '#1e293b',
+                        })}
+                    />
+                    </div>
+                )}
+                <p>{description}</p>
+                </div>
+            ))}
+            </div>
+        </div>
+        </div>
+    );
+    };
+
+    export default UnlockSuccess;
