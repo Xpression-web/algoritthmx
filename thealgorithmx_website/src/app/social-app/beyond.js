@@ -4,7 +4,7 @@ import styles from "../android-app/style.module.css";
 
 const monsterfont1 = Montserrat({
 subsets: ["latin"],
-weight: "400",
+weight: "100",
 });
 const monsterfont = Montserrat({
 subsets: ["latin"],

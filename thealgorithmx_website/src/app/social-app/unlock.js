@@ -2,6 +2,22 @@
     import React, { useState, useEffect, useRef } from 'react';
     import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
     import 'react-circular-progressbar/dist/styles.css';
+    import styles from '../seo/style.module.css'
+    import { Montserrat } from "next/font/google";
+    
+        const monsterfont = Montserrat({
+        subsets: ["latin"],
+        weight: "100",
+        });
+        const monsterfont2 = Montserrat({
+        subsets: ["latin"],
+        weight: "300",
+        });
+        const monsterfont3 = Montserrat({
+            subsets: ["latin"],
+            weight: "800",
+            });
+
 
     const UnlockSuccess = () => {
     const [percentages, setPercentages] = useState([21, 0, 0, 56]); // Set percentage only for 1st and 4th items
@@ -63,8 +79,11 @@
     return (
         <div className="bg-black text-white py-12 px-6 flex flex-col items-center min-h-screen justify-center" ref={componentRef}>
         <div className="max-w-[1200px] mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-8">Mastering Social Media Success</h1>
-            <p className="text-center mb-8">Expert strategies to elevate your brand's social media impact.</p>
+            <h1 className={` ${styles["unlock-title"]} ${monsterfont.className} `}>MASTERING SOCIAL MEDIA SUCCESS </h1>
+            <div className="flex justify-center items-center ">
+    <div className="w-10 h-1 bg-blue-600 mx-auto my-4"></div>
+    </div>
+    <p className={`${styles["unlock-subtitle "]} ${monsterfont2.className} text-semi-white  text-center mt-4 mb-8`}>Expert strategies to elevate your brand's social media impact.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {descriptions.map((description, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
@@ -74,11 +93,11 @@
                         value={visiblePercentages[index]}
                         text={`${visiblePercentages[index]}%`}
                         strokeWidth={10}
-                        styles={buildStyles({
-                        pathColor: '#3b82f6',
-                        textColor: '#fff',
-                        trailColor: '#1e293b',
-                        })}
+                    styles={buildStyles({
+                    pathColor: '#2775FF',
+                    textColor: '#2775FF',
+                    trailColor: '#000',
+                    })}
                     />
                     </div>
                 ) : (
@@ -88,10 +107,10 @@
                         alt={`Image ${index + 1}`}
                         className="w-32 h-32 object-contain mb-4"
                     />
-                    <h3 className="text-lg font-semibold mb-2">{titles[index]}</h3>
+                    <h3 className={`text-[26px] leading-[24px] font-semibold ${monsterfont3.className}  mb-2`}>{titles[index]}</h3>
                     </>
                 )}
-                <p>{description}</p>
+               <p className={`text-center ${styles["unlock-description"]} p-1 mb-4`}>{description}</p>
                 </div>
             ))}
             </div>

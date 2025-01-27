@@ -1,7 +1,19 @@
     'use client';
+    import styles from '../seo/style.module.css'
     import React, { useState, useEffect, useRef } from 'react';
     import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
     import 'react-circular-progressbar/dist/styles.css';
+    import { Montserrat } from "next/font/google";
+    
+        const monsterfont = Montserrat({
+        subsets: ["latin"],
+        weight: "100",
+        });
+        const monsterfont2 = Montserrat({
+        subsets: ["latin"],
+        weight: "300",
+        });
+
 
     const UnlockSuccess = () => {
     const [percentages, setPercentages] = useState([79, 80, 65, 0]); // Set percentage only for 1st, 2nd, and 3rd items
@@ -59,11 +71,14 @@
         ref={componentRef}
         >
         <div className="max-w-[1200px] mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-8">PPC Campaign Success</h1>
-            <p className="text-center mb-8">
-            Driving impactful results through effective PPC campaign management strategies.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <h1 className={` ${styles["unlock-title"]} ${monsterfont.className} `}>PPC CAMPAIGN SUCCESS</h1>
+      <div className="flex justify-center items-center ">
+  <div className="w-10 h-1 bg-blue-600 mx-auto my-4"></div>
+</div>
+
+
+      <p className={`${styles["unlock-subtitle "]} ${monsterfont2.className} text-semi-white  text-center mt-4 mb-8`}>Driving impactful results through effective PPC campaign management strategies.</p>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {descriptions.map((description, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
                 {index === 3 ? (
@@ -81,14 +96,15 @@
                         text={`${visiblePercentages[index]}%`}
                         strokeWidth={10}
                         styles={buildStyles({
-                        pathColor: '#3b82f6',
-                        textColor: '#fff',
-                        trailColor: '#1e293b',
-                        })}
+                                        pathColor: '#2775FF',
+                                        textColor: '#2775FF',
+                                        trailColor: '#000',
+                                        })}
+        
                     />
                     </div>
                 )}
-                <p>{description}</p>
+                <p className={`text-center ${styles["unlock-description"]} p-1 mb-4`}>{description}</p>
                 </div>
             ))}
             </div>

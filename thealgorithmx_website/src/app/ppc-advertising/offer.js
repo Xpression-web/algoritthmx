@@ -1,6 +1,9 @@
     'use client';
     import React, { useState, useEffect, useRef } from 'react';
     import { Montserrat } from "next/font/google";
+    import styles from '../seo/style.module.css'
+    import style from '../graphics/styles.module.css'
+  
 
     const monsterfont1 = Montserrat({
     subsets: ["latin"],
@@ -10,6 +13,9 @@
     subsets: ["latin"],
     weight: "700",
     });
+
+
+   
 
     const PPCServicesSection = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -95,10 +101,10 @@
 
             {/* Main titles */}
             <div className="relative z-10">
-                <h2 className={`${monsterfont1.className} text-4xl mt-12 text-white`}>
+                <h2 className={` ${style["description"]} ${monsterfont1.className}  text-white`}>
                 OUR PPC
                 </h2>
-                <h3 className={`text-3xl md:text-4xl ${monsterfont.className} font-semibold text-white`}>
+                <h3 className={` ${style["description"]}  ${monsterfont.className} font-semibold text-white`}>
                 SERVICES
                 </h3>
             </div>
@@ -116,10 +122,10 @@
                     alt={service.title}
                     className="w-16 h-16"
                     />
-                    <h3 className={`text-xl md:text-2xl ${monsterfont.className} text-white hover:text-blue-500`}>
+                    <h3 className={`${styles["services-title"]} text-white`}>
                     {service.title}
                     </h3>
-                    <p className="text-white text-sm md:text-base font-medium">
+                    <p className={`${styles["services-description"]}`}>
                     {service.description}
                     </p>
                 </div>

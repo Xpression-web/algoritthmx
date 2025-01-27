@@ -46,12 +46,12 @@ return (
         <h1
         className={`${styles["and-title"]} ${monsterfont1.className} text-center`}
         >
-    Essential SEO
+    Leverage
     </h1>
         <h2
         className={`${styles["and-subtitle"]} ${monsterfont2.className} text-center mb-12`}
         >
-        Strategy Benefits
+        PPC and SEO
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

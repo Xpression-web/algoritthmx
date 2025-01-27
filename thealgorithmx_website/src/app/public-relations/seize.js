@@ -1,4 +1,12 @@
 import React from 'react';
+import { Montserrat } from 'next/font/google';
+import styles from "./styles.module.css";
+
+const monsterfont1 = Montserrat({
+subsets: ["latin"],
+weight: "600",
+});
+
 
 const PublicSeizeSection = () => {
   return (
@@ -7,18 +15,18 @@ const PublicSeizeSection = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           {/* Left Section - Content */}
           <div className="w-full lg:w-1/2 space-y-4">
-            <h1 className="text-xl lg:text-5xl font-bold">
+            <h1 className={`${styles["press-title"]} ${monsterfont1.className}`}>
               Seize PR Opportunities
             </h1>
-            <p className="text-gray-300 text-md">
+            <p className={`${styles["press-description"]} text-semi-white`}>
               At AlgorithmX, we have a dedicated team of experts in organic public relations who handle all aspects of your digital PR efforts as part of our public relations services, including but not limited to:
             </p>
             {/* Unordered List */}
-            <ul className="list-disc pl-5 text-gray-300">
-              <li>Providing timely crisis management support.</li>
-              <li>Developing thought leadership opportunities for your brand.</li>
-              <li>Establishing an effective backlink strategy.</li>
-              <li>Tracking PR campaign success with detailed reports.</li>
+            <ul className={`list-disc pl-5 text-semi-white ${styles["press-description"]} `}>
+              <li>Working together with bloggers and social media influencers to reach more audiences.</li>
+              <li>Generating valuable content to secure top-notch backlinks and build credibility.</li>
+              <li>Managing testimonials and online reviews.</li>
+              <li>Developing and sharing press releases.</li>
             </ul>
           </div>
 

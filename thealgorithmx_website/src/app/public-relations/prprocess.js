@@ -1,5 +1,21 @@
     'use client'
     import React, { useState } from 'react';
+    import { Montserrat } from 'next/font/google';
+    import styles from "./styles.module.css";
+
+    const monsterfont = Montserrat({
+    subsets: ["latin"],
+    weight: "100",
+    });
+    const monsterfont1 = Montserrat({
+        subsets: ["latin"],
+        weight: "300",
+        });
+    const monsterfont2 = Montserrat({
+            subsets: ["latin"],
+            weight: "700",
+            });
+
 
     const PRProcessVisualization = () => {
     const [activeStep, setActiveStep] = useState(1);
@@ -43,10 +59,13 @@
 
     return (
         <div className="min-h-screen bg-black text-white flex items-center justify-center p-6">
-        <div className="w-full max-w-4xl mx-auto p-4">
+        <div className="w-full max-w-5xl mx-auto p-4">
             {/* Title on top */}
-            <h1 className="text-blue-500 text-md text-center mb-2">Our</h1>
-            <h2 className="text-white text-4xl font-bold text-center mb-10">PR PROCESS</h2>
+            <h1 className={`${styles["our-text"]} ${monsterfont1.className}`}>Our</h1>
+            <h2 className={`${styles["pr-text"]} ${monsterfont.className} text-center`}>PR PROCESS</h2>
+            <div className="flex justify-center items-center ">
+  <div className="w-10 h-1 bg-blue-600 mx-auto my-4"></div>
+</div>
 
             <div className="flex justify-between mb-8">
             {steps.map((step) => (
@@ -55,8 +74,8 @@
                 className={`${
                     activeStep === step.number
                     ? ' text-white'
-                    : 'bg-transparent text-gray-400'
-                } py-2  transition-colors text-sm`}
+                    : 'bg-transparent '
+                } py-2  transition-colors text-sm ${styles["step-text"]}  ${monsterfont2.className}  `}
                 onClick={() => handleStepClick(step.number)}
                 >
                 STEP {step.number}
@@ -91,9 +110,9 @@
             </div>
 
             <div className="mt-[100px] space-y-4 text-white">
-            <div className="space-y-2">
-                <h2 className="text-2xl text-white font-bold">{steps[activeStep - 1].title}</h2>
-                <p className="text-semi-white ">{steps[activeStep - 1].description}</p>
+            <div className="">
+                <h2 className={`${styles["pr-title"]} ${monsterfont2.className}`}>{steps[activeStep - 1].title}</h2>
+                <p className={`${styles["pr-description"]} text-semi-white`}>{steps[activeStep - 1].description}</p>
             </div>
             </div>
         </div>

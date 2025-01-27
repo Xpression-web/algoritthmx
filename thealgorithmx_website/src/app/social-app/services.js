@@ -1,6 +1,9 @@
     'use client';
     import React, { useState, useEffect, useRef } from 'react';
+    import styles from '../seo/style.module.css'
     import { Montserrat } from "next/font/google";
+    
+
 
     const monsterfont1 = Montserrat({
     subsets: ["latin"],
@@ -114,12 +117,12 @@
                     <img
                     src={service.image}
                     alt={service.title}
-                    className="w-16 h-16"
+                    className="w-12 h-12"
                     />
-                    <h3 className={`text-xl md:text-2xl ${monsterfont.className} text-white`}>
+                    <h3 className={`${styles["services-title"]} text-white`}>
                     {service.title}
                     </h3>
-                    <p className="text-white text-sm md:text-base font-medium">
+                    <p className={`${styles["services-description"]}`}>
                     {service.description}
                     </p>
                 </div>

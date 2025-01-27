@@ -10,7 +10,7 @@
     subsets: ["latin"],
     weight: "300",
     });
-    const monsterfont2 = Montserrat({
+    const monsterfont3 = Montserrat({
         subsets: ["latin"],
         weight: "700",
         });
@@ -49,7 +49,7 @@
         Essential SEO
         </h1>
             <h2
-            className={`${styles["and-subtitle"]} ${monsterfont2.className} text-center mb-12`}
+            className={`${styles["and-title"]} ${monsterfont3.className} text-center mb-12`}
             >
             Strategy Benefits
             </h2>
