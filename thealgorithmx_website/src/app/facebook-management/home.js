@@ -15,7 +15,7 @@ const FacebookSection = () => {
         Facebook Management
         </h1>
         
-        <p className={` ${styles["android-description"]} ${monsterfont1.className} text-semi-white leading-relaxed pl-4 max-w-[670px] mx-auto`}>
+        <p className={` ${styles["android-description"]} ${monsterfont1.className} text-semi-white leading-relaxed  max-w-[670px] mx-auto`}>
         Facebook Management Services:
         Grow, Engage, and Elevate Your Brand.
         </p>

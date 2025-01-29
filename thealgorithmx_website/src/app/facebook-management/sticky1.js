@@ -143,7 +143,7 @@ const Card = ({ i, title, description, src, url, color, points, progress, range,
           <p className="text-[15px] font-[Helvetica] leading-[20px] text-semi-white whitespace-pre-wrap">{description}</p>
 
             {/* Bullet points list */}
-            <ul className="list-disc pl-4 text-[15px] font-[Helvetica] leading-[10px] text-semi-white ">
+            <ul className="list-disc pl-4 text-[15px] font-[Helvetica] leading-[24px] text-semi-white ">
               {points.map((point, index) => (
                 <li key={index} className="mb-0">{point}</li>
               ))}
