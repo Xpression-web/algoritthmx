@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useEffect, useRef } from "react";
 import styles from "./style.module.css";
 import { Montserrat } from "next/font/google";
 
@@ -20,37 +21,69 @@ const monsterfont3 = Montserrat({
 });
 
 export default function Content() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleScroll = (e) => {
+      const rightSection = container.querySelector(`.${styles.flx_right}`);
+      if (!rightSection) return;
+    
+      // Get scroll positions and limits
+      const isAtBottom = rightSection.scrollTop + rightSection.clientHeight >= rightSection.scrollHeight;
+      const isAtTop = rightSection.scrollTop === 0;
+    
+      // Allow default page scrolling if at the top or bottom of the right section
+      if ((isAtBottom && e.deltaY > 0) || (isAtTop && e.deltaY < 0)) {
+        return;
+      }
+    
+      // Prevent default behavior and scroll the right section
+      e.preventDefault();
+      rightSection.scrollTop += e.deltaY;
+    };
+    
+
+    container.addEventListener('wheel', handleScroll, { passive: false });
+
+    return () => {
+      container.removeEventListener('wheel', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-black min-h-screen flex justify-center items-center">
-      <div className={` ${styles["container1"]} w-full max-w-[1200px] mx-auto ${styles["algo-content-creation-services"]}`}>
+    <div ref={containerRef} className="bg-black min-h-screen flex justify-center items-center">
+      <div className={`${styles["container1"]} w-full max-w-[1200px] mx-auto ${styles["algo-content-creation-services"]}`}>
         {/* Left Section (Sticky) */}
-  <div className={` ${styles["flx_left"]} flex flex-col lg:flex-row`}>
-  <div className="flex flex-col md:flex-col lg:flex-col space-y-2">
-      <span className={`${styles["explore"]} ${monsterfont1.className} text-white`}>Explore Our</span>
-      <div className="space-x-2">
-      <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Content</span>
-      </div>
-      <div>
-      <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Creation</span>
-      </div>
-      <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Variety</span>
-  </div>
+        <div className={`${styles["flx_left"]} flex flex-col lg:flex-row`}>
+          <div className="flex flex-col md:flex-col lg:flex-col space-y-2">
+            <span className={`${styles["explore"]} ${monsterfont1.className} text-white`}>Explore Our</span>
+            <div className="space-x-2">
+              <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Content</span>
+            </div>
+            <div>
+              <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Creation</span>
+            </div>
+            <span className={`${styles["explore"]} ${monsterfont.className} text-white`}>Variety</span>
+          </div>
 
-  {/* Vertical Line and Text */}
-  <div className="flex items-center">
-    <div className="h-20 border-l-8 border-blue-500 rounded-full mr-6"></div>
-    <p className={` ${styles["content"]} text-semi-white`}>
-      <span className={` ${monsterfont3.className}`}>DISCOVERING OUR RANGE</span>
-      <br />
-      <span className={` ${monsterfont2.className}`}>OF CONTENT</span>
-    </p>
-  </div>
-</div>
-
+          {/* Vertical Line and Text */}
+          <div className="flex items-center">
+            <div className="h-20 border-l-8 border-blue-500 rounded-full mr-6"></div>
+            <p className={`${styles["content"]} text-semi-white`}>
+              <span className={monsterfont3.className}>DISCOVERING OUR RANGE</span>
+              <br />
+              <span className={monsterfont2.className}>OF CONTENT</span>
+            </p>
+          </div>
+        </div>
 
         {/* Right Section (Scrollable) */}
-        <div className= {`${styles["flx_right"]}`}>
-        <div className="mb-8">
+        <div className={`${styles["flx_right"]}`}>
+          {/* All your existing content items */}
+          <div className="mb-8">
             <h2 className={`${styles["scroll-title"]} text-white`} >Article Writing</h2>
             <p className={`${styles["scroll-description"]} text-semi-white`}>
               At our premier content creation firm, we carefully plan article concepts and generate top-notch content tailored to enhance your brand’s online presence.
