@@ -41,7 +41,7 @@
     animation: fadeIn 1s ease-out forwards;
   }
   .android-title {
-    line-height: 64px;
+    line-height: 80px;
     font-size: 84px;
     padding-bottom: 10px;
   }

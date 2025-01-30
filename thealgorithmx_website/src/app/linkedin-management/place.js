@@ -22,7 +22,7 @@ return (
             />
         </div>
 
-        {/* Left Section - Content */}
+        {/* Right Section - Content */}
         <div className="w-full lg:w-1/2 space-y-4">
             <h1 className={`${styles["what-title"]} ${monsterfont1.className}`}>
             The Place for Professional Networking
