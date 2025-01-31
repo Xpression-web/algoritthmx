@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../navbar/navbar';
 import ContentSection from './home';
 import Content from './content';
 import Offer from './offer';
@@ -13,6 +14,7 @@ import Footer from '../company/footer';
 const page = () => {
   return (
     <div>
+      <Navbar/>
       <ContentSection/>
       <Content/>
       <Offer/>
