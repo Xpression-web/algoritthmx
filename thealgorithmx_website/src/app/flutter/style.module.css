@@ -56,8 +56,8 @@
 
 @media (max-width: 768px) {
     .flutter-title {
-        line-height: 64px;
-        font-size: 84px;
+        line-height: 60px;
+        font-size: 52px;
         padding-bottom: 10px;
     }
     .flutter-description {
