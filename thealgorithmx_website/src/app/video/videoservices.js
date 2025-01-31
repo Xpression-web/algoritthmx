@@ -27,7 +27,7 @@ const VideoServices = () => {
           setIsInView(true);
         }
       },
-      { threshold: 0.1 } // Trigger animation when 50% of the component is in view
+      { threshold: 0.2 } // Trigger animation when 50% of the component is in view
     );
 
     if (scalableRef.current) {
@@ -98,7 +98,7 @@ const VideoServices = () => {
             <div
             key={service.id}
             className={`${styles["service-card1"]} relative group rounded-lg p-7 transition-all duration-700  ${styles["box-color"]} transform
-              ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}
+              ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
             `}
             style={{
               transitionDelay: `${index * 150}ms`,

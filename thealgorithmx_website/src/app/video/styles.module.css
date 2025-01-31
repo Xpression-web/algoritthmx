@@ -59,7 +59,7 @@
 }
 
 .service-card1:hover {
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 80px 25px rgba(255, 255, 255, 0.2); /* Starts with a small shadow and grows larger */
 }
 
 .main-craft{

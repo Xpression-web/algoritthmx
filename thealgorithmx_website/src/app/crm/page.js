@@ -7,8 +7,8 @@ import CRMTechStack from './crmtechstack'
 import CRMDevelopmentTimeline from './crmtimeline'
 import CRMOutcomes from './outcomes'
 import CostEstimations from './crmcost'
-import InsightSection from '../Graphics/insight'
-import Footer from '../Company/footer'
+import InsightSection from '../graphics/insight'
+import Footer from '../mainpage/footer'
 
 
 const page = () => {
