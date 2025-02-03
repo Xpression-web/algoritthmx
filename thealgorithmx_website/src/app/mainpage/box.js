@@ -1,19 +1,27 @@
 import React from 'react';
+import { Montserrat } from "next/font/google";
+import './style.css'
+
+
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const ServiceCard = ({ title, description }) => (
   <div className="relative flex-1  bg-black rounded-lg min-w-[250px] overflow-visible">
     
     {/* Border container */}
-    <div className="absolute inset-0 border border-blue-600   rounded-md opacity-50 shadow-[0_0_2px_2px_rgba(0,0,255,1)]"></div>
+    <div className="absolute inset-0  box-design"></div>
     {/* Title positioned on the border */}
     <div className="absolute -top-3 left-0 w-full flex justify-center">
-      <span className="bg-black px-4 text-white  rounded-md whitespace-nowrap">
+      <span className={`text-[18px] leading-[22px]  ${monsterfont1.className} bg-black px-4 text-white  rounded-lg whitespace-nowrap `}>
         {title}
       </span>
     </div>
     {/* Content */}
     <div className="relative flex flex-col items-center text-center px-[50px] py-[50px] space-y-4 z-10">
-      <p className="text-gray-300   text-2xl">{description}</p>
+      <p className={`text-[16px] leading-[26px]  font-[Helvetica] font-[400] text-white  p-4  `}>{description}</p>
     </div>
   </div>
 );
@@ -49,18 +57,18 @@ const ServicesSection = () => {
         </div>
 
         {/* Content section */}
-        <div className="relative p-6 bg-black rounded-lg overflow-visible shadow-[0_0_2px_2px_rgba(0,0,255,0.7)]">
-          <div className="absolute inset-0 border border-blue-600 opacity-50"></div>
+        <div className="relative p-6 bg-black box-design">
+          <div className="absolute inset-0  opacity-50"></div>
           <div className="absolute -top-3 left-0 w-full flex justify-center">
-            <span className="bg-black px-4 text-white   rounded-md whitespace-nowrap">
+            <span className={`text-[18px] leading-[22px]  ${monsterfont1.className} bg-black px-4 text-white  rounded-lg whitespace-nowrap `}>
               Content
             </span>
           </div>
-          <div className="relative flex flex-col items-center text-center px-[50px] py-[50px] space-y-4 z-10">
-            <p className="text-gray-300 mt-4">
-              Offering a range of content services from content creation to writing and marketing.
-              Creating top-notch content designed to attract your target audience
-              and fuel business expansion resulting in increased interaction
+          <div className="relative flex flex-col items-center text-center px-[50px] py-[10px] space-y-4 z-10">
+            <p className={`text-[16px] leading-[26px]  font-[Helvetica] font-[400] text-white mt-4   `}>
+              Offering a range of content services from content creation to writing and marketing.<br/>
+              Creating top-notch content designed to attract your target audience<br/>
+              and fuel business expansion resulting in increased interaction<br/>
               and enhanced brand visibility.
             </p>
           </div>

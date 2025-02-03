@@ -33,3 +33,29 @@
     background-color: rgba(255,255,255,0.2);
     border-radius: 4px;
   }
+
+  .box-design{
+    box-shadow: -1px 1px 5px 7px rgba(38, 109, 234, 0.2);
+    border-radius: 10px;
+    border: 1px solid #2775ff;
+  }
+  .box-style-red{
+    border: 1px solid #d9302d;
+    box-shadow: -1px 1px 5px 7px rgba(217, 48, 45, 0.1);
+  }
+  .box-style-yellow{
+    border: 1px solid #ffca00;
+    box-shadow: -1px 1px 5px 7px rgba(255, 202, 0, 0.1);
+  }
+  .box-style-green{
+    border: 1px solid #00d748;
+    box-shadow: -1px 1px 5px 7px rgba(0, 215, 72, 0.1);
+  }
+  .box-style-blue{
+    border: 1px solid #4285f4;
+    box-shadow: -1px 1px 5px 7px rgba(66, 133, 244, 0.1);
+  }
+  .box-style-purple{
+    border: 1px solid #ea0fb4;
+    box-shadow: -1px 1px 5px 7px rgba(234, 15, 180, 0.1);
+  }

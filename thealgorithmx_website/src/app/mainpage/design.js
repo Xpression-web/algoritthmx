@@ -1,5 +1,13 @@
 'use client';
 import './styles.css';
+import { Montserrat } from "next/font/google";
+
+
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const ResponsiveGrid = () => {
   return (
@@ -97,10 +105,10 @@ const GridItem = ({ image, text }) => {
         <img 
           src={`/images/${image}`} 
           alt="grid item" 
-          className="w-16 h-16 object-cover m-0 p-0 filter md:grayscale"
+          className="w-16 h-16 object-cover m-0 p-0 filter grayscale"
         />
       ) : (
-        <a href="#" className="text-[#e6c522] no-underline text-base lg:text-xl font-bold">
+        <a href="#" className={`text-[20px] leading-[34px] mb-[6px]  ${monsterfont.className} text-[#e6c522] no-underline `}>
           {text}
         </a>
       )}

@@ -1,5 +1,17 @@
 "use client";
 import React from "react";
+import { Montserrat } from "next/font/google";
+
+
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "300",
+});
+const monsterfont2 = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
+
 
 const DiagonalGridWithText = () => {
   // Array of image URLs or icons
@@ -16,7 +28,7 @@ const DiagonalGridWithText = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black w-full  flex flex-col md:flex-row ">
+    <div className="min-h-screen bg-black w-full  flex flex-col md:flex-row md:p-16">
       {/* Left Section: Centered Grid Container */}
       <div className="w-full p-4 flex-1 flex items-center justify-center xxl:w-4/5 my-10 md:h-auto ">
         <div className="transform rotate-45 xxl:w-1/2 xxl:h-1/2  ">
@@ -42,20 +54,20 @@ const DiagonalGridWithText = () => {
       <div className="w-full text-white py-4 px-6 flex-1 flex items-center justify-center md:w-1/2 ">
         <div className="container px-10  mt-3 max-w-screen-sm text-center md:text-left">
           {/* Added max-width and alignment */}
-          <h2 className="text-3xl md:text-4xl ">
+          <h2 className={`text-[36px] leading-[42px]  ${monsterfont1.className} text-white  `}>
             Empowered by Cutting-Edge
           </h2>
-          <h1 className="text-2xl md:text-3xl font-extrabold mb-5">
+          <h1 className={`text-[36px] leading-[42px]  ${monsterfont2.className} bg-black  text-white mb-5  `}>
             Tech Stack
           </h1>
 
-          <p className=" text-sm md:text-md mb-4">
+          <p className={`text-[15px] leading-[24px]  font-[Helvetica] font-[400] text-semi-white mt-[20px]`}>
             At AlgorithmX, our tech stack is designed to deliver powerful and scalable solutions. We leverage
             powerful technologies like Java, Kotlin, Flutter, React-Native, and Android SDK for seamless app and
             website development. Our creative processes are powered by Adobe Creative Cloud and Webflow, ensuring
             visually stunning and user-friendly designs.
           </p>
-          <p className="text-sm md:text-md">
+          <p className={`text-[15px] leading-[24px]  font-[Helvetica] font-[400] text-semi-white mt-[20px]`}>
             To drive marketing excellence, we utilize tools like Google Analytics, SEMrush, and Moz for in-depth
             insights and optimization. Platforms like HubSpot streamline our CRM and marketing automation, while
             Midjourney and ChatGPT enhance our content creation, and Hootsuite facilitates social media management.

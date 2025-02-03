@@ -1,5 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { Montserrat } from "next/font/google";
+
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
+
 
 const FeaturesSection = () => {
   const features = [
@@ -40,10 +48,10 @@ const FeaturesSection = () => {
                   className="rounded"
                 />
               </div>
-              <h2 className="text-2xl font-bold mb-4 leading-tight">
+              <h2 className={`text-[24px] leading-[1.1] mb-[16px] mt-[16px]  ${monsterfont.className} `}>
                 {feature.title}
               </h2>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className={`text-[15px] leading-[24px]  font-[400] font-[Helvetica] text-semi-white `}>
                 {feature.description}
               </p>
             </div>

@@ -1,4 +1,11 @@
 import React from 'react';
+import { Montserrat } from "next/font/google";
+
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const CROStrategies = () => {
   const columns = [
@@ -31,8 +38,8 @@ const CROStrategies = () => {
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-[1200px] mx-auto">
-        <h1 className="text-2xl md:text-5xl text-white text-center font-light mb-12">
-          Drive high-conversions with our Award-winning CRO Strategies
+        <h1 className={` text-[42px] leading-[1.1] md:text-[64px] md:leading-[68px] mb-12 text-center text-white  ${monsterfont.className} `}>
+          Drive high-conversions <br/>with our Award- <br/> winning CRO Strategies
         </h1>
         <div className='p-4 '>
         <div className="bg-black rounded-lg shadow-lg shadow-emerald-500/20 overflow-hidden ">
@@ -47,11 +54,11 @@ const CROStrategies = () => {
                 )}
                 <div className="space-y-4">
                   {column.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-start gap-2">
+                    <div key={itemIndex} className="flex items-start ">
                       <span className={`mt-1 text-xl ${item.included ? 'text-emerald-500' : 'text-red-500'}`}>
                         {item.included ? '✓' : '✕'}
                       </span>
-                      <p className="text-white text-sm md:text-base">
+                      <p className={`text-[16px] leading-[24px]  font-[400] font-[Helvetica] text-white `}>
                         {item.text}
                       </p>
                     </div>

@@ -1,9 +1,21 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
+import { Montserrat } from "next/font/google";
+
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
+
 
 const CopywritingMarketingImpact = () => {
   const [isInView, setIsInView] = useState(false);
   const scalableRef = useRef(null);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -12,7 +24,7 @@ const CopywritingMarketingImpact = () => {
           setIsInView(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.2}
     );
 
     if (scalableRef.current) {
@@ -70,11 +82,10 @@ const CopywritingMarketingImpact = () => {
       <div className="max-w-[1200px] mx-auto p-4">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-6">
-          <h1 className="text-4xl md:text-5xl font-bold md:w-1/2">
-          Impact of Our SEO<br/>
-          Copywriting Agency
+        <h1 className={`text-[44px] leading-[48px]  ${monsterfont1.className} `}>
+            Impact of Our SEO<span className={`text-[44px] leading-[48px]  ${monsterfont.className} `}>  Copywriting Agency </span>
           </h1>
-          <p className="md:w-1/2 text-gray-300">
+          <p className={`md:w-full text-[15px] leading-[24px] font-[400] font-[Helvetica]  text-white`}>
           Our SEO copywriting agency enhances search engine rankings, drives organic traffic, and improves user experience. By crafting high-quality, optimized content, we boost conversion rates, strengthen brand authority, and support sustainable long-term growth for your business.
           </p>
         </div>
@@ -87,7 +98,7 @@ const CopywritingMarketingImpact = () => {
           {impactData.map((item, index) => (
             <div
             key={index}
-            className={`relative p-10 min-h-[200px]  rounded-lg bg-black transition-all duration-700 transform
+            className={`relative p-6 min-h-[200px]  rounded-lg bg-black transition-all duration-700 transform
               ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}
             `}
             style={{
@@ -103,10 +114,10 @@ const CopywritingMarketingImpact = () => {
           
             {/* Content */}
             <div className="flex justify-between items-start mb-6">
-              <h3 className="text-md font-bold w-4/5">{item.title}</h3>
+              <h3 className={`text-[24px] leading-[28px] font-[500] font-[Helvetica]  text-white w-4/5`}>{item.title}</h3>
               <span className="text-3xl">{item.icon}</span>
             </div>
-            <p className="text-gray-400 text-base hover:text-white">
+            <p className={`text-[15px] leading-[24px] font-[400] font-[Helvetica]  text-semi-white hover:text-white`}>
               {item.description}
             </p>
           </div>

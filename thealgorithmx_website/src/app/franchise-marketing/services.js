@@ -1,19 +1,21 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from "../video/styles.module.css";
+import style from '../graphics/styles.module.css'
 import { Montserrat } from "next/font/google";
+
 
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "100",
 });
-const monsterfont2 = Montserrat({
+const monsterfont = Montserrat({
   subsets: ["latin"],
-  weight: "300",
+  weight: "200",
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
-  weight: "600",
+  weight: "700",
 });
 
 const FranchiseServices = () => {
@@ -82,11 +84,30 @@ const FranchiseServices = () => {
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
-      <div className="max-w-6xl mx-auto" ref={scalableRef}>
-        <div className="text-center mb-8 md:mb-16">
-          <h1 className={`text-white ${styles["video"]} ${monsterfont1.className} mb-4`}>
-            FRANCHISE MARKETING
-          </h1>
+      <div className="max-w-[1200px] mx-auto" ref={scalableRef}>
+      <div className="text-center mb-16 relative overflow-hidden">
+          {/* Background "SCALABLE" text */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <span
+              ref={scalableRef}
+              className={`mb-8 md:text-[100px] text-[40px] transform transition-transform duration-700 ${monsterfont3.className} text-[#151515] ${
+                isInView ? `${style["scale-110"]} ${style["opacity-100"]}` : `${style["scale-75"]} ${style["opacity-0"]}`
+              }`}
+              
+            >
+              SCALABLE
+            </span>
+          </div>
+
+          {/* Main titles */}
+          <div className="relative z-10">
+            <h2 className={` ${style["description"]} ${monsterfont1.className} mt-14 text-white`}>
+              FRANCHISE MARKETING
+            </h2>
+            <h2 className={`${style["description"]} ${monsterfont3.className} text-white -mt-2`}>
+              SERVICES
+            </h2>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">

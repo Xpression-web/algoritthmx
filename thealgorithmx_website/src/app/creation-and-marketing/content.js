@@ -98,8 +98,8 @@
               <div className="mb-6">
                 {step.icon}
               </div>
-              <h3 className="text-white text-xl font-bold mb-10 mt-10">{step.title}</h3>
-              <p className="text-gray-400 text-md">{step.description}</p>
+              <h3 className={`text-[24px] leading-[1.5] mb-[20px]  ${monsterfont4.className} `}>{step.title}</h3>
+              <p className={`text-[16px] leading-[28px]  font-[400] font-[Helvetica]  text-semi-white`}>{step.description}</p>
             </div>
           ))}
         </div>

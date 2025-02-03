@@ -302,7 +302,7 @@ const Navbar = () => {
                             <div className="hidden md:flex items-center space-x-6">
                                 {navItems.map((item, index) => (
                                     <div key={item.name} className="relative" onMouseEnter={() => handleMouseEnter(index)}>
-                                        <Link href={item.href} className="text-white hover:text-gray-200 text-md font-light whitespace-nowrap">
+                                        <Link href={item.href} className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap `}>
                                             {item.name}
                                         </Link>
                                     </div>
@@ -310,7 +310,7 @@ const Navbar = () => {
                             </div>
 
                             <div className="flex items-center justify-center">
-                                <Link href="/">
+                                <Link href="/mainpage">
                                     <img
                                         src="images/logo5.png"
                                         alt="Company Logo"
@@ -321,7 +321,7 @@ const Navbar = () => {
                             <div className="hidden md:flex items-center justify-end space-x-4">
                                 <div className="relative">
                                     <Link href="tel:+1234567890" className="flex items-center pr-8 pl-6 py-3 rounded-full bg-black text-white border border-gray-600 hover:border-gray-400 transition">
-                                        <span className="text-sm font-medium mr-4">Connect</span>
+                                        <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap mr-6`}>Connect</span>
                                         <div className="absolute -right-1 top-1/2 -translate-y-1/2">
                                             <div className="bg-blue-500 p-2.5 rounded-full">
                                                 <Phone size={20} />
@@ -352,7 +352,7 @@ const Navbar = () => {
                                 } md:hidden overflow-y-auto`}
                             >
                                 <div className="flex justify-between items-center p-4 border-b border-gray-200">
-                                    <Link href="/">
+                                    <Link href="">
                                         <img
                                             src="images/logo5.png"
                                             alt="Company Logo"
@@ -374,7 +374,7 @@ const Navbar = () => {
                                                 className="flex items-center justify-between py-3 text-black cursor-pointer"
                                                 onClick={() => item.subItems.length > 0 ? toggleMobileSubmenu(index) : null}
                                             >
-                                                <span className="text-lg font-light">{item.name}</span>
+                                                <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-black whitespace-nowrap `}>{item.name}</span>
                                                 {item.subItems.length > 0 && (
                                                     <ChevronDown 
                                                         className={`transform transition-transform ${mobileSubmenuOpen === index ? 'rotate-180' : ''}`} 
@@ -406,7 +406,7 @@ const Navbar = () => {
                                                                         <Link 
                                                                             key={subItem.name} 
                                                                             href={subItem.href}
-                                                                            className="block py-2 pl-4 text-gray-500 hover:text-black"
+                                                                            className={` block py-2 pl-2 text-[14px] leading-[22px] font-[300] font-[Helvetica] text-black whitespace-nowrap `}
                                                                         >
                                                                             {subItem.name}
                                                                         </Link>
@@ -456,7 +456,7 @@ const Navbar = () => {
                                                                 }`} 
                                                                 onMouseEnter={() => handleCategoryHover(idx)}
                                                             >
-                                                                <span className="hover:text-white transition-colors">
+                                                                <span className={`text-[20px] leading-[28px] font-[700] font-[Helvetica] text-white whitespace-nowrap `}>
                                                                     {category.category}
                                                                 </span>
                                                             </div>
@@ -477,9 +477,9 @@ const Navbar = () => {
                                                                         <img 
                                                                             src={item.icon} 
                                                                             alt={item.name} 
-                                                                            className="w-4 h-4 mr-3" 
+                                                                            className="w-4 h-4 mr-5" 
                                                                         />
-                                                                        <span className="text-green-300 text-md group-hover:text-white transition-colors">
+                                                                        <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap `}>
                                                                             {item.name}
                                                                         </span>
                                                                     </Link>
