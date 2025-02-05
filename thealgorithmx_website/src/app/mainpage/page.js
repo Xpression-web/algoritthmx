@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../navbar/navbar';
 import DiagonalGridWithText from './rotate';
 import ResponsiveGrid from './design';
 import PlatformPerformance from './button';
@@ -8,14 +9,16 @@ import Hexagon from './hexagon';
 import ResultRow from './band';
 import MarketingGrid from './Marketing';
 import  Reviews from './reviews';
-import Footer from './footer';
-import Home from './Honeycomb';
+import ParticleAnimation from './Honeycomb';
+import InsightSection from '../graphics/insight'
+import Footer from '../mainpage/footer';
 
 
 const Page = () => {
   return (
     <div >
-      <Home/>
+      <ParticleAnimation/>
+      <Navbar/>
       <ResponsiveGrid/>
       <Hexagon/>
       <ServicesSection/>
@@ -25,6 +28,7 @@ const Page = () => {
       <ResultRow/>
       <MarketingGrid/>
       <Reviews/>
+      <InsightSection/>
       <Footer/>
     </div>
   );

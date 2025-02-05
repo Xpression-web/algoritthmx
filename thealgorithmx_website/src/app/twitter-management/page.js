@@ -5,6 +5,8 @@ import TwitterGrowHeroSection from './multimedia'
 import TwitterSmoothScrollStack from './solution'
 import TwitterServicesGrid from './business'
 import TwitterBusinessSection from './grow'
+import InsightSection from '../graphics/insight'
+import Footer from '../mainpage/footer';
 
 
 const page = () => {
@@ -16,6 +18,8 @@ const page = () => {
     <TwitterSmoothScrollStack/>
     <TwitterServicesGrid/>
     <TwitterBusinessSection/>
+    <InsightSection/>
+    <Footer/>
     </div>
   )
 }

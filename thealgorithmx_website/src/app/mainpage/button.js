@@ -1,35 +1,56 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGoogle,
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faSpotify,
+  faGithub,
+  faAmazon,
+  faYoutube,
+  faTiktok,
+  faReddit,
+  faTwitter,
+  faDiscord
+} from "@fortawesome/free-brands-svg-icons";
+import { Montserrat } from "next/font/google";
+
+const monsterfont3 = Montserrat({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const firstRowIcons = [
-  { name: "Image1", colStart: "md:col-start-1", imgSrc: "images/11.png" },
-  { name: "Icon2", colStart: "md:col-start-3", imgSrc: "images/brew.png" },
-  { name: "Icon3", colStart: "md:col-start-5", imgSrc: "Images/gg.jpg" },
-  { name: "Icon4", colStart: "md:col-start-7", imgSrc: "Images/gg.jpg" },
-  { name: "Icon5", colStart: "md:col-start-9", imgSrc: "Images/gg.jpg" },
-  { name: "Icon6", colStart: "md:col-start-11", imgSrc: "Images/gg.jpg" }
+  { name: "Google", colStart: "md:col-start-1", icon: faGoogle },
+  { name: "Meta", colStart: "md:col-start-3", icon: faFacebook },
+  { name: "Instagram", colStart: "md:col-start-5", icon: faInstagram },
+  { name: "LinkedIn", colStart: "md:col-start-7", icon: faLinkedin },
+  { name: "Spotify", colStart: "md:col-start-9", icon: faSpotify },
+  { name: "GitHub", colStart: "md:col-start-11", icon: faGithub }
 ];
 
 const secondRowIcons = [
-  { name: "Icon7", colStart: "md:col-start-2", imgSrc: "Images/gg.jpg" },
-  { name: "Icon8", colStart: "md:col-start-4", imgSrc: "Images/gg.jpg" },
-  { name: "Icon9", colStart: "md:col-start-6", imgSrc: "Images/gg.jpg" },
-  { name: "Icon10", colStart: "md:col-start-8", imgSrc: "Images/gg.jpg" },
-  { name: "Icon11", colStart: "md:col-start-10", imgSrc: "Images/gg.jpg" },
-  { name: "Icon12", colStart: "md:col-start-12", imgSrc: "Images/gg.jpg" }
+  { name: "Amazon", colStart: "md:col-start-2", icon: faAmazon },
+  { name: "YouTube", colStart: "md:col-start-4", icon: faYoutube },
+  { name: "TikTok", colStart: "md:col-start-6", icon: faTiktok },
+  { name: "Reddit", colStart: "md:col-start-8", icon: faReddit },
+  { name: "Twitter", colStart: "md:col-start-10", icon: faTwitter },
+  { name: "Discord", colStart: "md:col-start-12", icon: faDiscord }
 ];
 
 const PlatformPerformance = () => {
   return (
-    <div className="min-h-screen bg-black text-white p-4 md:p-6 flex items-center justify-center">
-      <div className="max-w-6xl w-full border border-gray-700 md:border-2 rounded-lg p-6 md:p-12 shadow-[0_0_4px_2px_rgba(0,0,255,0.7)]">
-        <div className="space-y-12">
+    <div className="min-h-screen bg-black text-white p-4 md:p-8 flex items-center justify-center">
+      <div className="max-w-6xl w-full p-6 md:p-12 box-design1 ">
+        <div className="space-y-20">
           {/* Header Section */}
-          <div className="space-y-8 pb-12 border-b border-gray-700">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <h1 className="text-4xl md:text-6xl font-bold">
+          <div className="space-y-8 pb-12 border-b border-gray-300">
+            <div className="grid md:grid-cols-2 gap-8 items-center mt-10">
+              <h1 className={`text-[38px] md:text-[56px] leading-[1.1] ${monsterfont3.className} text-white`}>
                 Better platform performance
               </h1>
-              <p className="text-gray-400 text-lg">
+              <p className="text-[16px] leading-[24px] opacity-50 font-[Helvetica] text-white">
                 Achieving better performance on the platforms that matter involves
                 optimizing key aspects of your digital presence. This includes enhancing
                 speed, reliability, and user experience to ensure you meet the needs of
@@ -39,38 +60,24 @@ const PlatformPerformance = () => {
           </div>
 
           {/* Icons Grid */}
-          <div className="space-y-8">
+          <div className="">
             {/* First row - odd columns */}
-            <div className="grid grid-cols-2 md:grid-cols-12 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:mb-[100px]">
               {firstRowIcons.map((item, index) => (
-                <div 
-                  key={`row1-${index}`} 
-                  className={`flex items-center justify-center ${item.colStart}`}
-                >
-                  <div className="w-14 h-14 md:w-16 md:h-16   overflow-hidden flex items-center justify-center ">
-                    <img
-                      src={item.imgSrc}
-                      alt={item.name}
-                      className="w-full h-full object-cover"
-                    />
+                <div key={`row1-${index}`} className={`flex items-center justify-center ${item.colStart}`}>
+                  <div className="w-8 h-8  flex items-center justify-center">
+                    <FontAwesomeIcon icon={item.icon} className="" />
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Second row - even columns */}
-            <div className="grid grid-cols-2 md:grid-cols-12 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-12 gap-8 mt-[20px] md:mt-[0px] md:mb-[100px]  ">
               {secondRowIcons.map((item, index) => (
-                <div 
-                  key={`row2-${index}`} 
-                  className={`flex items-center justify-center ${item.colStart}`}
-                >
-                   <div className="w-14 h-14 md:w-16 md:h-16   overflow-hidden flex items-center justify-center ">
-                    <img
-                      src={item.imgSrc}
-                      alt={item.name}
-                      className="w-full h-full object-cover"
-                    />
+                <div key={`row2-${index}`} className={`flex items-center justify-center ${item.colStart}`}>
+                  <div className="w-8 h-8  flex items-center justify-center">
+                    <FontAwesomeIcon icon={item.icon} className=" text-md" />
                   </div>
                 </div>
               ))}

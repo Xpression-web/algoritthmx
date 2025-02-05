@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../navbar/navbar';
 import CRMServices from './crmservices'
 import CRMDashboard from './development'
 import CRMSection from './home'
@@ -8,12 +9,13 @@ import CRMDevelopmentTimeline from './crmtimeline'
 import CRMOutcomes from './outcomes'
 import CostEstimations from './crmcost'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../mainpage/footer';
 
 
 const page = () => {
   return (
     <div>
+      <Navbar/>
       <CRMSection/>
       <CRMServices/>
       <CRMSystem/>

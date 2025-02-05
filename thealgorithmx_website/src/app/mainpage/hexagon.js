@@ -11,9 +11,9 @@ const Hexagon = () => {
   return (
     <div className="w-full h-full bg-black flex justify-center items-center">
       <div className="relative w-[500px] h-[500px]">
-        {/* Outer hexagon */}
+        {/* Outer hexagon - hidden on mobile (< 768px) */}
         <svg
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] hidden md:block"
           viewBox="0 0 300 300"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -26,7 +26,7 @@ const Hexagon = () => {
         {/* Inner hexagon */}
         <div className="container">
           <svg
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[250px]"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-[200px] h-[160px] md:w-[300px] md:h-[250px]"
             viewBox="0 0 300 300"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -49,7 +49,7 @@ const Hexagon = () => {
 
         {/* Surrounding Items positioned at hexagon vertices */}
         {/* Top-left */}
-        <Link href="/social-media" className="absolute left-[5%] top-[10.3%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="social-app" className="absolute left-[20%] top-[20.3%] md:left-[5%] md:top-[10.3%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads7.png" 
             alt="Email Marketing" 
@@ -59,7 +59,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Top-right */}
-        <Link href="/ppc" className="absolute -right-[10%] top-[10.3%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="/ppc-advertising" className="absolute -right-[5%] top-[20.3%] md:-right-[10%] md:top-[10.3%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads6.png" 
             alt="Social Media" 
@@ -69,7 +69,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Left-middle */}
-        <Link href="/email-marketing" className="absolute -left-[5%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="" className="absolute left-[10%] md:-left-[5%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads5.png" 
             alt="Content" 
@@ -79,7 +79,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Right-middle */}
-        <Link href="/pr" className="absolute -right-[25%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="/public-relations" className="absolute -right-[8%] md:-right-[25%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads3.png" 
             alt="PPC Advertising" 
@@ -89,7 +89,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Bottom-right */}
-        <Link href="/app-store" className="absolute -right-[10%] top-[84.7%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="/app-store" className="absolute -right-[5%] top-[75%] md:-right-[10%] md:top-[84.7%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads2.png" 
             alt="Public Relations" 
@@ -99,7 +99,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Bottom-left */}
-        <Link href="/content" className="absolute left-[5%] top-[84.7%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="/content" className="absolute left-[20%] top-[75%] md:left-[5%] md:top-[84.7%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads4.png" 
             alt="App Store" 

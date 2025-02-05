@@ -62,24 +62,24 @@ const Navbar = () => {
         },
         {
             name: 'Creative Assets',
-            href: '/creative-assets',
+            href: '#',
             subItems: [
-                { category: 'Branding', href: '/android' },
-                { category: 'Graphics', href: '/android' },
-                { category: 'Video', href: '/android' },
-                { category: 'Content Creation', href: '/android' },
+                { category: 'Branding', href: '/branding' },
+                { category: 'Graphics', href: '/graphics' },
+                { category: 'Video', href: '/video' },
+                { category: 'Content Creation', href: '/contentcreation' },
             ]
         },
         {
             name: '</Code>',
-            href: '/code',
+            href: '#',
             subItems: [
                 {
                     category: 'App/Mobile',
                     icon: '',
                     items: [
-                        { name: 'Android Development', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'iPhone/iPad Development', href: '/ios', icon: '/icons/ios.svg' },
+                        { name: 'Android Development', href: '/android-app', icon: '/icons/android.svg' },
+                        { name: 'iPhone/iPad Development', href: '/iphone-app', icon: '/icons/ios.svg' },
                         { name: 'Xamarin Development', href: '/xamarin', icon: '/icons/xamarin.svg' },
                         { name: 'Flutter Development', href: '/flutter', icon: '/icons/flutter.svg' },
                         { name: 'React Native Development', href: '/react-native', icon: '/icons/react.svg' }
@@ -89,76 +89,78 @@ const Navbar = () => {
                     category: 'Web',
                     icon: '',
                     items: [
-                        { name: 'Front end', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'Back end', href: '/ios', icon: '/icons/ios.svg' }
+                        { name: 'Front-End Designing-HTML/CSS/Bootstrap/More', href: '/front-end', icon: '/icons/android.svg' },
+                        { name: 'Back-End Developmen-Python/.NET/More', href: '/back-end', icon: '/icons/ios.svg' }
                     ]
                 },
                 {
                     category: 'CMS Development',
                     icon: '',
                     items: [
-                        { name: 'Shopify', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'Magento', href: '/ios', icon: '/icons/ios.svg' },
-                        { name: 'Wordpress', href: '/xamarin', icon: '/icons/xamarin.svg' },
-                        { name: 'HubSpot', href: '/flutter', icon: '/icons/flutter.svg' },
-                        { name: 'Big Commerce', href: '/react-native', icon: '/icons/react.svg' },
-                        { name: 'Drupal', href: '/react-native', icon: '/icons/react.svg' }
+                        { name: 'Shopify', href: '/shopify', icon: '/icons/android.svg' },
+                        { name: 'Magento', href: '/magento', icon: '/icons/ios.svg' },
+                        { name: 'Wordpress', href: '/wordpress', icon: '/icons/xamarin.svg' },
+                        { name: 'HubSpot', href: '/hubspot', icon: '/icons/flutter.svg' },
+                        { name: 'Big Commerce', href: '/bigcommerce', icon: '/icons/react.svg' },
+                        { name: 'Drupal', href: '/drupal', icon: '/icons/react.svg' }
                     ]
                 },
-                { category: 'CRM', href: '/android' },
-                { category: 'ERP', href: '/android' },
-                { category: 'Blockchain', href: '/android' },
-                { category: 'Software', href: '/android' },
+                { category: 'CRM', href: '/crm' },
+                { category: 'ERP', href: '/erp' },
+                { category: 'Blockchain', href: '/blockchain' },
+                { category: 'Software', href: '/software' },
             ]
         },
         {
             name: 'Leads & Revenue',
-            href: '/code',
+            href: '#',
             subItems: [
                 {
                     category: 'SEO',
                     icon: '',
                     items: [
-                        { name: 'seo audit', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'local seo', href: '/ios', icon: '/icons/ios.svg' },
-                        { name: 'ecommerce seo', href: '/xamarin', icon: '/icons/xamarin.svg' },
-                        { name: 'seo', href: '/flutter', icon: '/icons/flutter.svg' },
+                        { name: 'SEO Audits', href: '/seoaudits', icon: '/icons/android.svg' },
+                        { name: 'Local SEO', href: '/local-seo', icon: '/icons/ios.svg' },
+                        { name: 'Ecommerce SEO', href: '/ecommerce-seo', icon: '/icons/xamarin.svg' },
+                        { name: 'SEO Consulting', href: '/seo-consulting', icon: '/icons/flutter.svg' },
+                        { name: ' Link Building', href: '/link-building', icon: '/icons/flutter.svg' },
+                        { name: 'Technical SEO Audit', href: '/technical-seo', icon: '/icons/flutter.svg' },
+                        { name: 'National SEO', href: '/national-seo', icon: '/icons/flutter.svg' },
+                        { name: 'Mobile SEO', href: '/mobile-seo', icon: '/icons/flutter.svg' },
+                        { name: 'Global/International SEO', href: '/global-seo', icon: '/icons/flutter.svg' },
+                        { name: 'Enterprise SEO', href: '/enterprise-seo', icon: '/icons/flutter.svg' },
+                        { name: 'Amazon SEO', href: '/amazon-seo', icon: '/icons/flutter.svg' },
+                        { name: 'Penalization Recovery', href: '/penalization-recovery', icon: '/icons/flutter.svg' },
                     ]
                 },
                 {
                     category: 'Social Media',
                     icon: '',
                     items: [
-                        { name: 'Faceboook', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'Instagram', href: '/ios', icon: '/icons/ios.svg' },
-                        { name: 'Linkedin', href: '/ios', icon: '/icons/ios.svg' },
-                        { name: 'Twitter', href: '/ios', icon: '/icons/ios.svg' },
+                        { name: 'Social Media Audit', href: '/social-media-audit', icon: '/icons/android.svg' },
+                        { name: 'Facebook Management', href: '/facebook-management', icon: '/icons/ios.svg' },
+                        { name: 'Instagram Management', href: '/instagram-management', icon: '/icons/ios.svg' },
+                        { name: 'Linkedin Management', href: '/linkedin-management', icon: '/icons/ios.svg' },
+                        { name: 'Twitter Management', href: '/twitter-management', icon: '/icons/ios.svg' },
+                        { name: 'Youtube Management', href: '/youtube-management', icon: '/icons/ios.svg' },
+                        { name: 'Tiktok Management', href: '/tiktok-management', icon: '/icons/ios.svg' },
+                        { name: 'Social Media Consulting', href: '/social-media-consulting', icon: '/icons/ios.svg' },
                     ]
                 },
-                {
-                    category: 'PPC Advertising',
-                    icon: '',
-                    items: [
-                        { name: 'Google ads', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'Bing ads', href: '/ios', icon: '/icons/ios.svg' },
-                        { name: 'Twitter ads', href: '/xamarin', icon: '/icons/xamarin.svg' },
-                        { name: 'Facebook ads', href: '/flutter', icon: '/icons/flutter.svg' },
-                        { name: 'Instagram ads', href: '/react-native', icon: '/icons/react.svg' },
-                    ]
-                },
+                { category: 'PPC Advertising', href: '/ppc-advertising' },
                 {
                     category: 'Content ',
                     icon: '',
                     items: [
-                        { name: 'Content Creation', href: '/android', icon: '/icons/android.svg' },
-                        { name: 'Copy writing', href: '/ios', icon: '/icons/ios.svg' },
+                        { name: 'Creation & Marketing', href: '/creation-and-marketing', icon: '/icons/android.svg' },
+                        { name: 'SEO Copywriting', href: '/seo-copywriting', icon: '/icons/ios.svg' },
                     ]
                 },
-                { category: 'App Store', href: '/android' },
-                { category: 'Conversion Rate', href: '/app-store' },
-                { category: 'Public Relations', href: '/app-store' },
-                { category: 'Franchise', href: '/app-store' },
-                { category: 'Influencer', href: '/app-store' },
+                { category: 'App Store', href: '/app-store' },
+                { category: 'Conversion Rate', href: '/conversion-rate-optimization' },
+                { category: 'Public Relations', href: '/public-relations' },
+                { category: 'Franchise', href: '/franchise-marketing' },
+                { category: 'Influencer', href: '/influencer-marketing' },
             ]
         },
         {
@@ -320,29 +322,30 @@ const Navbar = () => {
                             </div>
                             <div className="hidden md:flex items-center justify-end space-x-4">
                                 <div className="relative">
-                                    <Link href="tel:+1234567890" className="flex items-center pr-8 pl-6 py-3 rounded-full bg-black text-white border border-gray-600 hover:border-gray-400 transition">
+                                <a href="/contact-us"  className="flex items-center pr-8 pl-6 py-3 rounded-full bg-black text-white border border-gray-600 hover:border-gray-400 transition">
                                         <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap mr-6`}>Connect</span>
                                         <div className="absolute -right-1 top-1/2 -translate-y-1/2">
                                             <div className="bg-blue-500 p-2.5 rounded-full">
                                                 <Phone size={20} />
                                             </div>
                                         </div>
-                                    </Link>
+                                    </a>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <Link href="https://twitter.com" target="_blank" className="text-white hover:text-gray-200">
-                                        <Twitter size={20} />
+                                    <Link href="http://x.com/algorithmxinc" target="_blank" className="text-white hover:text-gray-200">
+                                    <img src="/images/icons8-twitter.svg" alt="twitter" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[240deg] hover:brightness-[100%] hover:contrast-[100%]" />
                                     </Link>
-                                    <Link href="https://instagram.com" target="_blank" className="text-white hover:text-gray-200">
-                                        <Instagram size={20} />
+                                    <Link href="https://www.instagram.com/thealgorithmx/" target="_blank" className="text-white hover:text-gray-200">
+                                    <img src="/images/icons8-instagram.svg" alt="instagram" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
                                     </Link>
-                                    <Link href="https://facebook.com" target="_blank" className="text-white hover:text-gray-200">
-                                        <Facebook size={20} />
+                                    <Link href="https://www.facebook.com/algorithmxinc" target="_blank" className="text-white hover:text-gray-200">
+                                    <img src="/images/icons8-facebook.svg" alt="Facebook" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
                                     </Link>
-                                    <Link href="https://linkedin.com" target="_blank" className="text-white hover:text-gray-200">
-                                        <Linkedin size={20} />
+                                    <Link href="https://www.linkedin.com/company/algorithmxinc" target="_blank" className="text-white ">
+                                    <img src="/images/icons8-linkedin.svg" alt="linkedin" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
                                     </Link>
                                 </div>
+
                             </div>
 
                             <div 
@@ -368,59 +371,67 @@ const Navbar = () => {
                                 </div>
 
                                 <div className="px-4 py-6 space-y-2">
-                                    {navItems.map((item, index) => (
-                                        <div key={item.name} className="border-b border-gray-200">
-                                            <div 
-                                                className="flex items-center justify-between py-3 text-black cursor-pointer"
-                                                onClick={() => item.subItems.length > 0 ? toggleMobileSubmenu(index) : null}
-                                            >
-                                                <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-black whitespace-nowrap `}>{item.name}</span>
-                                                {item.subItems.length > 0 && (
-                                                    <ChevronDown 
-                                                        className={`transform transition-transform ${mobileSubmenuOpen === index ? 'rotate-180' : ''}`} 
-                                                        size={20} 
-                                                    />
-                                                )}
-                                            </div>
-                                            
-                                            {item.subItems.length > 0 && (
-                                                <div className={`mobile-submenu ${mobileSubmenuOpen === index ? 'open' : ''}`}>
-                                                    {item.subItems.map((category, categoryIndex) => (
-                                                        <div key={category.category} className="pl-4">
-                                                            <div 
-                                                                className="flex items-center justify-between py-2 text-gray-600 cursor-pointer"
-                                                                onClick={() => toggleMobileCategory(categoryIndex)}
-                                                            >
-                                                                <span>{category.category}</span>
-                                                                {category.items && (
-                                                                    <ChevronRight 
-                                                                        className={`transform transition-transform ${mobileCategoryOpen === categoryIndex ? 'rotate-90' : ''}`} 
-                                                                        size={18} 
-                                                                    />
-                                                                )}
-                                                            </div>
-                                                            
-                                                            {category.items && (
-                                                                <div className={`mobile-submenu ${mobileCategoryOpen === categoryIndex ? 'open' : ''}`}>
-                                                                    {category.items.map((subItem) => (
-                                                                        <Link 
-                                                                            key={subItem.name} 
-                                                                            href={subItem.href}
-                                                                            className={` block py-2 pl-2 text-[14px] leading-[22px] font-[300] font-[Helvetica] text-black whitespace-nowrap `}
-                                                                        >
-                                                                            {subItem.name}
-                                                                        </Link>
-                                                                    ))}
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
+    {navItems.map((item, index) => (
+        <div key={item.name} className="border-b border-gray-200">
+            {item.subItems.length > 0 ? (
+                <div 
+                    className="flex items-center justify-between py-3 text-black cursor-pointer"
+                    onClick={() => toggleMobileSubmenu(index)}
+                >
+                    <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-black whitespace-nowrap`}>{item.name}</span>
+                    <ChevronDown 
+                        className={`transform transition-transform ${mobileSubmenuOpen === index ? 'rotate-180' : ''}`} 
+                        size={20} 
+                    />
+                </div>
+            ) : (
+                <Link href={item.href} className={`block py-3 text-[20px] leading-[28px] font-[400] font-[Helvetica] text-black whitespace-nowrap`}>
+                    {item.name}
+                </Link>
+            )}
+            
+            {item.subItems.length > 0 && (
+                <div className={`mobile-submenu ${mobileSubmenuOpen === index ? 'open' : ''}`}>
+                    {item.subItems.map((category, categoryIndex) => (
+                        <div key={category.category} className="pl-4">
+                            {category.items ? (
+                                <div 
+                                    className="flex items-center justify-between py-2 text-gray-600 cursor-pointer"
+                                    onClick={() => toggleMobileCategory(categoryIndex)}
+                                >
+                                    <span>{category.category}</span>
+                                    <ChevronRight 
+                                        className={`transform transition-transform ${mobileCategoryOpen === categoryIndex ? 'rotate-90' : ''}`} 
+                                        size={18} 
+                                    />
+                                </div>
+                            ) : (
+                                <Link href={category.href} className={`block py-2 text-gray-600`}>
+                                    {category.category}
+                                </Link>
+                            )}
+                            
+                            {category.items && (
+                                <div className={`mobile-submenu ${mobileCategoryOpen === categoryIndex ? 'open' : ''}`}>
+                                    {category.items.map((subItem) => (
+                                        <Link 
+                                            key={subItem.name} 
+                                            href={subItem.href}
+                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[300] font-[Helvetica] text-black whitespace-nowrap`}
+                                        >
+                                            {subItem.name}
+                                        </Link>
                                     ))}
-                                    
-                                    <div className="pt-6">
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+        
+    ))}
+    <div className="pt-6">
                                         <div className="flex space-x-4">
                                             <Link href="https://twitter.com" target="_blank" className="text-black hover:text-gray-600">
                                                 <Twitter size={20} />
@@ -436,7 +447,7 @@ const Navbar = () => {
                                             </Link>
                                         </div>
                                     </div>
-                                </div>
+</div>
                             </div>
 
                             {activeDropdown !== null && navItems[activeDropdown]?.subItems.length > 0 && (
@@ -451,7 +462,7 @@ const Navbar = () => {
                                                     {navItems[activeDropdown].subItems.map((category, idx) => (
                                                         <Link key={category.category} href={category.href || '#'}>
                                                             <div 
-                                                                className={`flex items-center px-4 py-2 cursor-pointer ${
+                                                                className={`flex items-center px-4 py-1 cursor-pointer ${
                                                                     activeCategory === idx ? 'text-white' : 'text-gray-300'
                                                                 }`} 
                                                                 onMouseEnter={() => handleCategoryHover(idx)}
@@ -464,7 +475,7 @@ const Navbar = () => {
                                                     ))}
                                                 </div>
                                                 <div className="flex-1 pl-8">
-                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:grid-flow-col md:auto-cols-fr">
                                                         {activeCategory !== null && 
                                                             navItems[activeDropdown].subItems[activeCategory]?.items?.map((item, index) => {
                                                                 const columnClass = index < 8 ? 'md:col-start-1' : 'md:col-start-2';
@@ -474,11 +485,6 @@ const Navbar = () => {
                                                                         href={item.href} 
                                                                         className={`flex items-center group ${columnClass}`}
                                                                     >
-                                                                        <img 
-                                                                            src={item.icon} 
-                                                                            alt={item.name} 
-                                                                            className="w-4 h-4 mr-5" 
-                                                                        />
                                                                         <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap `}>
                                                                             {item.name}
                                                                         </span>

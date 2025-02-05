@@ -8,7 +8,7 @@ const monsterfont = Montserrat ({
 })
 const AboutSection = () => {
   return (
-    <section className="relative w-full bg-black flex items-center justify-center p-4">
+    <section className="relative w-full bg-black flex items-center justify-center p-4 pt-[200px]">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h1 className={` font-size-60 md:font-size-84 algo-line-height-64 ${monsterfont.className} bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent `}>
           About Us

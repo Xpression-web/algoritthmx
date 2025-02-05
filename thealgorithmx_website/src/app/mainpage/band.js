@@ -1,13 +1,25 @@
-import React from 'react';
+import React from "react";
+import { Montserrat } from "next/font/google";
+
+
+const monsterfont3 = Montserrat({
+  subsets: ["latin"],
+  weight: "300",
+});
 
 const ResultsRow = () => {
   return (
-    <div className="flex w-full h-auto md:h-24 lg:h-32 bg-gradient-to-r from-black via-black to-rose-500">
-      <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center py-8 md:py-0 px-4 sm:px-8 md:px-12 lg:px-16 gap-4 md:gap-0">
-        <div className="text-white text-6xl sm:text-4xl md:text-4xl lg:text-6xl ">
+    <div className="flex w-full h-auto md:h-full lg:h-full">
+      {/* Left Side - Black Background */}
+      <div className="w-1/2 bg-black flex justify-start items-center p-24 ">
+        <div className={`  ${monsterfont3.className} text-white text-4xl md:text-[80px] leading-[0.875] tracking-[0.02em] -ml-10 md:ml-10`}>
           Results
         </div>
-        <div className="text-rose-500 text-6xl sm:text-6xl md:text-6xl lg:text-8xl font-light">
+      </div>
+
+      {/* Right Side - Pink Background */}
+      <div className="w-1/2 text-rose  flex justify-start items-center p-16">
+        <div className={`    text-4xl md:text-[224px]  -ml-10 md:ml-10 ${monsterfont3.className}`}>
           90%
         </div>
       </div>

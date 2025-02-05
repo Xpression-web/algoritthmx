@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Navbar from '../navbar/navbar'
 import Carousel from './erpservices'
 import ERPProcess from './erpdevelopment'
 import ERPModules from './erpmodule'
@@ -8,12 +8,13 @@ import ERPTechStack from './erptechstack'
 import Solution from './erpsolution'
 import DynamicSolutionsHero from './dynamic'
 import InsightSection from '../graphics/insight'
-import Footer from '../company/footer'
+import Footer from '../mainpage/footer';
 
 
 const page = () => {
   return (
     <div>
+      <Navbar/>
       <ERPContentSection/>
       <Carousel/>
       <ERPModules/>

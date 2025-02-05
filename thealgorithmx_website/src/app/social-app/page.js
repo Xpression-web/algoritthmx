@@ -6,6 +6,8 @@ import UnlockSuccess from './unlock'
 import ResponsiveHero from '../seo/experience'
 import ServicesGrid from './beyond'
 import SocialTechnologyToolbox from './socialtoolbox'
+import InsightSection from '../graphics/insight'
+import Footer from '../mainpage/footer';
 
 const page = () => {
   return (
@@ -17,6 +19,8 @@ const page = () => {
         <ResponsiveHero/>
         <ServicesGrid/>
         <SocialTechnologyToolbox/>
+        <InsightSection/>
+        <Footer/>
       
     </div>
   )

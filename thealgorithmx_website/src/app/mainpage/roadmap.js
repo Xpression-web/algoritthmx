@@ -3,12 +3,10 @@ import React from 'react';
 import './style.css'
 import { Montserrat } from "next/font/google";
 
-
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "400",
 });
-
 
 const Roadmap = () => {
   const timelineData = [
@@ -59,10 +57,10 @@ const Roadmap = () => {
         {/* Left Section */}
         <div className="w-full lg:w-5/12">
           <div className="p-8 lg:sticky lg:top-0">
-            <h1 className={`text-[50px] leading-[1.1]  ${monsterfont1.className} bg-black  text-white  `}>
+            <h1 className={`text-[50px] leading-[1.1]  ${monsterfont1.className} bg-black  text-white md:text-start text-center `}>
               Accelerate <br/> Your Digital Evolution!
             </h1>
-            <p className={`text-[17px] leading-[26px]  font-[Helvetica] font-[400] text-white mt-[48px] `}>
+            <p className={`text-[17px] leading-[26px]  font-[Helvetica] font-[400] text-white mt-[48px] md:text-start text-center`}>
               We're a premier end-to-end digital agency committed to revolutionizing businesses with advanced digital 
               solutions and data-driven strategies to deliver exceptional growth and success. We transform your Vision 
               into a known Brand, your Concept into a tangible Product, and your Product into a Market Leader. Our 
@@ -114,9 +112,11 @@ const Roadmap = () => {
                           borderRightColor: item.direction === 'right' ? item.borderColor : 'transparent',
                           borderLeftColor: item.direction === 'left' ? item.borderColor : 'transparent'
                         }} />
-                      <h3 className={`text-[15px] leading-[1.1]  font-[Helvetica] font-[400] text-white   `}>{item.title}</h3>
+                      <h3 className={`text-[15px] leading-[1.1]  font-[Helvetica] font-[400] text-white`}>{item.title}</h3>
                     </div>
-                    <p className={`text-[12.44px] leading-[1.5]  font-[Helvetica] font-[400] text-white  italic max-w-md  mt-3`}>
+                    <p className={`text-[12.44px] leading-[1.5] font-[Helvetica] font-[400] text-white italic max-w-md mt-3 
+                      lg:p-0 lg:border-0 lg:bg-transparent
+                      p-4 border border-[${item.borderColor}] bg-[#0F0F0F]`}>
                       {item.description}
                     </p>
                   </div>

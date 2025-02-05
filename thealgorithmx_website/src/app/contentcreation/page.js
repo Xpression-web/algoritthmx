@@ -6,8 +6,8 @@ import Offer from './offer';
 import IndustriesGrid from '../branding/industries';
 import TechnologyToolbox from './toolbox';
 import StrategyGrid from './strategy';
-import InsightSection from '../video/insight';
-import Footer from '../company/footer';
+import InsightSection from '../graphics/insight'
+import Footer from '../mainpage/footer';
 
 
 

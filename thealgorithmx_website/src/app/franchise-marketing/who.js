@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FranchiseStrategy = () => {
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-8  flex items-center justify-center">

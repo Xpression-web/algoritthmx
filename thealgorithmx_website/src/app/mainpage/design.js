@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
-  weight: "400",
+  weight: "700",
 });
 
 const ResponsiveGrid = () => {

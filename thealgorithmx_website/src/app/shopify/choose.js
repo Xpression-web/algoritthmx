@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './style.module.css';
 import { Montserrat } from 'next/font/google';
 
+
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',

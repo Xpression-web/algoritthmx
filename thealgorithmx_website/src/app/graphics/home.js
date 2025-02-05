@@ -13,7 +13,7 @@ const monsterfont = Montserrat({
 
 const GraphicsSection = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black pt-[100px]">
       <div className="  md:max-w-[1200px] mx-auto py-16 px-4">
         <div className="flex flex-col md:flex-row md:items-center gap-8">
           {/* Left side - Image */}
