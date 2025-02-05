@@ -53,7 +53,7 @@ const ConsultingServices = () => {
                 {/* Tabs Container - Mobile scrollable, Desktop grid */}
                 <div className="w-full overflow-x-auto pb-4 p-2 mb-8">
                     <div
-                        className="flex md:grid md:grid-cols-5 min-w-max md:min-w-0 max-w-4xl mx-auto bg-black/50 rounded-lg border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                        className={`flex md:grid md:grid-cols-5 min-w-max md:min-w-0 max-w-4xl mx-auto bg-black/50 ${styles["box-design"]} `}
                         onMouseEnter={() => setIsHovered(true)} // Activate hover state for any tab
                         onMouseLeave={() => {
                             setIsHovered(false);

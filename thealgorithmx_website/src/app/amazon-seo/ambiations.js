@@ -9,6 +9,7 @@
 
     const AmazonReachSection  = () => {
     return (
+        
         <div className="min-h-screen bg-black text-white flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="container max-w-[1200px] mx-auto">
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">

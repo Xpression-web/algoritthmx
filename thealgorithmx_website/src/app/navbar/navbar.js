@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/link';
 import { Menu, X, Phone, Twitter, Instagram, Facebook, Linkedin, ChevronDown, ChevronRight } from 'lucide-react';
 
 const Navbar = () => {
@@ -22,6 +21,14 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+    useEffect(() => {
+        const mainContent = document.getElementById('main-content');
+        if (activeDropdown !== null || isOpen) {
+            mainContent?.classList.add('blur-effect');
+        } else {
+            mainContent?.classList.remove('blur-effect');
+        }
+    }, [activeDropdown, isOpen]);
 
     useEffect(() => {
         const mainContent = document.getElementById('main-content');
@@ -124,7 +131,7 @@ const Navbar = () => {
                         { name: 'Ecommerce SEO', href: '/ecommerce-seo', icon: '/icons/xamarin.svg' },
                         { name: 'SEO Consulting', href: '/seo-consulting', icon: '/icons/flutter.svg' },
                         { name: ' Link Building', href: '/link-building', icon: '/icons/flutter.svg' },
-                        { name: 'Technical SEO Audit', href: '/technical-seo', icon: '/icons/flutter.svg' },
+                        { name: 'Technical SEO Audit', href: '/technical-seo-audit', icon: '/icons/flutter.svg' },
                         { name: 'National SEO', href: '/national-seo', icon: '/icons/flutter.svg' },
                         { name: 'Mobile SEO', href: '/mobile-seo', icon: '/icons/flutter.svg' },
                         { name: 'Global/International SEO', href: '/global-seo', icon: '/icons/flutter.svg' },
@@ -210,13 +217,14 @@ const Navbar = () => {
             <style jsx global>{`
                 /* ... keep existing styles ... */
                 @media (min-width: 768px) {
-                    .blur-sm {
+                    .blur-effect {
                         filter: blur(4px);
+                        pointer-events: none;
                     }
                     
                     .navbar-transparent {
                         background-color: transparent;
-                        backdrop-filter: blur(8px);
+                        
                     }
                     
                     .navbar-scrolled {
@@ -226,12 +234,16 @@ const Navbar = () => {
                     
                     .dropdown-overlay {
                         background-color: rgba(0, 0, 0, 0.9);
-                        backdrop-filter: blur(8px);
+                        
                     }
                 }
 
                 /* Updated Mobile styles to white background */
                 @media (max-width: 767px) {
+                    .blur-effect {
+                        filter: blur(4px);
+                        pointer-events: none;
+                    }
                     .navbar-transparent,
                     .navbar-scrolled {
                         background: black;
@@ -263,7 +275,6 @@ const Navbar = () => {
                 .mobile-submenu.open {
                     max-height: 1000px;
                 }
-                /* Add these new styles for dropdown positioning */
                 .dropdown-wrapper {
                     position: fixed;
                     top: 64px; /* Height of navbar */
@@ -278,11 +289,14 @@ const Navbar = () => {
                     opacity: 0;
                     visibility: hidden;
                     transition: all 0.2s ease-in-out;
+    
                 }
 
                 .dropdown-content.active {
                     opacity: 1;
                     visibility: visible;
+                     backdrop-filter: blur(16px);
+    
                 }
             `}</style>
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../navbar/navbar'
 import TwitterSection from './home'
 import TwitterHeroSection from './engagement'
 import TwitterGrowHeroSection from './multimedia'
@@ -12,6 +13,7 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
+    <Navbar/>
     <TwitterSection/>
     <TwitterHeroSection/>
     <TwitterGrowHeroSection/>

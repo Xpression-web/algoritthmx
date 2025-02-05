@@ -3,7 +3,6 @@ import { useState } from 'react';
 import styles from  '../seoaudits/style.module.css'
 import { Montserrat } from "next/font/google";
 
-
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",

@@ -54,6 +54,7 @@ const AmazonServices = () => {
     ];
 
     return (
+        
         <div className="min-h-screen bg-black text-white p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 <h1 className={`text-[64px] leading-[68px] ${monsterfont.className} text-white mb-[15px] text-center`}> Services</h1>
