@@ -24,7 +24,7 @@ const GraphicsSection = () => {
               <img
                 src="images/Branding.webp"
                 alt="Branding process with color swatches"
-                className={`w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
+                className={`w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}  `}
               />
               {/* Rectangular Image */}
               <img
