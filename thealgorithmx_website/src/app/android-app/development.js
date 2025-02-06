@@ -2,6 +2,7 @@ import React from 'react';
 import { Montserrat } from 'next/font/google';
 import styles from "./style.module.css";
 
+
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"400",
@@ -15,37 +16,37 @@ const services = [
   {
     title: "Android App Development Consultation",
     description: "Android applications cater to a unique user base with specific expectations. Our Android application development company assists businesses in aligning their concerns with the distinct preferences of Android users. Our experienced app developers and consultants guide you in choosing the optimal Android platform and strategy.",
-    image: "images/consultation-image.png", // Replace with the actual path
+    image: "/images/ai-img.svg", // Replace with the actual path
     alt: "Consultation Icon",
   },
   {
     title: "Android UX/UI Design",
     description: "As an Android app development agency, AlgorithmX delivers exceptional Android UX/UI design services where we create visually stunning app interfaces that function seamlessly on a variety of devices. Our Android app developers and designers use their expertise to create memorable user experiences.",
-    image: "/path/to/design-image.png", // Replace with the actual path
+    image: "/images/IoT-img.svg", // Replace with the actual path
     alt: "Design Icon",
   },
   {
     title: "Custom Android App Development",
     description: "At our custom Android app development company, we specialize in developing exclusive Android mobile applications that are personalized, user-centric, and scalable by utilizing the latest technologies. Our affordable app developers focus on productivity, flexibility, and customer satisfaction from conceptualization to deployment.",
-    image: "/path/to/custom-dev-image.png", // Replace with the actual path
+    image: "/images/blockchain-img.svg", // Replace with the actual path
     alt: "Custom Development Icon",
   },
   {
     title: "Android Software Testing",
     description: "Our process of Android application development focuses on reliability and performance first. To develop apps for Android and iOS, we perform manual and automated testing ranging from unit and integration testing to UI and performance testing. This ensures lag-free functioning and maintains app stability.",
-    image: "/path/to/testing-image.png", // Replace with the actual path
+    image:  "/images/cloud-img.svg",  // Replace with the actual path
     alt: "Testing Icon",
   },
   {
     title: "Multi-platform Deployment",
     description: "As an Android mobile app development company, we use tools and frameworks like Flutter and React Native to facilitate multi-platform deployment. Regardless of which platform you choose to use, our talented Android app developers offer efficient Android app development services to meet your desired goals.",
-    image: "/path/to/deployment-image.png", // Replace with the actual path
+    image: "/images/AR.svg",  // Replace with the actual path
     alt: "Deployment Icon",
   },
   {
     title: "Support & Maintenance",
     description: "Our app development team offers continuous support to address any issues or implement updates, ensuring the smooth functioning of the Android app. With our reliable and prompt actions, your app remains relevant over time and provides exceptional user satisfaction.",
-    image: "/path/to/support-image.png", // Replace with the actual path
+    image:"/images/metaverse.svg", // Replace with the actual path
     alt: "Support Icon",
   },
 ];
@@ -66,10 +67,10 @@ const ServicesGrid = () => {
           <div
           key={index}
           className="bg-black rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group transition-colors duration-1000 ease-in-out">
-              <img
-                src={service.image}
-                alt={service.alt}
-                className="h-12 w-12 object-contain rounded-lg "
+              <img 
+                src={service.image} 
+                alt={service.alt} 
+                className={` object-contain rounded-lg  ${styles["indus-card-figure"]}  `}
               />
               <h3 className={` ${styles["and-title2"]} transition-colors duration-300 `}>
                 {service.title}

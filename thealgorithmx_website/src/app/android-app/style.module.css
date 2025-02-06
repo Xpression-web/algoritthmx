@@ -96,6 +96,16 @@
     margin:15px 0;
     font-family: Arial, Helvetica, sans-serif;
   }
+  .indus-card-figure {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #514f57;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
   /*4 th  */
   .tech-subtitle{
     font-size: 40px;

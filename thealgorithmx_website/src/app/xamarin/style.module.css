@@ -41,6 +41,16 @@
     font-size: 12px;
     padding-left: 24px;
   }
+  .indus-card-figure {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #514f57;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width: 768px) {
     .android-title {
     font-size: 52px;
