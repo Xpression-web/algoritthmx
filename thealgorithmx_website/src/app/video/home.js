@@ -14,7 +14,7 @@ const monsterfont = Montserrat({
 const VideoSection = () => {
   return (
     <div className="min-h-screen bg-black">
-      <div className="  md:max-w-[1200px] mx-auto py-16 px-4">
+      <div className="  md:max-w-[1200px] mx-auto py-16 px-4 pt-[100px]">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-0">
           {/* Left side - Image */}
           <div className="w-full md:w-1/2 ">
@@ -23,7 +23,7 @@ const VideoSection = () => {
               <img
                 src="images/video.webp"
                 alt="Branding process with color swatches"
-                className={` w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
+                className={` w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
               />
               {/* Rectangular Image */}
               <img

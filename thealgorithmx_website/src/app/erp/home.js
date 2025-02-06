@@ -26,7 +26,7 @@ const ERPContentSection = () => {
               <img
                 src="images/ERP.webp"
                 alt="Branding process with color swatches"
-                className={`w-3/5  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
+                className={`w-3/5  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
               />
               {/* Rectangular image below the main image (hidden on phones) */}
               <img

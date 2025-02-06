@@ -29,7 +29,7 @@ const ContentSection = () => {
               <img
                 src="images/Software.webp"
                 alt="Branding process with color swatches"
-                className={`w-4/5 md:w-full  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
+                className={`w-4/5 md:w-full  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
               />
               {/* Rectangular image below the main image (hidden on phones) */}
               <img
