@@ -22,45 +22,45 @@ const SoftwareTechStack = () => {
     {
     title: 'Desktop',
     items: [
-        { name: 'objective C', icon: '/images/HTML5.png' },
-        { name: 'WPF', icon: '/api/placeholder/24/24' },
-        { name: 'Python', icon: '/api/placeholder/24/24' },
-        { name: 'C++', icon: '/api/placeholder/24/24' },
-        { name: 'Swift', icon: '/api/placeholder/24/24' },
-        { name: 'C#', icon: '/api/placeholder/24/24' },
+        { name: 'objective C', icon: '/images/objectiveC.png' },
+        { name: 'WPF', icon: '/images/wpf.png' },
+        { name: 'Python', icon: '/images/Python.png' },
+        { name: 'C++', icon: '/images/c-plus-plus.png' },
+        { name: 'Swift', icon: '/images/swift.png' },
+        { name: 'C#', icon: '/images/c-sharp.png' },
     ]
     },
     {
     title: 'Back-end',
     items: [
-        { name: 'ASP.NET', icon: '/api/placeholder/24/24' },
-        { name: 'Python', icon: '/api/placeholder/24/24' },
-        { name: 'Java', icon: '/api/placeholder/24/24' },
-        { name: 'Node.js', icon: '/api/placeholder/24/24' },
-        { name: 'PHP', icon: '/api/placeholder/24/24' },
-        { name: 'Go', icon: '/api/placeholder/24/24' },
+      { name: 'Python', icon: '/images/Python.png' },
+      { name: 'ASP.NET', icon: '/images/aspnet.png' },
+      { name: 'Nodejs', icon: '/images/Nodejs.png' },
+      { name: 'PHP', icon: '/images/PHP.png' },
+      { name: 'Java', icon: '/images/Java (1).png' },
+      { name: 'Go', icon: '/images/Go (1).png' },
 
     ]
     },
     {
       title: 'Databases',
       items: [
-        { name: 'MSSQL', icon: '/api/placeholder/24/24' },
-        { name: 'MySQL', icon: '/api/placeholder/24/24' },
-        { name: 'MongoDB', icon: '/api/placeholder/24/24' },
-        { name: 'Cassandra', icon: '/api/placeholder/24/24' },
-        { name: 'Oracle', icon: '/api/placeholder/24/24' },
-        { name: 'Apache Hbase', icon: '/api/placeholder/24/24' },
+        { name: 'MSSQL', icon: '/images/MSSQL (1).png' },
+        { name: 'MySQL', icon: '/images/MySQL.png' },
+        { name: 'MongoDB', icon: '/images/MongoDB.png' },
+        { name: 'Cassandra', icon: '/images/Cassandra.png' },
+        { name: 'Oracle', icon: '/images/oracle.png' },
+        { name: 'Apache Hbase', icon: '/images/apache-hbase.png' },
       ]
     },
     {
       title: 'Devops',
       items: [
-        { name: 'Google Developer', icon: '/api/placeholder/24/24' },
-        { name: 'Azure Devops', icon: '/api/placeholder/24/24' },
-        { name: 'GitLab CI', icon: '/api/placeholder/24/24' },
-        { name: 'Docker', icon: '/api/placeholder/24/24' },
-        { name: 'Jenkins', icon: '/api/placeholder/24/24' },
+        { name: 'Google Developer', icon: '/images/google-developer-tool.png' },
+        { name: 'Azure Devops', icon: '/images/azure-devops.png' },
+        { name: 'GitLab CI', icon: '/images/GitLab-CI.png' },
+        { name: 'Docker', icon: '/images/docker-icon.png' },
+        { name: 'Jenkins', icon: '/images/Jenkins.png' },
       ]
     },
    

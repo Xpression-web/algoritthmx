@@ -13,21 +13,21 @@ const monsterfont1 = Montserrat({
 
 const CROTechnologyToolbox = () => {
   const tools = [
-    { id: 'ps', name: 'Adobe Target', image: 'images/Premiere-pro.png' },
-    { id: 'ai', name: 'Amplitude', image: 'images/Animate.png' },
-    { id: 'ae', name: 'Crazy Egg', image: 'images/After-effects.png' },
-    { id: 'id', name: 'Google Analytics', image: 'images/Autodesk.png' },
-    { id: 'canva', name: 'Google Optimize', image: 'images/Cinema-4D.png' },
-    { id: 'figma', name: 'PageSpeed Insights', image: 'images/Final.png' },
-    { id: 'cs', name: 'GTmetrix', image: 'images/maya.png'},
-    { id: 'stock', name: 'Hotjar', image: 'images/Moho.png' },
-    { id: 'kis', name: 'Kissmetrics', image: 'images/Moho.png' },
-    { id: 'mix', name: 'Mixpanel', image: 'images/Moho.png' },
-    { id: 'opt', name: 'Optimizely', image: 'images/Moho.png' },
-    { id: 'pin', name: 'Pingdom', image: 'images/Moho.png' },
-    { id: 'pow', name: 'Power BI', image: 'images/Moho.png' },
-    { id: 'qua', name: 'Qualaroo', image: 'images/Moho.png' },
-    { id: 'tab', name: 'Tableau', image: 'images/Moho.png' }
+    { id: 'ps', name: 'Adobe Target', image: 'images/Adobe-Target.png' },
+    { id: 'ai', name: 'Amplitude', image: 'images/Amplitude.png' },
+    { id: 'ae', name: 'Crazy Egg', image: 'images/Crazy-Egg.png' },
+    { id: 'id', name: 'Google Analytics', image: 'images/Google-Analytics (1).png' },
+    { id: 'canva', name: 'Google Optimize', image: 'images/Google-Optimize.png' },
+    { id: 'figma', name: 'PageSpeed Insights', image: 'images/Google-PageSpeed-Insights.png' },
+    { id: 'cs', name: 'GTmetrix', image: 'images/GTmetrix.png'},
+    { id: 'stock', name: 'Hotjar', image: 'images/Hotjar.png' },
+    { id: 'kis', name: 'Kissmetrics', image: 'images/Kissmetrics.png' },
+    { id: 'mix', name: 'Mixpanel', image: 'images/Mixpanel.png' },
+    { id: 'opt', name: 'Optimizely', image: 'images/Optimizely.png' },
+    { id: 'pin', name: 'Pingdom', image: 'images/Pingdom.png' },
+    { id: 'pow', name: 'Power BI', image: 'images/Power BI.png' },
+    { id: 'qua', name: 'Qualaroo', image: 'images/Qualaroo.png' },
+    { id: 'tab', name: 'Tableau', image: 'images/Tableau.png' }
 
   ];
 

@@ -22,43 +22,43 @@ const BlockTechStack = () => {
     {
         title: 'Frameworks',
         items: [
-          { name: 'Bitcoin', icon: '/api/placeholder/24/24' },
-          { name: 'Ethereum', icon: '/api/placeholder/24/24' },
-          { name: 'Solana', icon: '/api/placeholder/24/24' },
-          { name: 'Avalanche', icon: '/api/placeholder/24/24' },
-          { name: 'Stellar', icon: '/api/placeholder/24/24' },
-          { name: 'Apache Hbase', icon: '/api/placeholder/24/24' },
+          { name: 'Bitcoin', icon: 'images/bitcoin.png' },
+          { name: 'Ethereum', icon: '/images/ethereum.png' },
+          { name: 'Solana', icon: '/images/solana.png' },
+          { name: 'Avalanche', icon: '/images/avalanche.png' },
+          { name: 'Stellar', icon: '/images/stellar.png' },
+          { name: 'Apache Hbase', icon: '/images/fantom.png' },
         ]
       },
     {
       title: 'Front-end',
       items: [
-        { name: 'HTML5', icon: '/api/placeholder/24/24' },
-        { name: 'CSS3', icon: '/api/placeholder/24/24' },
-        { name: 'JavaScript', icon: '/api/placeholder/24/24' },
-        { name: 'Angular', icon: '/api/placeholder/24/24' },
-        { name: 'React', icon: '/api/placeholder/24/24' },
-        { name: 'meteor', icon: '/api/placeholder/24/24' },
-        { name: 'Vuejs', icon: '/api/placeholder/24/24' },
+        { name: 'HTML5', icon: '/images/HTML5.png' },
+        { name: 'CSS3', icon: '/images/CSS3 (1).png' },
+        { name: 'JavaScript', icon: '/images/JavaScript (1).png' },
+        { name: 'Angular', icon: '/images/Angular (1).png' },
+        { name: 'React', icon: '/images/React.png' },
+        { name: 'meteor', icon: '/images/meteor.png' },
+        { name: 'Vuejs', icon: '/images/Vuejs.png' },
       ]
     },
     {
         title: 'Back-end',
         items: [
-          { name: 'Python', icon: '/api/placeholder/24/24' },
-          { name: 'ASP.NET', icon: '/api/placeholder/24/24' },
-          { name: 'Nodejs', icon: '/api/placeholder/24/24' },
-          { name: 'PHP', icon: '/api/placeholder/24/24' },
-          { name: 'Java', icon: '/api/placeholder/24/24' },
-          { name: 'Go', icon: '/api/placeholder/24/24' },
+          { name: 'Python', icon: '/images/Python.png' },
+          { name: 'ASP.NET', icon: '/images/aspnet.png' },
+          { name: 'Nodejs', icon: '/images/Nodejs.png' },
+          { name: 'PHP', icon: '/images/PHP.png' },
+          { name: 'Java', icon: '/images/Java (1).png' },
+          { name: 'Go', icon: '/images/Go (1).png' },
         ]
       },
     {
       title: 'Smart Contract',
       items: [
-        { name: 'Solidity', icon: '/api/placeholder/24/24' },
-        { name: 'Rust', icon: '/api/placeholder/24/24' },
-        { name: 'Vyper', icon: '/api/placeholder/24/24' },
+        { name: 'Solidity', icon: '/images/solidity.png' },
+        { name: 'Rust', icon: '/images/rust.png' },
+        { name: 'Vyper', icon: '/images/vyper.png' },
       ]
     },
    

@@ -24,42 +24,42 @@ const servicesData = [
     id: 1,
     title: ['DISPLAY BANNERS'],
     description: 'AlgorithmX offers innovative banner design services that support your marketing efforts. Whether you need Static or dynamic HTML banners, we have got you covered.',
-    image: 'images/Graphics.webp',
+    image: 'images/Display-banners.webp',
     textGradient: 'from-amber-600 to-amber-800'
   },
   {
     id: 2,
     title: ['EMAIL', 'TEMPLATE'],
     description: 'Our dedicated designing team designs professional and customized email templates that align with your brand identity and ensure effective communication, therefore increasing engagement.',
-    image: 'images/Graphics.webp',
+    image: 'images/Email-template.webp',
     textGradient: 'from-blue-400 to-blue-600'
   },
   {
     id: 3,
     title: ['SOCIAL', 'MEDIA'],
     description: 'The detailed planning of our experienced graphic designers injects fresh air into your social media content\'s universe, helping your audience grow fast through well-designed engaging posts that grab attention.',
-    image: 'images/Graphics.webp',
+    image: 'images/Social-Media.webp',
     textGradient: 'from-cyan-400 to-cyan-600'
   },
   {
     id: 4,
     title: ['CORPORATE', 'ASSETS'],
     description: 'As one of the best graphic design agencies, we use a rough plan to devise custom visually compelling material that fits your business needs. Our detailed and eye-catching whitepaper/PPT layouts are carefully designed to be compelling and serve as strong content marketing aids.',
-    image: 'images/Graphics.webp',
+    image: 'images/Corporate-Assets.webp',
     textGradient: 'from-slate-400 to-slate-600'
   },
   {
     id: 5,
     title: ['INFO-', 'GRAPHICS'],
     description: "AlgorithmX's affordable web design services extend to generating designed content such as brand graphics, infographics, and data visualizations to be used on websites, original documents, reports, and presentations.",
-    image: 'images/Graphics.webp',
+    image: 'images/Inforgraphics.webp',
     textGradient: 'from-teal-400 to-teal-600'
   },
   {
     id: 6,
     title: ['PRINT', 'MEDIA'],
     description: 'Get precisely designed packaging for a range of products such as posters, book covers, magazines, trade show graphics, stickers, and many more, that matches your brand voice as part of our offshore creative design services.',
-    image: 'images/Graphics.webp',
+    image: 'images/Print-Media.webp',
     textGradient: 'from-purple-400 to-purple-600'
   }
 ];
@@ -81,7 +81,7 @@ const FlipCard = ({ service }) => {
             >
               {service.title.join(' ')}
             </h3>
-            <p className={`text-white/80 font-size-14 .algo-line-height-21 card-font  mt-12 px-6`}>{service.description}</p>
+            <p className={`text-white/80 text-[16px] font-[Helvetica] .algo-line-height-21   mt-10 px-6`}>{service.description}</p>
             <div className="w-full h-0.5 bg-white/20 mt-14"></div>
           </div>
         </div>
@@ -125,7 +125,7 @@ const FlipCard = ({ service }) => {
                   <span className={`font-size-78  ${monsterfont.className}`}>
                     {String(service.id).padStart(2, '0')}
                   </span>
-                  <p className={`font-size-14 .algo-line-height-21 card-font  mt-10`}>{service.description}</p>
+                  <p className={`text-[16px] font-[Helvetica] .algo-line-height-21   mt-10`}>{service.description}</p>
                 </div>
               </div>
             </div>

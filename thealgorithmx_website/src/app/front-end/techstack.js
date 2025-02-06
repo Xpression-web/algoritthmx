@@ -23,60 +23,60 @@ const TechStack = () => {
     {
       title: 'Core Technologies',
       items: [
-        { name: 'HTML5', icon: '/api/placeholder/24/24' },
-        { name: 'CSS3', icon: '/api/placeholder/24/24' },
-        { name: 'JavaScript', icon: '/api/placeholder/24/24' },
-        { name: 'SCSS', icon: '/api/placeholder/24/24' },
-        { name: 'TypeScript', icon: '/api/placeholder/24/24' }
+        { name: 'HTML5', icon: '/images/HTML5.png' },
+        { name: 'CSS3', icon: '/images/CSS3 (1).png' },
+        { name: 'JavaScript', icon: '/images/JavaScript (1).png' },
+        { name: 'SCSS', icon: '/images/SCSS.png' },
+        { name: 'TypeScript', icon: '/images/TypeScript.png' }
       ]
     },
     {
       title: 'Frameworks & Libraries',
       items: [
-        { name: 'Angular', icon: '/api/placeholder/24/24' },
-        { name: 'Next', icon: '/api/placeholder/24/24' },
-        { name: 'React', icon: '/api/placeholder/24/24' },
-        { name: 'Vue', icon: '/api/placeholder/24/24' },
-        { name: 'Nuxt', icon: '/api/placeholder/24/24' },
-        { name: 'Svelte', icon: '/api/placeholder/24/24' }
+        { name: 'Angular', icon: '/images/Angular (1).png' },
+        { name: 'Next', icon: '/images/Nextjs.png' },
+        { name: 'React', icon: '/images/React.png' },
+        { name: 'Vue', icon: '/images/Vuejs.png' },
+        { name: 'Nuxt', icon: '/images/Nuxtjs.png' },
+        { name: 'Svelte', icon: '/images/Svelte.png' }
       ]
     },
     {
       title: 'Styling & UI Management',
       items: [
-        { name: 'Bootstrap', icon: '/api/placeholder/24/24' },
-        { name: 'Material-UI', icon: '/api/placeholder/24/24' },
-        { name: 'Tailwind CSS', icon: '/api/placeholder/24/24' }
+        { name: 'Bootstrap', icon: '/images/Bootstrap (1).png' },
+        { name: 'Material-UI', icon: '/images/Material-UI.png' },
+        { name: 'Tailwind CSS', icon: '/images/Tailwind-CSS.png' }
       ]
     },
     {
       title: 'Package Manager',
       items: [
-        { name: 'npm', icon: '/api/placeholder/24/24' },
-        { name: 'pnpm', icon: '/api/placeholder/24/24' }
+        { name: 'npm', icon: '/images/npm.png' },
+        { name: 'pnpm', icon: '/images/pnpm.png' }
       ]
     },
     {
       title: 'Version Control',
       items: [
-        { name: 'GIT', icon: '/api/placeholder/24/24' },
-        { name: 'GITHUB', icon: '/api/placeholder/24/24' }
+        { name: 'GIT', icon: '/images/GIT.png' },
+        { name: 'GITHUB', icon: '/images/GITHUB (1).png' }
       ]
     },
     {
       title: 'Development Environment',
       items: [
-        { name: 'Visual Code', icon: '/api/placeholder/24/24' },
-        { name: 'Visual Studio IDE', icon: '/api/placeholder/24/24' },
-        { name: 'Dreamweaver', icon: '/api/placeholder/24/24' }
+        { name: 'Visual Code', icon: '/images/visual code.png' },
+        { name: 'Visual Studio IDE', icon: '/images/Visual Studio IDE.png' },
+        { name: 'Dreamweaver', icon: '/images/Dreamviewer.png' }
       ]
     },
     {
       title: 'APIs & Data Handling',
       items: [
-        { name: 'Axios', icon: '/api/placeholder/24/24' },
-        { name: 'GraphQL', icon: '/api/placeholder/24/24' },
-        { name: 'Restful-APIs', icon: '/api/placeholder/24/24' }
+        { name: 'Axios', icon: '/images/Axios.png' },
+        { name: 'GraphQL', icon: '/images/GraphQL.png' },
+        { name: 'Restful-APIs', icon: '/images/Restful-APIs.png' }
       ]
     }
   ];

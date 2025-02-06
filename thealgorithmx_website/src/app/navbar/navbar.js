@@ -2,7 +2,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Twitter, Instagram, Facebook, Linkedin, ChevronDown, ChevronRight } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane, faTint,faGift, faUniversity, faCameraRetro, faSnowflake, faLightbulb, faCab, faGlobe, faShop, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faAmazon, faFacebook, faInstagram, faLinkedin, faTiktok, faTwitter, faYandexInternational, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
+
+  
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
@@ -85,31 +90,31 @@ const Navbar = () => {
                     category: 'App/Mobile',
                     icon: '',
                     items: [
-                        { name: 'Android Development', href: '/android-app', icon: '/icons/android.svg' },
-                        { name: 'iPhone/iPad Development', href: '/iphone-app', icon: '/icons/ios.svg' },
-                        { name: 'Xamarin Development', href: '/xamarin', icon: '/icons/xamarin.svg' },
-                        { name: 'Flutter Development', href: '/flutter', icon: '/icons/flutter.svg' },
-                        { name: 'React Native Development', href: '/react-native', icon: '/icons/react.svg' }
+                        { name: 'Android Development', href: '/android-app', icon: faPaperPlane },
+                        { name: 'iPhone/iPad Development', href: '/iphone-app', icon: faTint },
+                        { name: 'Xamarin Development', href: '/xamarin', icon: faGift },
+                        { name: 'Flutter Development', href: '/flutter', icon: faUniversity },
+                        { name: 'React Native Development', href: '/react-native', icon: faCameraRetro }
                     ]
                 },
                 {
                     category: 'Web',
                     icon: '',
                     items: [
-                        { name: 'Front-End Designing-HTML/CSS/Bootstrap/More', href: '/front-end', icon: '/icons/android.svg' },
-                        { name: 'Back-End Developmen-Python/.NET/More', href: '/back-end', icon: '/icons/ios.svg' }
+                        { name: 'Front-End Designing-HTML/CSS/Bootstrap/More', href: '/front-end', icon: faPaperPlane },
+                        { name: 'Back-End Developmen-Python/.NET/More', href: '/back-end', icon: faTint}
                     ]
                 },
                 {
                     category: 'CMS Development',
                     icon: '',
                     items: [
-                        { name: 'Shopify', href: '/shopify', icon: '/icons/android.svg' },
-                        { name: 'Magento', href: '/magento', icon: '/icons/ios.svg' },
-                        { name: 'Wordpress', href: '/wordpress', icon: '/icons/xamarin.svg' },
-                        { name: 'HubSpot', href: '/hubspot', icon: '/icons/flutter.svg' },
-                        { name: 'Big Commerce', href: '/bigcommerce', icon: '/icons/react.svg' },
-                        { name: 'Drupal', href: '/drupal', icon: '/icons/react.svg' }
+                        { name: 'Shopify', href: '/shopify', icon: faPaperPlane },
+                        { name: 'Magento', href: '/magento', icon: faTint },
+                        { name: 'Wordpress', href: '/wordpress', icon: faGift },
+                        { name: 'HubSpot', href: '/hubspot', icon: faUniversity},
+                        { name: 'Big Commerce', href: '/bigcommerce', icon: faCameraRetro },
+                        { name: 'Drupal', href: '/drupal', icon: faSnowflake }
                     ]
                 },
                 { category: 'CRM', href: '/crm' },
@@ -126,32 +131,32 @@ const Navbar = () => {
                     category: 'SEO',
                     icon: '',
                     items: [
-                        { name: 'SEO Audits', href: '/seoaudits', icon: '/icons/android.svg' },
-                        { name: 'Local SEO', href: '/local-seo', icon: '/icons/ios.svg' },
-                        { name: 'Ecommerce SEO', href: '/ecommerce-seo', icon: '/icons/xamarin.svg' },
-                        { name: 'SEO Consulting', href: '/seo-consulting', icon: '/icons/flutter.svg' },
-                        { name: ' Link Building', href: '/link-building', icon: '/icons/flutter.svg' },
-                        { name: 'Technical SEO Audit', href: '/technical-seo-audit', icon: '/icons/flutter.svg' },
-                        { name: 'National SEO', href: '/national-seo', icon: '/icons/flutter.svg' },
-                        { name: 'Mobile SEO', href: '/mobile-seo', icon: '/icons/flutter.svg' },
-                        { name: 'Global/International SEO', href: '/global-seo', icon: '/icons/flutter.svg' },
-                        { name: 'Enterprise SEO', href: '/enterprise-seo', icon: '/icons/flutter.svg' },
-                        { name: 'Amazon SEO', href: '/amazon-seo', icon: '/icons/flutter.svg' },
-                        { name: 'Penalization Recovery', href: '/penalization-recovery', icon: '/icons/flutter.svg' },
+                        { name: 'SEO Audits', href: '/seoaudits', icon: faPaperPlane },
+                        { name: 'Local SEO', href: '/local-seo', icon: faSnowflake },
+                        { name: 'Ecommerce SEO', href: '/ecommerce-seo', icon: faTint },
+                        { name: 'SEO Consulting', href: '/seo-consulting', icon: faCameraRetro },
+                        { name: ' Link Building', href: '/link-building', icon: faUniversity },
+                        { name: 'Technical SEO Audit', href: '/technical-seo-audit', icon: faLightbulb },
+                        { name: 'National SEO', href: '/national-seo', icon: faCab },
+                        { name: 'Mobile SEO', href: '/mobile-seo', icon: faSnowflake },
+                        { name: 'Global/International SEO', href: '/global-seo', icon: faGlobe },
+                        { name: 'Enterprise SEO', href: '/enterprise-seo', icon: faShop },
+                        { name: 'Amazon SEO', href: '/amazon-seo', icon: faAmazon },
+                        { name: 'Penalization Recovery', href: '/penalization-recovery', icon: faUniversity },
                     ]
                 },
                 {
                     category: 'Social Media',
                     icon: '',
                     items: [
-                        { name: 'Social Media Audit', href: '/social-media-audit', icon: '/icons/android.svg' },
-                        { name: 'Facebook Management', href: '/facebook-management', icon: '/icons/ios.svg' },
-                        { name: 'Instagram Management', href: '/instagram-management', icon: '/icons/ios.svg' },
-                        { name: 'Linkedin Management', href: '/linkedin-management', icon: '/icons/ios.svg' },
-                        { name: 'Twitter Management', href: '/twitter-management', icon: '/icons/ios.svg' },
-                        { name: 'Youtube Management', href: '/youtube-management', icon: '/icons/ios.svg' },
-                        { name: 'Tiktok Management', href: '/tiktok-management', icon: '/icons/ios.svg' },
-                        { name: 'Social Media Consulting', href: '/social-media-consulting', icon: '/icons/ios.svg' },
+                        { name: 'Social Media Audit', href: '/social-media-audit', icon: faTint },
+                        { name: 'Facebook Management', href: '/facebook-management', icon: faFacebook},
+                        { name: 'Instagram Management', href: '/instagram-management', icon: faInstagram},
+                        { name: 'Linkedin Management', href: '/linkedin-management', icon: faLinkedin},
+                        { name: 'Twitter Management', href: '/twitter-management', icon: faTwitter},
+                        { name: 'Youtube Management', href: '/youtube-management', icon: faYoutube},
+                        { name: 'Tiktok Management', href: '/tiktok-management', icon: faTiktok},
+                        { name: 'Social Media Consulting', href: '/social-media-consulting', icon: faGraduationCap},
                     ]
                 },
                 { category: 'PPC Advertising', href: '/ppc-advertising' },
@@ -159,8 +164,8 @@ const Navbar = () => {
                     category: 'Content ',
                     icon: '',
                     items: [
-                        { name: 'Creation & Marketing', href: '/creation-and-marketing', icon: '/icons/android.svg' },
-                        { name: 'SEO Copywriting', href: '/seo-copywriting', icon: '/icons/ios.svg' },
+                        { name: 'Creation & Marketing', href: '/creation-and-marketing', icon: faTint },
+                        { name: 'SEO Copywriting', href: '/seo-copywriting', icon: faSnowflake},
                     ]
                 },
                 { category: 'App Store', href: '/app-store' },
@@ -250,7 +255,7 @@ const Navbar = () => {
                     }
                     
                     .mobile-menu {
-                        background: white;
+                        background: #D4F8E8;
                     }
                 }
 
@@ -295,7 +300,7 @@ const Navbar = () => {
                 .dropdown-content.active {
                     opacity: 1;
                     visibility: visible;
-                     backdrop-filter: blur(16px);
+                    
     
                 }
             `}</style>
@@ -386,7 +391,7 @@ const Navbar = () => {
 
                                 <div className="px-4 py-6 space-y-2">
     {navItems.map((item, index) => (
-        <div key={item.name} className="border-b border-gray-200">
+        <div key={item.name} className=" border-gray-200">
             {item.subItems.length > 0 ? (
                 <div 
                     className="flex items-center justify-between py-3 text-black cursor-pointer"
@@ -410,7 +415,7 @@ const Navbar = () => {
                         <div key={category.category} className="pl-4">
                             {category.items ? (
                                 <div 
-                                    className="flex items-center justify-between py-2 text-gray-600 cursor-pointer"
+                                    className="flex items-center justify-between py-2 text-[#006064] text-[14px] leading-[28px] font-[600] font-[Helvetica] cursor-pointer"
                                     onClick={() => toggleMobileCategory(categoryIndex)}
                                 >
                                     <span>{category.category}</span>
@@ -420,7 +425,7 @@ const Navbar = () => {
                                     />
                                 </div>
                             ) : (
-                                <Link href={category.href} className={`block py-2 text-gray-600`}>
+                                <Link href={category.href} className={`block py-2 text-[#006064] text-[14px] leading-[28px] font-[600] font-[Helvetica]  whitespace-nowrap  `}>
                                     {category.category}
                                 </Link>
                             )}
@@ -431,7 +436,7 @@ const Navbar = () => {
                                         <Link 
                                             key={subItem.name} 
                                             href={subItem.href}
-                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[300] font-[Helvetica] text-black whitespace-nowrap`}
+                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[400] font-[Helvetica] text-[#4C4C4C] whitespace-nowrap`}
                                         >
                                             {subItem.name}
                                         </Link>
@@ -489,7 +494,7 @@ const Navbar = () => {
                                                     ))}
                                                 </div>
                                                 <div className="flex-1 pl-8">
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:grid-flow-col md:auto-cols-fr">
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-x-2 md:grid-flow-col md:auto-cols-fr">
                                                         {activeCategory !== null && 
                                                             navItems[activeDropdown].subItems[activeCategory]?.items?.map((item, index) => {
                                                                 const columnClass = index < 8 ? 'md:col-start-1' : 'md:col-start-2';
@@ -499,6 +504,12 @@ const Navbar = () => {
                                                                         href={item.href} 
                                                                         className={`flex items-center group ${columnClass}`}
                                                                     >
+                                                                        {item.icon && (
+                                                                                    <FontAwesomeIcon 
+                                                                                        icon={item.icon} 
+                                                                                            className="w-3 h-3 mr-5 gap-2 text-gray-400 group-hover:text-blue-500"/>
+                                                                                    )}
+
                                                                         <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap `}>
                                                                             {item.name}
                                                                         </span>
