@@ -181,6 +181,10 @@ const Navbar = () => {
             subItems: []
         },
     ];
+    const shouldHaveBlurEffect = (index) => {
+        const itemName = navItems[index]?.name;
+        return itemName === 'Creative Assets' || itemName === '</Code>' || itemName === 'Leads & Revenue';
+    };
 
     const handleMouseEnter = (index) => {
         if (window.innerWidth > 768) {
@@ -221,32 +225,54 @@ const Navbar = () => {
         <>
             <style jsx global>{`
                 /* ... keep existing styles ... */
-                @media (min-width: 768px) {
+                 @media (min-width: 768px) {
                     .blur-effect {
-                        filter: blur(4px);
+                        filter: blur(8px);
+                        transition: filter 0.3s ease-in-out;
                         pointer-events: none;
                     }
                     
                     .navbar-transparent {
                         background-color: transparent;
-                        
                     }
                     
                     .navbar-scrolled {
-                        background-color: rgba(0, 0, 0, 0.8);
+                        background-color: rgba(0, 0, 0, 0.5);
                         backdrop-filter: blur(10px);
                     }
                     
-                    .dropdown-overlay {
-                        background-color: rgba(0, 0, 0, 0.9);
-                        
+                    /* Update dropdown overlay styles */
+                    .dropdown-wrapper {
+                        background-color: rgba(0, 0, 0, 0.7);
+                        backdrop-filter: blur(16px);
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    /* Add overlay for the rest of the page */
+                    .page-overlay {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        backdrop-filter: blur(8px);
+                        z-index: 30;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+                    }
+
+                    .page-overlay.active {
+                        opacity: 1;
+                        visibility: visible;
                     }
                 }
 
                 /* Updated Mobile styles to white background */
                 @media (max-width: 767px) {
                     .blur-effect {
-                        filter: blur(4px);
+                        filter: blur(8px);
                         pointer-events: none;
                     }
                     .navbar-transparent,
@@ -259,6 +285,7 @@ const Navbar = () => {
                     }
                 }
 
+                /* Rest of your existing styles */
                 .mobile-menu {
                     transition: transform 0.3s ease-in-out;
                 }
@@ -304,6 +331,7 @@ const Navbar = () => {
     
                 }
             `}</style>
+             <div className={`page-overlay ${activeDropdown !== null && shouldHaveBlurEffect(activeDropdown) ? 'active' : ''}`} />
 
             <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
                 scrolled ? 'navbar-scrolled' : 'navbar-transparent'

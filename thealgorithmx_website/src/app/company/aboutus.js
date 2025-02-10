@@ -14,7 +14,7 @@ const Aboutus = () => {
   return (
     <section className="relative w-full min-h-screen bg-black text-gray-300 flex items-center justify-center p-8 ">
       <div className="max-w-6xl mx-auto text-center space-y-0 ">
-        <h1 className={`algo-line-height-1 font-size-60  ${monsterfont.className} text-white font-helvetica mb-8`}>
+        <h1 className={`algo-line-height-1 md:font-size-60 text-[50px] ${monsterfont.className} text-white font-helvetica mb-8`}>
           Introduction
         </h1>
         

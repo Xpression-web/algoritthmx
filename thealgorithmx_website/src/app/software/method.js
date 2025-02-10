@@ -132,7 +132,7 @@ const InteractiveBox = () => {
             <hr className="border-red-600 w-full" />
 
             {/* Content Section */}
-            <div className="p-[20px] md:p-[70px] bg-black overflow-hidden" style={{ height: "310px" }}>
+            <div className="p-[20px] md:p-[70px] bg-black overflow-hidden" style={{ height: "350px" }}>
               <h2 className={`${style["method-title"]} ${monsterfont.className}`}>{activeContent.title}</h2>
               <p className={`${style["method-description"]} text-semi-white`}>{activeContent.content}</p>
             </div>
