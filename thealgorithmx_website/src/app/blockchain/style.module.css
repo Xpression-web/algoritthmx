@@ -7,12 +7,12 @@
   
   /* Scrollbar track */
   ::-webkit-scrollbar-track {
-    background: rgba(254, 212, 47, 0.3); /* Yellowish background */
+    background: rgba(238, 235, 223, 0.3); /* Yellowish background */
   }
   
   /* Scrollbar thumb */
   ::-webkit-scrollbar-thumb {
-    background: rgba(210, 220, 16, 0.8); /* Green thumb */
+    background: rgba(31, 31, 30, 0.8); /* Green thumb */
   }
   
   /* Hover effect on scrollbar thumb */

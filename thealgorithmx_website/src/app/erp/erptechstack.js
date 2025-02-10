@@ -81,7 +81,7 @@ const ERPTechStack = () => {
             <div className="grid grid-cols-[1fr,2fr] md:grid-cols-[200px,1fr] gap-4 items-start">
             <h3 className={` ${style["tech-subtitle1"]} ${monsterfont.className  }`}>{tech.title}</h3>
               
-              <div className="grid grid-cols-2 md:grid-cols-6 gap-4 ">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 ">
                 {tech.items.map((item, itemIndex) => (
                   <div 
                     key={itemIndex} 

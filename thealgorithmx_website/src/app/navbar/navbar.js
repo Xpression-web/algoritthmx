@@ -272,17 +272,38 @@ const Navbar = () => {
                 /* Updated Mobile styles to white background */
                 @media (max-width: 767px) {
                     .blur-effect {
-                        filter: blur(8px);
-                        pointer-events: none;
-                    }
-                    .navbar-transparent,
-                    .navbar-scrolled {
-                        background: black;
-                    }
-                    
-                    .mobile-menu {
-                        background: #D4F8E8;
-                    }
+            filter: blur(8px);
+            transition: filter 0.3s ease-in-out;
+            pointer-events: none;
+        }
+        
+        .navbar-transparent,
+        .navbar-scrolled {
+            background: black;
+        }
+        
+        .mobile-menu {
+            background: #D4F8E8;
+            z-index: 50; /* Ensure mobile menu stays above overlay */
+        }
+        .page-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(8px);
+        z-index: 30;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .page-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
                 }
 
                 /* Rest of your existing styles */
@@ -331,7 +352,7 @@ const Navbar = () => {
     
                 }
             `}</style>
-             <div className={`page-overlay ${activeDropdown !== null && shouldHaveBlurEffect(activeDropdown) ? 'active' : ''}`} />
+             <div className={`page-overlay ${(activeDropdown !== null && shouldHaveBlurEffect(activeDropdown)) || isOpen ? 'active' : ''}`} />
 
             <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
                 scrolled ? 'navbar-scrolled' : 'navbar-transparent'
@@ -498,7 +519,7 @@ const Navbar = () => {
                             </div>
 
                             {activeDropdown !== null && navItems[activeDropdown]?.subItems.length > 0 && (
-                                <div 
+                                <div
                                     className="dropdown-wrapper"
                                     onMouseLeave={handleMouseLeave}
                                 >

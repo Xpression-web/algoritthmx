@@ -111,10 +111,10 @@ const BlockServices = () => {
           className={`
             ${isMobile ? 'overflow-x-auto' : 'md:w-1/3 md:h-[300px] md:overflow-y-auto'}
             md:p-6 ${!isMobile && ' border-red-700'} pr-4 mt-2
-            ${styles["crm-scrollbar"]}
+            ${styles["crm-scrollbar"]  }
           `}
         >
-      <div className={`${isMobile ? 'flex space-x-0 min-w-max' : 'space-y-2'} ${styles["crm-scrollbar"]}`}>
+      <div className={`${isMobile ? 'flex space-x-0 min-w-max' : 'space-y-2'} ${styles["crm-scrollbar"]} `}>
         {crmServices.map((service) => (
           <div
             key={service.id}
@@ -147,7 +147,7 @@ const BlockServices = () => {
     {/* Content section */}
     <div className={`md:w-2/3 ${!isMobile && 'md:pl-[100px]'} mt-6 md:mt-0`}>
     <div
-  className={`pt-6 pr-10 pl-10 ${styles["box-border1"]} rounded w-full h-[410px] md:h-[300px]`}
+  className={`pt-6 pr-10 pl-10 ${styles["box-border1"]} rounded w-full h-[450px] md:h-[300px]`}
 >
 
         <h2 className={`${styles["right-title"]} ${monsterfont.className}`}>
