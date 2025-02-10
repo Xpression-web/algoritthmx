@@ -75,24 +75,24 @@ const ServicesAccordion = () => {
 
   const services = [
     {
-      title: "Search Campaigns",
-      content: "Be there when customers are searching for you. Capture customers at the moment they’re looking for your product. As a premier Google ads management agency, we craft high-converting search campaigns that put your brand in front of the right audience at the right time."
+      title: "Search Advertising",
+      content: "With our Bing Ads campaign management expertise, we ensure your ads appear in front of high-intent users on Bing, Yahoo, and AOL. Our dedicated Bing ads manager optimizes your bids and ad copy to capture users when they are searching for what you offer."
     },
     {
-      title: "Performance Max",
-      content: "Leverage automation to reach your audience across Search, Display, YouTube, and more. Performance Max optimizes your entire ad spend to drive conversions across multiple channels. As your Google ads marketing agency, we optimize your ad spend across multiple channels to ensure that you're getting the highest ROI possible."
+      title: "Display Advertising",
+      content: "Boost brand visibility with Bing Ads services that place engaging ads across Bing’s display network. These ads are perfect for building awareness and retargeting potential customers."
     },
     {
-      title: "Demand-Gen Campaigns",
-      content: "Our Demand Generation Campaigns focus on mid-funnel engagement, using AI to place visually appealing ads throughout potential customers’ digital journeys. These campaigns blend seamlessly into social platforms, building interest and driving conversions."
+      title: "Shopping Campaigns",
+      content: "Showcase your products directly in search results. We manage your product feed and bids for better exposure and conversions."
     },
     {
-      title: "Google Local Service Ads (GLSA)",
-      content: "With GLSA, we utilize a pay-per-lead model, uniquely suited for local businesses. Our team optimizes your GLSA campaigns to reach local customers actively seeking your services, ensuring high-quality leads and measurable returns directly aligned with your advertising spend. Connect with local customers who are searching for services like yours. As your google ads agency, we get your business seen first and build trust with Local Service Ads."
+      title: "Audience Targeting",
+      content: "Target your ideal customers using advanced demographic data like location, age, and device. We tailor your ads to attract the most relevant audience."
     },
     {
-      title: "Display and YouTube",
-      content: "We leverage visual storytelling through Display and YouTube Ads. By crafting compelling visuals and engaging video content, we capture audience interest across websites and the world’s largest video platform, driving brand engagement and conversions."
+      title: "App Install Ads",
+      content: "Bing Ads offers app install campaigns that promote mobile app downloads directly from search results or display ads. These ads are designed to drive users to app stores where they can download the advertiser’s app. It Increases app downloads by targeting users across the Microsoft Advertising network, optimizing campaigns for maximum reach and conversion."
     }
   ];
 
