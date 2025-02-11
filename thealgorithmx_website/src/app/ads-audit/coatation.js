@@ -1,4 +1,10 @@
 import React from 'react';
+import { Montserrat } from "next/font/google";
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "500",
+});
 
 const TestimonialSection = () => {
   return (
@@ -10,13 +16,13 @@ const TestimonialSection = () => {
 
       {/* Quote Content */}
       <div className="max-w-3xl mx-auto z-10 mt-[80px]">
-        <blockquote className="text-white text-xl md:text-3xl font-light leading-relaxed italic text-center">
+        <blockquote className="text-white text-[26px] leading-[44px] -tracking-[0.025em] font-[Helvetica] font-[100] italic text-center">
           Whether you've invested your spend in Google, Bing or another search engine, we leave no stone unturned in our fight to produce the best PPC results to get you noticed. We make you more money. We make you famous by combining research, analysis and audience personas to ensure you get a bespoke plan that actually works.
         </blockquote>
       </div>
       <div className="mt-6">
-          <button className="text-white uppercase tracking-wider text-sm font-medium hover:text-gray-300 transition-colors">
-            Talk to us
+          <button className={`${monsterfont.className} text-[12px] leading-[20px]`}>
+            TALK TO US 
           </button>
         </div>
 

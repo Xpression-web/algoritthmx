@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Twitter, Instagram, Facebook, Linkedin, ChevronDown, ChevronRight } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faTint,faGift, faUniversity, faCameraRetro, faSnowflake, faLightbulb, faCab, faGlobe, faShop, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faTint,faGift, faUniversity, faCameraRetro, faSnowflake, faLightbulb, faCab, faGlobe, faShop, faGraduationCap, faAd } from '@fortawesome/free-solid-svg-icons';
 import { faAmazon, faFacebook, faInstagram, faLinkedin, faTiktok, faTwitter, faYandexInternational, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -159,7 +159,20 @@ const Navbar = () => {
                         { name: 'Social Media Consulting', href: '/social-media-consulting', icon: faGraduationCap},
                     ]
                 },
-                { category: 'PPC Advertising', href: '/ppc-advertising' },
+                {
+                    category: 'PPC Advertising',
+                    icon: '',
+                    items: [
+                        { name: 'Google Ads', href: '/google-ads', icon: faTint },
+                        { name: 'Bing Ads', href: '/bing-ads', icon: faPaperPlane},
+                        { name: 'Ads Audit', href: '/ads-audit', icon: faAd},
+                        { name: 'Ads Suspension Recovery', href: '/ads-suspension-recovery', icon: faSnowflake},
+                        { name: 'Facebook Ads', href: '/facebook-ads', icon: faFacebook},
+                        { name: 'Instagram Ads', href: '/instagram-ads', icon: faInstagram},
+                        { name: 'Linkedin Ads', href: '/linkedin-ads', icon: faLinkedin},
+                        { name: 'Landing Page Design', href: '/landing-page-design', icon: faGraduationCap},
+                    ]
+                },
                 {
                     category: 'Content ',
                     icon: '',
