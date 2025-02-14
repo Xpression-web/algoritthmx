@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 
@@ -81,7 +82,7 @@ const FlipCard = ({ service }) => {
             >
               {service.title.join(' ')}
             </h3>
-            <p className={`text-white/80 text-[16px] font-[Helvetica] .algo-line-height-21   mt-10 px-6`}>{service.description}</p>
+            <p className={`text-white text-[14px] font-opensans .algo-line-height-21   mt-10 px-6`}>{service.description}</p>
             <div className="w-full h-0.5 bg-white/20 mt-14"></div>
           </div>
         </div>

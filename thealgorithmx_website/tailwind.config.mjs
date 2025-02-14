@@ -22,11 +22,15 @@ export default {
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
-        helvetica: ['Helvetica Neue'],
+        helvetica: ['Helvetica', 'sans-serif'],
+        helveticaneue: ['Helvetica Neue', 'sans-serif'],
+        opensans: ['Open Sans', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       colors: {
         'semi-white': 'rgba(255, 255, 255, 0.5)',
         'semii-white': 'rgba(255, 255, 255, 0.6)',
+        'nav-bar-text':'rgba(255, 255, 255, 0.8)',
         'dark': '#0f0f0f',
         
       },

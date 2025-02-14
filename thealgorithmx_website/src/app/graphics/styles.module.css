@@ -64,6 +64,7 @@
 .sub-title{
   font-size: 20;
   line-height: 1.1;
+  color: #fff;
 }
 .sub-description{
   font-size: 16px;
@@ -77,7 +78,6 @@
 }
 .hero-img-description{
   font-size:15px ;
-  margin-bottom: 20px;
 }
 .responsive-hero{
   min-height: 325px;
@@ -272,4 +272,8 @@
     left: -3px;
     background: #7202bb;
     border-radius: 50px;
+}
+
+.tool:hover{
+  background-color: rgb(255 255 255 / 16%);
 }

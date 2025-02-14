@@ -41,7 +41,6 @@
 }
 .video-description{
   font-size: 13px;
-  font-family: Helvetica, sans-serif;
   line-height: 2;
   margin-bottom: 20px;
 }
@@ -87,7 +86,6 @@
 }
 .craft-description{
   font-size: 15px;
-  font-family:  Helvetica, sans-serif;
  
 }
 .responsive-hero{
@@ -111,7 +109,6 @@
 .box-description{
   font-size:16px;
   line-height: 1.5625rem;
-  font-family:  Helvetica, sans-serif;
 }
 .border-design{
   border-top: 0.5em solid transparent;
@@ -185,6 +182,9 @@
     }
   }
 
+  .tool:hover{
+    background-color: rgb(255 255 255 / 16%);
+  }
   /* Add the slide-up animation */
 
 /* Add other necessary styles for your service cards */

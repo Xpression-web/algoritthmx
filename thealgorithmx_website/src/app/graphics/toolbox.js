@@ -5,10 +5,12 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 
 const TechnologyToolbox = () => {
@@ -41,7 +43,7 @@ const TechnologyToolbox = () => {
             {tools.map((tool) => (
               <div
                 key={tool.id}
-                className={`${styles["background"]} rounded-lg  flex items-center hover:bg-gray-900 transition duration-300`}
+                className={`${styles["background"]} rounded-lg  flex items-center ${styles["tool"]}  transition duration-300`}
               >
                 {/* Flex container for image and text */}
                 <div className={`flex w-full items-center ${styles["toolbox"]} `}>

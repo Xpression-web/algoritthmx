@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 
 const Roadmap = () => {
@@ -53,14 +54,14 @@ const Roadmap = () => {
 
   return (
     <div className="relative bg-black text-white">
-      <div className="flex flex-col lg:flex-row max-w-6xl mx-auto lg:h-[800px]">
+      <div className="flex flex-col lg:flex-row max-w-[1200px] mx-auto lg:h-[800px]">
         {/* Left Section */}
         <div className="w-full lg:w-5/12">
           <div className="p-8 lg:sticky lg:top-0">
-            <h1 className={`text-[50px] leading-[1.1]  ${monsterfont1.className} bg-black  text-white md:text-start text-center `}>
-              Accelerate <br/> Your Digital Evolution!
+            <h1 className={`text-[50px] leading-[1.1]  font-helveticaneue bg-black font-[400]  text-white md:text-start text-center `}>
+              Accelerate Your <br/>Digital Evolution!
             </h1>
-            <p className={`text-[17px] leading-[26px]  font-[Helvetica] font-[400] text-white mt-[48px] md:text-start text-center`}>
+            <p className={`text-[17px] leading-[26px]  font-helveticaneue font-[400] text-white mt-[48px] md:text-start text-center`}>
               We're a premier end-to-end digital agency committed to revolutionizing businesses with advanced digital 
               solutions and data-driven strategies to deliver exceptional growth and success. We transform your Vision 
               into a known Brand, your Concept into a tangible Product, and your Product into a Market Leader. Our 
@@ -77,24 +78,26 @@ const Roadmap = () => {
             {/* Timeline container */}
             <div className="relative">
               {/* Vertical Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gray-600" 
-                   style={{
-                     top: '-40px',
-                     height: 'calc(100% + 40px)'
-                   }} />
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1.5" 
+     style={{
+       top: '-40px',
+       height: 'calc(100% + 40px)',
+       background: 'linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%)'
+     }} />
 
               {/* Timeline Items */}
               {timelineData.map((item, index) => (
                 <div key={index} className="relative mb-4">
                   {/* Timeline Dot */}
-                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-white ${item.color} ${item.boxShadow} -top-6 md:-top-0`} />
+                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-white -top-6 md:-top-0`} 
+                    style={{ border: '4px solid rgb(255, 80, 80)' }} />
 
                   {/* Content Box */}
                   <div className={`flex flex-col items-center lg:items-start text-center mt-8 lg:mt-0
                     ${item.direction === 'right' 
                       ? 'lg:ml-[60%] lg:text-left' 
                       : 'lg:mr-[60%] lg:items-end lg:text-right self-start lg:self-end'}`}>
-                    <div className={`relative inline-flex items-center gap-2 px-4 py-2 rounded ${item.color} border-2 ${item.boxShadow}`}>
+                    <div className={`relative inline-flex items-center gap-2 px-[10px] py-[6px] rounded ${item.color} border-2 ${item.boxShadow}`}>
                       {/* Mobile Arrow Triangle (upward) */}
                       <div className={`absolute lg:hidden w-0 h-0 bottom-full left-1/2 -translate-x-1/2 
                         border-b-[12px] border-x-[8px] border-x-transparent`}
@@ -112,9 +115,9 @@ const Roadmap = () => {
                           borderRightColor: item.direction === 'right' ? item.borderColor : 'transparent',
                           borderLeftColor: item.direction === 'left' ? item.borderColor : 'transparent'
                         }} />
-                      <h3 className={`text-[15px] leading-[1.1]  font-[Helvetica] font-[400] text-white`}>{item.title}</h3>
+                      <h3 className={`text-[15px] leading-[1.1]  font-helveticaneue font-[600] text-white`}>{item.title}</h3>
                     </div>
-                    <p className={`text-[12.44px] leading-[1.5] font-[Helvetica] font-[400] text-white italic max-w-md mt-3 
+                    <p className={`text-[11.665px] leading-[1.5em] font-helveticaneue font-[400] text-white italic max-w-md mt-3 
                       lg:p-0 lg:border-0 lg:bg-transparent
                       p-4 border border-[${item.borderColor}] bg-[#0F0F0F]`}>
                       {item.description}

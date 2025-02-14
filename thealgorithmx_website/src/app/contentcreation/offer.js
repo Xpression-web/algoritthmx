@@ -6,14 +6,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "600",
+  fallback: ["sans-serif"],
 });
 
 const Offer = () => {
@@ -104,7 +107,7 @@ const Offer = () => {
                 {service.id}
               </div>
 
-              <h3 className={` ${styles["offer-title"]} text-white ${monsterfont3.className} transition-colors duration-300`}>
+              <h3 className={` ${styles["offer-title"]} text-white font-helveticaneue transition-colors duration-300`}>
                 {service.title}
               </h3>
               <div className="mb-6">
@@ -114,7 +117,7 @@ const Offer = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className={`text-semi-white  ${styles["offer-description"]} `}>
+              <p className={`text-semi-white font-helveticaneue ${styles["offer-description"]} `}>
                 {service.description}
               </p>
             </div>

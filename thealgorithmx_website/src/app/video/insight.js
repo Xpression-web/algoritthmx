@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const InsightSection = () => {

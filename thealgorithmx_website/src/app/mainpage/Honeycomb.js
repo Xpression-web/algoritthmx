@@ -6,11 +6,13 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
     subsets: ["latin"],
     weight: "500",
+    fallback: ["sans-serif"],
 });
 
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "100",
+    fallback: ["sans-serif"],
 });
 
 const ParticleAnimation = () => {
@@ -136,7 +138,7 @@ const ParticleAnimation = () => {
         };
     }, []);
     return (
-        <div className="relative w-screen h-screen overflow-hidden">
+        <div className="relative w-full h-screen overflow-hidden">
             <canvas 
                 ref={canvasRef} 
                 className="absolute top-0 left-0 w-full h-full bg-black -z-10" 

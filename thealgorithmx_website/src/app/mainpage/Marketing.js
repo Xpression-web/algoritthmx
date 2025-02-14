@@ -1,12 +1,11 @@
 import React from 'react';
 import { Montserrat } from "next/font/google";
 
-
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
-
 
 const MarketingServices = () => {
   const services = [
@@ -53,8 +52,8 @@ const MarketingServices = () => {
                   />
                 </div>
                 <div className="bg-black p-6">
-                  <h2 className="text-2xl font-bold text-white mb-3">{service.title}</h2>
-                  <p className="text-gray-300">{service.description}</p>
+                  <h2 className={`text-[21px] leading-[1.1] ${monsterfont3.className} text-white mb-[15px]`}>{service.title}</h2>
+                  <p className={`text-[16px] leading-[26px] font-helvetica text-[#9f9f9f] `}>{service.description}</p>
                 </div>
               </div>
 
@@ -63,8 +62,8 @@ const MarketingServices = () => {
                 {/* Content Section */}
                 <div className={`w-1/2 ${service.imageOnLeft ? 'order-2' : 'order-1'}`}>
                   <div className="bg-black p-8">
-                    <h2 className={`text-[21px]  leading-[1.1] ${monsterfont3.className} text-white mb-[15px]`}>{service.title}</h2>
-                    <p className={`text-[14px]  leading-[24px] font-[Helvetica] text-semi-white`}>{service.description}</p>
+                    <h2 className={`text-[21px] leading-[1.1] ${monsterfont3.className} text-white mb-[15px]`}>{service.title}</h2>
+                    <p className={`text-[14px] leading-[24px] font-helveticaneue text-[#9f9f9f] `}>{service.description}</p>
                   </div>
                 </div>
 
@@ -110,12 +109,5 @@ const MarketingServices = () => {
     </div>
   );
 };
-
-// Inject styles
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = styles;
-  document.head.appendChild(styleSheet);
-}
 
 export default MarketingServices;

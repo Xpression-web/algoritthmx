@@ -28,7 +28,6 @@ const Page = () => {
       <ResultRow/>
       <MarketingGrid/>
       <Reviews/>
-      <InsightSection/>
       <Footer/>
     </div>
   );

@@ -4,12 +4,14 @@ import styles from "./styles.module.css";
 
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
-  weight: "300",
+  weight: "400",
+  fallback: ["sans-serif"],
 });
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const DesignProcess = () => {
@@ -54,13 +56,13 @@ const DesignProcess = () => {
             <div key={index} className="relative pl-16 pb-16">
               {/* Timeline dot */}
               <div className="absolute left-0 w-8 h-8 bg-white  rounded-full flex items-center justify-center">
-                <span className={`${monsterfont1.className} text-black`}>{step.number}</span>
+                <span className={`font-helveticaneue text-black`}>{step.number}</span>
               </div>
               
               {/* Content */}
               <div>
                 <h3 className= {`${monsterfont.className} ${styles["sub-title"]}`}>{step.title}</h3>
-                <p className={`${styles["sub-description"]} ${monsterfont1.className} text-semi-white`}>{step.description}</p>
+                <p className={`${styles["sub-description"]} font-helveticaneue text-semi-white`}>{step.description}</p>
               </div>
             </div>
           ))}

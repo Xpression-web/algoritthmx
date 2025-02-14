@@ -6,6 +6,7 @@ import './style.css'
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const ServiceCard = ({ title, description }) => (
@@ -20,8 +21,8 @@ const ServiceCard = ({ title, description }) => (
       </span>
     </div>
     {/* Content */}
-    <div className="relative flex flex-col items-center text-center px-[50px] py-[50px] space-y-4 z-10">
-      <p className={`text-[16px] leading-[26px]  font-[Helvetica] font-[400] text-white  p-4  `}>{description}</p>
+    <div className="relative flex flex-col items-center text-center px-[50px] py-[30px] space-y-4 z-10">
+      <p className={`text-[16px] leading-[26px]  font-helveticneue font-[400] text-white  p-4  `}>{description}</p>
     </div>
   </div>
 );
@@ -43,7 +44,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="min-h-screen content-center bg-black p-6">
+    <div className="min-h-screen content-center bg-black px-16">
       <div className="max-w-[1200px] mx-auto space-y-8 ">
         {/* Top row services */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
@@ -65,7 +66,7 @@ const ServicesSection = () => {
             </span>
           </div>
           <div className="relative flex flex-col items-center text-center px-[50px] py-[10px] space-y-4 z-10">
-            <p className={`text-[16px] leading-[26px]  font-[Helvetica] font-[400] text-white mt-4   `}>
+            <p className={`text-[16px] leading-[26px]  font-helveticneue font-[400] text-white mt-4   `}>
               Offering a range of content services from content creation to writing and marketing.<br/>
               Creating top-notch content designed to attract your target audience<br/>
               and fuel business expansion resulting in increased interaction<br/>

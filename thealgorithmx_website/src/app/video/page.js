@@ -4,7 +4,7 @@ import VideoSection from './home';
 import VideoServices from './videoservices';
 import  DevelopmentProcess from './craftmanship';
 import TechnologyToolbox from'./toolbox';
-import ResponsiveHero from './experience';
+import ResponsiveHero from  '../graphics/experience'
 import Home from './digital';
 import InsightSection from '../graphics/insight'
 import Footer from '../mainpage/footer';

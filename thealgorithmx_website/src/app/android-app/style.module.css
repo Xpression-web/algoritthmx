@@ -63,7 +63,6 @@
   
   .multi-description {
     font-size: 18px;
-    font-family: Helvetica, Arial, sans-serif;
     word-wrap: break-word;
     word-break: break-all;
     font-weight: 400;
@@ -88,13 +87,11 @@
     font-size: 24px;
     line-height: 1.1;
     margin: 20px 0;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
   }
   .and-description{
     font-size: 14px;
     margin:15px 0;
-    font-family: Arial, Helvetica, sans-serif;
   }
   .indus-card-figure {
     width: 32px;

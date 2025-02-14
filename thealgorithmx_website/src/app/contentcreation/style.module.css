@@ -130,7 +130,7 @@
   .scroll-title{
     font-size: 18px;
     line-height: 1.1;
-    font-family:  Helvetica, sans-serif;
+     
     font-weight: 700;
     margin-bottom: 15px;
 
@@ -138,7 +138,7 @@
   .scroll-description{
     font-size: 14px;
     line-height: 1.1;
-    font-family:  Helvetica, sans-serif;
+     
 
   }
 
@@ -160,7 +160,6 @@
 }
 .offer-description{
   font-size: 13px;
-  font-family: Helvetica, sans-serif;
   line-height: 2;
   margin-bottom: 20px;
 }
@@ -191,7 +190,7 @@
 }
 .aligned-content{
   font-size: 15px;
-  font-family:  Helvetica, sans-serif;
+   
 }
 
 .toolbox-title{
@@ -206,7 +205,6 @@
 .toolbox{
   font-size: 1.1rem;
   padding: 1rem 0.75rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -306,4 +304,8 @@
     }
   
     
+  }
+
+  .tool:hover{
+    background-color: rgb(255 255 255 / 16%);
   }

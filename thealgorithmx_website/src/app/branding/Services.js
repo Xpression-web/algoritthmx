@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
@@ -13,6 +14,7 @@ const monsterfont2 = Montserrat({
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"], // Explicit fallback
 });
 
 const ServicesSection = () => {
@@ -47,7 +49,7 @@ const ServicesSection = () => {
     {
       title: 'Brand Strategy',
       image: '/images/brand.png',
-      color: 'bg-gradient-to-br from-red-600 to-orange-500',
+      gradient: 'linear-gradient(30deg, #ff5000 0%, #cd0055 100%)',
       items: [
         'BRAND STORY',
         'BRAND NAMING',
@@ -61,8 +63,8 @@ const ServicesSection = () => {
     },
     {
       title: 'Packaging Design',
-      image: '/images/brand.png',
-      color: 'bg-gradient-to-br from-orange-500 to-yellow-600',
+      image: '/images/packaging-design.png',
+      gradient: 'linear-gradient(30deg, #ff9900 0%, #ff6600 100%)',
       items: [
         'CREATIVE IDEATION',
         'COLOUR PAIRINGS & COMBINATIONS',
@@ -74,8 +76,8 @@ const ServicesSection = () => {
     },
     {
       title: 'Brand Identity',
-      image: '/images/brand.png',
-      color: 'bg-gradient-to-br from-teal-400 to-blue-500',
+      image: '/images/brand-identity.png',
+      gradient: 'linear-gradient(30deg, #00b4db 0%, #0083b0 100%)',
       items: [
         'LOGO DESIGN',
         'BRAND COLOUR PALETTE',
@@ -89,8 +91,8 @@ const ServicesSection = () => {
     },
     {
       title: 'Brand Naming & Tagline',
-      image: '/images/brand.png',
-      color: 'bg-gradient-to-br from-purple-600 to-purple-900',
+      image: '/images/Brand-name-and-tagline.png',
+      gradient: 'linear-gradient(150deg, #553388 0%, #cd0055 100%)',
       items: [
         'CREATIVE TERRITORIES',
         'BRAND NAMES',
@@ -100,8 +102,8 @@ const ServicesSection = () => {
     },
     {
       title: 'Illustration',
-      image: '/images/brand.png',
-      color: 'bg-gradient-to-br from-purple-900 to-blue-600',
+      image: '/images/illustration.png',
+      gradient: 'linear-gradient(150deg, #553388 0%, #2299dd 100%)',
       items: [
         'DIGITAL WALL ART',
         'WEBSITE GRAPHICS',
@@ -112,8 +114,8 @@ const ServicesSection = () => {
     },
     {
       title: 'Brand Videos',
-      image: '/images/brand.png',
-      color: 'bg-gradient-to-br from-green-500 to-green-600',
+      image: '/images/brand-video.png',
+      gradient: 'linear-gradient(90deg, #05a234 0%, #069552 100%)',
       items: [
         'LOGO ANIMATION',
         'BRAND EXPLAINER VIDEOS',
@@ -123,6 +125,7 @@ const ServicesSection = () => {
       ]
     }
   ];
+  
 
   return (
     <div className="bg-black min-h-screen p-8" ref={sectionRef}>
@@ -153,21 +156,22 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
-              key={index}
-              className={`${service.color} rounded-2xl px-12 py-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
-            >
+            key={index}
+            className="rounded-[10px] px-12 py-6 transform transition-all duration-300"
+            style={{ background: service.gradient }}
+          >
               <div className="space-y-4">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-16 h-16"
                 />
-                <h3 className={`text-xl md:text-2xl ${monsterfont.className} text-white`}>
+                <h3 className={`text-[24px]  leading-[1.1] font-helveticaneue font-[700] text-white`}>
                   {service.title}
                 </h3>
                 <ul>
                   {service.items.map((item, idx) => (
-                    <li key={idx} className={`text-white text-sm md:text-base font-medium ${monsterfont2.className}`}>
+                    <li key={idx} className={`text-white text-[15px] leading-[1.5rem] font-helveticaneue font-[500]`}>
                       {item}
                     </li>
                   ))}

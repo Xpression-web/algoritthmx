@@ -6,6 +6,7 @@ import styles from "./styles.module.css";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "500",
+  fallback: ["sans-serif"],
 });
 
 const ResponsiveHero = () => {

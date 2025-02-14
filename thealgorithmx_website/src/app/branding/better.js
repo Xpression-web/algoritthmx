@@ -6,18 +6,22 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "600",
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 
 
@@ -58,12 +62,12 @@ const Icons = {
 
 // Define FeatureCard component
 const FeatureCard = ({ Icon, title, description, isHighlighted }) => (
-  <div className={`bg-black p-8 rounded-lg py-16 px-5   text-center shadow-md transform transition-transform duration-300 hover:-translate-y-2 ${isHighlighted ? 'border' : 'bg-dark'}`}>
+  <div className={`bg-black p-8 rounded-[10px] py-16 px-5   text-center shadow-md transform transition-transform duration-300 hover:-translate-y-2 ${isHighlighted ? styles['box-border'] : 'bg-dark'}`}>
     <div className="mb-4 flex justify-center items-center">
       <Icon />
     </div>
     <h3 className= {`algo-line-height-24 letter-spacing-100 font-size-14 ${monsterfont2.className} mt-4`}>{title}</h3>
-    <p className={`font-size-14 text-semi-white ${monsterfont3.className} mt-4`}>{description}</p>
+    <p className={`font-size-14 text-semi-white font-opensans mt-4`}>{description}</p>
   </div>
 );
 
@@ -146,7 +150,7 @@ export default function MarketingFeatures() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 relative">
+      <div className="max-w-[1200px] mx-auto px-4 relative">
         {/* Heading */}
         <div className="text-center mb-14 relative z-8">
           <h2 className={`font-size-40 ${monsterfont.className} text-white `}>

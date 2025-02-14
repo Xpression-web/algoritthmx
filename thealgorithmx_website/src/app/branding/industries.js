@@ -6,14 +6,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "600",
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "500",
+  fallback: ["sans-serif"],
 });
 
 
@@ -116,7 +119,7 @@ const IndustriesGrid = () => {
               <div
                 className={`w-full h-full ml-12 flex items-center justify-center bg-black border-2 ${industry.borderColor} ${styles["custom-rounded"]} transition-all duration-300 `}
               >
-                <span className={`text-white font-size-19 algo-line-height-23 ${monsterfont1.className} ml-4 max-w-[180px]`}>{industry.title}</span>
+                <span className={`text-white font-size-19 algo-line-height-23 font-helveticaneue font-[600] ml-4 max-w-[180px]`}>{industry.title}</span>
               </div>
             </button>
           ))}

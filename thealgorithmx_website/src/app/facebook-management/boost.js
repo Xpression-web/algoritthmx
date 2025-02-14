@@ -20,7 +20,7 @@
 
     const content = {
         organic: {
-        text: "Need to reach more people, fast? Our paid Facebook marketing services are built to put your brand in front of the right audience, at the right time. By leveraging boosted posts and precisely targeted ads, we drive visibility where it matters most—getting your message directly to potential customers and optimizing ad spending for maximum impact. Whether you’re looking for a “top facebook management agency in USA” or a “dedicated Facebook Manager”, we’ve got you covered.",
+        text: "Need to reach more people, fast? Our paid Facebook marketing services are built to put your brand in front of the right audience, at the right time. By leveraging boosted posts and precisely targeted ads, we drive visibility where it matters most—getting your message directly to potential customers and optimizing ad spending for maximum impact. Whether you're looking for a top facebook management agency in USA or a dedicated Facebook Manager, we've got you covered.",
         extraText: "Our organic Facebook services focus on engaging your audience and driving meaningful interactions.",
         features: [
             "10+ Monthly Posts and 8+ Custom Images",
@@ -29,7 +29,7 @@
             "Dedicated Account Manager",
             "Monthly Performance Reports"
         ]
-    },
+        },
         paid: {
         text: "Paid ads may be quick, but organic marketing is where true brand loyalty is built. We focus on creating content that not only keeps your current audience engaged but also nurtures long-term relationships. Through consistent, meaningful interactions, your brand becomes more than just another post—it becomes a trusted voice in your community.",
         extraText: "Our paid Facebook advertising helps expand your reach with targeted campaigns that drive conversions.",
@@ -70,7 +70,7 @@
     };
 
     return (
-        <div className="min-h-screen bg-black text-gray-300 p-4">
+        <div className="min-h-screen bg-black text-gray-300 p-4 flex justify-center items-center">
         <div className="max-w-[1200px] mx-auto p-8">
             <div className="mb-16 text-center space-y-2">
             <h2
@@ -92,86 +92,116 @@
             </div>
 
             <div className="relative mb-12">
-            <div className="flex rounded-full border border-green-500 p-1 relative">
-                <div
-                className="absolute h-[calc(100%-8px)] transition-all duration-300 ease-in-out rounded-full"
+            <div className="flex justify-center items-center">
+            <div className="flex rounded-[33px] border-[1px] border-[#a2ed56] p-2 relative md:min-w-[720px]">
+
+                <div 
+                className="hidden md:flex absolute h-[calc(100%-8px)] transition-all duration-300 ease-in-out"
                 style={{
-                    width: hoverTab || activeTab === 'paid' ? '50%' : '45%',
-                    left: hoverTab
-                    ? hoverTab === 'paid'
-                        ? '50%'
-                        : '0'
+                  width: '180px',  // Adjust this value to control background width
+                  height: '45px',  // Adjust this value to control background height
+                  left: hoverTab 
+                    ? hoverTab === 'paid' 
+                      ? 'calc(36% + 90px)' // Center in right half
+                      : 'calc(40% - 90px)'  // Center in left half
                     : activeTab === 'paid'
-                    ? '50%'
-                    : '0',
-                    background: 'linear-gradient(90deg, rgba(22,163,74,0.95) 0%, rgba(21,128,61,0.95) 100%)',
-                    boxShadow: '0 0 15px rgba(34,197,94,0.3)',
-                    backdropFilter: 'blur(4px)',
+                      ? 'calc(36% + 90px)'
+                      : 'calc(40% - 90px)',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background:'#5a882b',
+                  borderRadius: '9999px',
+                  boxShadow: '-1px 1px 5px 7px rgba(128, 215, 0, 0.2)',
+                  backdropFilter: 'blur(4px)',
                 }}
-                />
+              />
+              <div 
+                className="flex md:hidden absolute h-[calc(100%-8px)] transition-all duration-300 ease-in-out"
+                style={{
+                  width: '120px',  // Adjust this value to control background width
+                  height: '45px',  // Adjust this value to control background height
+                  left: hoverTab 
+                    ? hoverTab === 'paid' 
+                      ? 'calc(18% + 90px)' // Center in right half
+                      : 'calc(40% - 90px)'  // Center in left half
+                    : activeTab === 'paid'
+                      ? 'calc(18% + 90px)'
+                      : 'calc(40% - 90px)',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background:'#5a882b',
+                  borderRadius: '9999px',
+                  boxShadow: '-1px 1px 5px 7px rgba(128, 215, 0, 0.2)',
+                  backdropFilter: 'blur(4px)',
+                }}
+              />
                 <button
                 className="flex-1 rounded-full py-2 px-6 transition-all duration-300 relative z-10"
                 onClick={() => setActiveTab('organic')}
                 onMouseEnter={() => setHoverTab('organic')}
                 onMouseLeave={() => setHoverTab(null)}
-                >
-                <span
-                    className={`flex items-center justify-center gap-2 ${hoverTab === 'organic' || (!hoverTab && activeTab === 'organic') ? 'text-white' : 'text-green-500'}`}
-                >
+              >
+                <div className="flex justify-end items-center">
+                  <span className={`flex justify-end items-center gap-2 ${hoverTab === 'organic' || (!hoverTab && activeTab === 'organic') ? 'text-white' : 'text-[#a2ed56]'}`}>
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z" />
+                      <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z" />
                     </svg>
                     ORGANIC
-                </span>
-                </button>
+                  </span>
+                </div>
+              </button>
 
-                <button
+              <button
                 className="flex-1 rounded-full py-2 px-6 transition-all duration-300 relative z-10"
                 onClick={() => setActiveTab('paid')}
                 onMouseEnter={() => setHoverTab('paid')}
                 onMouseLeave={() => setHoverTab(null)}
-                >
-                <span
-                    className={`flex items-center justify-center gap-2 ${hoverTab === 'paid' || (!hoverTab && activeTab === 'paid') ? 'text-white' : 'text-green-500'}`}
-                >
+              >
+                <div className="flex justify-start items-center">
+                  <span className={`flex items-center gap-2 ${hoverTab === 'paid' || (!hoverTab && activeTab === 'paid') ? 'text-white' : 'text-[#a2ed56]'}`}>
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z" />
+                      <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z" />
                     </svg>
                     PAID
-                </span>
-                </button>
+                  </span>
+                </div>
+              </button>
+                </div>
             </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div className="space-y-4">
-        <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica']">{splitContent(content[activeTab].text)[0]}</p>
-    </div>
-    <div className="space-y-4">
-        <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica']">{splitContent(content[activeTab].extraText)[0]}</p>
-        {activeTab === 'paid' && (
-            <ul className="space-y-2 mt-4">
-                {content.paid.features.map((feature, index) => (
+            <div className="space-y-4">
+                <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica']">
+                {splitContent(content[activeTab].text)[0]}
+                </p>
+            </div>
+            <div className="space-y-4">
+                <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica']">
+                {splitContent(content[activeTab].extraText)[0]}
+                </p>
+                {activeTab === 'paid' && (
+                <ul className="space-y-2 mt-4">
+                    {content.paid.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica'] gap-2">
                         <span className="w-1 h-1 bg-white rounded-full"></span>
                         {feature}
                     </li>
-                ))}
-            </ul>
-        )}
-        {activeTab === 'organic' && (
-            <ul className="space-y-2 mt-4">
-                {content.organic.features.map((feature, index) => (
+                    ))}
+                </ul>
+                )}
+                {activeTab === 'organic' && (
+                <ul className="space-y-2 mt-4">
+                    {content.organic.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica'] gap-2">
                         <span className="w-1 h-1 bg-green-500 rounded-full"></span>
                         {feature}
                     </li>
-                ))}
-            </ul>
-        )}
-    </div>
-</div>
-
+                    ))}
+                </ul>
+                )}
+            </div>
+            </div>
         </div>
         </div>
     );

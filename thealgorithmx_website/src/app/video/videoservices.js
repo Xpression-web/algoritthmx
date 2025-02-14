@@ -6,14 +6,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "600",
+  fallback: ["sans-serif"],
 });
 
 const VideoServices = () => {
@@ -118,7 +121,7 @@ const VideoServices = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className={`text-semi-white ${styles["video-description"]}`}>
+              <p className={`text-semi-white font-helveticaneue ${styles["video-description"]}`}>
                 {service.description}
               </p>
             </div>

@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 
@@ -11,26 +12,47 @@ const monsterfont = Montserrat({
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 
 const ReviewCard = ({ title, description, author, bgImage, category }) => {
+  const categoryColors = {
+    'SEO & PPC': {
+      bgColor: 'bg-blue-600',
+      textColor: 'text-white',
+      opacity: 'bg-opacity-70'
+    },
+    'Android App Development': {
+      bgColor: 'bg-white', // Example different color
+      textColor: 'text-blue-500', // Example different color
+      opacity: 'bg-opacity-50'
+    },
+    // Add more categories and colors as needed
+  };
+
+  const { bgColor, textColor, opacity } = categoryColors[category] || { // Default if category not found
+    bgColor: 'bg-gray-500', 
+    textColor: 'text-white',
+    opacity: 'bg-opacity-70'
+  };
+
   return (
     <div className="relative h-96 w-full overflow-hidden">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/images/${bgImage}')`, // Dynamically set background image
+          backgroundImage: `url('/images/${bgImage}')`,
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-90"></div>
+        <div className={`absolute inset-0 bg-black ${opacity}`}></div> {/* Apply dynamic opacity */}
       </div>
 
       {/* Content */}
       <div className="relative h-full p-6 flex flex-col">
         {/* Category Tag */}
         <div className="mb-4">
-          <span className={`inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-[14px] leading-[32px] ${monsterfont.className} font-semibold`}>
+          <span className={`inline-block ${bgColor} ${textColor} px-4 py-2 rounded-full text-[14px] leading-[32px] ${monsterfont.className} font-semibold`}>
             {category}
           </span>
         </div>
@@ -56,14 +78,14 @@ const Reviews = () => {
       description:
         'EXCEPTIONAL SEO & PPC SERVICES WITH GOOGLE ADS. SAW SIGNIFICANT TRAFFIC INCREASE AND EXCELLENT ROI. HIGHLY PROFESSIONAL & RELIABLE TEAM',
       author: 'Maika Fischer',
-      bgImage: 'testimonial-1.webp', // Different image for this review
+      bgImage: 'testimonial-1.webp',
     },
     {
       category: 'Android App Development',
       description:
         'TOP-NOTCH ANDROID APP DEVELOPMENT! EFFICIENT, INNOVATIVE, AND GREAT COMMUNICATION THROUGHOUT THE PROJECT. HIGHLY RECOMMEND THEIR SERVICES!',
       author: 'Rachel Lawson',
-      bgImage: 'testimonial-2.webp', // Different image for this review
+      bgImage: 'testimonial-2.webp',
     },
   ];
   

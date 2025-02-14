@@ -16,6 +16,9 @@ const Navbar = () => {
     const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(null);
     const [mobileCategoryOpen, setMobileCategoryOpen] = useState(null);
     const menuRef = useRef(null);
+    const dropdownRef = useRef(null);
+    const hoverTimeoutRef = useRef(null);
+    const navItemsRef = useRef([]); // Ref to store nav items
 
     useEffect(() => {
         const handleScroll = () => {
@@ -201,6 +204,9 @@ const Navbar = () => {
 
     const handleMouseEnter = (index) => {
         if (window.innerWidth > 768) {
+            if (hoverTimeoutRef.current) {
+                clearTimeout(hoverTimeoutRef.current);
+            }
             setActiveDropdown(index);
             if (navItems[index].subItems.length > 0) {
                 setActiveCategory(0);
@@ -208,13 +214,54 @@ const Navbar = () => {
         }
     };
 
+    // Modify handleMouseLeave to use setTimeout for smoother transitions
     const handleMouseLeave = (e) => {
-        if (!e.relatedTarget || !(e.relatedTarget instanceof Element) || !e.relatedTarget.closest('.dropdown-content')) {
+        if (window.innerWidth > 768) {
+            const relatedTarget = e.relatedTarget;
+            const dropdownElement = dropdownRef.current;
+            
+            // Check if moving to the dropdown content
+            if (dropdownElement && relatedTarget && 
+                (dropdownElement === relatedTarget || dropdownElement.contains(relatedTarget))) {
+                return; 
+            }
+
+            // Set timeout for smoother transitions
+            hoverTimeoutRef.current = setTimeout(() => {
+                setActiveDropdown(null);
+                setActiveCategory(null);
+            }, 100);
+        }
+    };
+
+    // Add new handler for dropdown mouse enter
+    const handleDropdownMouseEnter = () => {
+        if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+        }
+    };
+
+    // Add new handler for dropdown mouse leave
+    const handleDropdownMouseLeave = (e) => {
+        if (!e.relatedTarget) {
+            setActiveDropdown(null);
+            setActiveCategory(null);
+            return;
+        }
+    
+        const navElement = e.relatedTarget;
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        // Check if moving back to nav items
+        const isMovingToNavItem = Array.from(navItems).some(item => 
+            item && navElement && item.contains(navElement)
+        );
+        
+        if (!isMovingToNavItem) {
             setActiveDropdown(null);
             setActiveCategory(null);
         }
     };
-
     const handleCategoryHover = (categoryIndex) => {
         setActiveCategory(categoryIndex);
     };
@@ -250,8 +297,8 @@ const Navbar = () => {
                     }
                     
                     .navbar-scrolled {
-                        background-color: rgba(0, 0, 0, 0.5);
-                        backdrop-filter: blur(10px);
+                        background-color: black;
+                        
                     }
                     
                     /* Update dropdown overlay styles */
@@ -350,6 +397,7 @@ const Navbar = () => {
                     backdrop-filter: blur(8px);
                     z-index: 40;
                 }
+                    
 
                 .dropdown-content {
                     opacity: 0;
@@ -384,8 +432,13 @@ const Navbar = () => {
 
                             <div className="hidden md:flex items-center space-x-6">
                                 {navItems.map((item, index) => (
-                                    <div key={item.name} className="relative" onMouseEnter={() => handleMouseEnter(index)}>
-                                        <Link href={item.href} className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap `}>
+                                    <div 
+                                        key={item.name} 
+                                        className="relative nav-item" 
+                                        onMouseEnter={() => handleMouseEnter(index)}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <Link href={item.href} className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-nav-bar-text whitespace-nowrap`}>
                                             {item.name}
                                         </Link>
                                     </div>
@@ -414,16 +467,16 @@ const Navbar = () => {
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <Link href="http://x.com/algorithmxinc" target="_blank" className="text-white hover:text-gray-200">
-                                    <img src="/images/icons8-twitter.svg" alt="twitter" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[240deg] hover:brightness-[100%] hover:contrast-[100%]" />
+                                    <img src="/images/icons8-twitter.svg" alt="twitter" className="w-6 h-6 " />
                                     </Link>
                                     <Link href="https://www.instagram.com/thealgorithmx/" target="_blank" className="text-white hover:text-gray-200">
-                                    <img src="/images/icons8-instagram.svg" alt="instagram" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
+                                    <img src="/images/icons8-instagram.svg" alt="instagram" className="w-6 h-6 " />
                                     </Link>
                                     <Link href="https://www.facebook.com/algorithmxinc" target="_blank" className="text-white hover:text-gray-200">
-                                    <img src="/images/icons8-facebook.svg" alt="Facebook" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
+                                    <img src="/images/icons8-facebook.svg" alt="Facebook" className="w-6 h-6 " />
                                     </Link>
                                     <Link href="https://www.linkedin.com/company/algorithmxinc" target="_blank" className="text-white ">
-                                    <img src="/images/icons8-linkedin.svg" alt="linkedin" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
+                                    <img src="/images/icons8-linkedin.svg" alt="linkedin" className="w-6 h-6 hover:filter " />
                                     </Link>
                                 </div>
 
@@ -530,11 +583,12 @@ const Navbar = () => {
                                     </div>
 </div>
                             </div>
-
                             {activeDropdown !== null && navItems[activeDropdown]?.subItems.length > 0 && (
                                 <div
+                                    ref={dropdownRef}
                                     className="dropdown-wrapper"
-                                    onMouseLeave={handleMouseLeave}
+                                    onMouseEnter={handleDropdownMouseEnter}
+                                    onMouseLeave={handleDropdownMouseLeave}
                                 >
                                     <div className={`dropdown-content active`}>
                                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

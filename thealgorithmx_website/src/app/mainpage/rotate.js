@@ -5,10 +5,12 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const DiagonalGridWithText = () => {
@@ -57,7 +59,7 @@ const DiagonalGridWithText = () => {
       {/* Left Section: Centered Grid Container */}
       <div className="w-full p-4 flex-1 flex items-center justify-center xxl:w-4/5 my-10 md:h-auto ">
         <div className="transform rotate-45 xxl:w-1/2 xxl:h-1/2">
-          <div className="grid grid-cols-6 gap-1 md:gap-5 w-full mr-1 ml-1 justify-items-center content-center items-center">
+          <div className="grid grid-cols-6 gap-1 md:gap-4 w-full mr-1 ml-1 justify-items-center content-center items-center">
             {images.map((imageData, index) => (
               <div
                 key={index}
@@ -85,13 +87,13 @@ const DiagonalGridWithText = () => {
             Tech Stack
           </h1>
 
-          <p className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white mt-[20px]`}>
+          <p className={`text-[15px] leading-[24px] font-opensans font-[400] text-semi-white mt-[20px]`}>
             At AlgorithmX, our tech stack is designed to deliver powerful and scalable solutions. We leverage
             powerful technologies like Java, Kotlin, Flutter, React-Native, and Android SDK for seamless app and
             website development. Our creative processes are powered by Adobe Creative Cloud and Webflow, ensuring
             visually stunning and user-friendly designs.
           </p>
-          <p className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white mt-[20px]`}>
+          <p className={`text-[15px] leading-[24px] font-opensans font-[400] text-semi-white mt-[20px]`}>
             To drive marketing excellence, we utilize tools like Google Analytics, SEMrush, and Moz for in-depth
             insights and optimization. Platforms like HubSpot streamline our CRM and marketing automation, while
             Midjourney and ChatGPT enhance our content creation, and Hootsuite facilitates social media management.

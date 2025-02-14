@@ -7,11 +7,13 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const ResponsiveGrid = () => {
   return (
-    <div className="container1 min-h-screen bg-black place-content-center mx-auto  py-8 p-4">
+    <div className="container1 min-h-screen bg-black mx-auto  p-4 ">
+      <div className='max-w-[1200px] mx-auto'>
 
       {/* Mobile Layout (5-7-5) - Show on small screens, hide on lg and up */}
       <div className="grid grid-cols-1 xxs:grid-cols-3 lg:hidden mt-3 gap-0 justify-center ">
@@ -48,7 +50,7 @@ const ResponsiveGrid = () => {
       {/* Desktop Layout (2-3-2-3-2) - Hide on small screens, show on lg and up */}
       <div className="hidden lg:grid grid-cols-7 mt-3 gap-0 justify-center">
         {/* Column 1 (2 items) */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-[60px]">
           <GridItem image="6188204.png" />
           <GridItem text="App" />
         </div>
@@ -61,20 +63,20 @@ const ResponsiveGrid = () => {
         </div>
 
         {/* Column 3 (2 items) */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-[30px]">
           <GridItem image="14601160.png" />
           <GridItem text="CMS" />
         </div>
 
         {/* Column 4 (3 items) */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-[62px]">
           <GridItem image="4288871.png" />
           <GridItem text="CRM" />
           <GridItem image="9872417.png" />
         </div>
 
         {/* Column 5 (2 items) */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-[55 px] ">
           <GridItem image="992908.png" />
           <GridItem text="ERP" />
         </div>
@@ -87,11 +89,12 @@ const ResponsiveGrid = () => {
         </div>
 
         {/* Column 7 (2 items) */}
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-[50px]">
           <GridItem image="4795542.png" />
           <GridItem text="Software" />
         </div>
       </div>
+    </div>
     </div>
     
   );
@@ -100,15 +103,18 @@ const ResponsiveGrid = () => {
 // GridItem component for reusability
 const GridItem = ({ image, text }) => {
   return (
-    <div className="bg-[#1b1a1a] p-2 m-0.5 text-center rounded-xl w-20 h-20 lg:w-32 lg:h-32 flex items-center justify-center text-sm">
+    <div
+      className={`p-2 m-0.5 text-center rounded-[20px] w-[137px] h-[137px] flex items-center justify-center  
+      ${image ? "bg-[#1a1a1a]" : "bg-[#0d0d0d]"}`}
+    >
       {image ? (
         <img 
           src={`/images/${image}`} 
           alt="grid item" 
-          className="w-16 h-16 object-cover m-0 p-0 filter grayscale"
+          className="w-[68px] h-[68px] object-cover m-0 p-0 filter grayscale"
         />
       ) : (
-        <a href="#" className={`text-[20px] leading-[34px] mb-[6px]  ${monsterfont.className} text-[#e6c522] no-underline `}>
+        <a href="#" className={`font-helveticaneue text-[22px] leading-[1.1] font-[400]  text-[#F9AD04]  `}>
           {text}
         </a>
       )}

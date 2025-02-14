@@ -6,14 +6,17 @@ import styles from "./style.module.css";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "800",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 
 const StrategyGrid = () => {
@@ -73,22 +76,22 @@ const StrategyGrid = () => {
         {/* Top Row */}
         <div className="flex flex-col md:flex-row justify-center gap-6 mb-6">
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Lead Generation</span>
+            <span className={`${styles["aligned-content"]}  font-helveticaneue `}>Lead Generation</span>
             <img src="images/lead-generation.png" alt="Lead Generation" className="w-8 h-8" />
           </div>
           
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Sales Enablement</span>
+            <span className={`${styles["aligned-content"]}  font-helveticaneue `}>Sales Enablement</span>
             <img src="images/sales.png" alt="Sales Enablement" className="w-8 h-8" />
           </div>
           
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Nurturing Customers</span>
+            <span className={`${styles["aligned-content"]} font-helveticaneue `}>Nurturing Customers</span>
             <img src="images/nuturing.png" alt="Nurturing Customers" className="w-8 h-8" />
           </div>
           
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Social Engagement</span>
+            <span className={`${styles["aligned-content"]} font-helveticaneue `}>Social Engagement</span>
             <img src="images/social.png" alt="Social Engagement" className="w-8 h-8" />
           </div>
         </div>
@@ -96,17 +99,17 @@ const StrategyGrid = () => {
         {/* Bottom Row - Centered and Spaced */}
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Thought Leadership</span>
+            <span className={`${styles["aligned-content"]} font-helveticaneue `}>Thought Leadership</span>
             <img src="images/leadership.png" alt="Thought Leadership" className="w-8 h-8" />
           </div>
           
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Conversions</span>
+            <span className={`${styles["aligned-content"]} font-helveticaneue `}>Conversions</span>
             <img src="images/conversion.png" alt="Conversions" className="w-8 h-8" />
           </div>
           
           <div className="bg-[#222] rounded-md p-6 flex items-center justify-between md:w-72 cursor-pointer transition-colors duration-300">
-            <span className={`${styles["aligned-content"]}`}>Search Engine Optimization</span>
+            <span className={`${styles["aligned-content"]} font-helveticaneue `}>Search Engine Optimization</span>
             <img src="images/SEO-.png" alt="SEO" className="w-8 h-8" />
           </div>
         </div>

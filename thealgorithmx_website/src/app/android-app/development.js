@@ -72,10 +72,10 @@ const ServicesGrid = () => {
                 alt={service.alt} 
                 className={` object-contain rounded-lg  ${styles["indus-card-figure"]}  `}
               />
-              <h3 className={` ${styles["and-title2"]} transition-colors duration-300 `}>
+              <h3 className={` ${styles["and-title2"]} font-helveticaneue  transition-colors duration-300 `}>
                 {service.title}
               </h3>
-              <p className={` text-semi-white  ${styles["and-description"]} transition-colors duration-300 `}>
+              <p className={` text-semi-white  ${styles["and-description"]} font-helveticaneue  transition-colors duration-300 `}>
                 {service.description}
               </p>
             </div>

@@ -81,11 +81,11 @@ const AppGrid = () => {
         </div>
 
         <div className={`${styles["container1"]}`}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-x-14 md:gap-y-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="border border-white-200 p-2 md:px-2 md:py-6 flex flex-col items-center justify-center text-center hover:border-gray-500 transition-colors duration-300"
+                className="border border-semi-white p-2 md:px-0 md:py-3 flex flex-col items-center justify-center text-center transition-colors duration-300"
               >
                 <div className="mb-2">
                   {/* Render image instead of icon */}
@@ -96,7 +96,7 @@ const AppGrid = () => {
                   />
                 </div>
                 <h3
-                  className={`${styles["multi-description"]}    mt-4 `} 
+                  className={`${styles["multi-description"]} font-helveticaneue    mt-4 `} 
                   dangerouslySetInnerHTML={{ __html: service.title }}
                 />
               </div>

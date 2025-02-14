@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "500",
+  fallback: ["sans-serif"],
 });
 
 const ResponsiveHero = () => {
@@ -39,13 +40,13 @@ const ResponsiveHero = () => {
 
             {/* Main content area: 4/5 width */}
             <div className="md:w-4/5 flex flex-col items-center md:items-start  mt-40 md:mt-20  text-center md:text-left">
-              <h2 className={`${styles["hero-img-title "]}text-white ${monsterfont1.className}`}>
+              <h2 className={`${styles["hero-img-title"]} font-helveticaneue text-white `}>
                 Experience AlgorithmX Today
               </h2>
-              <p className={`text-semi-white ${styles["hero-img-description "]} ${monsterfont1.className} md:max-w-md`}>
+              <p className={`text-semi-white ${styles["hero-img-description "]} font-helveticaneue mb-[20px] md:max-w-md`}>
                 We're your full-stack solution for everything digital. Bring us your idea and we'll make it a success.
               </p>
-              <button className="px-12 py-4 mb-4 rounded-full bg-transparent border border-white/20 text-white text-lg hover:bg-white/10 transition-all duration-300">
+              <button className="px-12 py-4 mb-4 rounded-full bg-transparent border border-white/20 text-white text-[16px] font-helveticaneue ">
                 Get Started
               </button>
             </div>
