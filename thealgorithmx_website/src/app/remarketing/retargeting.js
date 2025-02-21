@@ -4,6 +4,7 @@
         const monsterfont = Montserrat({
           subsets: ['latin'],
           weight: '400',
+          fallback : ["sans-serif"],
         });
 
 
@@ -27,7 +28,7 @@
                 Retargeting Competition Analysis
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 We analyze the competition to understand what they’re doing to bring their visitors back. Not only does this give us insight into new avenues to target, we can also identify holes in their plan to help you obtain a competitive advantage. By understanding the different channels they’re advertising on, we can place your brand in a competitive position while targeting the low-cost channels they aren't using with a different strategy. We continue to analyze your competition and the industry as a whole to adapt your retargeting campaign to new trends and developments.
                 </p>
             </div>

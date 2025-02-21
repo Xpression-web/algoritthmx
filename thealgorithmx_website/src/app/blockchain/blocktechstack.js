@@ -5,15 +5,18 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 
 
@@ -70,7 +73,11 @@ const BlockTechStack = () => {
         <p className={` ${styles["tech-title"]} ${monsterfont1.className} mb-2`}>WE LEVERAGE</p>
         <h1 className={` ${styles["tech-subtitle"]} ${monsterfont2.className  }`}>TECH STACK</h1>
         <h2 className={` ${styles["tech-subtitle"]} ${monsterfont.className  }`}>EXPERTISE</h2>
+        <div className="flex justify-center mt-4">
+          <div className="h-[2px] w-[35px] bg-[#2775ff]"></div>
+        </div>
       </div>
+      
 
       <div className="max-w-6xl mx-auto">
         {technologies.map((tech, index) => (

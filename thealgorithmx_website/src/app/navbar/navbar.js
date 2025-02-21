@@ -4,8 +4,13 @@ import Link from 'next/link';
 import { Menu, X, Phone, Twitter, Instagram, Facebook, Linkedin, ChevronDown, ChevronRight } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faTint,faGift, faUniversity, faCameraRetro, faSnowflake, faLightbulb, faCab, faGlobe, faShop, faGraduationCap, faAd } from '@fortawesome/free-solid-svg-icons';
-import { faAmazon, faFacebook, faInstagram, faLinkedin, faTiktok, faTwitter, faYandexInternational, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faAmazon, faFacebook, faInstagram, faLinkedin, faSnapchat, faTiktok, faTwitter, faYandexInternational, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { Montserrat } from 'next/font/google';
 
+const monsterfont2 = Montserrat({
+  subsets: ['latin'],
+  fallback: ["sans-serif"],
+});
 
   
 const Navbar = () => {
@@ -174,6 +179,14 @@ const Navbar = () => {
                         { name: 'Instagram Ads', href: '/instagram-ads', icon: faInstagram},
                         { name: 'Linkedin Ads', href: '/linkedin-ads', icon: faLinkedin},
                         { name: 'Landing Page Design', href: '/landing-page-design', icon: faGraduationCap},
+                        { name: 'X/Twitter Ads', href: '/twitter-ads', icon: faTwitter},
+                        { name: 'Youtube Ads', href: '/youtube-ads', icon: faYoutube},
+                        { name: 'Tiktok Ads', href: '/tiktok-ads', icon: faTiktok},
+                        { name: 'Snapchat Ads', href: '/snapchat-ads', icon: faSnapchat},
+                        { name: 'Amazon Ads', href: '/amazon-ads', icon: faAmazon},
+                        { name: 'Display Ads', href: '/display-ads', icon: faPaperPlane},
+                        { name: 'Remarketing', href: '/remarketing', icon: faSnowflake},
+                        { name: 'Ecommerce Advertising', href: '/ecommerce-advertising', icon: faUniversity},
                     ]
                 },
                 {
@@ -219,13 +232,16 @@ const Navbar = () => {
         if (window.innerWidth > 768) {
             const relatedTarget = e.relatedTarget;
             const dropdownElement = dropdownRef.current;
-            
-            // Check if moving to the dropdown content
-            if (dropdownElement && relatedTarget && 
-                (dropdownElement === relatedTarget || dropdownElement.contains(relatedTarget))) {
-                return; 
+    
+            // Ensure dropdownElement is valid before calling contains()
+            if (!dropdownElement || !relatedTarget) {
+                return;
             }
-
+    
+            if (dropdownElement === relatedTarget || dropdownElement.contains(relatedTarget)) {
+                return;
+            }
+    
             // Set timeout for smoother transitions
             hoverTimeoutRef.current = setTimeout(() => {
                 setActiveDropdown(null);
@@ -233,6 +249,7 @@ const Navbar = () => {
             }, 100);
         }
     };
+    
 
     // Add new handler for dropdown mouse enter
     const handleDropdownMouseEnter = () => {
@@ -241,27 +258,44 @@ const Navbar = () => {
         }
     };
 
-    // Add new handler for dropdown mouse leave
     const handleDropdownMouseLeave = (e) => {
-        if (!e.relatedTarget) {
+        if (window.innerWidth <= 768) return; // Don't handle on mobile
+    
+        const relatedTarget = e.relatedTarget;
+        
+        // If mouse leaves to nowhere, close the dropdown
+        if (!relatedTarget) {
             setActiveDropdown(null);
             setActiveCategory(null);
             return;
         }
     
-        const navElement = e.relatedTarget;
-        const navItems = document.querySelectorAll('.nav-item');
-        
-        // Check if moving back to nav items
-        const isMovingToNavItem = Array.from(navItems).some(item => 
-            item && navElement && item.contains(navElement)
-        );
-        
-        if (!isMovingToNavItem) {
+        // Check if relatedTarget is an Element before using DOM methods
+        if (!(relatedTarget instanceof Element)) {
+            setActiveDropdown(null);
+            setActiveCategory(null);
+            return;
+        }
+    
+        // Check if the related target or any of its parents has the nav-item class
+        let currentElement = relatedTarget;
+        let isNavItem = false;
+    
+        while (currentElement instanceof Element) {
+            if (currentElement.classList.contains('nav-item')) {
+                isNavItem = true;
+                break;
+            }
+            if (!currentElement.parentElement) break;
+            currentElement = currentElement.parentElement;
+        }
+    
+        if (!isNavItem) {
             setActiveDropdown(null);
             setActiveCategory(null);
         }
     };
+    
     const handleCategoryHover = (categoryIndex) => {
         setActiveCategory(categoryIndex);
     };
@@ -431,19 +465,23 @@ const Navbar = () => {
                             </div>
 
                             <div className="hidden md:flex items-center space-x-6">
-                                {navItems.map((item, index) => (
-                                    <div 
-                                        key={item.name} 
-                                        className="relative nav-item" 
-                                        onMouseEnter={() => handleMouseEnter(index)}
-                                        onMouseLeave={handleMouseLeave}
-                                    >
-                                        <Link href={item.href} className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-nav-bar-text whitespace-nowrap`}>
-                                            {item.name}
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
+    {navItems.map((item, index) => (
+        <div 
+            key={item.name} 
+            className="relative nav-item" // Make sure this class is present
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+        >
+            <Link 
+                href={item.href} 
+                className="text-[14px] leading-[22px] font-[400] font-[Helvetica] text-nav-bar-text whitespace-nowrap"
+            >
+                {item.name}
+            </Link>
+        </div>
+    ))}
+</div>
+
 
                             <div className="flex items-center justify-center">
                                 <Link href="/mainpage">
@@ -540,7 +578,7 @@ const Navbar = () => {
                                     />
                                 </div>
                             ) : (
-                                <Link href={category.href} className={`block py-2 text-[#006064] text-[14px] leading-[28px] font-[600] font-[Helvetica]  whitespace-nowrap  `}>
+                                <Link href={category.href} className={`block py-2 text-[#006064] text-[14px] leading-[28px] font-[600] font-[Helvetica] text-white  whitespace-nowrap  `}>
                                     {category.category}
                                 </Link>
                             )}
@@ -584,25 +622,31 @@ const Navbar = () => {
 </div>
                             </div>
                             {activeDropdown !== null && navItems[activeDropdown]?.subItems.length > 0 && (
-                                <div
-                                    ref={dropdownRef}
-                                    className="dropdown-wrapper"
-                                    onMouseEnter={handleDropdownMouseEnter}
-                                    onMouseLeave={handleDropdownMouseLeave}
-                                >
+    <div
+        ref={dropdownRef}
+        className="dropdown-wrapper"
+        onMouseEnter={() => {
+            if (hoverTimeoutRef.current) {
+                clearTimeout(hoverTimeoutRef.current);
+            }
+        }}
+        onMouseLeave={(e) => {
+            handleDropdownMouseLeave(e);
+        }}
+    >
                                     <div className={`dropdown-content active`}>
-                                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[135px] py-4">
                                             <div className="flex">
                                                 <div className="w-64">
                                                     {navItems[activeDropdown].subItems.map((category, idx) => (
                                                         <Link key={category.category} href={category.href || '#'}>
                                                             <div 
-                                                                className={`flex items-center px-4 py-1 cursor-pointer ${
+                                                                className={`flex items-center px-4  cursor-pointer ${
                                                                     activeCategory === idx ? 'text-white' : 'text-gray-300'
                                                                 }`} 
                                                                 onMouseEnter={() => handleCategoryHover(idx)}
                                                             >
-                                                                <span className={`text-[20px] leading-[28px] font-[700] font-[Helvetica] text-white whitespace-nowrap `}>
+                                                                <span className={`text-[1.25rem] leading-[35px] font-[600] font-opensans text-white whitespace-nowrap `}>
                                                                     {category.category}
                                                                 </span>
                                                             </div>
@@ -610,7 +654,7 @@ const Navbar = () => {
                                                     ))}
                                                 </div>
                                                 <div className="flex-1 pl-8">
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-x-2 md:grid-flow-col md:auto-cols-fr">
+                                                <div className="grid grid-cols-1 md:grid-cols-2  md:gap-x-2 md:grid-flow-col md:auto-cols-fr">
                                                         {activeCategory !== null && 
                                                             navItems[activeDropdown].subItems[activeCategory]?.items?.map((item, index) => {
                                                                 const columnClass = index < 8 ? 'md:col-start-1' : 'md:col-start-2';
@@ -626,7 +670,7 @@ const Navbar = () => {
                                                                                             className="w-3 h-3 mr-5 gap-2 text-gray-400 group-hover:text-blue-500"/>
                                                                                     )}
 
-                                                                        <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap `}>
+                                                                        <span className={`text-[13px] leading-[10px] font-[400] ${monsterfont2.className} text-white whitespace-nowrap py-[10px]  `}>
                                                                             {item.name}
                                                                         </span>
                                                                     </Link>

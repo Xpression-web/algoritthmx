@@ -6,14 +6,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '200',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 
 
@@ -110,14 +113,14 @@ const SEOReports = () => {
               className="group p-8 relative"
             >
               <div className="flex flex-col space-y-0">
-                <h2 className=" text-[24px] leading-[1.1] font-[Helvetica] text-start font-[400]">
+                <h2 className=" text-[24px] leading-[1.1] font-helveticaneue text-start font-[400]">
                   {feature.title}
                 </h2>
                 <div className="flex items-center space-x-2">
                   <div className="transition-all duration-500 group-hover:opacity-0 group-hover:-translate-x-full">
                     <LineSVG />
                   </div>
-                  <p className={`text-[24px] leading-[1.1] font-[Helvetica] font-[400] text-white-500   duration-300 group-hover:-translate-x-14`}>
+                  <p className={`text-[24px] leading-[1.1] font-helveticaneue font-[400] text-white-500   duration-300 group-hover:-translate-x-14`}>
                     {feature.subtitle}
                   </p>
                 </div>
@@ -140,14 +143,14 @@ const SEOReports = () => {
       className="group py-8 relative"
     >
       <div className="flex flex-col space-y-4">
-        <h2 className="text-[24px] leading-[1.1] font-[Helvetica] text-start font-[400]">
+        <h2 className="text-[24px] leading-[1.1] font-helveticaneue text-start font-[400]">
           {feature.title}
         </h2>
         <div className="flex items-center space-x-2">
           <div className="transition-all duration-300 ">
             <LineSVG />
           </div>
-          <p className="text-[24px] leading-[1.1] font-[Helvetica] text-start font-[400] text-white transition-transform duration-300">
+          <p className="text-[24px] leading-[1.1] font-helveticaneue text-start font-[400] text-white transition-transform duration-300">
             {feature.subtitle}
           </p>
         </div>

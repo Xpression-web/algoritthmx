@@ -6,18 +6,19 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 const carouselData = [
     {
         id: 'erp-consulting',
-        icon: "images/Erp.png",
+        icon: "images/erp-consultant-services.png",
         title: "ERP Consulting Services",
         description: "AlgorithmX's team of expert ERP consultants carefully analyze your business environment and understand your strategic business needs and goals. With our ERP consulting services, we work on creating and implementing necessary strategies to deploy ERP software."
     },
     {
         id: 'custom-erp',
-        icon: "images/Erp.png",
+        icon: "images/custom-erp-solutions.png",
         title: "Custom ERP Solutions",
         description: "We offer custom ERP software development services for businesses of all sizes and industries. By building robust and flexible systems, we provide essential data analytics that can be accessed through mobile phones, web or any other in-house platforms."
     },
@@ -29,19 +30,19 @@ const carouselData = [
     },
     {
         id: 'erp-development',
-        icon: "images/Erp.png",
+        icon: "images/erp-application.png",
         title: "ERP Application Development",
         description: "Being the top ERP development company in USA, expert ERP developers leverage the most advanced programming languages and industry technologies when they build customized cloud ERP solutions that meet your specific business needs for all platforms."
     },
     {
         id: 'managed-erp',
-        icon: "images/Erp.png",
+        icon: "images/manege-erp.png",
         title: "Managed ERP Services",
         description: "Free up resources and time for focusing on core operations by using our ERP managed services. Our talented ERP software consultants offer management, monitoring, assistance, for your ERP system, thereby addressing, resolving and averting any issues effectively."
     },
     {
         id: 'staff-augmentation',
-        icon: "images/Erp.png",
+        icon: "images/staff-augmentation.png",
         title: "Staff Augmentation",
         description: "If you're not sure about outsourcing your custom enterprise software development and lean more towards building your in-house team, our premier ERP development company provides outstanding ERP staff augmentation services that allow you to hire talented and experienced professionals who are critical to the success of your project."
     }
@@ -154,7 +155,7 @@ const Carousel = () => {
                                 height: isMobile ? "auto" : "700px"
                             }}
                         >
-                            <div className="bg-black bg-opacity-50 p-6 md:p-14 border border-white shadow-[0_0_10px_rgba(218,240,245,1)] w-full h-full">
+                            <div className="bg-black bg-opacity-50 p-6 md:p-14 border border-white shadow-[0_0_10px_rgba(218,240,245,1)] w-full h-fit-content">
                                 <div className="flex flex-col items-center space-y-4">
                                     <img
                                         src={item.icon}
@@ -166,7 +167,7 @@ const Carousel = () => {
                                             <span key={`${item.id}-word-${idx}`} className="block">{word}</span>
                                         ))}
                                     </h3>
-                                    <p className={`text-semi-white ${styles["erp-description"]} text-center md:p-4 md:mb-2`}>
+                                    <p className={`text-semi-white ${styles["erp-description"]} font-helveticaneue text-center md:p-4 md:mb-2`}>
                                         {item.description}
                                     </p>
                                 </div>

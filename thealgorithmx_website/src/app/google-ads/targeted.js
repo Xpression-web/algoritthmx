@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback: ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback: ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback: ["sans-serif"],
   })
 
 const Targeted = () => {
@@ -44,7 +47,7 @@ const Targeted = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
                 AlgorithmX is a leading Google ads services agency dedicated to 
                 driving conversions, increasing visibility, and boosting your bottom line. 
                 As a top Google Ads management company, we focus on precision-targeted 
@@ -53,7 +56,7 @@ const Targeted = () => {
             </div>
 
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
                 "Get better results from your ad budget by targeting the right people, 
                 optimizing campaigns, and boosting conversions. With our expert 
                 Google ads management services, your campaigns are built to deliver 

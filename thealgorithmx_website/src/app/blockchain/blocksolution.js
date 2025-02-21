@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 
 const BlockchainSolutions = () => {
@@ -37,16 +40,19 @@ const BlockchainSolutions = () => {
         <h2 className={`${styles["solution-title"]} ${monsterfont2.className} text-center mb-8`}>
           WE DELIVER
         </h2>
+        <div className="flex justify-center mb-8">
+          <div className="h-[2px] w-[35px] bg-[#2775ff]"></div>
+        </div>
         
         <p className={`${styles["solution-subtitle"]} ${monsterfont1.className} text-center mb-16 text-semi-white`}>
           As a leading blockchain application development company, AlgorithmX provides personalized solutions designed to suit your business requirements. Employing an agile methodology, we prioritize comprehending your distinct needs, enabling us to devise bespoke blockchain solutions that foster innovation in your business processes.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 max-w-4xl content-center mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-[3.5rem] max-w-4xl content-center mx-auto">
           {solutions.map((solution) => (
             <div key={solution.id} className="flex items-center space-x-3">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-              <span className={`${styles["solution-description"]} `}>{solution.title}</span>
+              <div className="w-[12px] h-[12px] bg-yellow-400 rounded-full mr-[10px] "></div>
+              <span className={`${styles["solution-description"]} font-helveticaneue `}>{solution.title}</span>
             </div>
           ))}
         </div>

@@ -6,11 +6,13 @@
         const monsterfont = Montserrat({
           subsets: ["latin"],
           weight: "500",
+          fallback: ['sans-serif'],
         });
     
         const monsterfont1 = Montserrat({
           subsets: ["latin"],
           weight: "100",
+          fallback: ['sans-serif'],
         });
     
 
@@ -131,7 +133,7 @@
                         onClick={() => handleTabChange(key)}
                     >
                         <span className="w-6 h-6">{value.icon}</span>
-                        <span className='font-[Helvetica] text-[15px] leading-[22px] '>{value.mainTitle}</span>
+                        <span className='font-helveticaneue text-[15px] leading-[22px] '>{value.mainTitle}</span>
                     </button>
                     ))}
                 </div>
@@ -159,7 +161,7 @@
                     onClick={() => handleTabChange(key)}
                     >
                     <span className="w-6 h-6">{value.icon}</span>
-                    <span className='font-[Helvetica] text-[15px] leading-[22px] '>{value.mainTitle}</span>
+                    <span className='font-helveticaneue text-[15px] leading-[22px] '>{value.mainTitle}</span>
                     </button>
                 ))}
                 </div>

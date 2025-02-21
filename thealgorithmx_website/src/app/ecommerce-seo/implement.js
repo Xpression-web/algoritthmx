@@ -6,11 +6,13 @@
             const monsterfont = Montserrat({
               subsets: ["latin"],
               weight: "500",
+              fallback: ['sans-serif'],
             });
         
             const monsterfont1 = Montserrat({
               subsets: ["latin"],
               weight: "100",
+              fallback: ['sans-serif'],
             });
 
 
@@ -119,7 +121,7 @@
         <div className='p-4 md:p-8 bg-black text-white md:min-h-screen flex items-center justify-center'>
         <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-8 md:mb-12">
-            <div className="text-blue-400 font-['Helvetica'] leading-[18px] text-[18px]  text-center">WHY IMPLEMENT</div>
+            <div className="text-blue-400 font-helveticaneue leading-[18px] text-[18px]  text-center">WHY IMPLEMENT</div>
             <h1 className={`leading-[40px] text-[36px] md:text-[56px] mt-[20px]  text-center  ${monsterfont1.className} `}>ECOMMERCE SEO</h1>
             </div>
 
@@ -137,7 +139,7 @@
                         onClick={() => handleTabChange(key)}
                     >
                         <span className="w-6 h-6">{value.icon}</span>
-                        <span className='font-[Helvetica] text-[15px] leading-[22px] '>{value.mainTitle}</span>
+                        <span className='font-helveticaneue text-[15px] leading-[22px] '>{value.mainTitle}</span>
                     </button>
                     ))}
                 </div>
@@ -165,7 +167,7 @@
                     onClick={() => handleTabChange(key)}
                     >
                     <span className="w-6 h-6">{value.icon}</span>
-                    <span className='font-[Helvetica] text-[15px] leading-[22px] '>{value.mainTitle}</span>
+                    <span className='font-helveticaneue text-[15px] leading-[22px] '>{value.mainTitle}</span>
                     </button>
                 ))}
                 </div>

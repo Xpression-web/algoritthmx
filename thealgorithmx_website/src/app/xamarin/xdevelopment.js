@@ -5,10 +5,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"400",
+  fallback: ["sans-serif"],
 })
 const monsterfont = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback: ["sans-serif"],
 })
 
 const services = [
@@ -65,8 +67,7 @@ const XamarinServicesGrid = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-black rounded-lg p-7 hover:bg-zinc-800 border border-zinc-800 group"
-            >
+              className={`bg-black ${styles["box"]} `}>
               <img 
                 src={service.image} 
                 alt={service.alt} 

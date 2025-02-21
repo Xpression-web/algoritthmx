@@ -7,18 +7,22 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ['latin'],
   weight: '600',
+  fallback: ["sans-serif"],
 });
 
 
@@ -97,10 +101,10 @@ const CRMSystem = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
           {services.map((service, index) => (
             <div
-              key={index}
-              className={`relative p-6 bg-gradient-to-b from-black via-[#2a3b4e] to-black rounded-lg 
-              transition-all duration-300 group hover:shadow-[0px_0px_50px_15px_rgba(42,201,235,0.2)] overflow-hidden w-full h-[450px]`}
-            >
+            key={index}
+            className={`relative p-6 bg-gradient-to-b from-black via-[#2a3b4e] to-black rounded-lg
+              transition-all duration-300 group hover:bg-[rgba(39,117,255,.6)] hover:shadow-[0px_20px_60px_0px_rgba(39,117,255,0.4)] overflow-hidden w-full h-[450px]`}
+          >
               <div className="flex flex-col items-center justify-center h-full text-center">
                 <div
                   className={`${styles["animate-slideDown"]} mb-4 ${
@@ -115,7 +119,7 @@ const CRMSystem = () => {
                   }`}
                 >
                   <h3 className={`${styles["scale-title"]} ${monsterfont3.className} mt-5  mb-4`}>{service.title}</h3>
-                  <p className={`${styles["scale-description"]}  `}>{service.description}</p>
+                  <p className={`${styles["scale-description"]} font-helveticaneue  `}>{service.description}</p>
                 </div>
               </div>
             </div>

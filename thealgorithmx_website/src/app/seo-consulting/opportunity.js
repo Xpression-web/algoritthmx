@@ -41,11 +41,11 @@
 
             {/* Right Section with Content */}
             <div className="md:w-1/2 flex flex-col justify-center">
-            <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-[Helvetica] text-[#f857a6] `}>KEY POINT</div>
-            <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-[Helvetica] text-white `}>
+            <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-helveticaneue text-[#f857a6] `}>KEY POINT</div>
+            <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-helveticaneue text-white `}>
             Seize every opportunity with our extensive SEO consulting services.
             </h1>
-            <p className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>
+            <p className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>
             Whether you're seeking an enterprise SEO consultant or small business SEO consultant,
             our team delivers tailored strategies that align with your goals. As a top SEO consulting
             company in USA, we provide both local and international SEO consultant services. Our SEO
@@ -55,28 +55,20 @@
             {/* SEO Services Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center  ">
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M21 3L3 21l18-18z" />
-                </svg>
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Improving Rankings: Achieve top search engine positions with proven strategies.</span>
+                 
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Improving Rankings: Achieve top search engine positions with proven strategies.</span>
                 </div>
                 <div className="flex items-center  ">
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M21 3L3 21l18-18z" />
-                </svg>
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Optimizing Site Health: Fix errors and apply SEO best practices for greater visibility.</span>
+                 
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Optimizing Site Health: Fix errors and apply SEO best practices for greater visibility.</span>
                 </div>
                 <div className="flex items-center  ">
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M21 3L3 21l18-18z" />
-                </svg>
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Driving Growth: Attract more customers and increase profitability.</span>
+                 
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Driving Growth: Attract more customers and increase profitability.</span>
                 </div>
                 <div className="flex items-center  ">
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M21 3L3 21l18-18z" />
-                </svg>
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Strategic Insights: Stay ahead of trends and adapt to market shifts.</span>
+                 
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Strategic Insights: Stay ahead of trends and adapt to market shifts.</span>
                 </div>
             </div>
             </div>

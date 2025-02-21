@@ -20,8 +20,8 @@ const monsterfont2 = Montserrat({
 
 const ContentSection = () => {
   return (
-    <div className="min-h-screen bg-black pt-[100px]">
-      <div className="  md:max-w-[1200px] mx-auto py-16 px-4 pt-[200px]">
+    <div className="min-h-screen bg-black ">
+      <div className="  md:max-w-[1200px] mx-auto py-16 px-4 pt-[100px]">
         <div className="flex flex-col md:flex-row md:items-center">
           {/* Left side - Image */}
           <div className="w-full md:w-1/2">
@@ -75,12 +75,12 @@ const ContentSection = () => {
             />
           <div>
         <span
-          className={` ${styles["title"]} ${monsterfont2.className} tracking-wider bg-white-500 block`}
+          className={` ${styles["title"]} ${monsterfont2.className} tracking-[8px] bg-white-500 block`}
       >
     CONTENT
   </span>
   <span
-    className={`  ${styles["title"]} ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
+    className={`  ${styles["title"]} ${monsterfont1.className} tracking-[8px] bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
   >
     CREATION
   </span>

@@ -26,7 +26,9 @@ export default {
         helveticaneue: ['Helvetica Neue', 'sans-serif'],
         opensans: ['Open Sans', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        glock: ['Glock', 'sans-serif'], 
       },
+      
       colors: {
         'semi-white': 'rgba(255, 255, 255, 0.5)',
         'semii-white': 'rgba(255, 255, 255, 0.6)',

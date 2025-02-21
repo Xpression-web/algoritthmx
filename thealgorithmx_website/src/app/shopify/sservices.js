@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 
 
@@ -102,10 +105,10 @@ const ShopifyServices = () => {
                 />
               </div>
               <div className="flex-1">
-                <h3 className={`${styles["development-title"]}  mb-3`}>
+                <h3 className={`${styles["development-title"]} font-helveticaneue  mb-[18px]`}>
                   {service.title}
                 </h3>
-                <p className={`${styles["development-description"]}  text-semi-white`}>
+                <p className={`${styles["development-description"]} font-helveticaneue  text-semi-white`}>
                   {service.description}
                 </p>
               </div>

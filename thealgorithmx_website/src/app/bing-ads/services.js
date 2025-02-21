@@ -7,14 +7,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 
 
@@ -40,7 +43,7 @@ const AccordionItem = ({ title, content, isActive, onClick, isInView }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="py-10 text-[15px] leading-[22px] text-semi-white font-[Helvetica]">{content}</p>
+          <p className="py-10 text-[15px] leading-[22px] text-semi-white font-helveticaneue">{content}</p>
         </div>
       </div>
     </div>

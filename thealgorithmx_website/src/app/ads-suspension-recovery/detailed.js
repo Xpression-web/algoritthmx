@@ -3,6 +3,7 @@
     const monsterfont1 = Montserrat ({
       subsets : ["latin"],
       weight :"100",
+        fallback : ["sans-serif"],
     })
 
     const DetailedHeroSection = () => {
@@ -30,7 +31,7 @@
             DETAILED REPORT
                 </h1>
                 <div className="w-[35px] h-[2px] bg-blue-500  mt-[35px] mb-[32px]"></div>
-                <p className="text-semi-white text-[16px] leading-[26px] font-[300] font-['Helvetica']">
+                <p className="text-semi-white text-[16px] leading-[26px] font-[300] font-helveticaneue">
                 The keywords powering your campaign can also be your undoing. Google changes its policies towards how you advertise to fall in line with new advertising guidelines. We analyze the keywords for all of your campaigns to make sure you're not targeting anything that runs afoul of their advertising guidelines.
                 </p>
             </div>

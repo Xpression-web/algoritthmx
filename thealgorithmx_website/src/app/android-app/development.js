@@ -6,10 +6,13 @@ import styles from "./style.module.css";
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"400",
+  fallback: ["sans-serif"],
+  
 })
 const monsterfont = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback: ["sans-serif"],
 })
 
 const services = [
@@ -66,7 +69,7 @@ const ServicesGrid = () => {
           {services.map((service, index) => (
           <div
           key={index}
-          className="bg-black rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group transition-colors duration-1000 ease-in-out">
+          className={`bg-black ${styles["box"]} `}>
               <img 
                 src={service.image} 
                 alt={service.alt} 

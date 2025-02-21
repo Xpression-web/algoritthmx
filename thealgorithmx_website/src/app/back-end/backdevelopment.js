@@ -6,17 +6,20 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '800',
+  fallback: ["sans-serif"],
 });
 
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '200',
+  fallback: ["sans-serif"],
 });
 
 const services = [
@@ -112,17 +115,17 @@ const BackServicesGrid = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`${styles["card"]} hover:bg-zinc-800 border border-zinc-800 group transition-colors duration-1000 ease-in-out `}
+              className={`${styles["card"]} hover:bg-[#1c1c1e]  hover:border-[#1c1c1e;] border border-zinc-800 group transition-colors duration-1000 ease-in-out  `}
             >
               <img
                 src={service.image}
                 alt={service.alt}
                 className={`${styles["image1"]} object-contain `}
               />
-              <h3 className={`${styles["card-title"]} mb-4 transition-colors duration-300 `}>
+              <h3 className={`${styles["card-title"]} font-helveticaneue  mb-4 transition-colors duration-300 `}>
                 {service.title}
               </h3>
-              <p className={`${styles["card-description"]} transition-colors duration-300 `}>
+              <p className={`${styles["card-description"]} font-helveticaneue  transition-colors duration-300 `}>
                 {service.description}
               </p>
             </div>

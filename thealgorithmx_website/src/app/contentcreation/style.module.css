@@ -266,13 +266,16 @@
   
     .algo-content-creation-services .flx_right {
       width: 55%; /* Scrollable right section */
-      padding: 7rem 15px 0;
+      padding: 7rem 60px 0;
       display: inline-block;
       vertical-align: top;
       float: right;
       overflow-y: auto;
       max-height: 100vh;
       position: relative;
+    }
+    .borderb{
+      border-bottom: 1px solid gray;
     }
   
     /* Hide scrollbar */

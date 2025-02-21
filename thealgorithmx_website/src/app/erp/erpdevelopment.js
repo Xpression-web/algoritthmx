@@ -7,10 +7,12 @@ import  style from './style.module.css'
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
@@ -25,62 +27,62 @@ const ERPProcess = () => {
     {
       title: 'Discovery',
       description: 'Analysis of business requirements and engineering of ERP needs.',
-      color: 'bg-yellow-400',
-      textColor: 'text-yellow-400',
+      color: 'bg-[#fff200]',
+      textColor: 'text-[#fff200]',
     },
     {
       title: 'Technical design',
       description: 'Crafting secure, scalable architecture and role-specific UX/UI for ERP software.',
-      color: 'bg-orange-500',
-      textColor: 'text-orange-500',
+      color: 'bg-[#ff793f]',
+      textColor: 'text-[#ff793f]',
     },
     {
       title: 'ERP project planning',
       description: 'Defining project scope, success metrics, team, timelines, budget, risks, and mitigation.',
-      color: 'bg-red-500',
-      textColor: 'text-red-500',
+      color: 'bg-[#EA2027]',
+      textColor: 'text-[#EA2027]',
     },
     {
       title: 'ERP development',
       description: 'Creating new solutions, modernizing existing ERP, or customizing market-available ERPs.',
-      color: 'bg-green-500',
-      textColor: 'text-green-500',
+      color: 'bg-[#32ff7e]',
+      textColor: 'text-[#32ff7e]',
     },
     {
       title: 'Quality assurance',
       description: 'Conducting thorough testing concurrently with coding.',
-      color: 'bg-emerald-400',
-      textColor: 'text-emerald-400',
+      color: 'bg-[#00b894]',
+      textColor: 'text-[#00b894]',
     },
     {
       title: 'Integration',
       description: 'Establishing connections among ERP modules and integrating ERP with systems.',
-      color: 'bg-pink-500',
-      textColor: 'text-pink-500',
+      color: 'bg-[#b71540]',
+      textColor: 'text-[#b71540]',
     },
     {
       title: 'Data migration',
       description: 'Migrating enterprise data to ERP from spreadsheets or previous systems.',
-      color: 'bg-blue-400',
-      textColor: 'text-blue-400',
+      color: 'bg-[#00a8ff]',
+      textColor: 'text-[#00a8ff]',
     },
     {
       title: 'Deployment',
       description: 'Configuring ERP infrastructure, deploying solutions, and transferring knowledge to users.',
-      color: 'bg-blue-600',
-      textColor: 'text-blue-600',
+      color: 'bg-[#273c75]',
+      textColor: 'text-[#273c75]',
     },
     {
       title: 'User training',
       description: 'Creating user manuals and maintenance guides; providing in-person or remote training.',
-      color: 'bg-purple-500',
-      textColor: 'text-purple-500',
+      color: 'bg-[#be2edd]',
+      textColor: 'text-[#be2edd]',
     },
     {
       title: 'After-launch services',
       description: 'Ongoing ERP software support and evolution.',
-      color: 'bg-purple-400',
-      textColor: 'text-purple-400',
+      color: 'bg-[#6D214F]',
+      textColor: 'text-[#6D214F]',
     },
   ];
 
@@ -139,7 +141,7 @@ const ERPProcess = () => {
             >
               {/* Vertical line */}
               <div
-                className={`absolute left-0 top-0 h-full w-1 ${step.color} transition-all duration-200 group-hover:-translate-x-3 group-hover:bg-blue-500`}
+                className={`absolute left-0 top-0 h-full w-[2px] ${step.color} transition-all duration-200 group-hover:-translate-x-3 group-hover:bg-blue-500`}
               />
               {/* Title */}
               <div className={`w-48 ${step.textColor} ${style["dev-title"]} font-medium md:pl-6`}>{step.title}</div>

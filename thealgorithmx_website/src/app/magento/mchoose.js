@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 const LineSVG = () => (
@@ -82,18 +83,18 @@ const MagentoFeatures = () => {
               className="group p-8 relative"
             >
               <div className="flex flex-col space-y-0">
-                <h2 className={`${styles["choose-title"]} text-start`}>
+                <h2 className={`${styles["choose-title"]} font-helveticaneue text-start`}>
                   {feature.title}
                 </h2>
                 <div className="flex items-center space-x-2">
                   <div className="transition-all duration-500 group-hover:opacity-0 group-hover:-translate-x">
                     <LineSVG />
                   </div>
-                  <p className={`${styles["choose-title"]} transition-all duration-500 group-hover:-translate-x-14`}>
+                  <p className={`${styles["choose-title"]} font-helveticaneue transition-all duration-500 group-hover:-translate-x-14`}>
                     {feature.subtitle}
                   </p>
                 </div>
-                <p className={`${styles["choose-description"]} text-semi-white`}>
+                <p className={`${styles["choose-description"]} font-helveticaneue text-semi-white`}>
                   {feature.description}
                 </p>
               </div>
@@ -109,18 +110,18 @@ const MagentoFeatures = () => {
               className="group py-8 relative"
             >
               <div className="flex flex-col space-y-4">
-                <h2 className={`${styles["choose-title"]} text-start`}>
+                <h2 className={`${styles["choose-title"]} font-helveticaneue text-start`}>
                   {feature.title}
                 </h2>
                 <div className="flex items-center space-x-2">
                   <div className="">
                     <LineSVG />
                   </div>
-                  <p className={`${styles["choose-title"]} `}>
+                  <p className={`${styles["choose-title"]} font-helveticaneue `}>
                     {feature.subtitle}
                   </p>
                 </div>
-                <p className={`${styles["choose-description"]} text-semi-white`}>
+                <p className={`${styles["choose-description"]} font-helveticaneue text-semi-white`}>
                   {feature.description}
                 </p>
               </div>

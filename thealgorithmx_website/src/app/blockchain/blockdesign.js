@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '600',
+  fallback: ["sans-serif"],
 });
 
 const BlockchainHero = () => {
@@ -19,7 +20,7 @@ const BlockchainHero = () => {
           Blockchain Design & Development Platforms
         </h1>
 
-        <p className={`${styles["design-description"]} text-semi-white mt-8`}>
+        <p className={`${styles["design-description"]} font-helveticaneue text-semi-white mt-8`}>
           AlgorithmX presents a vast range of blockchain development services, including developing Ethereum applications and crafting cutting-edge blockchain solutions. Our skilled blockchain developers hold expertise in tailoring solutions to suit your business requirements, whether on new platforms like Polkadot or established ones like Ethereum.
         </p>
       </div>

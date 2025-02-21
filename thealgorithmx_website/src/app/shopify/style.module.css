@@ -21,13 +21,11 @@
 .development-title{
     font-size: 22px;
     line-height: 1.1;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 .development-description{
     font-size: 16px;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
 }
 .shadowred{
@@ -75,12 +73,10 @@
 .choose-title{
     font-size: 36px;
     line-height: 1.1;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 .choose-description{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-weight: 200;
 }
@@ -96,7 +92,6 @@
 .quality-description{
     font-size: 16px;
     line-height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .algorithmx-text{
     font-size: 100px;
@@ -113,7 +108,7 @@
 }
 .timeline-description{
     font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
 }
 .timeline-border{
     

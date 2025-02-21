@@ -7,10 +7,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '200',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 
@@ -147,7 +149,7 @@ const ERPModules = () => {
 };
 
 const ModuleCard = ({ title, description, imageSrc }) => (
-  <div className="p-6 bg-black relative">
+  <div className="pt-6 pl-6 pr-6 bg-black relative">
     <div className="flex items-start gap-4 mb-4">
       <div className="">
         <img
@@ -161,7 +163,7 @@ const ModuleCard = ({ title, description, imageSrc }) => (
         <p className={`${style['modules-description']} text-semi-white`}>{description}</p>
       </div>
     </div>
-    <div className="absolute bottom-0 left-6 right-6 h-px bg-gray-800"></div>
+    <div className={`${style['line']} absolute bottom-0 left-6 right-6 h-px `}></div>
   </div>
 );
 

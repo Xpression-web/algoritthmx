@@ -5,10 +5,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '200',
+  fallback: ["sans-serif"],
 });
 
 const QualityBanner = () => {
@@ -25,7 +27,7 @@ const QualityBanner = () => {
           </span>
         </div>
 
-        <h2 className={`${styles["quality-title"]} ${monsterfont1.className} mb-4 md:-ml-6`}>
+        <h2 className={`${styles["quality-title"]} ${monsterfont1.className}  md:-ml-8`}>
           QUALITY GUARANTEED
         </h2>
         
@@ -48,7 +50,7 @@ const QualityBanner = () => {
 
           
           <div className="pl-4 pr-8 py-6 relative z-0">
-            <p className={`${styles["quality-description"]} text-semi-white leading-relaxed pb-6 px-6 `}>
+            <p className={`${styles["quality-description"]} font-helveticaneue text-semi-white leading-relaxed pb-6 px-6 `}>
               AlgorithmX is committed to exploring all possibilities to deliver top-notch and innovative Shopify 
               development services customized to suit all your requirements and surpass your expectations.
             </p>

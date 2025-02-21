@@ -7,10 +7,12 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const InteractiveBox = () => {
   const [activeContent, setActiveContent] = useState({
@@ -117,11 +119,11 @@ const InteractiveBox = () => {
                   }}
                   className={`group transition-colors duration-300 bg-black hover:bg-[rgba(217,48,45,0.1)] focus:outline-none ${activeId === icon.id ? 'bg-[rgba(217,48,45,0.1)]' : ''}`}
                 >
-                  <div className="p-5 md:ml-[110px] md:mr-[110px]">
+                  <div className="p-5 md:ml-[100px] md:mr-[100px]">
                     <img
                       src={icon.src}
                       alt={icon.alt}
-                      className="w-11 h-11 mx-auto"
+                      className="w-[50px] h-[50px] mx-auto"
                     />
                   </div>
                 </button>
@@ -134,7 +136,7 @@ const InteractiveBox = () => {
             {/* Content Section */}
             <div className="p-[20px] md:p-[70px] bg-black overflow-hidden" style={{ height: "350px" }}>
               <h2 className={`${style["method-title"]} ${monsterfont.className}`}>{activeContent.title}</h2>
-              <p className={`${style["method-description"]} text-semi-white`}>{activeContent.content}</p>
+              <p className={`${style["method-description"]} font-helveticaneue text-semi-white`}>{activeContent.content}</p>
             </div>
           </div>
         </div>

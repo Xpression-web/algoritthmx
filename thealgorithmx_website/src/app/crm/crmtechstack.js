@@ -5,15 +5,18 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 
 
@@ -81,14 +84,14 @@ const CRMTechStack = () => {
       <div className="max-w-6xl mx-auto">
         {technologies.map((tech, index) => (
           <div key={index} className="mb-8 md:mb-12 pb-8 border-b border-gray-800">
-            <div className="grid grid-cols-[1fr,2fr] md:grid-cols-[200px,1fr] gap-4 items-start">
+            <div className="grid grid-cols-2 md:grid-cols-[200px,1fr] gap-10 items-start">
               <h3 className={` ${styles["tech-subtitle1"]} ${monsterfont.className  }`}>{tech.title}</h3>
               
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-2 whitespace-nowrap">
+              <div className="flex flex-wrap gap-x-10 gap-y-4">
                 {tech.items.map((item, itemIndex) => (
                 <div 
                 key={itemIndex} 
-                className={`${styles["box"]} inline-flex items-center gap-2 hover:bg-black transition-colors whitespace-nowrap w-fit `}
+                className={`${styles["box"]} inline-flex items-center gap-2 hover:bg-black transition-colors`}
               >
                 <img 
                   src={item.icon} 
@@ -99,9 +102,6 @@ const CRMTechStack = () => {
                   {item.name}
                 </span>
               </div>
-              
-              
-                
                 ))}
               </div>
             </div>

@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const EcommerceBoostAds = () => {
@@ -44,7 +47,7 @@ const EcommerceBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               At AlgorithmX, we specialize in leveraging formats like product listing ads, dynamic retargeting, and shoppable social media ads. We target potential buyers based on their browsing behavior, past purchases, and interests, creating personalized experiences that drive real engagement and boost your sales. As your eCommerce ads agency, we ensure your brand stays visible wherever your audience is—be it search engines, social media, or partner sites. As one of the top ecommerce advertising companies in the USA, we offer customized solutions for every business size. From Google Ads for ecommerce to Facebook ads agency for ecommerce solutions, our expertise ensures you’re connecting with your audience on the right platforms.
               </p>
             

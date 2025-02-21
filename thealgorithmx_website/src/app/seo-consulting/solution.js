@@ -4,6 +4,7 @@
         const monsterfont = Montserrat({
           subsets: ['latin'],
           weight: '400',
+          fallback: ['sans-serif'],
         });
 
 
@@ -14,11 +15,11 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Comprehensive SEO Solutions for Every Business
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Whether you're looking for an enterprise SEO consultant or need support as a small business SEO consultant,
                 our team designs strategies to meet your goals. As a prominent SEO consulting company in USA, we offer both
                 local SEO and international SEO consulting. Connect with a leading SEO consulting company in USA for a complimentary 

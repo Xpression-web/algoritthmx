@@ -4,6 +4,7 @@
                 const monsterfont = Montserrat({
                   subsets: ['latin'],
                   weight: '400',
+                  fallback: ["sans-serif"],
                 });
 
     const NationalRiseSection  = () => {
@@ -13,11 +14,11 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Rise through the ranks with National SEO
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 AlgorithmX offers custom SEO strategies crafted to align with your business goals, industry, and audience, driving nationwide
                 success. Our team uses advanced tools and proven techniques—from keyword research to technical audits—to elevate your rankings.
                 With a commitment to transparent reporting, our national SEO experts provide regular updates on your site’s performance, ensuring

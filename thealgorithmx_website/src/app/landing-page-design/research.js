@@ -6,14 +6,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback : ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback : ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "600",
+  fallback : ["sans-serif"],
 });
 
 const LandingServices = () => {

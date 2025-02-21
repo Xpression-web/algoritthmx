@@ -2,19 +2,25 @@
 import { useState } from 'react';
 import styles from '../seoaudits/style.module.css'
 import { Montserrat } from "next/font/google";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodepen, faDelicious, faGg } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faCube, faGem } from '@fortawesome/free-solid-svg-icons';
 
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "700",
+    fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
     subsets: ["latin"],
     weight: "500",
+    fallback: ["sans-serif"],
 });
 
 
@@ -24,26 +30,26 @@ const NationalServices = () => {
     const [hoveredTab, setHoveredTab] = useState(null);
 
     const tabs = [
-        { id: 'on-page', label: 'Keyword Strategy', icon: '□', content: { title: 'In-Depth Keyword Research & Strategy', 
+        { id: 'on-page', label: 'Keyword Strategy', icon: faDelicious, content: { title: 'In-Depth Keyword Research & Strategy', 
         text: 'We identify the high-volume, relevant keywords your target audience is searching for. Our keyword strategy ensures your business ranks for the terms that bring the most traffic—and the highest conversions.',
         
         }},
 
-        { id: 'off-page', label: 'On-Page', icon: '◇', content: { title: 'On-Page Optimization', 
+        { id: 'off-page', label: 'On-Page', icon: faGem, content: { title: 'On-Page Optimization', 
             text: "We optimize every detail on your site, from meta tags to headings, URLs, and internal links. Our goal? To help your site rank #1 with national search engine optimization.", 
         
         }},
 
-        { id: 'technical', label: 'Content ', icon: '◈', content: { title: 'Content Creation and Optimization',
+        { id: 'technical', label: 'Content ', icon: faGg, content: { title: 'Content Creation and Optimization',
             text: 'Nothing works better than high-quality content tailored to your audience and optimized for SEO. The goal here is to boost your rankings and keep visitors engaged.',
         
         }},
 
-        { id: 'report', label: 'Link Building ', icon: '▢', content: { title: 'Link Building', 
+        { id: 'report', label: 'Link Building ', icon: faCodepen, content: { title: 'Link Building', 
         text: 'Backlinks build your site’s credibility. We’ll secure quality links from trusted sites through outreach, guest posts, and content promotion—boosting your rankings and authority.',
             
         }},
-        { id: 'implementation', label: 'Technical SEO ', icon: '▣', content: { title: 'Technical SEO Audit and Optimization', 
+        { id: 'implementation', label: 'Technical SEO ', icon: faCube, content: { title: 'Technical SEO Audit and Optimization', 
             text: 'We handle the technical side, ensuring fast load times and easy crawling for search engines. Our optimizations keep your site running smoothly and improve rankings.', 
             
         }},
@@ -80,15 +86,15 @@ const NationalServices = () => {
                                 transition-all duration-300
                                 ${isHovered 
                                     ? hoveredTab === tab.id
-                                        ? 'bg-white/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                        ? 'bg-black/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                         : 'text-[#a2a2a2] hover:bg-white/5'
                                     : activeTab === tab.id
-                                        ? 'bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                        ? 'bg-black/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                         : 'text-[#a2a2a2] hover:bg-white/5'
                                 }
                             `}
                         >
-                            <span className="text-2xl mb-2">{tab.icon}</span>
+                            <FontAwesomeIcon icon={tab.icon} className="mb-2 w-[30px] h-[40px]"  />
                             <span className={`text-[15.2px] leading-[26px] tracking-[0.01em] ${monsterfont2.className} text-center`}>
                                 {tab.label}
                             </span>
@@ -109,7 +115,7 @@ const NationalServices = () => {
         >
             <div className="text-center max-w-4xl mx-auto px-4">
             <h2 className={`text-[28px] leading-[32px] ${monsterfont.className} mb-[30px]`}>{tab.content.title}</h2>
-            <p className={`text-[16px] leading-[22px] font-[Helvetica] mb-[2px] max-w-3xl mx-auto`}>{tab.content.text}</p>
+            <p className={`text-[16px] leading-[22px] font-helveticaneue mb-[2px] max-w-3xl mx-auto`}>{tab.content.text}</p>
             </div>
         </div>
     ))}

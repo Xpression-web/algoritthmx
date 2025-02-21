@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback : ["sans-serif"],
 });
 
 export default function AdsProcess() {

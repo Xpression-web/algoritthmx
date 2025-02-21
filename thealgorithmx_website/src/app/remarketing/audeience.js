@@ -4,6 +4,7 @@
         const monsterfont = Montserrat({
           subsets: ['latin'],
           weight: '400',
+          fallback : ["sans-serif"],
         });
 
 
@@ -19,7 +20,7 @@
                 Audience Retention
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Due to the nature of the internet, it can become difficult to retain visitors on your website. We work to ensure your visitors are always coming back to see the latest deals and offerings. This gives you the best chance to convert them and keeps them in tune with your brand.
                 </p>
             </div>

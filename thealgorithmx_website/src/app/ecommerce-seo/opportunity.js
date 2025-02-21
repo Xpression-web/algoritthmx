@@ -40,19 +40,19 @@
 
             {/* Right Section with Content */}
             <div className="md:w-1/2 flex flex-col justify-center">
-            <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-[Helvetica] text-[#f857a6] `}>KEY POINT</div>
-            <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-[Helvetica] text-white `}>
+            <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-helveticaneue text-[#f857a6] `}>KEY POINT</div>
+            <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-helveticaneue text-white `}>
             Seize every opportunity with eCommerce SEO
             </h1>
-            <p className={`text-[15px] leading-[24px]  font-[400] font-[Helvetica] text-semi-white mb-[20px] `}>
+            <p className={`text-[15px] leading-[24px]  font-[400] font-helveticaneue text-semi-white mb-[20px] `}>
             Running a great e-commerce store but not seeing the sales you deserve? You need more than just e-commerce listings to run the show for you.
             
             </p>
-            <p className={`text-[15px] leading-[24px]  font-[400] font-[Helvetica] text-semi-white mb-[20px]`}>
+            <p className={`text-[15px] leading-[24px]  font-[400] font-helveticaneue text-semi-white mb-[20px]`}>
             You need an e-commerce SEO agency that knows how to make your store stand out through e-commerce SEO services,
             attract eager customers, and turn your products into top sellers.
             </p>
-            <p className={`text-[15px] leading-[24px]  font-[400] font-[Helvetica] text-semi-white mb-[20px] `}>
+            <p className={`text-[15px] leading-[24px]  font-[400] font-helveticaneue text-semi-white mb-[20px] `}>
             At AlgorithmX, we go beyond the basics. Our eCommerce SEO services are built to do more than just get your site noticed.
             We make sure it’s the one your ideal customers *keep coming back to*. We don’t stop at simple optimizations—we craft a tailored strategy
             that turns your online presence into a powerful sales engine, driving real results and lasting growth.

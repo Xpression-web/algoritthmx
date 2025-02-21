@@ -2,18 +2,33 @@
 import { useState } from 'react';
 import styles from './style.module.css';
 import { Montserrat } from "next/font/google";
+import { 
+    faFileLines, 
+    faLink, 
+    faCog, 
+    faClipboardList, 
+    faWrench, 
+    faChartLine, 
+    faGem,
+    faCube
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodepen, faDelicious, faGg } from '@fortawesome/free-brands-svg-icons';
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "700",
+    fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
     subsets: ["latin"],
     weight: "500",
+    fallback: ["sans-serif"],
 });
 
 const AuditServices = () => {
@@ -25,7 +40,7 @@ const AuditServices = () => {
         { 
             id: 'on-page', 
             label: 'On-page', 
-            icon: '□', 
+            icon: faDelicious,
             content: { 
                 title: 'On-Page SEO Services', 
                 text: 'The starting point of our SEO audit is a thorough on-page review. This involves pinpointing core issues that may hinder your site\'s visibility, such as:', 
@@ -37,7 +52,7 @@ const AuditServices = () => {
         { 
             id: 'off-page', 
             label: 'Off-page', 
-            icon: '◇', 
+            icon: faGem,
             content: { 
                 title: 'Off-Page SEO Services', 
                 text: "Understanding your website's reputation within your industry and among search engines is crucial. We conduct a detailed off-page analysis of your site and benchmark it against competitors. Key areas we assess include:", 
@@ -49,7 +64,7 @@ const AuditServices = () => {
         { 
             id: 'technical', 
             label: 'Technical SEO', 
-            icon: '◈', 
+            icon: faGg,
             content: { 
                 title: 'Technical SEO Services', 
                 text: 'Technical aspects can often obstruct site visibility if not optimized. Our SEO audit includes an in-depth technical review covering:', 
@@ -61,7 +76,7 @@ const AuditServices = () => {
         { 
             id: 'report', 
             label: 'SEO Reports', 
-            icon: '▢', 
+            icon: faCodepen,
             content: { 
                 title: ' SEO Report', 
                 text: 'Upon completing the audit, your account manager will deliver a prioritized report with clear, actionable steps. These may include resolving:', 
@@ -73,7 +88,7 @@ const AuditServices = () => {
         { 
             id: 'implementation', 
             label: 'Implementation', 
-            icon: '▣', 
+            icon: faCube,
             content: { 
                 title: 'Audit Implementation Services', 
                 text: 'Choose the implementation path that suits your needs:', 
@@ -88,7 +103,7 @@ const AuditServices = () => {
         { 
             id: 'strategy', 
             label: 'Strategy', 
-            icon: '▤', 
+            icon: faCodepen,
             content: { 
                 title: 'SEO Strategy ', 
                 text: 'Beyond immediate fixes, our SEO audit package includes a forward-looking SEO strategy crafted around your:', 
@@ -110,7 +125,7 @@ const AuditServices = () => {
 
                 <div className="w-full overflow-x-auto pb-4 p-2 mb-8">
                     <div
-                        className={`grid grid-cols-3 md:grid-cols-6 gap-1 max-w-4xl mx-auto bg-black/50 ${styles["box-design"]}`}
+                        className={`grid grid-cols-3 md:grid-cols-6 gap-1 max-w-4xl mx-auto bg-black ${styles["box-design"]}`}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => {
                             setIsHovered(false);
@@ -128,15 +143,16 @@ const AuditServices = () => {
                                     transition-all duration-300
                                     ${isHovered 
                                         ? hoveredTab === tab.id
-                                            ? 'bg-white/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : 'text-[#a2a2a2] hover:bg-white/5'
                                         : activeTab === tab.id
-                                            ? 'bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : 'text-[#a2a2a2] hover:bg-white/5'
                                     }
                                 `}
                             >
-                                <span className="text-2xl mb-2">{tab.icon}</span>
+                            <FontAwesomeIcon icon={tab.icon} className="mb-2 w-[30px] h-[40px]"  />
+
                                 <span className={`text-[15.2px] leading-[26px] tracking-[0.01em] ${monsterfont2.className} text-center`}>
                                     {tab.label}
                                 </span>
@@ -155,16 +171,16 @@ const AuditServices = () => {
                         >
                             <div className="text-center max-w-4xl mx-auto px-4">
                                 <h2 className={`text-[28px] leading-[32px] ${monsterfont.className} mb-[30px]`}>{tab.content.title}</h2>
-                                <p className={`text-[16px] leading-[22px] font-[Helvetica] mb-[30px]`}>{tab.content.text}</p>
+                                <p className={`text-[16px] leading-[22px] font-helveticaneue mb-[30px]`}>{tab.content.text}</p>
                                 
                                 {tab.content.useCustomContent ? (
                                     <div className="space-y-6">
                                         {tab.content.customContent.map((item, index) => (
                                             <div key={index} className="items-center gap-2">
-                                                <span className="text-[16px] leading-[1.1] font-[400] font-[Helvetica] text-red-500">
+                                                <span className="text-[16px] leading-[1.1] font-[400] font-helveticaneue text-red-500">
                                                     {item.header}:
                                                 </span>
-                                                <span className="text-[16px] leading-[1.1] font-[400] font-[Helvetica]">
+                                                <span className="text-[16px] leading-[1.1] font-[400] font-helveticaneue">
                                                     {item.description}
                                                 </span>
                                             </div>
@@ -175,7 +191,7 @@ const AuditServices = () => {
                                         {tab.content.items.map((item, index) => (
                                             <div key={index} className="flex items-center gap-6">
                                                 <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                                                <span className="text-[18px] leading-[1.1] font-[500] font-[Helvetica]">
+                                                <span className="text-[18px] leading-[1.1] font-[500] font-helveticaneue">
                                                     {item}
                                                 </span>
                                             </div>
@@ -187,7 +203,7 @@ const AuditServices = () => {
                     ))}
                 </div>
 
-                <p className="text-[16px] leading-[26px] font-[300] font-[Helvetica] text-center mt-[50px] max-w-4xl mx-auto">
+                <p className="text-[16px] leading-[26px] font-[300] fonthelevticaneue text-center mt-[50px] max-w-4xl mx-auto">
                     {tabs.find(tab => tab.id === activeTab)?.content.bottomText}
                 </p>
             </div>

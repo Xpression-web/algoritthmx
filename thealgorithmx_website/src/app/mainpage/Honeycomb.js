@@ -137,6 +137,9 @@ const ParticleAnimation = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+
+
     return (
         <div className="relative w-full h-screen overflow-hidden">
             <canvas 
@@ -145,34 +148,37 @@ const ParticleAnimation = () => {
             />
 
             {/* Content Container */}
-            <div className="relative z-10 w-full h-full flex flex-row justify-center items-center text-center md:text-left pr-8 md:pr-0 md:px-8 max-w-[1400px] mx-auto">
-                
-                {/* Text Content - Always in Row */}
-                <div className="w-2/3 text-white flex flex-col justify-center items-start">
-                    <h1 className={`${monsterfont1.className} text-[20px] md:text-[46.5px] leading-[24px] md:leading-[50px]`}>
-                        From Concept to Market Dominance!
-                    </h1>
-                    <h2 className={`${monsterfont.className} text-[18px] md:text-[34.4px] leading-[22px] md:leading-[38px]`}>
-                        We're the Holistic Solution you've been Looking for
-                    </h2>
-                </div>
+            <div className="relative z-10 w-full h-full flex justify-center items-center">
+                <div className="max-w-[1200px] w-full mx-auto bg-black/50 p-8 rounded-lg">
+                    <div className="flex flex-row justify-between items-center gap-0">
+                        {/* Text Content */}
+                        <div className="flex-1 text-white">
+                            <h1 className={`${monsterfont1.className} text-[20px] md:text-[46.5px] leading-[24px] md:leading-[50px] mb-4`}>
+                                From Concept to Market Dominance!
+                            </h1>
+                            <h2 className={`${monsterfont.className} text-[18px] md:text-[34.4px] leading-[22px] md:leading-[38px]`}>
+                                We're the Holistic Solution you've been Looking for
+                            </h2>
+                        </div>
 
-                {/* Vertical Line */}
-                <div className="h-32 w-px bg-white"></div>
+                        {/* Vertical Line */}
+                        <div className="h-32 w-px bg-white"></div>
 
-                {/* Right Side - Image & Text */}
-                <div className="w-1/3 flex flex-row justify-start items-center gap-4">
-                    <img 
-                        src="images/logo-slide.png" 
-                        alt="Placeholder" 
-                        className="w-16 md:w-24 h-auto object-cover"
-                    />
-                    <div className={`${monsterfont.className} text-[16px] md:text-[24px] leading-[18px] md:leading-[20px]`}>
-                        esthetic
-                        <br />
-                        gile
-                        <br />
-                        mplify
+                        {/* Right Side - Image & Text */}
+                        <div className="flex flex-row items-start gap-6">
+                            <img 
+                                src="images/logo-slide.png" 
+                                alt="Placeholder" 
+                                className="w-16 md:w-24 h-auto object-contain"
+                            />
+                            <div className={`${monsterfont.className} text-white text-[16px] md:text-[24px] leading-[24px] md:leading-[32px]`}>
+                                esthetic
+                                <br />
+                                gile
+                                <br />
+                                mplify
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

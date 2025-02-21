@@ -7,14 +7,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "700",
+    fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
     subsets: ["latin"],
     weight: "500",
+    fallback: ["sans-serif"],
 });
 
 const PPCAuditSection = () => {
@@ -38,13 +41,13 @@ const PPCAuditSection = () => {
           <div className="md:w-2/3">
             <h1 className={`text-[28px] leading-[32px] mb-[10px] ${monsterfont.className} `}>WHAT IS A PPC AUDIT?</h1>
             
-            <p className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white mb-[25px]`}>
+            <p className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white mb-[25px]`}>
               Think of the ads audit services as an MRI for your campaigns. We look at everything—what's driving conversions,
               what's wasting your budget, and what opportunities are flying under the radar. This isn't about surface-level fixes;
               we're talking deep-dive analysis to deliver actionable recommendations that get real results.
             </p>
 
-            <p className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white mb-[25px]`}>We cover every major platform :</p>
+            <p className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white mb-[25px]`}>We cover every major platform :</p>
 
             <div className="flex flex-wrap gap-16 mb-8">
               <div className="flex items-center gap-4">
@@ -52,7 +55,7 @@ const PPCAuditSection = () => {
                   icon={faGoogle} 
                   className="w-6 h-6 text-orange-500"
                 />
-                <span className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white `}>Google Ads</span>
+                <span className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white `}>Google Ads</span>
               </div>
 
               <div className="flex items-center gap-4">
@@ -60,7 +63,7 @@ const PPCAuditSection = () => {
                   icon={faMicrosoft} 
                   className="w-6 h-6 text-orange-500"
                 />
-                <span className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white `}>Microsoft Ads</span>
+                <span className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white `}>Microsoft Ads</span>
               </div>
 
               <div className="flex items-center gap-4">
@@ -68,7 +71,7 @@ const PPCAuditSection = () => {
                   icon={faFacebook} 
                   className="w-6 h-6 text-orange-500"
                 />
-                <span className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white `}>Facebook</span>
+                <span className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white `}>Facebook</span>
               </div>
 
               <div className="flex items-center gap-4">
@@ -76,15 +79,15 @@ const PPCAuditSection = () => {
                   icon={faLinkedin} 
                   className="w-6 h-6 text-orange-500"
                 />
-                <span className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white `}>LinkedIn</span>
+                <span className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white `}>LinkedIn</span>
               </div>
             </div>
 
-            <p className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white mb-[25px]`}>
+            <p className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white mb-[25px]`}>
               If you're tired of lackluster PPC results, it's time for a real change.
             </p>
 
-            <p className={`text-[15px] leading-[24px] font-[Helvetica] font-[400] text-semi-white mb-[25px]`}>
+            <p className={`text-[15px] leading-[24px] font-helveticaneue font-[400] text-semi-white mb-[25px]`}>
               Our Ads Audit Service isn't just a checklist, it's a comprehensive diagnosis of your ad campaigns.
               We pinpoint exactly what's holding you back and provide a detailed game plan to help you dominate your market.
               With insights backed by hard data and expertise, we guarantee improved Return on Ad Spend (RoAS) for your

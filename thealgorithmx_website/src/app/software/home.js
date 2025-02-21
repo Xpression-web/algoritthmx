@@ -7,14 +7,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '200',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 
 
@@ -65,7 +68,7 @@ const ContentSection = () => {
           </div>
 
           {/* Right side - Branding and description */}
-          <div className="w-full md:w-2/3 flex flex-col  space-y-2">
+          <div className="w-full md:w-2/3 flex flex-col">
             {/* Cylindrical image above branding (hidden on phones) */}
             <img
               src="images/g1.png"
@@ -73,10 +76,10 @@ const ContentSection = () => {
               className="w-12 h-12 md:w-24 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
             />
             <h1
-          className={` ${style["title"]} ${monsterfont2.className} tracking-wider text-center md:text-start bg-white-500 block`}>
+          className={` ${style["title"]} font-glock font-[400] tracking-[8px] text-center md:text-start bg-white-500 block`}>
             SOFTWARE
           </h1>
-            <h1 className={`${styles["development-text"]} ${monsterfont.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>
+            <h1 className={`${styles["development-text"]} ${monsterfont.className} tracking-[8px] bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>
             DEVELOPMENT
             </h1>
           </div>

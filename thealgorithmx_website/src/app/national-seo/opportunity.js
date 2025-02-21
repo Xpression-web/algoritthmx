@@ -40,32 +40,32 @@
 
             {/* Right Section with Content */}
             <div className="md:w-1/2 flex flex-col justify-center">
-            <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-[Helvetica] text-[#f857a6] `}>KEY POINT</div>
-            <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-[Helvetica] text-white `}>
+            <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-helveticaneue text-[#f857a6] `}>KEY POINT</div>
+            <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-helveticaneue text-white `}>
             Seize every opportunity with Expert National SEO
             </h1>
-            <p className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>
+            <p className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>
             Our goal is to help your business get top ranking in the national SEO of a particular country no matter where you’re from. 
             Imagine having customers all over the country find your business first when they search for what you offer. That’s the power 
             of nationwide SEO services —and we’re here to make that happen.
             </p>
-            <p className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>
+            <p className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>
             Here’s what we focus on:
                 </p>
 
             {/* SEO Services Grid */}
             <div className="grid grid-cols-2 gap-4 mb-2">
                 <div className="flex items-start  ">
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Targeted Long-Tail Keywords</span>
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Targeted Long-Tail Keywords</span>
                 </div>
                 <div className="flex items-center  ">
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Engaging Content Creation</span>
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Engaging Content Creation</span>
                 </div>
                 <div className="flex items-center  ">
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Data-Driven Keyword Strategies</span>
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Data-Driven Keyword Strategies</span>
                 </div>
                 <div className="flex items-center  ">
-                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-[Helvetica] text-semi-white `}>Google Maps Integration</span>
+                <span className={`text-[15px] leading-[24px] mb-[6px] font-[400] font-helveticaneue text-semi-white `}>Google Maps Integration</span>
                 </div>
                 </div>
             </div>

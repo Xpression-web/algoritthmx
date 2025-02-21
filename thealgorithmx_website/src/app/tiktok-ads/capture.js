@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const TiktokBoostAds = () => {
@@ -44,12 +47,12 @@ const TiktokBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               As the best TikTok ads agency, we help brands create successful TikTok marketing campaigns that engage, convert,
             and amplify your brand's presence. Our experienced TikTok Ads agency team knows what works—not just from theory,
             but from proven success creating campaigns that resonate and deliver ROI.
               </p>
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               We've mastered the art of advertising services for TikTok, refining strategies that generate real engagement. 
               Whether through In-Feed Ads, Branded Hashtag Challenges, or TopView Ads, our top TikTok ads services blend creativity
             with data-driven insights. This isn't about guesswork—we know what drives results. As your dedicated TikTok marketing agency

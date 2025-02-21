@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"100",
+  fallback : ["sans-serif"],
 })
 
 
@@ -17,7 +18,7 @@ const HeroSection = () => {
             PROACTIVE ACCOUNT PROTECTION
             </h1>
             <div className="w-[35px] h-[2px] bg-blue-500  mt-[35px] mb-[32px]"></div>
-            <p className="text-semi-white text-[16px] leading-[26px] font-[300] font-['Helvetica']">
+            <p className="text-semi-white text-[16px] leading-[26px] font-[300] font-helveticaneue">
             Once we find out why your account was suspended, we’ll handle the entire appeal process for you—addressing Google’s concerns and making the changes needed to get your ads back online fast. After recovering your account, we work to ensure you avoid future suspensions. Through our ads suspension recovery services, we analyze your campaigns, adjust keywords, and update your settings to comply with Google’s latest policies—keeping your ads live and running smoothly. Our in-depth review of your account includes a detailed report on what caused the suspension. We provide actionable insights and recommendations to prevent future violations and optimize your campaigns for continued success.
             </p>
           </div>

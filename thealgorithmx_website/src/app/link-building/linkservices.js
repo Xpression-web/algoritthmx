@@ -2,19 +2,25 @@
 import { useState } from 'react';
 import styles from  '../seoaudits/style.module.css'
 import { Montserrat } from "next/font/google";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodepen, faDelicious, faGg } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faCube, faGem } from '@fortawesome/free-solid-svg-icons';
 
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "700",
+    fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
     subsets: ["latin"],
     weight: "500",
+    fallback: ["sans-serif"],
 });
 
 
@@ -24,30 +30,30 @@ const LinkServices = () => {
     const [hoveredTab, setHoveredTab] = useState(null);
 
     const tabs = [
-        { id: 'on-page', label: 'Guest Posting', icon: '□', content: { title: 'Guest Posting Link Building Services', 
+        { id: 'on-page', label: 'Guest Posting', icon: faDelicious , content: { title: 'Guest Posting Link Building Services', 
         text: 'We secure high-quality backlinks through guest posting on authoritative, relevant sites. This will boost your SEO and position your brand as a thought leader in your industry.',
         
         }},
 
-        { id: 'off-page', label: 'Unlinked Mention', icon: '◇', content: { title: 'Unlinked Mention Link Building Services', 
+        { id: 'off-page', label: 'Unlinked Mention', icon:faGem, content: { title: 'Unlinked Mention Link Building Services', 
             text: "Got mentions but no links? We’ll reach out to publishers who’ve mentioned your brand but forgot to link back. It’s like connecting the dots—those unlinked mentions will soon become valuable backlinks, enhancing your authority and rankings.", 
         
         }},
 
-        { id: 'technical', label: 'Backlink Audit ', icon: '◈', content: { title: 'Backlink Audit Services',
+        { id: 'technical', label: 'Backlink Audit ', icon: faGg, content: { title: 'Backlink Audit Services',
             text: 'Concerned about bad links dragging your site down? Our backlink audit services will find harmful backlinks and remove them, keeping your site’s reputation spotless.',
         
         }},
 
-        { id: 'report', label: 'Resource Link ', icon: '▢', content: { title: 'Resource Link Building Services', 
+        { id: 'report', label: 'Resource Link ', icon: faCodepen, content: { title: 'Resource Link Building Services', 
         text: 'If you have valuable, link-worthy assets (or need us to help you create them), we’ll get links from resource pages, establishing your site as an essential go-to in your field.',
             
         }},
-        { id: 'implementation', label: ' Broken Link ', icon: '▣', content: { title: 'Broken Link Building Services', 
+        { id: 'implementation', label: ' Broken Link ', icon: faCube, content: { title: 'Broken Link Building Services', 
             text: 'We search the web for broken links and offer your site as the perfect replacement. It’s a win-win—websites fix their broken links, and you get valuable backlinks.', 
             
         }},
-        { id: 'custom', label: ' Custom Link ', icon: '▣', content: { title: 'Custom Link Campaigns', 
+        { id: 'custom', label: ' Custom Link ', icon: faCodepen, content: { title: 'Custom Link Campaigns', 
             text: "Our custom link-building campaigns are crafted around your business objectives. We provide dedicated project management, continuous reporting, and personalized strategies focused on your success. Whether you're looking for ‘an organic link-building service in California’ or the best contextual link-building service, we create custom solutions that fit your needs perfectly.", 
             
         }},
@@ -89,7 +95,7 @@ const LinkServices = () => {
                                 }
                             `}
                         >
-                            <span className="text-2xl mb-2">{tab.icon}</span>
+                            <FontAwesomeIcon icon={tab.icon} className="mb-2 w-[30px] h-[40px]"  />
                             <span className={`text-[15.2px] leading-[26px] tracking-[0.01em] ${monsterfont2.className} text-center`}>
                                 {tab.label}
                             </span>
@@ -110,7 +116,7 @@ const LinkServices = () => {
         >
             <div className="text-center max-w-4xl mx-auto px-4">
             <h2 className={`text-[28px] leading-[32px] ${monsterfont.className} mb-[30px]`}>{tab.content.title}</h2>
-            <p className={`text-[16px] leading-[22px] font-[Helvetica] mb-[2px] max-w-3xl mx-auto`}>{tab.content.text}</p>
+            <p className={`text-[16px] leading-[22px] font-helveticaneue mb-[2px] max-w-3xl mx-auto`}>{tab.content.text}</p>
             </div>
         </div>
     ))}

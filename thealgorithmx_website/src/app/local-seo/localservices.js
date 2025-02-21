@@ -2,18 +2,25 @@
 import { useState } from 'react';
 import styles from  '../seoaudits/style.module.css'
 import { Montserrat } from "next/font/google";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodepen, faDelicious, faGg } from '@fortawesome/free-brands-svg-icons';
+import { faCube, faGem } from '@fortawesome/free-solid-svg-icons';
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
+  
 });
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "700",
+    fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
     subsets: ["latin"],
     weight: "500",
+    fallback: ["sans-serif"],
 });
 
 
@@ -23,7 +30,7 @@ const LocalServices = () => {
     const [hoveredTab, setHoveredTab] = useState(null);
 
     const tabs = [
-        { id: 'on-page', label: 'Local SEO Audit', icon: '□', content: {
+        { id: 'on-page', label: 'Local SEO Audit', icon: faDelicious, content: {
             title: 'Local SEO Audit',
             text: "We kick off your local SEO journey with a deep-dive audit, led by our local SEO Expert. Here's what we look at:",
             points: [
@@ -33,13 +40,13 @@ const LocalServices = () => {
             ],
             conclusion: 'Armed with these insights, we craft a strategic plan tailored to your business, zeroing in on the areas with the biggest potential for impact.'
         }},
-        { id: 'off-page', label: 'Custom Strategy', icon: '◇', content: {
+        { id: 'off-page', label: 'Custom Strategy', icon: faGem, content: {
             title: 'Custom Local SEO Strategy',
             text: 'Every business is different, which is why we provide a fully customized strategy based on your:',
             items: ['SEO goals', 'Business objectives', 'Industry', 'Target audience'],
             conclusion: "Our team works to boost your local search visibility and drive meaningful growth aligned with your goals. We also optimize local SEO for service-area businesses (SAB) to boost your business in a very specific geographic radius, no matter where you're in the world."
         }},
-        { id: 'technical', label: 'Citation', icon: '◈', content: {
+        { id: 'technical', label: 'Citation', icon: faGg, content: {
             title: 'Citation management',
             text: 'Manage and update your business citations across the country for success in local searches. Our citation management service:',
             description: [
@@ -48,7 +55,7 @@ const LocalServices = () => {
             ],
             conclusion: 'Plus, with access to representatives from Google, Bing, and Facebook, any issues are resolved quickly and efficiently, keeping your listings competitive.'
         }},
-        { id: 'report', label: 'Review', icon: '▢', content: {
+        { id: 'report', label: 'Review', icon: faCodepen, content: {
             title: 'Review management',
             text: 'Leverage your customer reviews to build trust, reduce churn, and increase conversions. Our review management service helps you:',
             description: [
@@ -57,7 +64,7 @@ const LocalServices = () => {
                 'Increase conversions by using reviews to establish trust with potential customers.'
             ]
         }},
-        { id: 'implementation', label: 'On-Page local', icon: '▣', content: {
+        { id: 'implementation', label: 'On-Page local', icon: faCube, content: {
             title: 'On-page local SEO',
             text: 'Our comprehensive on-page local SEO services ensure your site is fully optimized to rank for local search terms:',
             description: [
@@ -81,7 +88,7 @@ const LocalServices = () => {
 
                 {/* Tabs Container */}
                 <div className="w-full overflow-x-auto pb-4 p-2 mb-8">
-                    <div className={`flex md:grid md:grid-cols-5 min-w-max md:min-w-0 max-w-4xl mx-auto bg-black/50 ${styles["box-design"]} `}
+                    <div className={`flex md:grid md:grid-cols-5 min-w-max md:min-w-0 max-w-[48rem] mx-auto bg-black/50 ${styles["box-design"]} `}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => {
                         setIsHovered(false);
@@ -99,15 +106,15 @@ const LocalServices = () => {
                                     transition-all duration-300
                                     ${isHovered 
                                         ? hoveredTab === tab.id
-                                            ? 'bg-white/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : 'text-[#a2a2a2] hover:bg-white/5'
                                         : activeTab === tab.id
-                                            ? 'bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : 'text-[#a2a2a2] hover:bg-white/5'
                                     }
                                 `}
                             >
-                                <span className="text-2xl mb-2">{tab.icon}</span>
+                                <FontAwesomeIcon icon={tab.icon} className="mb-2 w-[30px] h-[40px]"  />
                                 <span className={`text-[15.2px] leading-[26px] tracking-[0.01em] ${monsterfont2.className} text-center`}>
                                     {tab.label}
                                 </span>
@@ -127,14 +134,14 @@ const LocalServices = () => {
                         >
                             <div className="text-center max-w-4xl mx-auto px-4">
                                 <h2 className={`text-[28px] leading-[32px] ${monsterfont.className} mb-[30px]`}>{tab.content.title}</h2>
-                                <p className={`text-[16px] leading-[22px] font-[Helvetica] mb-[2px] max-w-2xl mx-auto`}>{tab.content.text}</p>
+                                <p className={`text-[16px] leading-[22px] font-helveticaneue mb-[2px] max-w-2xl mx-auto`}>{tab.content.text}</p>
                                 
                                 {/* Points/Description Section */}
                                 <div className="space-y-0 mb-12">
                                     {tab.content.points && (
                                         <div className=" text-left">
                                             {tab.content.points.map((point, index) => (
-                                                <p key={index} className={`text-[15px] leading-[22px] font-[Helvetica] ml-5 `}>{`${index + 1}) ${point}`}</p>
+                                                <p key={index} className={`text-[15px] leading-[22px] font-helveticaneue ml-5 `}>{`${index + 1}) ${point}`}</p>
                                             ))}
                                         </div>
                                     )}
@@ -142,7 +149,7 @@ const LocalServices = () => {
                                     {tab.content.description && (
                                         <div className="space-y-0 text-left">
                                             {tab.content.description.map((desc, index) => (
-                                                <p key={index} className={`text-[16px] leading-[26px] font-[Helvetica] mb-[2px] ml-5 `}>{desc}</p>
+                                                <p key={index} className={`text-[16px] leading-[26px] font-helveticaneue mb-[2px] ml-5 `}>{desc}</p>
                                             ))}
                                         </div>
                                     )}
@@ -152,7 +159,7 @@ const LocalServices = () => {
                                         {tab.content.items.map((item, index) => (
                                           <div key={index} className="flex items-center gap-3 mt-[30px]">
                                             <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                                            <span className="text-[18px] leading-[1.1] font-[500] font-[Helvetica]">{item}</span>
+                                            <span className="text-[18px] leading-[1.1] font-[500] font-helveticaneue">{item}</span>
                                           </div>
                                         ))}
                                       </div>
@@ -162,7 +169,7 @@ const LocalServices = () => {
 
                                 {/* Conclusion Section */}
                                 {tab.content.conclusion && (
-                                    <p className="text-[16px] leading-[26px] font-[300] font-[Helvetica] text-center mt-[30px] max-w-4xl mx-auto">
+                                    <p className="text-[16px] leading-[26px] font-[300] font-helveticaneue text-center mt-[30px] max-w-4xl mx-auto">
                                         {tab.content.conclusion}
                                     </p>
                                 )}

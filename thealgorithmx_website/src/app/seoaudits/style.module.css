@@ -23,3 +23,7 @@
     box-shadow: -1px 1px 5px 5px rgba(38, 234, 216, 0.15);
   }
   
+  .opp{
+    padding-right: calc(3.5rem* .5);
+    padding-left: calc(3.5rem* .5);
+  }

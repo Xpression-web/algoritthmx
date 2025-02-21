@@ -5,10 +5,12 @@ import styles from "./style.module.css";
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"400",
+  fallback: ["sans-serif"],
 })
 const monsterfont = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback: ["sans-serif"],
 })
 
 const services = [
@@ -53,7 +55,7 @@ const NativeServicesGrid = () => {
             {services.slice(0, 3).map((service, index) => (
               <div 
                 key={index}
-                className="bg-black rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group"
+                className={`bg-black ${styles["box"]} `}
               >
                 <img 
                   src={service.image} 
@@ -71,8 +73,7 @@ const NativeServicesGrid = () => {
   
             {/* Full-width box for the 4th item */}
             <div 
-              className="bg-black rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group lg:col-span-3 flex flex-col items-center text-center justify-center "
-            >
+              className={`bg-black ${styles["box"]} `}>
               <img 
                 src={services[3].image} 
                 alt={services[3].alt} 

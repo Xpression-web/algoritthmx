@@ -9,6 +9,7 @@ const monsterfont = Montserrat({
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback : ["sans-serif"],
 });
 
 
@@ -22,7 +23,7 @@ const BenefitsCard = ({ title, description, imageSrc }) => (
       />
     </div>
     <h3 className={`text-[22px] leading-[1.1] ${monsterfont.className} mt-[10px] mb-[10px]`}>{title}</h3>
-    <p className={`text-[13px] leading-[2] font-[Helvetica] text-semi-white`}>{description}</p>
+    <p className={`text-[13px] leading-[2] font-helveticaneue text-semi-white`}>{description}</p>
   </div>
 );
 

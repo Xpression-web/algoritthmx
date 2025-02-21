@@ -4,6 +4,7 @@
         const monsterfont = Montserrat({
           subsets: ['latin'],
           weight: '400',
+          fallback: ["sans-serif"],
         });
 
 
@@ -23,11 +24,11 @@
 
             {/* Right Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
-                Why Link Building Matters for SEO
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
+                Why Link Building Matters for<br/> SEO
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 In the SEO world, link building is like building bridges—each link is a bridge that connects your site to high-quality, reputable sites, telling search engines, "Hey, this website knows what it’s doing." And Google loves that.
                 Two critical factors in determining your site's ranking? The quality of your content and the strength of your link building strategy. Let us help you nail both.
                 </p>

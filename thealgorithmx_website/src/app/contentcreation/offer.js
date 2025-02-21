@@ -107,7 +107,7 @@ const Offer = () => {
                 {service.id}
               </div>
 
-              <h3 className={` ${styles["offer-title"]} text-white font-helveticaneue transition-colors duration-300`}>
+              <h3 className={` ${styles["offer-title"]} text-white font-helveticaneue font-bold transition-colors duration-300`}>
                 {service.title}
               </h3>
               <div className="mb-6">

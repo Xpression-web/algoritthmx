@@ -75,7 +75,6 @@
     font-size: 14px;
     line-height: 1.5;
     margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
   }
   .box-design{
@@ -101,7 +100,6 @@
   .method-description{
     font-size: 15px;
     line-height: 24px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     margin-bottom: 40px;
   }
@@ -130,3 +128,24 @@
     }
 
   }
+  .bgBlack {
+    background-color: black;
+    color: #777; /* Text color for black background */
+    padding: 66px 18px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+}
+
+.bgGray {
+    background-color: #0f0f0f;
+    color: #c4c2c2; /* Text color for gray background */
+    border-radius: 10px;
+    margin: 10px;
+    padding: 66px 20px;
+    position: relative;
+    z-index: 1;
+
+}

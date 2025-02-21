@@ -1,24 +1,30 @@
     import React from 'react';
     import styles  from './style.module.css'
     import { Montserrat } from 'next/font/google';
+    import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
     
     
     const monsterfont = Montserrat({
       subsets: ['latin'],
       weight: '200',
+      fallback: ["sans-serif"],
     });
     const monsterfont1 = Montserrat({
         subsets: ['latin'],
         weight: '700',
+        fallback: ["sans-serif"],
       });
       const monsterfont2 = Montserrat({
         subsets: ['latin'],
         weight: '300',
+        fallback: ["sans-serif"],
       });
 
       const monsterfont4 = Montserrat({
         subsets: ['latin'],
         weight: '100',
+        fallback: ["sans-serif"],
       });
 
 
@@ -76,7 +82,7 @@
 
     return (
         <div className="min-h-screen bg-black text-white p-4 flex items-center justify-center ">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto p-4">
             {/* Header */}
             <div className="text-center mb-24 relative pt-20 pb-8 w-full">
         {/* Background text */}
@@ -117,7 +123,7 @@
                     <ul className="space-y-7">
                     {column.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-center space-x-2 ">
-                        <span className="text-white-500">✓</span>
+                        <FontAwesomeIcon icon={faCheck} className="text-white-400 mb-[20px]" />
                         <span className={`text-[16px] leading-[22px]  ${monsterfont2.className} text-white-500 mb-4`}>{item}</span>
                         </li>
                     ))}

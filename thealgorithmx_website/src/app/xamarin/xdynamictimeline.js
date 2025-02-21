@@ -5,10 +5,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"400",
+  fallback: ["sans-serif"],
 })
 const monsterfont = Montserrat ({
   subsets : ["latin"],
   weight :"800",
+  fallback: ["sans-serif"],
 })
 
 
@@ -77,8 +79,8 @@ const XamarinDevelopmentTimeline = () => {
               {/* First row - items 1-4 */}
               <div className="relative col-span-full mb-16">
                 {/* Timeline for first row */}
-                <div className="hidden md:block absolute left-[0.5%] right-[0%] h-0.5 top-14">
-                  <div className="absolute right-full w-10 h-full border-t-2 border-dashed border-zinc-700"></div>
+                <div className="hidden md:block absolute left-[0.5%] -right-[4%] h-0.5 top-14">
+                  <div className="absolute right-full w-10 h-full border-t-2 border-dashed border-zinc-700 bottom-[2px]"></div>
                   <div className="w-full h-full bg-gradient-to-r from-red-500 via-orange-500 to-orange-400"></div>
                 </div>
 
@@ -112,9 +114,9 @@ const XamarinDevelopmentTimeline = () => {
               {/* Second row - items 5-6 */}
               <div className="relative col-span-full">
                 {/* Timeline for second row */}
-                <div className="hidden md:block absolute left-[0.5%] right-[73%] h-0.5 top-14">
+                <div className="hidden md:block absolute -left-[4%] right-[73%] h-0.5 top-14">
                   <div className="w-full h-full bg-gradient-to-r from-yellow-500 to-yellow-400"></div>
-                  <div className="absolute left-full w-20 h-full border-t-2 border-dashed border-zinc-700"></div>
+                  <div className="absolute left-full w-[500px] h-full border-t-2 border-dashed border-zinc-700 bottom-[.5px]"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">

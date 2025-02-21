@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const SnapchatBoostAds = () => {
@@ -44,7 +47,7 @@ const SnapchatBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               Running Snapchat ads isn’t just about throwing a flashy video in front of a young audience and hoping for the best. It takes strategy, knowing what resonates, and the experience to understand what doesn’t work. As a Snapchat ads agency, we know exactly what drives engagement and what gets scrolled past without a second thought. Snapchat is a playground for brands aiming to connect with younger, highly engaged users. But there’s a challenge: short attention spans and high expectations. If we don’t hit them with something fresh, fun, and interactive, the chance is gone. With our experience as a dedicated Snapchat ads manager, we ensure your ads aren’t just seen but remembered—and, more importantly, acted on.
               </p>
             

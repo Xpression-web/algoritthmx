@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const DisplayBoostAds = () => {
@@ -44,7 +47,7 @@ const DisplayBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               Display Ads are a powerful tool for enhancing brand visibility and engaging potential customers through visually appealing advertisements. These ads appear on various websites and apps within ad networks, targeting users based on their demographics, interests, and online behavior. With formats such as banners, videos, and interactive ads, businesses can create compelling campaigns that capture attention and drive traffic to their sites. Display Ads offer detailed analytics to monitor performance, optimize strategies, and maximize ROI. By leveraging Display Ads, businesses can increase brand awareness, reach a broader audience, and foster higher engagement with their target market.
               </p>
             

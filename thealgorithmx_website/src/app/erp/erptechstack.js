@@ -1,19 +1,23 @@
 import React from 'react';
 import style from '../front-end/style.module.css';
+
 import { Montserrat } from 'next/font/google';
 
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 
 
@@ -85,7 +89,7 @@ const ERPTechStack = () => {
                 {tech.items.map((item, itemIndex) => (
                   <div 
                     key={itemIndex} 
-                    className="bg-gray-900 rounded-lg p-3 flex items-center gap-2 hover:bg-gray-800 transition-colors"
+                    className={`${style["box"]} inline-flex items-center gap-2 hover:bg-black transition-colors`}
                   >
                     <img 
                       src={item.icon} 

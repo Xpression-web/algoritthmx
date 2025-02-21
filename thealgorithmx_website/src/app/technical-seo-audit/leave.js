@@ -4,6 +4,7 @@
             const monsterfont = Montserrat({
               subsets: ['latin'],
               weight: '400',
+              fallback: ["sans-serif"],
             });
     const   TechnicalLeaveSection = () => {
     return (
@@ -21,11 +22,11 @@
 
             {/* Right Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
-                Comprehensive Technical SEO Audit
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
+                Leave No Stone Unturned with a Comprehensive Technical SEO Audit
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Our technical SEO services are designed to elevate your website's performance. We start with a brief consultation to understand your
                 goals, followed by a detailed technical SEO audit covering site speed, crawlability, mobile usability, and more. Based on our 
                 findings, we create a custom strategy to address your unique needs, whether it's enhancing mobile performance or recovering from

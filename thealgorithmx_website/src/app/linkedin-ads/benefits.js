@@ -10,6 +10,7 @@ const monsterfont1 = Montserrat({
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
@@ -82,7 +83,7 @@ const LinkedinServices = () => {
                 transitionDelay: `${index * 150}ms`,
               }}
             >
-              <h3 className={`${styles["video-title"]} text-white ${monsterfont3.className} transition-colors duration-300`}>
+              <h3 className={`text-[18px] leading-[1.1] font-helveticaneue font-[400] text-white  transition-colors duration-300 mb-[8px]`}>
                 {service.title}
               </h3>
               <div className="mb-6">
@@ -92,7 +93,7 @@ const LinkedinServices = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className={`text-semi-white ${styles["video-description"]}`}>
+              <p className={`text-semi-white font-[300] text-[13px] leading-[2] font-helveticaneue transition-colors duration-300`}>
                 {service.description}
               </p>
             </div>

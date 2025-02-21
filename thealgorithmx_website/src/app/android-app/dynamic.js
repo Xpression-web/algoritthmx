@@ -5,10 +5,12 @@ import styles from "./style.module.css";
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"400",
+  fallback: ["sans-serif"],
 })
 const monsterfont = Montserrat ({
   subsets : ["latin"],
   weight :"800",
+  fallback: ["sans-serif"],
 })
 
 

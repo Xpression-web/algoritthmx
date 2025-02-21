@@ -4,6 +4,7 @@
                 const monsterfont = Montserrat({
                   subsets: ['latin'],
                   weight: '400',
+                  fallback: ["sans-serif"],
                 });
 
     const NationalMarketingSection = () => {
@@ -26,17 +27,17 @@
                 A Full-Service Search Marketing Team to Drive National Success
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Ready to transform your business into a nationwide powerhouse? Our National SEO services can help you elevate your brand’s
                 visibility across the country, drive targeted traffic, and leave competitors behind.
                 </p>
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Whether you need a dedicated national SEO expert in India or the best national SEO agency in the USA, we have the expertise and
                 tailored strategies to get you to the top. With expertise as a leading technical SEO audit consultancy in the USA, we provide 
                 actionable strategies for SEO improvement. As a technical SEO specialist, we deliver customized SEO technical audits, especially
                 for businesses seeking services in California or nationwide.
                 </p>
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 As your national SEO company, we connect your business with the right audience across the country. Our full-service nationwide
                 SEO services ensure your brand ranks higher, attracts more customers, and grows into a national leader.
                 </p>

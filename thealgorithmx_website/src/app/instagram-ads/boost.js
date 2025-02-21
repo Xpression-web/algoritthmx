@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const InstaBoostAds = () => {
@@ -44,7 +47,7 @@ const InstaBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               Maximize your brand’s potential with high-performance **Instagram Ads** designed to drive real results. 
               As a top **Instagram Ads Agency**, AlgorithmX creates targeted, data-driven campaigns that boost engagement, grow your audience, 
             and turn views into conversions. At AlgorithmX, we combine creativity with advanced targeting to help your brand shine. Our expertise in 

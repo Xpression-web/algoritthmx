@@ -5,10 +5,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ['sans-serif'],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ['sans-serif'],
 });
 
 
@@ -22,7 +24,7 @@ const BenefitsCard = ({ title, description, imageSrc }) => (
       />
     </div>
     <h3 className={`text-[22px] leading-[1.1] ${monsterfont.className} mt-[10px] mb-[10px]`}>{title}</h3>
-    <p className={`text-[13px] leading-[2] font-[Helvetica] text-semi-white`}>{description}</p>
+    <p className={`text-[13px] leading-[2] font-helveticaneue text-semi-white`}>{description}</p>
   </div>
 );
 
@@ -51,7 +53,7 @@ const EcommerceSEOBenefits = () => {
   return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center ">
       <div className="max-w-[1200px] mx-auto">
-      <div className="text-center mb-24 relative pt-20 pb-8 w-full">
+      <div className="text-center mb-4 relative pt-20 pb-8 w-full">
         {/* Background text */}
         <div className="absolute inset-0 flex items-center justify-center">
           <span className={`text-[46px] md:text-[100px] leading-[1.1] ${monsterfont.className} text-gray-600/20 select-none`}>

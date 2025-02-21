@@ -44,7 +44,7 @@ const AmazonBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               Amazon Ads provide a powerful platform for businesses to promote their products and reach a vast audience. With options like Sponsored Products, Sponsored Brands, and Sponsored Display, businesses can enhance visibility and drive sales. Amazon’s advanced targeting features allow for precise audience segmentation based on shopping behavior, demographics, and interests. Detailed analytics and performance metrics help optimize campaigns and improve ROI. By leveraging Amazon Ads, businesses can increase product discoverability, attract high-intent shoppers, and boost conversions, ultimately driving growth in a competitive online marketplace.
               </p>
             

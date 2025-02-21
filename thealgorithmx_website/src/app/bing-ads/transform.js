@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const Targeted = () => {
@@ -44,7 +47,7 @@ const Targeted = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               Bing Ads, now known as Microsoft Advertising, is an online advertising platform by Microsoft. It enables businesses to place ads on the Bing search engine, as well as Yahoo and AOL networks. Advertisers can bid on keywords to display ads in search results, targeting users based on keywords, location, device, and demographics. The platform uses a pay-per-click (PPC) model, where advertisers pay only when users click on their ads. Bing Ads offers robust analytics and integration with other Microsoft tools, providing a valuable alternative to Google Ads for reaching a diverse audience and maximizing advertising ROI.
               </p>
             </div>

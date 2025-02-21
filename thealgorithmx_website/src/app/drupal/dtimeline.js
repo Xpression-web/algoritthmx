@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 const timelineSteps = [
@@ -72,8 +73,8 @@ const  DrupalDevelopmentTimeline = () => {
               {/* First row - items 1-4 */}
               <div className="relative col-span-full mb-16">
                 {/* Timeline for first row */}
-                <div className="hidden md:block absolute left-[0.5%] right-[0%] h-0.5 top-14">
-                  <div className="absolute right-full w-10 h-full border-t-2 border-dashed border-zinc-700"></div>
+                <div className="hidden md:block absolute left-[0.5%] -right-[4%] h-0.5 top-14">
+                  <div className="absolute right-full w-10 h-full border-t-2 border-dashed border-zinc-700 bottom-[2px]"></div>
                   <div className="w-full h-full bg-gradient-to-r from-red-500 via-orange-500 to-orange-400"></div>
                 </div>
 
@@ -87,7 +88,7 @@ const  DrupalDevelopmentTimeline = () => {
                           </span>
                           <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                         </div>
-                        <h3 className={`${styles["timeline-title"]} ${monsterfont.className}`}>{step.title}</h3>
+                        <h3 className={`${styles["timeline-title"]} font-helveticaneue font-[700]`}>{step.title}</h3>
                       </div>
                       
                       {/* Mobile Timeline */}
@@ -96,7 +97,7 @@ const  DrupalDevelopmentTimeline = () => {
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
-                      <div className={`${styles["timeline-description"]}  mt-4 md:mt-6  p-4`}>
+                      <div className={`${styles["timeline-description"]} font-helveticaneue mt-4 md:mt-6  p-4`}>
                         {step.description}
                       </div>
                     </div>
@@ -107,9 +108,9 @@ const  DrupalDevelopmentTimeline = () => {
               {/* Second row - items 5-6 */}
               <div className="relative col-span-full">
                 {/* Timeline for second row */}
-                <div className="hidden md:block absolute left-[0.5%] right-[73%] h-0.5 top-14">
+                <div className="hidden md:block absolute -left-[4%] right-[73%] h-0.5 top-14">
                   <div className="w-full h-full bg-gradient-to-r from-yellow-500 to-yellow-400"></div>
-                  <div className="absolute left-full w-20 h-full border-t-2 border-dashed border-zinc-700"></div>
+                  <div className="absolute left-full w-[500px] h-full border-t-2 border-dashed border-zinc-700 bottom-[1px]"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
@@ -122,7 +123,7 @@ const  DrupalDevelopmentTimeline = () => {
                           </span>
                           <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                         </div>
-                        <h3 className={`${styles["shopify-title"]} ${monsterfont.className}`}>{step.title}</h3>
+                        <h3 className={`${styles["shopify-title"]} font-helveticaneue font-[700]`}>{step.title}</h3>
                       </div>
                       
                       {/* Mobile Timeline */}
@@ -131,7 +132,7 @@ const  DrupalDevelopmentTimeline = () => {
                         <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                       </div>
                       
-                      <div className={`${styles["timeline-description"]}  mt-4 md:mt-6 p-4`}>
+                      <div className={`${styles["timeline-description"]} font-helveticaneue mt-4 md:mt-6 p-4`}>
                         {step.description}
                       </div>
                     </div>

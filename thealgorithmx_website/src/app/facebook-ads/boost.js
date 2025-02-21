@@ -5,14 +5,17 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback : ["sans-serif"],
 })
 const monsterfont2 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
   })
   const monsterfont3 = Montserrat ({
     subsets : ["latin"],
     weight :"700",
+    fallback : ["sans-serif"],
   })
 
 const BoostAds = () => {
@@ -44,7 +47,7 @@ const BoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-[Helvetica] font-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
               Facebook Ads offer businesses a powerful platform to reach and engage with a highly targeted audience. Through advanced targeting options, businesses can specify demographics, interests, and behaviors to ensure ads reach the right people. Facebook Ads provide various formats, including image, video, carousel, and slideshow, allowing for creative flexibility. The platform's robust analytics and reporting tools enable businesses to track ad performance, optimize campaigns, and achieve better ROI. With the ability to set specific budgets and bid strategies, Facebook Ads are an essential tool for businesses looking to enhance their digital marketing efforts and drive measurable results.
               </p>
             </div>

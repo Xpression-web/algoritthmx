@@ -18,7 +18,7 @@ const GraphicsSection = () => {
   return (
     <div className="min-h-screen bg-black pt-[100px]">
       <div className="max-w-[1200px] mx-auto py-16 px-4">
-        <div className="flex flex-col md:flex-row md:items-center gap-8">
+        <div className="flex flex-col md:flex-row md:items-center ">
           {/* Left side - Image */}
           <div className="w-full md:w-1/2">
             <div className="relative">
@@ -52,7 +52,7 @@ const GraphicsSection = () => {
                   </svg>
                 </div>
                 <a
-                  href="#explore"
+                  href="#"
                   className={`text-white font-size-20 letter-spacing-8 ${monsterfont.className} tracking-widest text-lg hover:text-white transition`}
                 >
                   EXPLORE
@@ -70,10 +70,14 @@ const GraphicsSection = () => {
               className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
             />
             <h1
-              className={`text-4xl sm:4xl md:text-8xl ${monsterfont1.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent font-light`}
-            >
-              BRANDING
-            </h1>
+  className={`text-4xl md:text-[85px] md:leading-[90px] md:tracking[8px] ${monsterfont1.className} bg-clip-text text-transparent`}
+  style={{
+    backgroundImage: "linear-gradient(90deg, #ffbd12 0, #e03d3d 53.72%, #cd21e9 101.11%)"
+  }}
+>
+  BRANDING
+</h1>
+
           </div>
         </div>
         {/* Description below */}

@@ -4,6 +4,7 @@
             const monsterfont = Montserrat({
               subsets: ['latin'],
               weight: '400',
+              fallback: ["sans-serif"],
             });
     const TechnicalIdentifySection = () => {
     return (
@@ -12,11 +13,11 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue  `}>
                 Identify & Resolve Hidden SEO Issues with Precision
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Choose AlgorithmX for your technical SEO audit to uncover and resolve hidden issues holding your site back. 
                 Our technical SEO specialists leverage cutting-edge tools and proprietary software to ensure your site is fast, crawlable, 
                 and fully optimized. With a holistic approach, we address every detail, from site speed to structured data, for long-term 

@@ -5,15 +5,18 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 
@@ -68,13 +71,13 @@ const BackDesignProcess = () => {
             <div key={index} className="relative pl-16 pb-16">
               {/* Timeline dot */}
               <div className="absolute left-0 w-8 h-8 bg-white  rounded-full flex items-center justify-center">
-                <span className={`${monsterfont1.className} text-black `}>{step.number}</span>
+                <span className={`font-helveticaneue  text-black `}>{step.number}</span>
               </div>
               
               {/* Content */}
               <div>
                 <h3 className={` ${styles["dynamic-subtitle"]} ${monsterfont2.className} text-white mb-4`}>{step.title}</h3>
-                <p className={` ${styles["dynamic-description"]} text-semi-white mb-2`}>{step.description}</p>
+                <p className={` ${styles["dynamic-description"]} font-helveticaneue  text-semi-white mb-2`}>{step.description}</p>
               </div>
             </div>
           ))}

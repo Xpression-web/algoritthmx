@@ -6,10 +6,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 
 const CRMDevelopment = () => {
@@ -61,8 +63,8 @@ const CRMDevelopment = () => {
                 Development
               </div>
             </h1>
-            <div className="flex items-start gap-8 mt-6">
-          <div className="w-1 h-12 bg-blue-500"></div> {/* Vertical line */}
+            <div className="flex items-center gap-8 mt-6">
+          <div className="w-[4px] h-[70px] bg-[#2775ff] rounded-[10px]  "></div> {/* Vertical line */}
           <div className={`${styles['development-subtitle']} ${monsterfont1.className} text-semi-white text-left`}>
             STARTING ADVANCED CRM
           <br />
@@ -93,7 +95,7 @@ const CRMDevelopment = () => {
 
                   {activeBox === box.id && (
                     <div
-                      className={`${styles['right-description']} ${monsterfont.className} text-semi-white ${styles['border-']} min-w-[57px] -ml-[10px] -mr-[10px]`}
+                      className={`${styles['right-description']} font-opensans  text-[#9f9f9f]  text-center ${styles['border-']} min-w-[57px] -ml-[12px] -mr-[12px]`}
                     >
                       {box.content}
                     </div>

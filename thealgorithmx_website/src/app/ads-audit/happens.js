@@ -5,18 +5,22 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback : ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback : ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback : ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback : ["sans-serif"],
 });
 
 const PPCAudit = () => {
@@ -47,7 +51,7 @@ const PPCAudit = () => {
           {/* Right Content - 2/3 Text */}
           <div className="lg:w-2/3">
             <h2 className={`text-[28px] leading-[32px] mt-[30px] text-center md:text-start ${monsterfont1.className}  `}>WHAT DO WE LOOK FOR?</h2>
-            <p className={`text-[16px] leading-[26px] mt-[20px] text-center md:text-start font-[Helvetica] text-semi-white  `}>
+            <p className={`text-[16px] leading-[26px] mt-[20px] text-center md:text-start font-helveticaneue text-semi-white  `}>
             We cast our net far and wide and aim to cover the key elements of your account. We look for strengths, weaknesses, opportunities and threats. We focus on overall account structure, keywords, ad copy & assets, ad strength, quality score, bidding strategy, locations targeting, campaign types, attribution models, conversion tracking, dynamic ads and other opportunities for growth.
             </p>
           </div>
@@ -58,7 +62,7 @@ const PPCAudit = () => {
           {/* Left Content - 2/3 */}
           <div className="lg:w-2/3">
             <h2 className={`text-[28px] leading-[32px] mt-[30px] text-center md:text-start ${monsterfont1.className}  `}>WHAT HAPPENS AFTER?</h2>
-            <p className={`text-[16px] leading-[26px] mt-[20px] text-center md:text-start font-[Helvetica] text-semi-white  `}>
+            <p className={`text-[16px] leading-[26px] mt-[20px] text-center md:text-start font-helveticaneue text-semi-white  `}>
               We provide you with a visualised report of our findings. We organise the data so it becomes easy to 
               understand and highlights the key action points. One of our experts will then guide you through 
               your audit in a consultation arranged at your convenience. We will then work with you to plan out 
