@@ -6,44 +6,51 @@ import { Montserrat } from 'next/font/google';
 
 const monsterfont = Montserrat({
   subsets: ['latin'],
-  weight: '400',
+  weight: '700',
+  fallback: ["sans-serif"],
 });
+const monsterfont1 = Montserrat({
+    subsets: ['latin'],
+    weight: '400',
+    fallback: ["sans-serif"],
+  });
+  
 
 const carouselData = [
     {
         id: 'erp-consulting',
-        icon: "images/Erp.png",
+        icon: "images/advertisements.png",
         title: "Advertisements",
         description: "Paid Instagram ads can extend your reach to followers you haven’t interacted with yet. AlgorithmX Instagram marketing services can help your brand create a plan to make your money work for you."
     },
     {
         id: 'custom-erp',
-        icon: "images/Erp.png",
+        icon: "images/profile-optimization.png",
         title: "Profile Optimization",
         description:"A professional, optimized profile builds credibility. We craft a branded profile image, compelling bio, and cohesive highlights that showcase your brand’s personality, making your profile more attractive to new followers."
       
     },
     {
         id: 'erp-implementation',
-        icon: "images/Erp.png",
+        icon: "images/follower-optectics.png",
         title: "Followers Tactics",
         description: "We implement strategies to grow your audience organically, such as engaging with relevant accounts, responding to comments, and sharing user-generated content to foster a strong community around your brand."
     },
     {
         id: 'erp-development',
-        icon: "images/Erp.png",
+        icon: "images/keyword-research1.png",
         title: "Keyword Research",
         description: "With strategic hashtag and keyword research, we make it easier for potential followers to find you. We use targeted, high-impact Instagram hashtags to attract relevant followers and drive more engagement."
     },
     {
         id: 'managed-erp',
-        icon: "images/Erp.png",
+        icon: "images/a-regular-posting-scedule.png",
         title: "A Regular Posting Schedule",
         description:"Consistency is vital on Instagram. We develop a regular posting calendar to keep your brand top-of-mind, maintaining relevance and fostering an engaged community that looks forward to your content."
     },
     {
         id: 'staff-augmentation',
-        icon: "images/Erp.png",
+        icon: "images/story-integration.png",
         title: "Story Integration",
         description: "Stories and Reels are powerful tools for engagement on Instagram. We help you create eye-catching, timely content for Stories and Reels that highlights your brand, driving interaction and visibility."
     }
@@ -132,7 +139,7 @@ const InstagramCarousel = () => {
 
     return (
         <div className="w-full mx-auto px-4 py-8 bg-black relative">
-            <h1 className={`${styles["erp-text"]} ${monsterfont.className} mb-12`}>
+            <h1 className={`${styles["erp-text"]} ${monsterfont1.className} mb-12`}>
                 How It Works
             </h1>
             <div 
@@ -157,19 +164,19 @@ const InstagramCarousel = () => {
     }}
 >
 
-                            <div className="bg-black bg-opacity-50 p-6 md:p-14 border border-white shadow-[0_0_10px_rgba(218,240,245,1)] w-full h-auto">
+<div className={`bg-black bg-opacity-50 p-6 md:p-14  w-full h-fit-content ${styles["box-border"]}`}>
                                 <div className="flex flex-col items-center space-y-4">
                                     <img
                                         src={item.icon}
                                         alt={item.title}
-                                        className="w-12 h-12 object-contain mt-6"
+                                        className="w-[50px] h-[50px] object-contain mt-6"
                                     />
                                     <h3 className={`${styles["erp-title"]} ${monsterfont.className} text-center mt-6`}>
                                         {item.title.split(" ").map((word, idx) => (
                                             <span key={`${item.id}-word-${idx}`} className="block">{word}</span>
                                         ))}
                                     </h3>
-                                    <p className={`text-semi-white ${styles["erp-description"]} text-center md:p-4 md:mb-2`}>
+                                    <p className={`text-semi-white ${styles["erp-description"]} font-helveticaneue text-center md:p-4 md:mb-2`}>
                                         {item.description}
                                     </p>
                                 </div>
@@ -201,7 +208,7 @@ const InstagramCarousel = () => {
                     </div>
                     <button
                         onClick={nextSlide}
-                        className="p-2 hover:bg-gray-700 rounded-full transition-colors text-white text-xl font-bold"
+                        className="p-2  rounded-full transition-colors text-white text-xl font-bold"
                         aria-label="Next slide"
                     >
                         &gt;

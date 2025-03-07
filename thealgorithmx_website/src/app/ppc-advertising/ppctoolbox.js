@@ -44,13 +44,13 @@ const tools = [
 return (
     <div className="bg-black text-white py-8 px-2 sm:py-16 sm:px-4">
     <div className="max-w-[1200px] mx-auto">
-        <h1 className={` ${styles["toolbox-title"]} text-center  ${monsterfont.className} mb-3 sm:mb-4`}>
+    <h1 className={` text-[50px] md:text-[56px] leading-[60px] tracking-[0.06em] text-center  ${monsterfont.className} mb-3 sm:mb-4`}>
         TECHNOLOGY TOOLBOX
         </h1>
         
-        <div className="w-12 h-1 bg-blue-500 mx-auto mb-4 sm:mb-8"></div>
+        <div className="mx-auto w-[35px] h-[2px] bg-[#2775ff] mt-[25px] mb-[32px]"></div>
         
-        <p className={`text-semi-white text-center ${styles["toolbox-description"]}  ${monsterfont.className} mb-8 sm:mb-16 max-w-5xl mx-auto px-2`}>
+        <p className={`text-semi-white text-center text-[16px]  ${monsterfont1.className} mb-8 sm:mb-16  px-2`}>
         Comprehensive SEO services toolkit to enhance online visibility, drive organic traffic, and boost search rankings.
         </p>
         <div className={`container justify-center justify-items-center ${styles["margin1"]}`}>
@@ -58,7 +58,7 @@ return (
             {tools.map((tool) => (
             <div
                 key={tool.id}
-                className={` ${styles["background"]} rounded-lg  flex items-center hover:bg-[#545252] transition duration-300`}
+                className={`${styles["background"]} rounded-lg  flex items-center ${styles["tool"]}  transition duration-300`}
             >
                 {/* Flex container for image and text */}
                 <div className={`flex w-full items-center ${styles["toolbox"]} `}>

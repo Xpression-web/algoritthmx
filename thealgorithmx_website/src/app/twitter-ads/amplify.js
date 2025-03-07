@@ -47,7 +47,7 @@ const TwitterBoostAds = () => {
           {/* Right Section */}
           <div className="w-full md:w-[40%]">
             <div className="bg-black/20 backdrop-blur-sm p-2 rounded-lg">
-              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneuefont-[400] mb-[25px]">
+              <p className="text-semi-white text-[15px] leading-[24px] font-helveticaneue font-[400] mb-[25px]">
                 Twitter Ads provide a dynamic platform for reaching a broad audience with timely and relevant messaging.
                 Through various ad formats, including promoted tweets, trends, and accounts, businesses can engage users
                 based on interests, demographics, and behaviors. Twitter’s targeting capabilities allow for precise audience

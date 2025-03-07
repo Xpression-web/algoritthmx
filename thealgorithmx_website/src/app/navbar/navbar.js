@@ -23,7 +23,7 @@ const Navbar = () => {
     const menuRef = useRef(null);
     const dropdownRef = useRef(null);
     const hoverTimeoutRef = useRef(null);
-    const navItemsRef = useRef([]); // Ref to store nav items
+    const dropdownVisible = useRef(false); // Track if dropdown is visible
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,6 +34,7 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
     useEffect(() => {
         const mainContent = document.getElementById('main-content');
         if (activeDropdown !== null || isOpen) {
@@ -43,6 +44,7 @@ const Navbar = () => {
         }
     }, [activeDropdown, isOpen]);
 
+
     useEffect(() => {
         const mainContent = document.getElementById('main-content');
         if (activeDropdown !== null) {
@@ -51,6 +53,7 @@ const Navbar = () => {
             mainContent?.classList.remove('blur-effect');
         }
     }, [activeDropdown]);
+
 
     useEffect(() => {
         if (isOpen) {
@@ -198,7 +201,7 @@ const Navbar = () => {
                     ]
                 },
                 { category: 'App Store', href: '/app-store' },
-                { category: 'Conversion Rate', href: '/conversion-rate-optimization' },
+                { category: 'Conversion Rate(CRO)', href: '/conversion-rate-optimization' },
                 { category: 'Public Relations', href: '/public-relations' },
                 { category: 'Franchise', href: '/franchise-marketing' },
                 { category: 'Influencer', href: '/influencer-marketing' },
@@ -220,58 +223,59 @@ const Navbar = () => {
             if (hoverTimeoutRef.current) {
                 clearTimeout(hoverTimeoutRef.current);
             }
+            
+            // Set dropdown visible state
+            dropdownVisible.current = true;
+            
             setActiveDropdown(index);
             if (navItems[index].subItems.length > 0) {
                 setActiveCategory(0);
             }
         }
     };
-
-    // Modify handleMouseLeave to use setTimeout for smoother transitions
+    
     const handleMouseLeave = (e) => {
         if (window.innerWidth > 768) {
             const relatedTarget = e.relatedTarget;
             const dropdownElement = dropdownRef.current;
     
-            // Ensure dropdownElement is valid before calling contains()
-            if (!dropdownElement || !relatedTarget) {
+            if (!relatedTarget) {
+                hoverTimeoutRef.current = setTimeout(() => {
+                    dropdownVisible.current = false;
+                    setActiveDropdown(null);
+                    setActiveCategory(null);
+                }, 500);
                 return;
             }
     
-            if (dropdownElement === relatedTarget || dropdownElement.contains(relatedTarget)) {
-                return;
+            if (dropdownElement && relatedTarget instanceof Node && dropdownElement.contains(relatedTarget)) {
+                return; // Don't close if hovering within the dropdown
             }
     
-            // Set timeout for smoother transitions
             hoverTimeoutRef.current = setTimeout(() => {
+                dropdownVisible.current = false;
                 setActiveDropdown(null);
                 setActiveCategory(null);
-            }, 100);
+            }, 500);
         }
     };
     
-
     // Add new handler for dropdown mouse enter
     const handleDropdownMouseEnter = () => {
         if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current);
         }
+        dropdownVisible.current = true;
     };
 
     const handleDropdownMouseLeave = (e) => {
         if (window.innerWidth <= 768) return; // Don't handle on mobile
     
         const relatedTarget = e.relatedTarget;
-        
-        // If mouse leaves to nowhere, close the dropdown
-        if (!relatedTarget) {
-            setActiveDropdown(null);
-            setActiveCategory(null);
-            return;
-        }
     
-        // Check if relatedTarget is an Element before using DOM methods
-        if (!(relatedTarget instanceof Element)) {
+        // If mouse leaves to nowhere, close the dropdown
+        if (!relatedTarget || !(relatedTarget instanceof Element)) {
+            dropdownVisible.current = false;
             setActiveDropdown(null);
             setActiveCategory(null);
             return;
@@ -281,20 +285,21 @@ const Navbar = () => {
         let currentElement = relatedTarget;
         let isNavItem = false;
     
-        while (currentElement instanceof Element) {
+        while (currentElement && currentElement instanceof Element) {
             if (currentElement.classList.contains('nav-item')) {
                 isNavItem = true;
                 break;
             }
-            if (!currentElement.parentElement) break;
-            currentElement = currentElement.parentElement;
+            currentElement = currentElement.parentElement; // Ensure this doesn't become null
         }
     
         if (!isNavItem) {
+            dropdownVisible.current = false;
             setActiveDropdown(null);
             setActiveCategory(null);
         }
     };
+    
     
     const handleCategoryHover = (categoryIndex) => {
         setActiveCategory(categoryIndex);
@@ -327,7 +332,8 @@ const Navbar = () => {
                     }
                     
                     .navbar-transparent {
-                        background-color: transparent;
+                        
+                    backdrop-filter: blur(8px); /* Apply blur effect */
                     }
                     
                     .navbar-scrolled {
@@ -377,7 +383,7 @@ const Navbar = () => {
         }
         
         .mobile-menu {
-            background: #D4F8E8;
+            background: #434d50;
             z-index: 50; /* Ensure mobile menu stays above overlay */
         }
         .page-overlay {
@@ -423,28 +429,30 @@ const Navbar = () => {
                     max-height: 1000px;
                 }
                 .dropdown-wrapper {
-                    position: fixed;
-                    top: 64px; /* Height of navbar */
-                    left: 0;
-                    right: 0;
-                    background-color: rgba(0, 0, 0, 0.9);
-                    backdrop-filter: blur(8px);
-                    z-index: 40;
-                }
-                    
+    position: fixed;
+    top: 64px; /* Height of navbar */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 40;
+    transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
 
-                .dropdown-content {
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: all 0.2s ease-in-out;
-    
-                }
+.dropdown-wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
-                .dropdown-content.active {
-                    opacity: 1;
-                    visibility: visible;
-                    
-    
+.dropdown-content {
+transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease;
+}
                 }
             `}</style>
              <div className={`page-overlay ${(activeDropdown !== null && shouldHaveBlurEffect(activeDropdown)) || isOpen ? 'active' : ''}`} />
@@ -454,7 +462,7 @@ const Navbar = () => {
             }`}>
                 <div className="relative">
                     <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-3 items-center h-16">
+                        <div className="grid grid-cols-3 items-center h-20">
                             <div className="md:hidden flex items-center">
                                 <button
                                     onClick={toggleMobileMenu}
@@ -465,22 +473,22 @@ const Navbar = () => {
                             </div>
 
                             <div className="hidden md:flex items-center space-x-6">
-    {navItems.map((item, index) => (
-        <div 
-            key={item.name} 
-            className="relative nav-item" // Make sure this class is present
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-        >
-            <Link 
-                href={item.href} 
-                className="text-[14px] leading-[22px] font-[400] font-[Helvetica] text-nav-bar-text whitespace-nowrap"
-            >
-                {item.name}
-            </Link>
-        </div>
-    ))}
-</div>
+                                {navItems.map((item, index) => (
+                                    <div 
+                                        key={item.name} 
+                                        className="relative nav-item"
+                                        onMouseEnter={() => handleMouseEnter(index)}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <Link 
+                                            href={item.href} 
+                                            className="text-[14px] leading-[22px] font-[400] font-[Helvetica] text-nav-bar-text whitespace-nowrap"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
 
 
                             <div className="flex items-center justify-center">
@@ -496,9 +504,9 @@ const Navbar = () => {
                                 <div className="relative">
                                 <a href="/contact-us"  className="flex items-center pr-8 pl-6 py-3 rounded-full bg-black text-white border border-gray-600 hover:border-gray-400 transition">
                                         <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap mr-6`}>Connect</span>
-                                        <div className="absolute -right-1 top-1/2 -translate-y-1/2">
-                                            <div className="bg-blue-500 p-2.5 rounded-full">
-                                                <Phone size={20} />
+                                        <div className="absolute left-[91px] top-1/2 -translate-y-1/2">
+                                            <div className="bg-blue-500 p-3.5 rounded-full">
+                                                <Phone size={15} />
                                             </div>
                                         </div>
                                     </a>
@@ -526,7 +534,7 @@ const Navbar = () => {
                                     isOpen ? 'mobile-menu open' : 'mobile-menu closed'
                                 } md:hidden overflow-y-auto`}
                             >
-                                <div className="flex justify-between items-center p-4 border-b border-gray-200">
+                                <div className="flex justify-between items-center p-4 border-b border-semi-white">
                                     <Link href="">
                                         <img
                                             src="images/logo5.png"
@@ -550,14 +558,14 @@ const Navbar = () => {
                     className="flex items-center justify-between py-3 text-black cursor-pointer"
                     onClick={() => toggleMobileSubmenu(index)}
                 >
-                    <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-black whitespace-nowrap`}>{item.name}</span>
+                    <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-[#C4EAC1] whitespace-nowrap`}>{item.name}</span>
                     <ChevronDown 
                         className={`transform transition-transform ${mobileSubmenuOpen === index ? 'rotate-180' : ''}`} 
                         size={20} 
                     />
                 </div>
             ) : (
-                <Link href={item.href} className={`block py-3 text-[20px] leading-[28px] font-[400] font-[Helvetica] text-black whitespace-nowrap`}>
+                <Link href={item.href} className={`block py-3 text-[20px] leading-[28px] font-[400] font-[Helvetica] text-[#C4EAC1] whitespace-nowrap`}>
                     {item.name}
                 </Link>
             )}
@@ -568,7 +576,7 @@ const Navbar = () => {
                         <div key={category.category} className="pl-4">
                             {category.items ? (
                                 <div 
-                                    className="flex items-center justify-between py-2 text-[#006064] text-[14px] leading-[28px] font-[600] font-[Helvetica] cursor-pointer"
+                                    className="flex items-center justify-between py-2 text-[#E2EEFF] text-[14px] leading-[28px] font-[600] font-[Helvetica] cursor-pointer"
                                     onClick={() => toggleMobileCategory(categoryIndex)}
                                 >
                                     <span>{category.category}</span>
@@ -578,7 +586,7 @@ const Navbar = () => {
                                     />
                                 </div>
                             ) : (
-                                <Link href={category.href} className={`block py-2 text-[#006064] text-[14px] leading-[28px] font-[600] font-[Helvetica] text-white  whitespace-nowrap  `}>
+                                <Link href={category.href} className={`block py-2 text-[#E2EEFF] text-[14px] leading-[28px] font-[600] font-[Helvetica]  whitespace-nowrap  `}>
                                     {category.category}
                                 </Link>
                             )}
@@ -589,7 +597,7 @@ const Navbar = () => {
                                         <Link 
                                             key={subItem.name} 
                                             href={subItem.href}
-                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[400] font-[Helvetica] text-[#4C4C4C] whitespace-nowrap`}
+                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[400] font-[Helvetica] text-[#F2D7D5] whitespace-nowrap`}
                                         >
                                             {subItem.name}
                                         </Link>
@@ -624,17 +632,11 @@ const Navbar = () => {
                             {activeDropdown !== null && navItems[activeDropdown]?.subItems.length > 0 && (
     <div
         ref={dropdownRef}
-        className="dropdown-wrapper"
-        onMouseEnter={() => {
-            if (hoverTimeoutRef.current) {
-                clearTimeout(hoverTimeoutRef.current);
-            }
-        }}
-        onMouseLeave={(e) => {
-            handleDropdownMouseLeave(e);
-        }}
+        className={`dropdown-wrapper ${activeDropdown !== null ? 'visible' : ''}`}
+        onMouseEnter={handleDropdownMouseEnter}
+        onMouseLeave={handleDropdownMouseLeave}
     >
-                                    <div className={`dropdown-content active`}>
+                                    <div className="dropdown-content">
                                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[135px] py-4">
                                             <div className="flex">
                                                 <div className="w-64">
@@ -646,7 +648,7 @@ const Navbar = () => {
                                                                 }`} 
                                                                 onMouseEnter={() => handleCategoryHover(idx)}
                                                             >
-                                                                <span className={`text-[1.25rem] leading-[35px] font-[600] font-opensans text-white whitespace-nowrap `}>
+                                                                <span className={`text-[20px] leading-[35px] font-[600] font-opensans text-white whitespace-nowrap `}>
                                                                     {category.category}
                                                                 </span>
                                                             </div>

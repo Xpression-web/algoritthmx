@@ -1,11 +1,16 @@
     import React from "react";
-    import { Montserrat } from "next/font/google";
+    import { Roboto } from 'next/font/google';
 
-    const monsterfont1 = Montserrat({
+const robotoFont = Roboto({
+  subsets: ["latin"],
+  weight: "100",
+  fallback: ["sans-serif"],
+});
+const robotoFont1 = Roboto({
     subsets: ["latin"],
-    weight: "100",
-    });
-
+    weight: "300",
+    fallback: ["sans-serif"],
+  });
     const YoutubeHeroSection = () => {
     return (
         <div className="bg-black min-h-screen flex items-center justify-center">
@@ -14,12 +19,12 @@
             {/* Text Content */}
             <div className="w-full md:w-1/2 text-white order-2 md:order-1 text-center md:text-left flex flex-col items-center md:items-start">
                 <h1
-                className={`${monsterfont1.className} leading-[52px] tracking-[0.06em] text-[36px] md:text-[44px] mt-[20px]`}
+                className={`${robotoFont.className} leading-[52px] tracking-[0.06em] text-[36px] md:text-[44px] mt-[20px]`}
                 >
                 INCREASE AWARENESS + ENGAGEMENT
                 </h1>
                 <div className="w-[35px] h-[2px] bg-blue-500 mt-[20px] md:mt-[35px] mb-[20px] md:mb-[32px]"></div>
-                <p className="text-semi-white text-[16px] leading-[26px] font-[300] font-['Helvetica'] max-w-[90%] md:max-w-full">
+                <p className={` ${robotoFont1.className} text-semi-white text-[16px] leading-[26px] max-w-[90%] md:max-w-full `}>
                 Enhance your YouTube presence with our tailored management
                 services. We focus on increasing awareness and engagement through
                 strategic content creation, audience targeting, and

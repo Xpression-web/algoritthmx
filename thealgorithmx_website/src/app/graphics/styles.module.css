@@ -141,10 +141,6 @@
   font-size: 14px;
   font-family:  'Open Sans', sans-serif;
 }
-.connect{
-  font-family:  Helvetica, sans-serif;
-  font-size: 16px;
-}
 
 /* Medium devices (e.g., tablets) */
 @media (min-width: 768px) {
@@ -276,4 +272,60 @@
 
 .tool:hover{
   background-color: rgb(255 255 255 / 16%);
+}
+
+.connect::before {
+  content: '';
+  background: conic-gradient(transparent 270deg, white, transparent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 100%;
+  animation: rotate 2s linear infinite;
+}
+
+.connect::after {
+  content: '';
+  background: inherit;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 2 * var(--offset));
+  width: calc(100% - 2 * var(--offset));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.connect {
+  --offset: 1px;
+  background: #000;
+  border-radius: 50px;
+  position: relative;
+  height: 50px;
+  width: 150px;
+  max-width: 100%;
+  overflow: hidden;
+  transition: 3s linear;
+}
+
+.connect a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }

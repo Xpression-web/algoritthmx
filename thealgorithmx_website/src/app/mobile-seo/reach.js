@@ -4,6 +4,7 @@
     const monsterfont = Montserrat({
     subsets: ['latin'],
     weight: '400',
+    fallback: ["sans-serif"],
     });
 
     const MobileReachSection  = () => {
@@ -13,11 +14,11 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue`}>
                 Maximize Your Reach by Going Mobile!
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Our mobile SEO strategies are tailored for impact—no cookie-cutter solutions here. We craft clear, concise content optimized
                 for mobile users, ensuring it ranks higher in search results while keeping readers engaged on the go. With a team of experienced
                 mobile SEO specialists, we cover every detail, from keyword targeting to technical enhancements, so your strategy performs at its

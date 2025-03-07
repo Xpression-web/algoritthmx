@@ -5,10 +5,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 
 const GuidingPrinciples = () => {
@@ -25,35 +27,35 @@ const GuidingPrinciples = () => {
       title: "Intentional Design",
       number: "02",
       description: "We design with purpose and intention, not merely to follow trends.",
-      icon: "images/Leading.png", // Replace SVG with image source
+      icon: "images/Intentional-design.png", // Replace SVG with image source
     },
     {
       id: 3,
       title: "Embracing Uniqueness",
       number: "03",
       description: "We aim to make every design unique, standing out in a sea of sameness.",
-      icon: "images/Leading.png", // Replace SVG with image source
+      icon: "images/Embracing-Uniqueness.png", // Replace SVG with image source
     },
     {
       id: 4,
       title: "Intelligent Aesthetics",
       number: "04",
       description: "Design isn't just about appearance, it's about seamless functionality.",
-      icon: "images/Leading.png", // Replace SVG with image source
+      icon: "images/Intelligent-Aesthetics.png", // Replace SVG with image source
     },
     {
       id: 5,
       title: "Passion Drives Us",
       number: "05",
       description: "Our motivation stems from our passion for design, not solely financial gain.",
-      icon: "images/Leading.png", // Replace SVG with image source
+      icon: "images/Passion-Drives-Us.png", // Replace SVG with image source
     },
     {
       id: 6,
       title: "Prioritizing Understanding",
       number: "06",
       description: "We invest time in comprehending our clients' needs and visions.",
-      icon: "images/Leading.png", // Replace SVG with image source
+      icon: "images/Prioritizing-Understanding.png", // Replace SVG with image source
     },
   ];
 
@@ -93,7 +95,7 @@ const GuidingPrinciples = () => {
             <div
               key={principle.id}
               id={`principle-${principle.id}`}
-              className={`principle-box relative bg-[rgba(255,255,255,0.06)] p-8 rounded-lg transform transition-all duration-500 hover:bg-[rgba(85, 81, 81, 0.06)] hover:shadow-[0_0_50px_25px_rgba(255,255,255,0.2)] backdrop-blur-md ${
+              className={`principle-box relative bg-[rgba(255,255,255,0.06)] p-8 rounded-lg transform transition-all duration-700 hover:bg-[rgba(85, 81, 81, 0.06)] hover:shadow-[0_0_50px_25px_rgba(255,255,255,0.2)] backdrop-blur-md ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
               }`}
               style={{

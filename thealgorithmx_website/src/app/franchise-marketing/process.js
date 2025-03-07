@@ -6,14 +6,17 @@ import styles from "../public-relations/styles.module.css";
 const monsterfont = Montserrat({
 subsets: ["latin"],
 weight: "100",
+fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "300",
+    fallback: ["sans-serif"],
     });
 const monsterfont2 = Montserrat({
         subsets: ["latin"],
         weight: "700",
+        fallback: ["sans-serif"],
         });
 
 
@@ -62,62 +65,68 @@ return (
     <div className="w-full max-w-6xl mx-auto p-4">
         {/* Title on top */}
         <h1 className={`${styles["our-text"]} ${monsterfont1.className}`}>Our</h1>
-        <h2 className={` text-[46px] md:${styles["pr-text"]} ${monsterfont.className} text-center `}>FRANCHISE MARKETING PROCESS</h2>
+        <h2 className={`text-[50px] md:text-[56px] tracking-[0.06em] leading-[60px] md:${styles["pr-text"]} ${monsterfont.className} text-center `}>FRANCHISE MARKETING PROCESS</h2>
         <div className="flex justify-center items-center ">
 <div className="w-10 h-1 bg-blue-600 mx-auto my-4"></div>
 </div>
 
-        <div className="flex justify-between mb-8 max-w-5xl mx-auto">
-        {steps.map((step) => (
-            <button
-            key={step.number}
-            className={`${
-                activeStep === step.number
-                ? ' text-white'
-                : 'bg-transparent '
-            } py-2  transition-colors text-sm ${styles["step-text"]}  ${monsterfont2.className}  `}
-            onClick={() => handleStepClick(step.number)}
-            >
-            STEP {step.number}
-            </button>
-        ))}
-        </div>
+<div className="flex justify-between mb-8 max-w-5xl mx-auto ">
+  {steps.map((step) => (
+    <button
+      key={step.number}
+      className={`${
+        activeStep === step.number
+          ? ' text-white'
+          : 'bg-transparent '
+      } py-2 transition-colors text-sm ${styles["step-text"]} ${monsterfont2.className}`}
+      onClick={() => handleStepClick(step.number)}
+    >
+      STEP {step.number}
+    </button>
+  ))}
+</div>
 
-        <div className="relative mb-8 max-w-5xl mx-auto">
-        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-2 bg-white">
-            <div 
-            className="absolute left-0 h-2 bg-green-500 transition-all duration-300" 
-            style={{ 
-                width: `${((activeStep - 1) / (steps.length - 1)) * 100}%` 
-            }} 
-            />
-            {steps.map((step) => (
-            <button
-                key={step.number}
-                className={`absolute w-8 h-8 rounded-full transition-all duration-300 ${
-                activeStep >= step.number 
-                    ? 'bg-white border-4 border-green-500' 
-                    : 'bg-white'
-                }`}
-                style={{
-                left: `${((step.number - 1) / (steps.length - 1)) * 100}%`,
-                transform: 'translate(-50%, -40%)'
-                }}
-                onClick={() => handleStepClick(step.number)}
-            />
-            ))}
-        </div>
-        </div>
+{/* Progress bar with dots */}
+<div className="relative mb-8  max-w-[61rem] mx-auto">
+  {/* White background line */}
+  <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 h-2 bg-white">
+    {/* Green progress line */}
+    <div 
+      className="absolute left-0 h-2 bg-[#13a987] transition-all duration-300" 
+      style={{ 
+        width: `${((activeStep - 1) / (steps.length - 1)) * 100}%` 
+      }} 
+    />
+    
+    {/* Step indicators (dots) */}
+    {steps.map((step) => (
+  <button
+    key={step.number}
+    className={`absolute w-8 h-8 rounded-full transition-all duration-300 ${
+      step.number < activeStep 
+        ? 'bg-[#13a987]' // Completed steps get full green fill
+        : step.number === activeStep
+          ? 'bg-white border-4 border-[#13a987]' // Active step gets white fill with green border
+          : 'bg-white' // Upcoming steps remain white
+    }`}
+    style={{
+      left: `${((step.number - 1) / (steps.length - 1)) * 100}%`,
+      transform: 'translate(-50%, -40%)'
+    }}
+    onClick={() => handleStepClick(step.number)}
+  />
+))}
+  </div>
+</div>
 
-        <div className="mt-[100px] space-y-4 text-white max-w-5xl mx-auto">
-        <div className="">
-            <h2 className={`${styles["pr-title"]} ${monsterfont2.className}`}>{steps[activeStep - 1].title}</h2>
-            <p className={`${styles["pr-description"]} text-semi-white`}>{steps[activeStep - 1].description}</p>
+            <div className="mt-[100px] space-y-4 text-white  max-w-5xl mx-auto">
+            <div className="">
+                <h2 className={`${styles["pr-title"]} ${monsterfont2.className}`}>{steps[activeStep - 1].title}</h2>
+                <p className={`${styles["pr-description"]} font-opensans text-semi-white`}>{steps[activeStep - 1].description}</p>
+            </div>
+            </div>
         </div>
         </div>
-    </div>
-    </div>
-);
-};
-
+    );
+    };
 export default FranchiseProcessVisualization;

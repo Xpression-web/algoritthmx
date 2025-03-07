@@ -43,7 +43,7 @@ const AccordionItem = ({ title, content, isActive, onClick, isInView }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="py-10 text-[15px] leading-[22px] text-semi-white font-[Helvetica]">{content}</p>
+          <p className="py-10 text-[15px] leading-[22px] text-semi-white font-helveticaneue">{content}</p>
         </div>
       </div>
     </div>

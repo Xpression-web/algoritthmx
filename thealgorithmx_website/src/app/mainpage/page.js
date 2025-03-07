@@ -10,15 +10,15 @@ import ResultRow from './band';
 import MarketingGrid from './Marketing';
 import  Reviews from './reviews';
 import ParticleAnimation from './Honeycomb';
-import InsightSection from '../graphics/insight'
 import Footer from '../mainpage/footer';
 
 
 const Page = () => {
   return (
     <div >
-      <ParticleAnimation/>
       <Navbar/>
+      <ParticleAnimation/>
+      
       <ResponsiveGrid/>
       <Hexagon/>
       <ServicesSection/>

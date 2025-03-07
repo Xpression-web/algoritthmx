@@ -3,7 +3,7 @@
     import styles from './style.module.css'
     import style from '../graphics/styles.module.css'
     import { Montserrat } from "next/font/google";
-
+ 
     const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "200",
@@ -97,10 +97,10 @@
 
             {/* Main titles */}
             <div className="relative z-10">
-                <h2 className={` ${style["description"]} ${monsterfont1.className}  text-white`}>
+            <h2 className={`${monsterfont1.className} text-[40px] mt-12 text-white`}>
                 SEO Services
                 </h2>
-                <h3 className={` ${style["description"]}  ${monsterfont.className} font-semibold text-white`}>
+                <h3 className={`text-[40px]  ${monsterfont.className}  text-white`}>
                 WE OFFER
                 </h3>
             </div>
@@ -116,12 +116,12 @@
                     <img
                     src={service.image}
                     alt={service.title}
-                    className="w-12 h-12"
+                    className="w-[50px] h-[50px"
                     />
-                    <h3 className={`${styles["services-title"]} text-white`}>
+                    <h3 className={`text-[24px] font-[700] mt-3 mb-3 font-helveticaneue text-white `}>
                     {service.title}
                     </h3>
-                    <p className={`${styles["services-description"]}`}>
+                    <p className={`text-[15px] leading-[24px] font-helveticaneue`}>
                     {service.description}
                     </p>
                 </div>

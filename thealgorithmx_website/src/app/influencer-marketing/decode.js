@@ -13,11 +13,11 @@ return (
     <div className="container max-w-[1200px] mx-auto">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
         {/* Left Section - Content */}
-        <div className="w-full lg:w-1/2 space-y-2">
-            <h1 className={`${monsterfont1.className} leading-[1.08] text-[36px] mb-[30px]`}>
+        <div className="w-full lg:w-1/2   max-w-[43.875rem] mx-auto px-[1rem]">
+            <h1 className={`text-[35.2px] font-[600] leading-[1.08]  mb-[30px]`}>
             We’ve Decoded Influencer Profitability for You
             </h1>
-            <p className={`${styles["what-description"]} text-semi-white`}>
+            <p className={`text-[16px] leading-[28px] font-helveticaneue text-semi-white `}>
             The Business Intelligence and Data Science team at AlgorithmX has successfully tackled the challenges of measuring, evaluating, and attributing profitability in influencer marketing. We generate bespoke attribution models for clients to ensure that we measure the real profitability of influencer marketing using our advanced licensed technology.
             </p>
 

@@ -13,7 +13,7 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+    <Navbar/>
     <SEONationalSection />
     <NationalServices />
     <NationalStrategy/>

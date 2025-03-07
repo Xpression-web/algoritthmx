@@ -1,6 +1,21 @@
 'use client';
 
 import { useState } from 'react';
+import { Montserrat } from "next/font/google";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiamond, faSquare, faGem, faChartPie } from '@fortawesome/free-solid-svg-icons';
+import { faDelicious, faGg } from '@fortawesome/free-brands-svg-icons';
+
+const monsterfont = Montserrat({
+  subsets: ["latin"],
+  weight: "100",
+  fallback : ["sans-serif"],
+});
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "300",
+  fallback : ["sans-serif"],
+});
 
 const CampaignTabs = () => {
   const [activeTab, setActiveTab] = useState('conversion');
@@ -9,8 +24,8 @@ const CampaignTabs = () => {
   const tabs = [
     {
       id: 'conversion',
-      icon: '💎',
-      title: 'Advanced Conversion Tracking',
+      icon: faGem,
+      title: 'CONVERSION TRACKING',
       subtitle: 'ADVANCED CONVERSION TRACKING',
       content: {
         text: [
@@ -23,8 +38,8 @@ const CampaignTabs = () => {
     },
     {
       id: 'reporting',
-      icon: '🔲',
-      title: 'Transparent Reporting',
+      icon: faDelicious,
+      title: 'TRANSPARENT REPORTING',
       subtitle: 'TRANSPARENT REPORTING',
       content: {
         text: [
@@ -36,8 +51,8 @@ const CampaignTabs = () => {
     },
     {
       id: 'meetings',
-      icon: '💠',
-      title: 'Regular Strategy Meetings',
+      icon: faGg,
+      title: 'REGULAR STRATEGY MEETINGS',
       subtitle: 'REGULAR STRATEGY MEETINGS',
       content: {
         text: [
@@ -50,8 +65,8 @@ const CampaignTabs = () => {
     },
     {
       id: 'analysis',
-      icon: '💠',
-      title: '360° Data Analysis',
+      icon: faGg,
+      title: '360° DATA ANALYSIS',
       subtitle: '360° DATA ANALYSIS',
       content: {
         text: [
@@ -73,28 +88,30 @@ const CampaignTabs = () => {
       </div>
 
       {/* Tabs Section */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         {/* Tabs Container with White Line */}
         <div className="relative">
-          <div className="flex flex-wrap gap-6 mb-4">
+          <div className="flex flex-wrap mb-4">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 onMouseEnter={() => setHoverTab(tab.id)}
                 onMouseLeave={() => setHoverTab(null)}
-                className="flex flex-col items-center px-4"
+                className="flex flex-row items-center px-4 px-[26px]"
               >
-                <span className="text-pink-500 text-2xl mb-2">{tab.icon}</span>
-                <span className="text-pink-500 text-lg text-center">{tab.title}</span>
+                <span className="text-[#ea0fb4]  mr-2">
+                  <FontAwesomeIcon icon={tab.icon} />
+                </span>
+                <span className={`text-[#ea0fb4] text-[15px] text-center leading-[70px] ${monsterfont1.className} `}>{tab.title}</span>
               </button>
             ))}
           </div>
           {/* White base line */}
-          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-white">
+          <div className="absolute bottom-0 left-0 w-full h-[3px] bg-white">
             {/* Pink highlight line that moves */}
             <div 
-              className="absolute top-0 h-full bg-pink-500 transition-all duration-300 ease-in-out"
+              className="absolute top-0 h-full bg-[#ea0fb4] transition-all duration-300 ease-in-out"
               style={{
                 left: `${(hoverTab ? tabs.findIndex(t => t.id === hoverTab) : tabs.findIndex(t => t.id === activeTab)) * 25}%`,
                 width: '23%'
@@ -108,17 +125,17 @@ const CampaignTabs = () => {
           {tabs.map((tab) => (
             <div
               key={tab.id}
-              className={`grid md:grid-cols-2 gap-8 items-start transition-opacity duration-300 ${
+              className={`grid md:grid-cols-3 gap-8 items-start transition-opacity duration-300 ${
                 activeTab === tab.id ? 'opacity-100' : 'hidden opacity-0'
               }`}
             >
-              <div className="space-y-6">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-pink-500">
+              <div className="col-span-2">
+                <h3 className={`text-[28px] ${monsterfont1.className}  font-bold mb-4 text-white`}>
                   {tab.subtitle}
                 </h3>
-                <div className="space-y-4">
+                <div className="">
                   {tab.content.text.map((paragraph, index) => (
-                    <p key={index} className="text-gray-300 leading-relaxed">
+                    <p key={index} className="text-[15px] text-semi-white font-opensans mt-[40px]">
                       {paragraph}
                     </p>
                   ))}

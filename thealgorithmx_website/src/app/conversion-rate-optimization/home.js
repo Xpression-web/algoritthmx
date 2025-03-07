@@ -5,10 +5,12 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
 });
 
 const VideoSection = () => {
@@ -23,7 +25,7 @@ const VideoSection = () => {
               <img
                 src="images/CRO.webp"
                 alt="Branding process with color swatches"
-                className={` w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]}`}
+                className={` w-[290px] h-auto md:h-[400px] shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%]`}
               />
               {/* Rectangular Image */}
               <img

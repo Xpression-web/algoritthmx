@@ -44,7 +44,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="min-h-screen content-center bg-black px-16">
+    <div className="min-h-screen content-center bg-black p-4 md:px-16">
       <div className="max-w-[1200px] mx-auto space-y-8 ">
         {/* Top row services */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">

@@ -28,7 +28,7 @@ const EstimationBox = ({ imageSrc, title, description }) => (
       className="mx-auto mb-4 w-[50px] h-[50px] object-cover "
     />
     <h3 className={`${style["cost-price"]}  ${monsterfont2.className} text-center `}>{title}</h3>
-    <p className={`${style["cost-description"]} font-helveticaneue  mt-4 text-white`}>{description}</p>
+    <p className={`${style["cost-description"]} font-helveticaneue  mt-4 text-white mb-[10px]`}>{description}</p>
   </div>
 );
 

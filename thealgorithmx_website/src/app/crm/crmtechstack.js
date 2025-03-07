@@ -83,7 +83,13 @@ const CRMTechStack = () => {
 
       <div className="max-w-6xl mx-auto">
         {technologies.map((tech, index) => (
-          <div key={index} className="mb-8 md:mb-12 pb-8 border-b border-gray-800">
+          <div 
+          key={index} 
+          className="mb-8 md:mb-12 pb-8"
+          style={{
+                  borderBottom: index !== technologies.length - 1 ? "1px solid #dee2e6" : "none"
+                }}
+        >
             <div className="grid grid-cols-2 md:grid-cols-[200px,1fr] gap-10 items-start">
               <h3 className={` ${styles["tech-subtitle1"]} ${monsterfont.className  }`}>{tech.title}</h3>
               

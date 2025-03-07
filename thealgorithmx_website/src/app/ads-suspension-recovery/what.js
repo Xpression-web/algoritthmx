@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../social-media-audit/style.module.css'
+import './square.css'
 import { Montserrat } from 'next/font/google'
 
 const monsterfont1 = Montserrat ({
@@ -14,12 +15,15 @@ const WhatSection = () => {
             <div className="container max-w-[1200px] mx-auto">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                     {/* Left Section - Image */}
-                    <div className="w-full lg:w-1/3">
-                        <img
-                            src="images/Google-Ads-suspension.webp"
-                            alt="Local SEO visualization showing map interface across devices"
-                            className="w-auto h-auto border border-4 "
-                        />
+                    <div className="w-full lg:w-1/3 relative">
+                        <div className="relative">
+                            <img
+                                src="images/Google-Ads-suspension.webp"
+                                alt="Local SEO visualization showing map interface across devices"
+                                className="w-auto h-auto"
+                            />
+                            <div className="square"></div>
+                        </div>
                     </div>
 
                     {/* Right Section - Content */}
@@ -28,7 +32,7 @@ const WhatSection = () => {
                         What is Google Ads suspension?
                         </h1>
 
-                        <p className={`${styles["what-description"]} text-semi-white  mt-[30px]`}>
+                        <p className={`${styles["what-description"]} font-helveticaneue text-semi-white  mt-[30px]`}>
                         Google Ads suspension is a temporary pause on your online ads due to policy violation. If your ads break rules, like promoting inappropriate content, they won't be shown. But no stress – follow Google's guidelines to resolve issues and get your ads back up. We're here to cover all account suspension reactivation and ensure a safe and fair online experience for everyone!
                         </p>
                     </div>

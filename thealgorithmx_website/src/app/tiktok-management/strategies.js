@@ -7,6 +7,7 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '400',
+  fallback: ["sans-serif"],
 });
 
 
@@ -158,7 +159,7 @@ const TiktokCarousel = () => {
     }}
 >
 
-                            <div className="bg-black bg-opacity-50 p-6 md:p-14 border border-white shadow-[0_0_10px_rgba(218,240,245,1)] w-full h-auto">
+                            <div className={`bg-black bg-opacity-50 p-6 md:p-14 ${styles["box-border"]} w-full h-auto`}>
                                 <div className="flex flex-col items-center space-y-4">
                                     <img
                                         src={item.icon}
@@ -170,7 +171,7 @@ const TiktokCarousel = () => {
                                             <span key={`${item.id}-word-${idx}`} className="block">{word}</span>
                                         ))}
                                     </h3>
-                                    <p className={`text-semi-white ${styles["erp-description"]} text-center md:p-4 md:mb-2`}>
+                                    <p className={`text-semi-white ${styles["erp-description"]} font-helveticaneue text-center md:p-4 md:mb-2`}>
                                         {item.description}
                                     </p>
                                 </div>
@@ -180,7 +181,7 @@ const TiktokCarousel = () => {
                 })}
             </div>
             <div className="flex justify-center mt-8">
-                <div className="inline-flex items-center gap-4 bg-black bg-opacity-50 px-4 py-2 rounded-full border border-gray-700">
+                <div className="inline-flex items-center gap-4 bg-black bg-opacity-50 px-4 py-2 rounded-full border border-white">
                     <button
                         onClick={prevSlide}
                         className="p-2 hover:bg-gray-700 rounded-full transition-colors text-white text-xl font-bold"

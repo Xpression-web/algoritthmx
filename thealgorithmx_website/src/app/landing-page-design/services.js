@@ -21,9 +21,9 @@ const monsterfont2 = Montserrat({
 
 const ServiceTier = ({ title, features }) => (
   <div className="flex flex-col items-center text-white p-8 relative">
-    <h3 className={`${monsterfont2.className} text-2xl mb-6`}>{title}</h3>
+    <h3 className={`font-[300] text-[22px] font-helveticaneue  mb-6`}>{title}</h3>
     {features.map((feature, index) => (
-      <p key={index} className="text-gray-400 mb-3 text-center">{feature}</p>
+      <p key={index} className="text-gray-400  text-[13px] font-helveticaneue  text-center">{feature}</p>
     ))}
   </div>
 );

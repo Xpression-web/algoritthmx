@@ -7,10 +7,12 @@
     const monsterfont = Montserrat({
     subsets: ['latin'],
     weight: '700',
+    fallback: ["sans-serif"],
     });
     const monsterfont1 = Montserrat({
     subsets: ['latin'],
     weight: '200',
+    fallback: ["sans-serif"],
     });
 
     const ServicesSection = () => {
@@ -105,7 +107,7 @@
             {services.map((service, index) => (
                 <div
                 key={service.title}
-                className={`relative p-4 rounded-lg text-center transition-all duration-300 ${
+                className={`relative p-4 rounded-[20px] text-center transition-all duration-300 ${
                     activeBox === index || (index === 1 && activeBox === null) ? 'bg-[#131313]' : ''
                 }`}
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -169,7 +171,7 @@
                         </div>
                         </div>
                         <div className="mt-4 text-left">
-                        <p className={`${style['growth-description']} text-semi-white`}>{service.description}</p>
+                        <p className={`${style['growth-description']} font-opensans font-[500] text-semi-white`}>{service.description}</p>
                         </div>
                     </div>
                     )}

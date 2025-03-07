@@ -39,7 +39,7 @@ const TechnologyToolbox = () => {
             {tools.map((tool) => (
               <div
                 key={tool.id}
-                className={`${styles["background"]} rounded-lg  flex items-center hover:bg-gray-900 transition duration-300`}
+                className={`${styles["background"]} rounded-lg  flex items-center ${styles["tool"]}  transition duration-300`}
               >
                 {/* Flex container for image and text */}
                 <div className={`flex w-full items-center ${styles["toolbox"]} `}>

@@ -51,16 +51,19 @@
   background-color: rgba(255, 255, 255, 0.06) !important;
   height: max-content;
 
+
 }
 
 
 .service-card1 {
-  transition: transform 0.7s ease, opacity 0.7s ease;
+ 
 }
 
 .service-card1:hover {
-  box-shadow: 0 0 80px 25px rgba(255, 255, 255, 0.2); /* Starts with a small shadow and grows larger */
+  box-shadow: 0 0 80px 25px rgba(255, 255, 255, 0.2);
+  animation-delay: 0.2s;
 }
+
 
 .main-craft{
   font-size: 2.2rem;

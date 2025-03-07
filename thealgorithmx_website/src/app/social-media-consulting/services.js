@@ -1,15 +1,19 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../graphics/styles.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCube, faGem } from '@fortawesome/free-solid-svg-icons';
 import { Montserrat } from 'next/font/google';
 
 const monsterfont = Montserrat({
 subsets: ['latin'],
 weight: '700',
+fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
 subsets: ["latin"],
 weight: "200",
+fallback: ["sans-serif"],
 });
 
 const MarketingSection = () => {
@@ -30,6 +34,7 @@ const content = {
     ]
     }
 };
+
 
 useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,22 +57,12 @@ useEffect(() => {
     };
 }, [isInView]);
 
-
-
 return (
-    <div className="min-h-screen bg-black text-gray-300 p-4">
+    <div className="min-h-screen bg-black text-gray-300 p-4 flex justify-center items-center">
     <div className="max-w-[1200px] mx-auto p-8">
         <div className="mb-16 text-center space-y-2">
-        {/*<h2
-            ref={boostRef}
-            className={`-mb-6 leading-[1.1] text-[36px] md:text-[90px] text-[#151515] transform transition-transform duration-700 ${monsterfont.className} ${
-            isInView ? `${styles["scale-110"]} ${styles["opacity-100"]}` : `${styles["scale-75"]} ${styles["opacity-0"]}`
-            }`}
-        >
-            BOOST ENGAGEMENT
-        </h2> */}
         <div className="relative z-10">
-            <h2 className={`${styles["description"]} ${monsterfont1.className} mt-6 md:mt-0 text-white`}>
+            <h2 className={`${styles["description"]} ${monsterfont1.className} mt-6 md:-mt-[60px] text-white`}>
             SERVICES
             </h2>
             <h2 className={`${styles["description"]} ${monsterfont.className} text-white -mt-2`}>
@@ -77,85 +72,112 @@ return (
         </div>
 
         <div className="relative mb-12">
-        <div className="flex rounded-full border border-green-500 p-1 relative">
-            <div
-            className="absolute h-[calc(100%-8px)] transition-all duration-300 ease-in-out rounded-full"
+        <div className="flex justify-center items-center">
+        <div className="flex rounded-[33px] border-[1px] border-[#a2ed56] p-2 relative md:min-w-[720px]">
+
+            <div 
+            className="hidden md:flex absolute h-[calc(100%-8px)] transition-all duration-300 ease-in-out"
             style={{
-                width: hoverTab || activeTab === 'paid' ? '50%' : '45%',
-                left: hoverTab
-                ? hoverTab === 'paid'
-                    ? '50%'
-                    : '0'
+              width: '320px',  // Adjust this value to control background width
+              height: '45px',  // Adjust this value to control background height
+              left: hoverTab 
+                ? hoverTab === 'paid' 
+                  ? 'calc(38% + 90px)' // Center in right half
+                  : 'calc(16% - 90px)'  // Center in left half
                 : activeTab === 'paid'
-                ? '50%'
-                : '0',
-                background: 'linear-gradient(90deg, rgba(22,163,74,0.95) 0%, rgba(21,128,61,0.95) 100%)',
-                boxShadow: '0 0 15px rgba(34,197,94,0.3)',
-                backdropFilter: 'blur(4px)',
+                  ? 'calc(38% + 90px)'
+                  : 'calc(16% - 90px)',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background:'#5a882b',
+              borderRadius: '9999px',
+              boxShadow: '-1px 1px 5px 7px rgba(128, 215, 0, 0.2)',
+              backdropFilter: 'blur(4px)',
             }}
-            />
+          />
+          <div 
+            className="flex md:hidden absolute h-[calc(100%-8px)] transition-all duration-300 ease-in-out"
+            style={{
+              width: '180px',  // Adjust this value to control background width
+              height: '80px',  // Adjust this value to control background height
+              left: hoverTab 
+                ? hoverTab === 'paid' 
+                  ? 'calc(26% + 90px)' // Center in right half
+                  : 'calc(26% - 90px)'  // Center in left half
+                : activeTab === 'paid'
+                  ? 'calc(26% + 90px)'
+                  : 'calc(26% - 90px)',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background:'#5a882b',
+              borderRadius: '9999px',
+              boxShadow: '-1px 1px 5px 7px rgba(128, 215, 0, 0.2)',
+              backdropFilter: 'blur(4px)',
+            }}
+          />
             <button
             className="flex-1 rounded-full py-2 px-6 transition-all duration-300 relative z-10"
             onClick={() => setActiveTab('organic')}
             onMouseEnter={() => setHoverTab('organic')}
             onMouseLeave={() => setHoverTab(null)}
-            >
-            <span
-                className={`flex items-center justify-center gap-2 ${hoverTab === 'organic' || (!hoverTab && activeTab === 'organic') ? 'text-white' : 'text-green-500'}`}
-            >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z" />
-                </svg>
+          >
+            <div className="flex justify-end items-center">
+              <span className={`flex justify-end font-helveticaneue font-[700] text-[16px] tracking-[0.05em] items-center gap-1 ${hoverTab === 'organic' || (!hoverTab && activeTab === 'organic') ? 'text-white' : 'text-[#a2ed56]'}`}>
+                <FontAwesomeIcon icon={faGem} className=" w-[18px] h-[16.8px]" />
                 SOCIAL STRATEGY CONSULTING
-            </span>
-            </button>
+              </span>
+            </div>
+          </button>
 
-            <button
+          <button
             className="flex-1 rounded-full py-2 px-6 transition-all duration-300 relative z-10"
             onClick={() => setActiveTab('paid')}
             onMouseEnter={() => setHoverTab('paid')}
             onMouseLeave={() => setHoverTab(null)}
-            >
-            <span
-                className={`flex items-center justify-center gap-2 ${hoverTab === 'paid' || (!hoverTab && activeTab === 'paid') ? 'text-white' : 'text-green-500'}`}
-            >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 19h20L12 2zm0 3.8L18.5 17H5.5L12 5.8z" />
-                </svg>
+          >
+            <div className="flex justify-start items-center">
+              <span className={`flex items-center font-helveticaneue font-[700] text-[16px] tracking-[0.05em] gap-2 ${hoverTab === 'paid' || (!hoverTab && activeTab === 'paid') ? 'text-white' : 'text-[#a2ed56]'}`}>
+                <FontAwesomeIcon icon={faGem} className="w-[18px] h-[16.8px]" />
                 ADVERTISING STRATEGY
-            </span>
-            </button>
+              </span>
+            </div>
+          </button>
+            </div>
         </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div className="space-y-4">
-    <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica']">{content[activeTab].text}</p>
-</div>
-<div className="space-y-4">
-    {activeTab === 'paid' && (
-        <ul className="space-y-2 mt-4">
-            {content.paid.features.map((feature, index) => (
-                <li key={index} className="flex items-center text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica'] gap-2">
+        <div className="space-y-4">
+            <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-helveticaneue">
+            {content[activeTab].text}
+            </p>
+        </div>
+        <div className="space-y-4">
+            <p className="text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-helveticaneue">
+            {content[activeTab].extraText}
+            </p>
+            {activeTab === 'paid' && (
+            <ul className="space-y-2 mt-4">
+                {content.paid.features.map((feature, index) => (
+                <li key={index} className="flex items-center text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-helveticaneue gap-2">
                     <span className="w-1 h-1 bg-white rounded-full"></span>
                     {feature}
                 </li>
-            ))}
-        </ul>
-    )}
-    {activeTab === 'organic' && (
-        <ul className="space-y-2 mt-4">
-            {content.organic.features.map((feature, index) => (
-                <li key={index} className="flex items-center text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-['Helvetica'] gap-2">
+                ))}
+            </ul>
+            )}
+            {activeTab === 'organic' && (
+            <ul className="space-y-2 mt-4">
+                {content.organic.features.map((feature, index) => (
+                <li key={index} className="flex items-center text-[#FFFFFFB3] text-[16px] leading-[26px] font-[300] font-helveticaneue gap-2">
                     <span className="w-1 h-1 bg-green-500 rounded-full"></span>
                     {feature}
                 </li>
-            ))}
-        </ul>
-    )}
-</div>
-</div>
-
+                ))}
+            </ul>
+            )}
+        </div>
+        </div>
     </div>
     </div>
 );

@@ -23,14 +23,14 @@ return (
         </div>
 
         {/* Right Section - Content */}
-        <div className="w-full lg:w-1/2 space-y-4">
-            <h1 className={`${styles["what-title"]} ${monsterfont1.className}`}>
+        <div className="w-full lg:w-1/2 ">
+            <h1 className={`${styles["what-title"]} font-helveticaneue font-[700]`}>
             Why Your Company Needs a YouTube Channel
             </h1>
-            <p className={`${styles["what-description"]} text-semi-white mt-[2px]`}>
+            <p className={`${styles["what-description"]} font-helveticaneue  text-semi-white mt-[2px]`}>
             Join the Digital Giants with a YouTube Presence
             </p>
-            <p className={`${styles["what-description"]} text-semi-white mt-[2px]`}>
+            <p className={`${styles["what-description"]} font-helveticaneue text-semi-white mt-[8px]`}>
             With over 122 million daily users, YouTube is a vital platform for reaching your audience. Brands like Red Bull, Old Spice, Grammarly, Patreon, and many others experienced unparalleled engagement, encouraging discussions and driving brand loyalty through YouTube. Don’t miss the opportunity to connect with a vast audience—partner with a YouTube management agency to tap into the full potential of this platform.
             </p>
 

@@ -23,20 +23,20 @@ import styles from '../social-media-audit/style.module.css'
             </div>
 
             {/* Right Section - Content */}
-            <div className="w-full lg:w-1/2 space-y-4">
-                <h1 className={`${styles["what-title"]} ${monsterfont1.className}`}>
+            <div className="w-full lg:w-1/2 ">
+                <h1 className={`${styles["what-title"]} font-helveticaneue font-[700]`}>
                 TikTok's Business Impact
                 </h1>
-                <p className={`${styles["what-description"]} text-semi-white mt-[30px]`}>
+                <p className={`${styles["what-description"]} font-helveticaneue text-semi-white `}>
                 Stuck scrolling on TikTok without a strategy? We get it. As a TikTok marketing company, we unleash your brand's potential with engaging content, targeted growth tactics, and influencer partnerships.
                 </p>
-                <p className={`${styles["what-description"]} text-[#DC3545] mt-[30px]`}>
+                <p className={`${styles["what-description"]} font-helveticaneue text-[#DC3545] mt-[8px]`}>
                 Turn casual viewers into raving fans.
                 </p>
-                <p className={`${styles["what-description"]} text-[#DC3545] mt-[30px]`}>
+                <p className={`${styles["what-description"]} font-helveticaneue text-[#DC3545] mt-[8px]`}>
                 Reach New Audiences, Build Real Connections
                 </p>
-                <p className={`${styles["what-description"]} text-semi-white mt-[30px]`}>
+                <p className={`${styles["what-description"]} font-helveticaneue text-semi-white mt-[8px]`}>
                 TikTok’s got the viral magic. It’s where brands go big and make real connections with millions. Our tiktok marketing agency helps you ride the wave, grow your squad, and turn followers into superfans!
                 </p>
             

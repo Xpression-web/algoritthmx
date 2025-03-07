@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 
 const reasons = [
@@ -27,17 +28,17 @@ const SocialMediaAudit = () => {
         <div className="min-h-screen bg-black p-8">
             <div className="max-w-full mx-auto grid md:grid-cols-3 gap-6">
                 {/* Left side boxes (2/3 width) */}
-                <div className="md:col-span-2 grid md:grid-cols-3 gap-6">
+                <div className="md:col-span-2 grid md:grid-cols-3 gap-6 order-2 md:order-1">
                     {reasons.map((reason, index) => (
                         <div 
                             key={index}
-                            className={` p-4 bg-black relative overflow-hidden group ${styles["box"]} `}
+                            className={` p-4 bg-black relative overflow-hidden group ${styles["box"]}  `}
                         >
-                            <div className="relative z-10 transition-all duration-300 group-hover:translate-y-[-12px]">
-                                <h3 className={`${styles["what-description"]} text-[#ffca00] text-center`}>
+                            <div className={`relative z-10 transition-all duration-300  `}>
+                                <h3 className={`text-[16px] leading-[22px] text-[#ffca00] text-center mb-[10px] font-opensans font-[700]`}>
                                     {reason.title}
                                 </h3>
-                                <p className={`${styles["what-subtitle"]} text-semi-white text-center`}>
+                                <p className={`${styles["what-subtitle"]} font-helveticaneue text-semi-white text-center`}>
                                     {reason.content}
                                 </p>
                             </div>
@@ -46,7 +47,7 @@ const SocialMediaAudit = () => {
                 </div>
                 
                 {/* Right side title (1/3 width) */}
-                <div className="md:col-span-1 md:mt-20 md:pl-[30px]">
+                <div className="md:col-span-1 md:mt-20 md:pl-[62px] order-1 md:order-2">
                     <h2 className={`text-[40px] md:text-[56px] leading-[44px] md:leading-[60px] ${monsterfont1.className} text-white text-center md:text-left`}>
                         3 Key Reasons to Audit Social Media Accounts
                     </h2>

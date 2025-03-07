@@ -5,10 +5,12 @@
     const monsterfont1 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback: ["sans-serif"],
     })
     const monsterfont = Montserrat ({
     subsets : ["latin"],
     weight :"800",
+    fallback: ["sans-serif"],
     })
 
 
@@ -74,20 +76,26 @@
     const DevelopmentTimeline = () => {
     return (
         <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-            <div className="bg-black rounded-3xl p-8 md:p-12 border border-zinc-800">
-            <h1 className={`${styles["dynamic-title"]}  ${monsterfont1.className} md:text-center `}>
-                Dynamic Approach to Android App Development
+        <div className="max-w-[1200px] mx-auto">
+        <div
+  className="bg-black rounded-[32px] p-8 md:p-[48px] border"
+  style={{ border: "1px solid rgba(255, 255, 255, 0.4)" }}
+>
+            <h1 className={`text-[42px] font-helveticaneue font-[700] leading-[1.3]  `}>
+            Our comprehensive App Store Optimization approach
             </h1>
+            <p className='text-[15px] font-helveticaneue leading-[20px] text-semi-white mb-[40px] '>
+            We approach App Store Optimization (ASO) through meticulous keyword research, strategic content optimization, continuous performance monitoring, iterative improvements, and tailored localization strategies for global reach.
+            </p>
 
             <div className="relative">
                 <div className="grid grid-cols-1 md:grid-cols-8 gap-6 md:gap-4">
                 {/* First row - items 1-4 */}
                 <div className="relative col-span-full mb-16">
                     {/* Timeline for first row */}
-                    <div className="hidden md:block absolute left-[0.5%] right-[0%] h-0.5 top-14">
-                    <div className="absolute right-full w-10 h-full border-t-2 border-dashed border-zinc-700"></div>
-                    <div className="w-full h-full bg-gradient-to-r from-red-500 via-orange-500 to-orange-400"></div>
+                    <div className="hidden md:block absolute left-[0%] -right-[4.3%] h-0.5 top-14">
+                    <div className="absolute right-full w-10 h-full border-t-2 border-dashed border-zinc-700 bottom-[1px]"></div>
+                    <div className="w-full h-full bg-gradient-to-r from-red-500 via-orange-500 to-orange-400 "></div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
@@ -100,7 +108,7 @@
                             </span>
                             <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                             </div>
-                            <h3 className={` ${styles["dynamic-subtitle"]}  ${monsterfont.className}  `}>{step.title}</h3>
+                            <h3 className={` text-[18px] leading-[1.3] font-[700] font-helveticaneue  `}>{step.title}</h3>
                         </div>
                         
                         {/* Mobile Timeline */}
@@ -109,7 +117,7 @@
                             <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                         </div>
                         
-                        <div className={` ${styles["dynamic-description"]}  ${monsterfont1.className} mt-4 md:mt-8 `}>
+                        <div className={` text-[12px] leading-[24px]  font-helveticaneue mt-4 md:mt-8 px-[20px]`}>
                             {step.description}
                         </div>
                         </div>
@@ -122,7 +130,7 @@
                     {/* Timeline for second row */}
                     <div className="hidden md:block absolute left-[0.5%] right-[43%] h-0.5 top-14">
                     <div className="w-full h-full bg-gradient-to-r from-yellow-500 to-yellow-400"></div>
-                    <div className="absolute left-full  w-20 h-full border-t-2 border-dashed border-zinc-700"></div>
+                    <div className="absolute left-full  w-[520px] h-full border-t-2 border-dashed border-zinc-700 bottom-[1px]"></div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
@@ -135,7 +143,7 @@
                             </span>
                             <div className={`hidden md:block absolute -bottom-[1.125rem] left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full ${step.dotColor} z-10`}></div>
                             </div>
-                            <h3 className={`${styles["dynamic-subtitle"]}  ${monsterfont.className}  `}>{step.title}</h3>
+                            <h3 className={`text-[18px] leading-[1.3] font-[700] font-helveticaneue  `}>{step.title}</h3>
                         </div>
                         
                         {/* Mobile Timeline */}
@@ -144,7 +152,7 @@
                             <div className={`absolute top-1/2 left-0 transform -translate-y-1/2 w-3 h-3 rounded-full ${step.dotColor}`}></div>
                         </div>
                         
-                        <div className={`${styles["dynamic-description"]}  ${monsterfont1.className} mt-4 md:mt-8 `}>
+                        <div className={`text-[12px] leading-[24px]  font-helveticaneue mt-4 md:mt-8 px-[20px]`}>
                             {step.description}
                         </div>
                         </div>

@@ -1,10 +1,17 @@
 import React from 'react';
 import { Montserrat } from "next/font/google";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "400",
+  fallback: ["sans-serif"],
+});
+const monsterfont1 = Montserrat({
+  subsets: ["latin"],
+  weight: "300",
+  fallback: ["sans-serif"],
 });
 
 const CROStrategies = () => {
@@ -42,7 +49,13 @@ const CROStrategies = () => {
           Drive high-conversions <br/>with our Award- <br/> winning CRO Strategies
         </h1>
         <div className='p-4 '>
-        <div className="bg-black rounded-lg shadow-lg shadow-emerald-500/20 overflow-hidden ">
+        <div
+  className="bg-black overflow-hidden"
+  style={{
+    borderRadius: "30px",
+    boxShadow: "-1px 1px 5px 5px rgba(38, 234, 216, 0.15)",
+  }}
+>
           <div className="flex flex-col md:flex-row">
             {columns.map((column, columnIndex) => (
               <div key={columnIndex} className="flex-1 p-6 relative">
@@ -54,11 +67,11 @@ const CROStrategies = () => {
                 )}
                 <div className="space-y-4">
                   {column.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-start ">
-                      <span className={`mt-1 text-xl ${item.included ? 'text-emerald-500' : 'text-red-500'}`}>
-                        {item.included ? '✓' : '✕'}
+                    <div key={itemIndex} className="flex items-start">
+                      <span className={`mt-1 text-xl mr-2 `}>
+                        <FontAwesomeIcon icon={item.included ? faCheck : faTimes} />
                       </span>
-                      <p className={`text-[16px] leading-[24px]  font-[400] font-[Helvetica] text-white `}>
+                      <p className={`text-[16px] leading-[18px] ${monsterfont1.className} text-white`}>
                         {item.text}
                       </p>
                     </div>

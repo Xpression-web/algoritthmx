@@ -4,6 +4,7 @@
                     const monsterfont = Montserrat({
                       subsets: ['latin'],
                       weight: '400',
+                      fallback: ["sans-serif"],
                     });
 
 
@@ -15,11 +16,11 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue`}>
                 We Share Your Amazon Ambitions
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Whether you’re building a strong brand or focused on increasing revenue, we’re here to help achieve your Amazon goals. Our approach combines comprehensive strategies with a targeted focus on your unique selling objectives, aligning our success with yours—when you thrive, so do we.
                 </p>
                 

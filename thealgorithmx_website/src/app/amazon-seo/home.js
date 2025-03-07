@@ -6,6 +6,7 @@ import { Montserrat } from 'next/font/google';
     const monsterfont1 = Montserrat ({
       subsets : ["latin"],
       weight :"200",
+      fallback: ["sans-serif"],
     })
 
 const SEOAmazonSection = () => {

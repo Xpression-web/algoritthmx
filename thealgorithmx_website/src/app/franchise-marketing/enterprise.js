@@ -13,6 +13,7 @@ const monsterfont1 = Montserrat({
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '100',
+  fallback: ["sans-serif"],
 });
 
 
@@ -80,9 +81,7 @@ const FranchiseEnterprise = () => {
     <div className="min-h-screen bg-black p-4 sm:p-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className={`${styles["development-text"]} ${monsterfont2.className} mb-2`}>SHOPIFY DEVELOPMENT</h1>
-          <h2 className={`${styles["development-text"]} ${monsterfont.className} mb-2`}>SERVICES</h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+          <h2 className={`text-[40px]  ${monsterfont2.className} mb-2`}>Enterprise SEO for Franchise-Level Clients</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -102,10 +101,10 @@ const FranchiseEnterprise = () => {
                 />
               </div>
               <div className="flex-1">
-                <h3 className={`${styles["development-title"]}  mb-3`}>
+                <h3 className={`${styles["development-title"]} font-helveticaneue  mb-3`}>
                   {service.title}
                 </h3>
-                <p className={`${styles["development-description"]}  text-semi-white`}>
+                <p className={`${styles["development-description"]} font-helveticaneue  text-semi-white`}>
                   {service.description}
                 </p>
               </div>

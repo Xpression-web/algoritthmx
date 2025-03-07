@@ -211,7 +211,9 @@
   .algo-content-creation-services {
     display: block; /* Stack sections vertically */
   }
-
+  .borderb{
+    border-bottom: 1px solid gray;
+  }
   .algo-content-creation-services .flx_left,
   .algo-content-creation-services .flx_right {
     width: 100%; /* Full width for both sections */

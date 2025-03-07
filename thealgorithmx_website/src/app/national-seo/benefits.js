@@ -12,6 +12,11 @@
               weight: '100',
               fallback: ["sans-serif"],
             });
+            const monsterfont2 = Montserrat({
+              subsets: ['latin'],
+              weight: '400',
+              fallback: ["sans-serif"],
+            });
 
     const BenefitsCard = ({ title, description, imageSrc }) => (
     <div className="bg-black/5 backdrop-blur-sm p-6 rounded-lg flex flex-col items-start text-start transition-transform">
@@ -22,7 +27,7 @@
             className="w-[339px] h-[236px] object-cover rounded-md"
         />
         </div>
-        <h3 className={`text-[22px] leading-[1.1] ${monsterfont.className} mt-[10px] mb-[10px]`}>{title}</h3>
+        <h3 className={`text-[22px] leading-[1.1] ${monsterfont2.className} mt-[10px] mb-[10px]`}>{title}</h3>
         <p className={`text-[13px] leading-[2] font-helveticaneue text-semi-white`}>{description}</p>
     </div>
     );

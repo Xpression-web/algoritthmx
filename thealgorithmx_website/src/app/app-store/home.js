@@ -5,6 +5,7 @@
     const monsterfont = Montserrat({
     subsets: ['latin'],
     weight: '200',
+    fallback: ["sans-serif"],
     });
     const monsterfont1 = Montserrat({
     subsets: ['latin'],
@@ -13,6 +14,7 @@
     const monsterfont2 = Montserrat({
     subsets: ['latin'],
     weight: '400',
+    fallback: ["sans-serif"],
     });
     const AppSection = () => {
     return (

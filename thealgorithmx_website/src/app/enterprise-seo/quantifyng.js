@@ -14,14 +14,14 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Quantifying Success: KPIs and ROI in Enterprise SEO
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 As a top enterprise SEO company, we prioritize metrics that drive results. Key indicators like organic traffic, keyword rankings, conversion rates, and bounce rates guide our enterprise SEO experts in refining strategies for maximum impact.
                 </p>
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 When calculating ROI, we evaluate revenue from organic search, acquisition costs, and long-term customer value. Working with the best enterprise SEO agency in California, your business gains increased visibility and measurable authority in the industry—ensuring SEO investments deliver sustained growth aligned with your goals.
                 </p>
             </div>

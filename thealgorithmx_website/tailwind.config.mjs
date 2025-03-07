@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'fadeIn': 'fadeIn 0.3s ease-in-out',
+      },
       screens: {
         xxs: "360px",
         xs: "450px",
@@ -35,6 +38,12 @@ export default {
         'nav-bar-text':'rgba(255, 255, 255, 0.8)',
         'dark': '#0f0f0f',
         
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(-100px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
     },
   },

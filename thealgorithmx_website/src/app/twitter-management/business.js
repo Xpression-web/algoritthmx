@@ -8,23 +8,26 @@ import style from '../app-store/style.module.css'
 const monsterfont = Montserrat({
 subsets: ["latin"],
 weight: "700",
+fallback : ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
 subsets: ["latin"],
 weight: "200",
+fallback : ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
 subsets: ["latin"],
 weight: "600",
+fallback : ["sans-serif"],
 });
 
 const ServiceCard = ({ title, description }) => (
 <div className={`relative  bg-black ${style["border-design"]} `}>
     <div className="absolute -top-4 left-20 bg-black md:px-4 p-[5px]">
-    <h3 className={`${style["title"]} ${monsterfont.className}`}>{title}</h3>
+    <h3 className={`text-[22.4px] font-helveticaneue leading-[24px] font-[400]`}>{title}</h3>
     </div>
     <div className="mt-4">
-    <p className={`${style["description"]} text-semi-white text-center`}>
+    <p className={`text-[16px] font-helveticaneue leading-[28px] text-semi-white text-center`}>
         {description}
     </p>
     </div>

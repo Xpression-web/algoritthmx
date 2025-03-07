@@ -19,7 +19,7 @@ import styles from '../social-media-audit/style.module.css'
                 <h1 className={`text-[46px] leading-[48px]  md:text-[64px] md:leading-[68px] text-center md:text-start ${monsterfont1.className}`}>
                 Attract the right customer with the right message
                 </h1>
-                <p className={`${styles["what-description"]} text-semi-white mt-[30px]`}>
+                <p className={`${styles["what-description"]} font-helveticaneue text-semi-white mt-[30px]`}>
                 We design landing pages that convert. With a deep understanding of ad formats and design principles, our landing page design services align perfectly with your marketing goals. As one of the best landing page design specialists, we focus on turning visitors into leads and leads into customers.
                 </p>
             

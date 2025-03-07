@@ -15,14 +15,14 @@ const PublicSeizeSection = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           {/* Left Section - Content */}
           <div className="w-full lg:w-1/2 space-y-4">
-            <h1 className={`${styles["press-title"]} ${monsterfont1.className}`}>
+            <h1 className={`${styles["press-title"]} font-helveticaneue font-[600]`}>
               Seize PR Opportunities
             </h1>
-            <p className={`${styles["press-description"]} text-semi-white`}>
+            <p className={`${styles["press-description"]} font-helveticaneue text-semi-white`}>
               At AlgorithmX, we have a dedicated team of experts in organic public relations who handle all aspects of your digital PR efforts as part of our public relations services, including but not limited to:
             </p>
             {/* Unordered List */}
-            <ul className={`list-disc pl-5 text-semi-white ${styles["press-description"]} `}>
+            <ul className={`list-disc pl-5 text-semi-white font-helveticaneue ${styles["press-description"]} `}>
               <li>Working together with bloggers and social media influencers to reach more audiences.</li>
               <li>Generating valuable content to secure top-notch backlinks and build credibility.</li>
               <li>Managing testimonials and online reviews.</li>

@@ -4,6 +4,7 @@ import AppSection from './home'
 import ServicesGrid from './services'
 import AppServices from './empower'
 import DevelopmentTimeline from './timeline'
+import TechnologyToolbox from './toolbox';
 import InsightSection from '../graphics/insight'
 import Footer from '../mainpage/footer';
 
@@ -15,6 +16,7 @@ const page = () => {
     <ServicesGrid/>
     <AppServices/>
     <DevelopmentTimeline/>
+    <TechnologyToolbox/>
     <InsightSection/>
     <Footer/>
     </div>

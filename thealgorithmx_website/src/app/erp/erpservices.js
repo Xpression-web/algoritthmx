@@ -136,7 +136,7 @@ const Carousel = () => {
             </h1>
             <div 
                 ref={carouselRef}
-                className="relative flex items-center justify-center w-full h-[500px] md:h-[700px] overflow-hidden cursor-grab active:cursor-grabbing"
+                className="relative flex items-center justify-center w-full h-[500px] md:h-[780px] overflow-hidden cursor-grab active:cursor-grabbing"
                 onMouseDown={handleMouseDown}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
@@ -155,7 +155,7 @@ const Carousel = () => {
                                 height: isMobile ? "auto" : "700px"
                             }}
                         >
-                            <div className="bg-black bg-opacity-50 p-6 md:p-14 border border-white shadow-[0_0_10px_rgba(218,240,245,1)] w-full h-fit-content">
+                            <div className={`bg-black bg-opacity-50 p-6 md:p-14  w-full h-fit-content ${styles["box-border"]}`}>
                                 <div className="flex flex-col items-center space-y-4">
                                     <img
                                         src={item.icon}

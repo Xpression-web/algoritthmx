@@ -39,41 +39,42 @@ const services = [
 },
 ];
 
-const ServicesGrid = () => {
+const ServicesGrid = () => { 
 return (
     <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-6xl mx-auto">
         <h1
         className={`${styles["and-title"]} ${monsterfont1.className} text-center`}
         >
-    Beyond Our Core
+    Beyond Our Core <br/> Services
     </h1>
-        <h2
-        className={`${styles["and-subtitle"]} ${monsterfont1.className} text-center mb-12`}
-        >
-        Services
-        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-[4rem]">
         {services.map((service, index) => (
             <div
             key={index}
-            className="bg-black rounded-lg p-6 hover:bg-zinc-800 border border-zinc-800 group transition-colors duration-1000 ease-in-out flex flex-col items-center text-center space-y-4"
-            >
+            className="bg-black hover:bg-[rgba(255,255,255,0.1)]   group transition-colors duration-1000 ease-in-out flex flex-col items-center text-center space-y-4"
+            style={{
+              borderRadius: "15px",
+              padding: "30px",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+            }}
+          >
+          
             <div className="flex justify-center items-center">
                 <img
                 src={service.image}
                 alt={service.alt}
-                className="h-16 w-16 object-contain rounded-lg"
+                className="h-[50px] w-[50px] object-contain rounded-lg"
                 />
             </div>
             <h3
-                className={`${styles["and-title2"]} ${monsterfont1.className} transition-colors duration-300`}
+                className={`text-[24px] font-[600] my-[20px] font-helveticaneue transition-colors duration-300`}
             >
                 {service.title}
             </h3>
             <p
-                className={`text-semi-white ${styles["and-description"]} ${monsterfont.className} transition-colors duration-300`}
+                className={`text-semi-white text-[14px] font-helveticaneue transition-colors duration-300`}
             >
                 {service.description}
             </p>

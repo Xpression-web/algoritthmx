@@ -109,3 +109,8 @@
  .ltext{
   border: 2px solid #fff200;;
  }
+ .box-border{
+  box-shadow: -1px 1px 5px 7px rgba(255, 255, 255, 0.1);
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+ }

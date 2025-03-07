@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google'
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"700",
+  fallback : ["sans-serif"],
 })
 
 const TwitterBusinessSection = () => {
@@ -23,14 +24,14 @@ return (
         </div>
 
         {/* Right Section - Content */}
-        <div className="w-full lg:w-1/2 space-y-4">
-            <h1 className={`${styles["what-title"]} ${monsterfont1.className}`}>
+        <div className="w-full lg:w-1/2 ">
+            <h1 className={`${styles["what-title"]} font-helveticaneue font-[700]`}>
             Grow Your Business with Tweets
             </h1>
-            <p className={`${styles["what-description"]} text-semi-white mt-[2px]`}>
+            <p className={`${styles["what-description"]} font-helveticaneue text-semi-white`}>
             Tired of scrolling through endless Twitter feeds without making a dent? Maximize your brand’s visibility, engagement, and growth with tailored Twitter social media management services. Let our Full-Service Twitter Management team craft a personalized Twitter strategy that sets your brand apart.
             </p>
-            <p className={`${styles["what-description"]} text-semi-white mt-[2px]`}>
+            <p className={`${styles["what-description"]} font-helveticaneue text-semi-white mt-[2px]`}>
             X allows you to share impactful, engaging content with millions of users. Our dedicated team helps you craft posts that resonate, driving traffic to your website and increasing conversions. By developing a unique brand voice, you’ll attract a loyal audience and foster community engagement.
             </p>
 

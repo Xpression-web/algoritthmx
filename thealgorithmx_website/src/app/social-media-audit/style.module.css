@@ -5,13 +5,12 @@
 .what-description{
     font-size: 16px;
     line-height: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    
     font-weight: 400;
 }
 .what-subtitle{
     font-size: 15px;
     line-height: 24px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 /*3rd*/
 .box{
@@ -20,12 +19,12 @@
     border-radius: 26px;
     min-height: 640px;
     transition-property: min-height, box-shadow;
+    transition: transform 0.3s ease-in-out;
 }
 /*4th*/
 .box-title{
     font-size: 15px;
     line-height: 24px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 /*6th*/
 .box-design{
@@ -45,16 +44,18 @@
         font-size: 16px;
         line-height: 24px;
         margin-top: 30px;
-        font-family: Arial, Helvetica, sans-serif;
         font-weight: 400;
         text-align: center;
     }
     .what-subtitle{
         font-size: 15px;
         line-height: 24px;
-        font-family: Arial, Helvetica, sans-serif;
         font-weight: 300;
         margin-top: 30px;
         text-align: center;
     }
+}
+
+.box:hover {
+    transform: translateY(-40px); /* Moves the box up by 20px */
 }

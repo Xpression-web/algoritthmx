@@ -4,6 +4,7 @@
                     const monsterfont = Montserrat({
                       subsets: ['latin'],
                       weight: '400',
+                      fallback: ["sans-serif"],
                     });
 
 
@@ -23,11 +24,11 @@
 
             {/* Right Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Unmatched Amazon SEO & Listings Optimization
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Your product listings are key to driving sales success on Amazon. As a leading Amazon SEO agency, we offer comprehensive Amazon SEO services that enhance visibility and boost conversion rates. With a dedicated Amazon SEO expert focused on your account, we ensure every listing is fully optimized for maximum exposure. Our approach goes beyond advertising, tapping into Amazon’s search algorithms to improve organic rankings. Just like with other search engines, a strategic SEO plan elevates your products to the top of search results. Partner with us to maximize your Amazon presence and drive substantial growth.
                 </p>
             </div>

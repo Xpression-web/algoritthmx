@@ -1,6 +1,7 @@
 'use client';
 import './styles.css';
 import { Montserrat } from "next/font/google";
+import Link from "next/link";
 
 
 
@@ -33,8 +34,8 @@ const ResponsiveGrid = () => {
           <GridItem text="CMS" />
           <GridItem text="CRM" />
           <GridItem text="ERP" />
-          <GridItem text="ERP" />
-          <GridItem text="ERP" />
+          <GridItem text="Blockchain" />
+          <GridItem text="Software" />
         </div>
 
         {/* Third column with 5 items */}
@@ -102,9 +103,19 @@ const ResponsiveGrid = () => {
 
 // GridItem component for reusability
 const GridItem = ({ image, text }) => {
+  const hrefMap = {
+    "App": "/app-development",
+    "Web": "/web-development",
+    "CMS": "/cms",
+    "CRM": "/crm",
+    "ERP": "/erp",
+    "Blockchain": "/blockchain",
+    "Software": "/software"
+  };
+
   return (
     <div
-      className={`p-2 m-0.5 text-center rounded-[20px] w-[137px] h-[137px] flex items-center justify-center  
+      className={`p-2 m-0.5 text-center rounded-[20px] w-[100px] h-[100px] md:w-[137px] md:h-[137px] flex items-center justify-center  
       ${image ? "bg-[#1a1a1a]" : "bg-[#0d0d0d]"}`}
     >
       {image ? (
@@ -114,12 +125,15 @@ const GridItem = ({ image, text }) => {
           className="w-[68px] h-[68px] object-cover m-0 p-0 filter grayscale"
         />
       ) : (
-        <a href="#" className={`font-helveticaneue text-[22px] leading-[1.1] font-[400]  text-[#F9AD04]  `}>
-          {text}
-        </a>
+        <Link href={hrefMap[text] || "#"} legacyBehavior>
+          <a className="font-helveticaneue text-[20px] md:text-[22px] leading-[1.1] font-[400] text-[#F9AD04] ">
+            {text}
+          </a>
+        </Link>
       )}
     </div>
   );
 };
+
 
 export default ResponsiveGrid;

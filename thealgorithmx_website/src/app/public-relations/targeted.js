@@ -4,7 +4,8 @@ import styles from "./styles.module.css";
 
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
-  weight: "100",
+  weight: "300",
+  fallback: ["sans-serif"],
 });
 
 const PublicTargetedSection = () => {
@@ -17,10 +18,10 @@ const PublicTargetedSection = () => {
             <h1 className={`${styles["targeted-title"]} ${monsterfont1.className} text-center md:text-left`}>
               Targeted Audience Engagement
             </h1>
-            <p className={`${styles["targeted-description"]} text-semi-white`}>
+            <p className={`${styles["targeted-description"]} font-helveticaneue text-semi-white`}>
               AlgorithmX’s top-notch public relations services help your brand connect with millions of viewers/readers, placing your business as a leading player in the industry building trust and ownership. By utilizing more than 450 top news websites, our platform offers exquisite visibility and exposure, magnifying the impact of brand’s message across diverse audiences, leading to increased growth and recognition within your sector.
             </p>
-            <p className={`${styles["targeted-description"]} text-semi-white`}>
+            <p className={`${styles["targeted-description"]} font-helveticaneue text-semi-white`}>
               Our Penguin recovery strategy begins with a detailed link audit to identify and address problematic backlinks, including:
             </p>
           </div>

@@ -55,13 +55,13 @@
 
 @media (max-width: 768px) {
     .react-title {
-        line-height: 64px;
-        font-size: 84px;
+        line-height: 60px;
+        font-size: 52px;
         padding-bottom: 10px;
     }
     .react-description {
-        line-height: 34px;
-        font-size: 34px;
+        line-height: 28px;
+        font-size: 22.4px;
     }
 }
 .box{

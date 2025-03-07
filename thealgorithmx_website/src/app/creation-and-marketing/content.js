@@ -7,14 +7,17 @@
     const monsterfont1 = Montserrat ({
     subsets : ["latin"],
     weight :"400",
+    fallback : ["sans-serif"],
     })
     const monsterfont = Montserrat ({
     subsets : ["latin"],
     weight :"300",
+    fallback : ["sans-serif"],
     })
     const monsterfont4 = Montserrat ({
         subsets : ["latin"],
         weight :"700",
+        fallback : ["sans-serif"],
     })
 
   const MarketingApproach = () => {
@@ -93,13 +96,14 @@
           {steps.map((step, index) => (
             <div 
               key={index} 
-              className="border border-semii-white  flex flex-col items-center text-center  h-min px-10 pb-9 p-4"
+              style={{ border: "1px solid rgba(255, 255, 255, 0.1)" }}
+                className="flex flex-col items-center text-center h-min px-10 pb-9 p-4"
             >
               <div className="mb-6">
                 {step.icon}
               </div>
               <h3 className={`text-[24px] leading-[1.5] mb-[20px]  ${monsterfont4.className} `}>{step.title}</h3>
-              <p className={`text-[16px] leading-[28px]  font-[400] font-[Helvetica]  text-semi-white`}>{step.description}</p>
+              <p className={`text-[16px] leading-[28px]  font-[400] font-helveticaneue  text-semi-white`}>{step.description}</p>
             </div>
           ))}
         </div>

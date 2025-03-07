@@ -37,7 +37,7 @@
                     'Paid links',
                 ].map((point, index) => (
                     <li key={index} className="flex items-start space-x-2">
-                    <div className="w-1 h-1 bg-white rounded-full flex-shrink-0 mt-2"></div>
+                    <div className="w-1 h-1 bg-semi-white rounded-full flex-shrink-0 mt-3"></div>
                     <span className="text-[16px] leading-[1.75rem]  font-[Helvetica] font-[500] text-semi-white">{point}</span>
                     </li>
                 ))}

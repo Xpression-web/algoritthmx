@@ -7,10 +7,12 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "300",
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const ContactPage = () => {
@@ -53,7 +55,7 @@ const ContactPage = () => {
         </div>
 
         <h1 className={`text-[36px] leading-[40px] mb-[30px] ${monsterfont.className}`}>Get in Touch!</h1>
-        <div className={`text-[48px] leading-[52px] mb-[30px] ${monsterfont1.className}`}>
+        <div className={`text-[48px] leading-[52px] mb-[50px] ${monsterfont1.className}`}>
           <h2>Have an idea?</h2>
           <h2>Drop your details below</h2>
         </div>
@@ -91,14 +93,9 @@ const ContactPage = () => {
                   className="w-full bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                 />
               </div>
-              <a href='/contact-us'>
-              <button
-                type="submit"
-                className="px-8 py-3 border border-white rounded-full"
-              >
-                CONTACT US
-              </button>
-              </a>
+              <div className="fancy mt-10">
+<a href="contact-us" className="text-center">Contact Us</a>
+</div>
             </form>
           </div>
 

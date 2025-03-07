@@ -4,6 +4,7 @@
             const monsterfont = Montserrat({
               subsets: ['latin'],
               weight: '400',
+              fallback: ["sans-serif"],
             });
 
 
@@ -14,11 +15,11 @@
             <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Ready to Go Global? Let’s Make It Happen.
                 </h1>
 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Why stop at local when you can dominate globally? Our international SEO specialists help you expand your reach, boost your
                 brand’s international visibility, and drive revenue in new markets with our expert Global SEO services. Whether you’re
                 looking for an international SEO agency or looking to fine-tune your current strategy, AlgorithmX is here to get you where

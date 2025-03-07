@@ -5,6 +5,7 @@
     const monsterfont = Montserrat({
     subsets: ['latin'],
     weight: '100',
+    fallback: ["sans-serif"],
     });
 
 

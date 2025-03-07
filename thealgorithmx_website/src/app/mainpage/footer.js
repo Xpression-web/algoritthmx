@@ -3,10 +3,11 @@ import './shooting.css';
 import { Montserrat } from 'next/font/google';
 
 const monsterfont1 = Montserrat({
-subsets: ["latin"],
-weight: "500",
-fallback: ["sans-serif"],
+  subsets: ["latin"],
+  weight: "500",
+  fallback: ["sans-serif"],
 });
+
 
 const Footer = () => {
   return (
@@ -47,10 +48,10 @@ const Footer = () => {
                 <p>2810 N Church St, PMB 15369,</p>
                 <p>Wilmington, DE 19802</p>
                 <p>AlgorithmX Inc</p>
-                <a href="mailto:connect@thealgorithmx.com" className="hover:text-white transition-colors">
+                <a href="mailto:connect@thealgorithmx.com" className="hover:text-[#007bff] transition-colors">
                   connect@thealgorithmx.com
                 </a>
-                <p>+1-425-577-6660</p>
+                <p className="hover:text-[#007bff] transition-colors">+1-425-577-6660</p>
               </div>
             </div>
   
@@ -67,10 +68,10 @@ const Footer = () => {
                 <p>Operation Control Center</p>
                 <p>Cyber City, Sector 24, Gurgaon,</p>
                 <p>Haryana, India AlgorithmX Inc</p>
-                <a href="mailto:connect@thealgorithmx.com" className="hover:text-white transition-colors">
+                <a href="mailto:connect@thealgorithmx.com" className="hover:text-[#007bff] transition-colors">
                   connect@thealgorithmx.com
                 </a>
-                <p>1800 202 2202</p>
+                <p className="hover:text-[#007bff] transition-colors">1800 202 2202</p>
               </div>
             </div>
           </div>
@@ -105,15 +106,10 @@ const Footer = () => {
                 placeholder="enter-your@mail.com"
                 className="w-full px-6 py-3 rounded-full bg-white text-black focus:outline-none focus:ring-2 focus:ring-gray-400"
               />
-              <a href='/contact-us '>
-              <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200 mt-5">
-                <span>
-                  <span className="spark mask-gradient animate-flip before:animate-rotate absolute inset-0 h-[100%] w-[100%] overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
-                </span>
-                <span className="backdrop absolute inset-[1px] rounded-full bg-black transition-colors duration-200 group-hover:bg-slate-800" />
-                <span className="text z-10 text-[#cbd5e1]">Subscribe</span>
-              </button>
-              </a>
+              {/* Replace the button with the fancy animation */}
+              <div className="fancy mt-10">
+                <a href="/contact-us" className="text-center">Subscribe</a>
+              </div>
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@
 
             {/* Right Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 A Full-Service Search Marketing Team to Drive National Success
                 </h1>
                 

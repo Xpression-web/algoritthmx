@@ -4,10 +4,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"300",
+  fallback: ["sans-serif"],
 })
 const monsterfont = Montserrat ({
   subsets : ["latin"],
   weight :"600",
+  fallback: ["sans-serif"],
 })
 
 const Aboutus = () => {
@@ -18,7 +20,7 @@ const Aboutus = () => {
           Introduction
         </h1>
         
-        <p className={`algo-line-height-24  text-center text-lg  ${monsterfont1.className} text-semi-white`}>
+        <p className={`algo-line-height-24  text-center text-lg font-helveticaneue font-[300] text-semi-white`}>
           Welcome to AlgorithmX, where technology meets excellence. As a leading end-to-end digital agency, 
           we are dedicated to transforming your business with a personalized approach as we align your business 
           goals with the right strategies, utilizing the latest tools and technologies to deliver measurable results.

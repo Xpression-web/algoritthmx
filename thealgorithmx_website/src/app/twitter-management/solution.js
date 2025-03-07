@@ -6,10 +6,12 @@ import { Montserrat } from 'next/font/google';
     const monsterfont = Montserrat({
     subsets: ['latin'],
     weight: '100',
+    fallback : ["sans-serif"],
     });
     const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "400",
+    fallback : ["sans-serif"],
     });
 
 const TwitterSmoothScrollStack = () => {
@@ -116,7 +118,7 @@ return (
     >
         <div className="flex flex-col md:flex-row flex-1 gap-4 md:gap-8">
         <div className="flex-1 flex flex-col">
-        <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white  ${monsterfont1.className} `}>{title}</h2>
+        <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white  font-helveticaneue font-[400] `}>{title}</h2>
         <p className="text-[15px] font-[Helvetica] leading-[20px] text-semi-white whitespace-pre-wrap">{description}</p>
 
         <ul className="list-disc pl-4 text-[15px] font-[Helvetica] leading-[24px] text-semi-white ">

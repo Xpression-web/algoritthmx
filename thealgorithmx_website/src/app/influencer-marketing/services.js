@@ -137,8 +137,8 @@ const InfluencerModules = () => {
 };
 
 const ModuleCard = ({ title, description, imageSrc }) => (
-  <div className="p-6 bg-black relative">
-    <div className="flex items-start gap-4 mb-4">
+  <div className=" bg-black relative">
+    <div className="flex items-start gap-4  pb-[40px]">
       <div className="">
         <img
           src={imageSrc || "/images/Supply-Chain-Management.png"}
@@ -146,12 +146,14 @@ const ModuleCard = ({ title, description, imageSrc }) => (
           className={`w-full h-full object-contain ${style['border-design']}`}
         />
       </div>
-      <div className="flex-1">
-        <h3 className={`${style['modules-title']} ${monsterfont1.className}`}>{title}</h3>
-        <p className={`${style['modules-description']} text-semi-white`}>{description}</p>
-      </div>
+      <div className="flex-1" style={{ borderBottom: '1px solid gray', paddingBottom: '20px' }}>
+  <h3 className={`${style['modules-title']} font-helveticaneue font-[700]`}>{title}</h3>
+  <p className={`${style['modules-description']} font-helveticaneue text-semi-white`}>
+    {description}
+  </p>
+</div>
+
     </div>
-    <div className="absolute bottom-0 left-6 right-6 h-px bg-gray-800"></div>
   </div>
 );
 

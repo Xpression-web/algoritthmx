@@ -8,14 +8,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "100",
+  fallback: ["sans-serif"],
 });
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont3 = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback: ["sans-serif"],
 });
 
 const FranchiseServices = () => {
@@ -121,11 +124,11 @@ const FranchiseServices = () => {
               transitionDelay: `${index * 150}ms`,
             }}
           >
-              <div className={`absolute top-4 right-4 text-blue-500 ${styles["number"]} `} >
+              <div className={`absolute top-4 right-4 text-blue-500 font-helveticaneue ${styles["number"]} `} >
                 {service.id}
               </div>
 
-              <h3 className={`${styles["video-title"]} text-white  ${monsterfont3.className}  transition-colors duration-300`}>
+              <h3 className={`${styles["video-title"]} text-white font-helveticaneue font-[500]  transition-colors duration-300`}>
                 {service.title}
               </h3>
               <div className="mb-6">
@@ -135,7 +138,7 @@ const FranchiseServices = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className={`text-semi-white ${styles["video-description"]}`}>
+              <p className={`text-semi-white font-helveticaneue ${styles["video-description"]}`}>
                 {service.description}
               </p>
             </div>

@@ -1,4 +1,5 @@
     import React from 'react';
+    import styles from "../seoaudits/style.module.css";
 
 
     const EcommerceStrategy = () => {
@@ -6,7 +7,7 @@
         <div className="min-h-screen bg-black text-white p-4 md:p-8 flex items-center justify-center  ">
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8">
             {/* Left Section with Images */}
-            <div className="md:w-1/2 flex flex-col gap-4">
+            <div className={`md:w-1/2 flex flex-col gap-4 ${styles["opp"]}`}>
             {/* Top Row with Two Images */}
             <div className="flex gap-4">
                 {/* First Image */}
@@ -39,7 +40,7 @@
             </div>
 
             {/* Right Section with Content */}
-            <div className="md:w-1/2 flex flex-col justify-center">
+            <div className={`md:w-1/2 flex flex-col justify-center ${styles["opp"]}`}>
             <div className={`text-[12.8px] leading-[1.1] mb-[6px] font-[400] font-helveticaneue text-[#f857a6] `}>KEY POINT</div>
             <h1 className={`text-[30.4px] leading-[1.25] mb-6 mt-2 font-[400] font-helveticaneue text-white `}>
             Seize every opportunity with eCommerce SEO

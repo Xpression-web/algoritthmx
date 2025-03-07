@@ -92,9 +92,15 @@ const TechStack = () => {
         <h2 className={` ${styles["tech-subtitle"]} ${monsterfont.className  }`}>EXPERTISE</h2>
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         {technologies.map((tech, index) => (
-          <div key={index} className="mb-8 md:mb-12 pb-8 border-b border-gray-800">
+          <div 
+                              key={index} 
+                              className="mb-8 md:mb-12 pb-8"
+                              style={{
+                                borderBottom: index !== technologies.length - 1 ? "1px solid #dee2e6" : "none"
+                              }}
+                    >
             <div className="grid grid-cols-[1fr,2fr] md:grid-cols-[150px,1fr] gap-4 items-start">
               <h3 className={` ${styles["tech-subtitle1"]} ${monsterfont.className  }`}>{tech.title}</h3>
               

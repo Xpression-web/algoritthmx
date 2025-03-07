@@ -70,7 +70,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Left-middle */}
-        <Link href="" className="absolute left-[10%] md:-left-[18%] top-[55%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="" className="absolute left-[15%] md:-left-[18%] top-[50%] md:top-[55%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads5.png" 
             alt="Email Marketing" 
@@ -80,7 +80,7 @@ const Hexagon = () => {
         </Link>
 
         {/* Right-middle */}
-        <Link href="/public-relations" className="absolute -right-[8%] md:-right-[25%] top-[55%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
+        <Link href="/public-relations" className="absolute -right-[5%] md:-right-[25%] top-[50%] md:top-[55%] transform -translate-x-1/2 -translate-y-1/2 text-center group">
           <img 
             src="/images/home-leads3.png" 
             alt="Public Relations" 

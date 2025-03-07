@@ -85,14 +85,14 @@ const LandingServices = () => {
 
   return (
     <div className="min-h-screen bg-black p-4 md:p-8">
-      <div className="max-w-6xl mx-auto" ref={scalableRef}>
+      <div className="max-w-[1200px] mx-auto" ref={scalableRef}>
         <div className="text-center mb-8 md:mb-16">
           <h1 className={`text-white text-[40px] leading-[44px] md:text-[56px] md:leading-[60px] ${monsterfont1.className} mb-4`}>
            RESEARCH + DESIGN = <br/>
            <span className={` text-[40px] leading-[44px] md:text-[56px] md:leading-[60px] ${monsterfont3.className}`}>MORE CONVERSIONS</span>
           </h1>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className={`text-semi-white ${styles["video-subtitle"]} ${monsterfont2.className} max-w-4xl mx-auto`}>
+          <p className={`text-semi-white ${styles["video-subtitle"]} ${monsterfont2.className}  `}>
           Create the best landing page designs that capture leads and drive sales with a design optimized for your business goals. At AlgorithmX, our creative landing page design company specializes in crafting visually stunning and highly functional landing pages that boost conversions.
           </p>
         </div>
@@ -109,7 +109,7 @@ const LandingServices = () => {
             }}
           >
 
-              <h3 className={`${styles["video-title"]} text-white  ${monsterfont3.className}  transition-colors duration-300`}>
+              <h3 className={`${styles["video-title"]} text-white font-helveticaneue font-[600] transition-colors duration-300`}>
                 {service.title}
               </h3>
               <div className="mb-6">
@@ -119,7 +119,7 @@ const LandingServices = () => {
                   className="w-12 h-12 object-cover rounded-md"
                 />
               </div>
-              <p className={`text-semi-white ${styles["video-description"]}`}>
+              <p className={`text-semi-white font-helveticaneue ${styles["video-description"]}`}>
                 {service.description}
               </p>
             </div>

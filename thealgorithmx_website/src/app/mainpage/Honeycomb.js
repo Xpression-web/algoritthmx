@@ -149,23 +149,29 @@ const ParticleAnimation = () => {
 
             {/* Content Container */}
             <div className="relative z-10 w-full h-full flex justify-center items-center">
-                <div className="max-w-[1200px] w-full mx-auto bg-black/50 p-8 rounded-lg">
+            <div
+  className="max-w-[1200px] w-full mx-auto p-[20px] md:p-8 rounded-lg"
+  style={{
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backdropFilter: "blur(1px)",
+  }}
+>
                     <div className="flex flex-row justify-between items-center gap-0">
                         {/* Text Content */}
                         <div className="flex-1 text-white">
-                            <h1 className={`${monsterfont1.className} text-[20px] md:text-[46.5px] leading-[24px] md:leading-[50px] mb-4`}>
+                            <h1 className={`${monsterfont1.className} text-[31px]  leading-[35px] md:text-[46.5px] md:leading-[24px] md:leading-[50px] md:mb-4`}>
                                 From Concept to Market Dominance!
                             </h1>
-                            <h2 className={`${monsterfont.className} text-[18px] md:text-[34.4px] leading-[22px] md:leading-[38px]`}>
+                            <h2 className={` font-helveticaneue text-[19.5px] leading-[30px] md:text-[34.4px] md:leading-[22px] md:leading-[38px]`}>
                                 We're the Holistic Solution you've been Looking for
                             </h2>
                         </div>
 
                         {/* Vertical Line */}
-                        <div className="h-32 w-px bg-white"></div>
+                        <div className="h-36 md:h-32 w-[2px] bg-white"></div>
 
                         {/* Right Side - Image & Text */}
-                        <div className="flex flex-row items-start gap-6">
+                        <div className="flex flex-row items-start md:gap-6">
                             <img 
                                 src="images/logo-slide.png" 
                                 alt="Placeholder" 

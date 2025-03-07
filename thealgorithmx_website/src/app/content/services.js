@@ -6,14 +6,17 @@
     const monsterfont = Montserrat({
     subsets: ["latin"],
     weight: "700",
+    fallback: ["sans-serif"],
     });
     const monsterfont1 = Montserrat({
     subsets: ["latin"],
     weight: "200",
+    fallback: ["sans-serif"],
     });
     const monsterfont2 = Montserrat({
     subsets: ["latin"],
     weight: "600",
+    fallback: ["sans-serif"],
     });
 
     export default function Services() {
@@ -161,10 +164,10 @@
         ${className}`}
     >
         <div className="flex justify-center mb-4">
-        <img src={imageSrc} alt={title} className="w-12 h-12" />
+        <img src={imageSrc} alt={title} className="w-[50px] h-[50px]" />
         </div>
         <div>
-        <h3 className={`text-white ${styles["scale-title"]} ${monsterfont.className} mb-4`}>{title}</h3>
+        <h3 className={`text-white text=[16px] leading-[24px] tracking-[0.1em] ${monsterfont2.className} mb-4`}>{title}</h3>
         <p className={`text-semi-white ${styles["scale-description"]} `}>{description}</p>
         </div>
     </div>

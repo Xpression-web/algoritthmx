@@ -40,9 +40,9 @@ const ResponsiveHero = () => {
               <p className={`text-semi-white ${styles["hero-img-description "]} font-helveticaneue mb-[20px] md:max-w-md`}>
                 We're your full-stack solution for everything digital. Bring us your idea and we'll make it a success.
               </p>
-              <button className="px-12 py-4 mb-4 rounded-full bg-transparent border border-white/20 text-white text-[16px] font-helveticaneue ">
-                Get Started
-              </button>
+              <div className="fancy px-12 py-4 mb-4">
+              <a href="contact-us" className="text-center font-helveticaneue">Get Started</a>
+              </div>
             </div>
           </div>
         </div>

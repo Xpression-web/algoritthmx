@@ -54,10 +54,10 @@ const Roadmap = () => {
 
   return (
     <div className="relative bg-black text-white">
-      <div className="flex flex-col lg:flex-row max-w-[1200px] mx-auto lg:h-[800px]">
+      <div className="flex flex-col lg:flex-row max-w-[1200px] mx-auto">
         {/* Left Section */}
         <div className="w-full lg:w-5/12">
-          <div className="p-8 lg:sticky lg:top-0">
+          <div className="p-8 lg:sticky lg:top-[100px]">
             <h1 className={`text-[50px] leading-[1.1]  font-helveticaneue bg-black font-[400]  text-white md:text-start text-center `}>
               Accelerate Your <br/>Digital Evolution!
             </h1>
@@ -73,73 +73,74 @@ const Roadmap = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-7/12 lg:h-[800px] lg:overflow-y-auto scrollbar-hide">
-          <div className="p-8">
-            {/* Timeline container */}
-            <div className="relative">
-              {/* Vertical Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1.5" 
-     style={{
-       top: '-40px',
-       height: 'calc(100% + 40px)',
-       background: 'linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%)'
-     }} />
+        <div className="w-full lg:w-7/12">
+          {/* Added a container div with a desktop-only height limit */}
+          <div className="hidden lg:block" style={{ height: 'calc(100vh - 679px)' }}></div>
+          <div className="lg:h-auto lg:overflow-y-auto scrollbar-hide">
+            <div className="p-8">
+              {/* Timeline container */}
+              <div className="relative">
+                {/* Vertical Timeline Line - Different for mobile and desktop */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1.5 lg:hidden" 
+                    style={{
+                      top: '-10px',
+                      height: 'calc(100% + 40px)',
+                      background: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 100%)'
+                    }} />
+                
+                {/* Desktop timeline line stays the same */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1.5 hidden lg:block" 
+                    style={{
+                      top: '-40px',
+                      height: 'calc(100% + 40px)',
+                      background: 'linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%)'
+                    }} />
 
-              {/* Timeline Items */}
-              {timelineData.map((item, index) => (
-                <div key={index} className="relative mb-4">
-                  {/* Timeline Dot */}
-                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-white -top-6 md:-top-0`} 
-                    style={{ border: '4px solid rgb(255, 80, 80)' }} />
+                {/* Timeline Items */}
+                {timelineData.map((item, index) => (
+                  <div key={index} className="relative mb-4">
+                    {/* Timeline Dot */}
+                    <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-white -top-6 md:-top-0`} 
+                      style={{ border: '4px solid rgb(255, 80, 80)' }} />
 
-                  {/* Content Box */}
-                  <div className={`flex flex-col items-center lg:items-start text-center mt-8 lg:mt-0
-                    ${item.direction === 'right' 
-                      ? 'lg:ml-[60%] lg:text-left' 
-                      : 'lg:mr-[60%] lg:items-end lg:text-right self-start lg:self-end'}`}>
-                    <div className={`relative inline-flex items-center gap-2 px-[10px] py-[6px] rounded ${item.color} border-2 ${item.boxShadow}`}>
-                      {/* Mobile Arrow Triangle (upward) */}
-                      <div className={`absolute lg:hidden w-0 h-0 bottom-full left-1/2 -translate-x-1/2 
-                        border-b-[12px] border-x-[8px] border-x-transparent`}
-                        style={{
-                          borderBottomColor: item.borderColor
-                        }} />
-                      
-                      {/* Desktop Arrow Triangle (left/right) */}
-                      <div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 w-0 h-0
-                        ${item.direction === 'right' 
-                          ? 'right-full border-r-[12px]' 
-                          : 'left-full border-l-[12px]'}
-                        border-y-[8px] border-y-transparent`}
-                        style={{
-                          borderRightColor: item.direction === 'right' ? item.borderColor : 'transparent',
-                          borderLeftColor: item.direction === 'left' ? item.borderColor : 'transparent'
-                        }} />
-                      <h3 className={`text-[15px] leading-[1.1]  font-helveticaneue font-[600] text-white`}>{item.title}</h3>
+                    {/* Content Box */}
+                    <div className={`flex flex-col items-center lg:items-start text-center mt-8 lg:mt-0
+                      ${item.direction === 'right' 
+                        ? 'lg:ml-[60%] lg:text-left' 
+                        : 'lg:mr-[60%] lg:items-end lg:text-right self-start lg:self-end'}`}>
+                      <div className={`relative inline-flex items-center gap-2 px-[10px] py-[6px] rounded ${item.color} border-2 ${item.boxShadow}`}>
+                        {/* Mobile Arrow Triangle (upward) */}
+                        <div className={`absolute lg:hidden w-0 h-0 bottom-full left-1/2 -translate-x-1/2 
+                          border-b-[12px] border-x-[8px] border-x-transparent`}
+                          style={{
+                            borderBottomColor: item.borderColor
+                          }} />
+                        
+                        {/* Desktop Arrow Triangle (left/right) */}
+                        <div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 w-0 h-0
+                          ${item.direction === 'right' 
+                            ? 'right-full border-r-[12px]' 
+                            : 'left-full border-l-[12px]'}
+                          border-y-[8px] border-y-transparent`}
+                          style={{
+                            borderRightColor: item.direction === 'right' ? item.borderColor : 'transparent',
+                            borderLeftColor: item.direction === 'left' ? item.borderColor : 'transparent'
+                          }} />
+                        <h3 className={`text-[15px] leading-[1.1]  font-helveticaneue font-[600] text-white`}>{item.title}</h3>
+                      </div>
+                      <p className={`text-[11.665px] leading-[1.5em] font-helveticaneue font-[400] text-white italic max-w-md mt-3 
+                        lg:p-0 lg:border-0 lg:bg-transparent
+                        p-4 border-[1px] border-gray-700 bg-[#0F0F0F]`}>
+                        {item.description}
+                      </p>
                     </div>
-                    <p className={`text-[11.665px] leading-[1.5em] font-helveticaneue font-[400] text-white italic max-w-md mt-3 
-                      lg:p-0 lg:border-0 lg:bg-transparent
-                      p-4 border border-[${item.borderColor}] bg-[#0F0F0F]`}>
-                      {item.description}
-                    </p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </div>
   );
 };

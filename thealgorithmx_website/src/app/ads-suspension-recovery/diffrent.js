@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 
 const monsterfont = Montserrat({
   subsets: ["latin"],
+  weight: "400",
+  fallback : ["sans-serif"],
+});
+const interFont = Inter({
+  subsets: ["latin"],
+  style: "normal",
   weight: "400",
   fallback : ["sans-serif"],
 });
@@ -23,14 +30,14 @@ export default function AdsProcess() {
             alt="Process step image"
             width={600} 
             height={600} 
-            className="rounded-lg"
+            className="rounded-[20px]"
           />
         </div>
         <div className="md:w-4/5 md:pl-8 mt-6 md:mt-0">
           <h2 className={`font-size-42 algo-line-height-26 ${monsterfont.className} text-white mb-4`}>
           Circumventing policy violation:
           </h2>
-          <p className="text-semi-white">
+          <p className={`text-semi-white TEXT-[16px] ${interFont.className}`}>
           Circumventing Google Ads policies involves trying to manipulate Google's advertising rules like attempting to use prohibited keywords, misleading content, or other deceptive tactics to get ads approved. Engaging in such practices can lead to account suspensions.
           </p>
         </div>
@@ -44,7 +51,7 @@ export default function AdsProcess() {
             alt="Process step image"
             width={300} 
             height={300} 
-            className="rounded-lg"
+            className="rounded-[20px]"
           />
         </div>
         <div className="md:w-4/5 md:pr-8 mt-6 md:mt-0">
@@ -65,7 +72,7 @@ export default function AdsProcess() {
             alt="Process step image"
             width={300}
             height={300}
-            className="rounded-lg"
+            className="rounded-[20px]"
           />
         </div>
         <div className="md:w-4/5 md:pl-8 mt-6 md:mt-0">

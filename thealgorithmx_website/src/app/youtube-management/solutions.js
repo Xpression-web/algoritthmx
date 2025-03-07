@@ -75,13 +75,13 @@
                 {
                     title: "YOUTUBE ADS",
                     description:
-                        "<span class='text-yellow-400 '>Boost Reach with Targeted Video Advertising</span><br>" +
+                        "<span class='text-[21.6px] font-helveticaneue text-[#d93] font-[400] '>Boost Reach with Targeted Video Advertising</span><br>" +
                         "We handle all aspects of your YouTube advertising campaigns, from ad creation to targeting. Our services include:<br><br>" +
                         "<span class='text-white font-medium'>Scriptwriting, video production, and editing</span><br>" +
                         "<span class='text-white font-medium'>Managing YouTube ad campaigns through audience targeting, cost-per-view bidding, and performance tracking</span><br><br>",
                     color: "#000000",
                     url: "#",
-                    src: "images/Video-Syndication-and-Distribution.webp",
+                    src: "images/YOUTUBE-ADS.webp",
                     points: [],
                 },
                 
@@ -129,11 +129,11 @@
         >
             <div className="flex flex-col md:flex-row flex-1 gap-4 md:gap-8">
             <div className="flex-1 flex flex-col">
-                <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white ${monsterfont1.className}`}>
+                <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white font-helveticaneue font-[400]`}>
                 {title}
                 </h2>
                 <p
-  className="text-[15px] font-[Helvetica] leading-[20px] text-semi-white whitespace-pre-wrap"
+  className="text-[15px] font-helveticaneue leading-[20px] text-semi-white whitespace-pre-wrap"
   dangerouslySetInnerHTML={{ __html: description }}
 />
 

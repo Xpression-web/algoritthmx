@@ -120,12 +120,12 @@
                     <img
                     src={service.image}
                     alt={service.title}
-                    className="w-16 h-16"
+                    className="w-[50px] h-[50px]"
                     />
-                    <h3 className={`${styles["services-title"]} text-white`}>
+                    <h3 className={`text-[24px] font-[700] mt-3 mb-3 font-helveticaneue text-white `}>
                     {service.title}
                     </h3>
-                    <p className={`${styles["services-description"]}`}>
+                    <p className={`text-[15px] leading-[24px] font-helveticaneue`}>
                     {service.description}
                     </p>
                 </div>

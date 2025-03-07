@@ -67,8 +67,8 @@ const EcommerceServices = () => {
                 </div>
 
                 {/* Tabs Container */}
-                <div className="w-full overflow-x-auto pb-4 p-2 mb-8">
-                    <div className={`flex md:grid md:grid-cols-5 min-w-max md:min-w-0 max-w-4xl mx-auto bg-black ${styles["box-design"]} `}
+                <div className="w-full overflow-x-auto pb-4 p-[6px] mb-8">
+                    <div className={`flex md:grid md:grid-cols-5 min-w-max md:min-w-0 max-w-[72rem] mx-auto bg-black ${styles["box-design"]} `}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => {
                         setIsHovered(false);
@@ -86,10 +86,10 @@ const EcommerceServices = () => {
                                     transition-all duration-300
                                     ${isHovered 
                                         ? hoveredTab === tab.id
-                                            ? 'bg-white/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : 'text-[#a2a2a2] hover:bg-white/5'
                                         : activeTab === tab.id
-                                            ? 'bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : 'text-[#a2a2a2] hover:bg-white/5'
                                     }
                                 `}

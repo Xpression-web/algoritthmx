@@ -6,6 +6,7 @@ import styles from "../android-app/style.module.css";
 const monsterfont1 = Montserrat ({
   subsets : ["latin"],
   weight :"200",
+  fallback: ["sans-serif"],
 })
 
 const SEOGlobalSection = () => {

@@ -42,7 +42,7 @@ const TechnologyToolbox = () => {
             {tools.map((tool) => (
               <div
                 key={tool.id}
-                className={`${styles["background"]} rounded-lg  flex items-center hover:bg-gray-900 transition duration-300`}
+                className={`${styles["background"]} rounded-lg  flex items-center ${styles["tool"]}  transition duration-300`}
               >
                 {/* Flex container for image and text */}
                 <div className={`flex w-full items-center ${styles["toolbox"]} `}>
@@ -58,7 +58,7 @@ const TechnologyToolbox = () => {
                   {/* Text part (2/3) */}
                   <div className="md:w-4/5 ">
                   <div>
-                    <span className={`hidden md:block ${styles["toolbox"]} ml-1 mb-0`}>
+                    <span className={`hidden md:block ${styles["toolbox"]}  ml-1 mb-0`}>
                       {tool.name}
                     </span>
                     </div>

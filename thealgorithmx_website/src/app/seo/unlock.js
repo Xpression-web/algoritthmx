@@ -59,7 +59,7 @@ const UnlockSuccess = () => {
   return (
     <div className="bg-black text-white py-12 px-6 flex flex-col items-center min-h-screen justify-center" ref={componentRef}>
       <div className='max-w-[1200px] mx-auto '>
-      <h1 className={` ${styles["unlock-title"]} ${monsterfont.className} `}>UNLOCK UNPRECEDENTED SUCCESS WITH SEO</h1>
+      <h1 className={` ${styles["unlock-title"]} ${monsterfont.className}  `}>UNLOCK UNPRECEDENTED SUCCESS WITH SEO</h1>
       <div className="flex justify-center items-center ">
   <div className="w-10 h-1 bg-blue-600 mx-auto my-4"></div>
 </div>
@@ -76,12 +76,12 @@ const UnlockSuccess = () => {
                 strokeWidth={10}
                 styles={buildStyles({
                   pathColor: '#2775FF',
-                  textColor: '#2775FF',
+                  textColor: '#6377DF',
                   trailColor: '#000',
                 })}
               />
             </div>
-            <p className={`text-center ${styles["unlock-description"]} p-1 mb-4`}>{[
+            <p className={`text-center text-[18px] font-opensans`}>{[
               '68% of online experiences are initiated by search engines such as Google.',
               '75% of people who perform searches do not look beyond the first page of search results.',
               '53.3% of the entire website traffic comes from organic search.',

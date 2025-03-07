@@ -79,17 +79,23 @@ const ERPTechStack = () => {
         <h2 className={` ${style["tech-subtitle"]} ${monsterfont.className  }`}>EXPERTISE</h2>
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1150px] mx-auto">
         {technologies.map((tech, index) => (
-          <div key={index} className="mb-8 md:mb-12 pb-8 border-b border-gray-800">
+          <div 
+                    key={index} 
+                    className="mb-8 md:mb-12 pb-8"
+                    style={{
+                      borderBottom: index !== technologies.length - 1 ? "1px solid #dee2e6" : "none"
+                    }}
+          >
             <div className="grid grid-cols-[1fr,2fr] md:grid-cols-[200px,1fr] gap-4 items-start">
             <h3 className={` ${style["tech-subtitle1"]} ${monsterfont.className  }`}>{tech.title}</h3>
               
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 ">
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-4 ">
                 {tech.items.map((item, itemIndex) => (
                   <div 
                     key={itemIndex} 
-                    className={`${style["box"]} inline-flex items-center gap-2 hover:bg-black transition-colors`}
+                    className={`${style["box"]} inline-flex items-center gap-1 hover:bg-black transition-colors`}
                   >
                     <img 
                       src={item.icon} 

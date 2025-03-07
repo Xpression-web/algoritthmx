@@ -15,13 +15,13 @@ weight: "200",
 });
 const monsterfont2 = Montserrat({
 subsets: ["latin"],
-weight: "600",
+weight: "400",
 });
 
 const ServiceCard = ({ title, description }) => (
 <div className={`relative  bg-black ${style["border-design"]} `}>
     <div className="absolute -top-4 left-20 bg-black md:px-4 p-[5px]">
-    <h3 className={`${style["title"]} ${monsterfont.className}`}>{title}</h3>
+    <h3 className={`text-[22.4px] leading-[24px] ${monsterfont2.className}`}>{title}</h3>
     </div>
     <div className="mt-4">
     <p className={`${style["description"]} text-semi-white text-center`}>

@@ -5,14 +5,17 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback: ["sans-serif"],
 });
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "600",
+  fallback: ["sans-serif"],
 });
 const monsterfont2 = Montserrat({
   subsets: ["latin"],
-  weight: "600",
+  weight: "500",
+  fallback: ["sans-serif"],
 });
 
 const InfluencerSection = () => {
@@ -72,13 +75,13 @@ const InfluencerSection = () => {
             />
           <div>
           <span
-  className={` ${styles.title}  ${monsterfont2.className} tracking-wider bg-white-500 block`}
+  className={` text-[85px] leading-[90px]  ${monsterfont2.className} tracking-wider bg-white-500 block`}
 >
 
         INFLUENCER
   </span>
   <span
-    className={`  ${styles["title"]}  ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
+    className={` text-[85px] leading-[90px] ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
   >
    MARKETING
   </span>

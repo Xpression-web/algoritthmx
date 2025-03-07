@@ -4,6 +4,7 @@
                     const monsterfont = Montserrat({
                       subsets: ['latin'],
                       weight: '400',
+                      fallback: ["sans-serif"],
                     });
     const MobileMarketingSection = () => {
     return (
@@ -21,11 +22,11 @@
 
             {/* Right Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Optimized for Speed, Responsiveness, and Crawlability
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Our mobile SEO specialists focus on mobile-first strategies that enhance your site’s crawlability, responsiveness,
                 and loading speed. By refining these key areas, we ensure a seamless mobile experience that keeps visitors engaged
                 and maximizes conversion potential. Our Mobile SEO Agency brings years of experience and advanced tools to the table.

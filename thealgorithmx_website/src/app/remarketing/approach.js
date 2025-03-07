@@ -107,7 +107,7 @@ return (
     >
         <div className="flex flex-col md:flex-row flex-1 gap-4 md:gap-8">
         <div className="flex-1 flex flex-col">
-        <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white  ${monsterfont1.className} `}>{title}</h2>
+        <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white  font-helveticaneue font-[400] `}>{title}</h2>
         <p className="text-[15px] font-helveticaneue leading-[20px] text-semi-white whitespace-pre-wrap">{description}</p>
 
             <ul className="list-disc pl-6 mt-4 text-sm md:text-base text-gray-400">

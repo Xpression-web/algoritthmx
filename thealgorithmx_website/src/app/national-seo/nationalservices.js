@@ -95,7 +95,7 @@ const NationalServices = () => {
                             `}
                         >
                             <FontAwesomeIcon icon={tab.icon} className="mb-2 w-[30px] h-[40px]"  />
-                            <span className={`text-[15.2px] leading-[26px] tracking-[0.01em] ${monsterfont2.className} text-center`}>
+                            <span className={`text-[15.2px] leading-[26px]  ${monsterfont2.className} text-center`}>
                                 {tab.label}
                             </span>
                         </button>

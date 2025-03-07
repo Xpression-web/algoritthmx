@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 const monsterfont = Montserrat({
 subsets: ["latin"],
 weight: "100",
+fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
 subsets: ["latin"],
@@ -82,9 +83,7 @@ return (
     >
         OUR SOLUTIONS
     </h1>
-    <div className="flex items-center justify-center mt-10">
-        <div className="h-0.5 w-12 bg-blue-500"></div>
-    </div>
+    
 
     {cards.map((card, i) => (
         <Card
@@ -117,7 +116,7 @@ return (
     >
         <div className="flex flex-col md:flex-row flex-1 gap-4 md:gap-8">
         <div className="flex-1 flex flex-col">
-            <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white ${monsterfont1.className}`}>
+            <h2 className={`text-[36px] leading-[1.1] mb-4 text-left text-white font-helveticaneue font-[400]`}>
             {title}
             </h2>
             <p

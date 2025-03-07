@@ -62,7 +62,7 @@ const PPCAudit = () => {
           {/* Left Content - 2/3 */}
           <div className="lg:w-2/3">
             <h2 className={`text-[28px] leading-[32px] mt-[30px] text-center md:text-start ${monsterfont1.className}  `}>WHAT HAPPENS AFTER?</h2>
-            <p className={`text-[16px] leading-[26px] mt-[20px] text-center md:text-start font-helveticaneue text-semi-white  `}>
+            <p className={`text-[16px] leading-[26px] mt-[20px] text-center md:text-start font-opensans text-semi-white  `}>
               We provide you with a visualised report of our findings. We organise the data so it becomes easy to 
               understand and highlights the key action points. One of our experts will then guide you through 
               your audit in a consultation arranged at your convenience. We will then work with you to plan out 
@@ -90,13 +90,13 @@ const PPCAudit = () => {
           <div className="lg:w-1/2 ml-[150px]">
             <div className="grid gap-6">
             {auditItems.map((item, index) => (
-                <div key={index} className="flex items-center gap-4">
+                <div key={index} className="flex items-center gap-1">
                   <img 
                     src={item.imgSrc}
                     alt={`${item.title} icon`}
                     className="w-10 h-10"
                   />
-                  <span className={`font-[20px] leading-[60px] ${monsterfont3.className}`}>{item.title}</span>
+                  <span className={`text-[20px] leading-[60px] ${monsterfont3.className}`}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -106,8 +106,8 @@ const PPCAudit = () => {
           <div className="lg:w-1/2">
             <div className={` ${styles["box-design"]}`}>
               <h3 className={`text-[36px] leading-[40px] mt-[30px] text-center  ${monsterfont2.className}  `}>PPC AUDIT</h3>
-              <p className={`text-[18px] leading-[18px]    font-[700] font-[Helvetica] text-center mt-[10px] `}>that gives you a roadmap to success.</p>
-              <p className={`text-[16px] leading-[28px]    font-[400] font-[Helvetica] text-start mt-[30px] mb-[30px] `}>
+              <p className={`text-[18px] leading-[18px]    font-[700] font-helveticaneue text-center mt-[10px] `}>that gives you a roadmap to success.</p>
+              <p className={`text-[16px] leading-[28px]    font-[400] font-helveticaneue text-start mt-[30px] mb-[30px] `}>
                 Responding effectively to a PPC audit is essential. We develop a strategic roadmap based on our findings, 
                 analyzing performance metrics, identifying improvement areas, and creating tailored strategies. 
                 By addressing key issues and leveraging opportunities, we help you achieve maximum ROI. With our roadmap, 

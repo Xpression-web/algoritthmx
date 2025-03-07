@@ -4,10 +4,12 @@ import { Montserrat } from "next/font/google";
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
   weight: "200",
+  fallback : ["sans-serif"],
 });
 const monsterfont = Montserrat({
   subsets: ["latin"],
   weight: "700",
+  fallback : ["sans-serif"],
 });
 
 
@@ -21,15 +23,15 @@ const CopywritingMarketingSection = () => {
             Win customers for life as the go-to brand in your category.
           </h2>
           
-          <p className={`text-[15px] leading-[1.1] mb-[16px] font-[400] font-[Helvetica]  text-semi-white`}>
+          <p className={`text-[15px] leading-[24px] mb-[16px] font-[400] font-helveticaneue text-semi-white`}>
             Many brands make consumers feel like a walking wallet surrounded by incessant ads.
           </p>
           
-          <p className={`text-[15px] leading-[1.1] mb-[16px] font-[400] font-[Helvetica]  text-semi-white`}>
+          <p className={`text-[15px] leading-[24px] mb-[16px] font-[400] font-helveticaneue text-semi-white`}>
             Show them you care about their problems by solving them with quality content that informs, connects and entertains.
           </p>
           
-          <p className={`text-[15px] leading-[1.1] mb-[16px] font-[400] font-[Helvetica]  text-semi-white`}>
+          <p className={`text-[15px] leading-[24px] mb-[16px] font-[400] font-helveticaneue text-semi-white`}>
             Power Digital develops content marketing strategies that intertwine search engine optimization, social media, email marketing, PR, and CRO and social media marketing strategies to create undeniable value for your target audience and increase your brand awareness.
           </p>
         </div>
@@ -42,19 +44,19 @@ const CopywritingMarketingSection = () => {
           
           <div className="space-y-8 mt-8">
             <div className="space-y-0">
-              <p className={`text-[15px] leading-[1.1] mb-[16px] font-[400] font-[Helvetica]  text-semi-white`}>
+              <p className={`text-[15px] leading-[24px] mb-[16px] font-[400] font-helveticaneue text-semi-white`}>
                 Strengthen your entire customer experience from acquisition to nurture
               </p>
             </div>
             
             <div className="space-y-0">
-              <p className={`text-[15px] leading-[1.1] mb-[16px] font-[400] font-[Helvetica]  text-semi-white`}>
+              <p className={`text-[15px] leading-[24px] mb-[16px] font-[400] font-helveticaneue text-semi-white`}>
                 Become an industry authority
               </p>
             </div>
             
             <div className="space-y-0">
-              <p className={`text-[15px] leading-[1.1] mb-[16px] font-[400] font-[Helvetica]  text-semi-white`}>
+              <p className={`text-[15px] leading-[24px] mb-[16px] font-[400] font-helveticaneue text-semi-white`}>
                 Boost organic visits and revenue
               </p>
             </div>

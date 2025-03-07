@@ -5,10 +5,12 @@ import { Montserrat } from 'next/font/google';
 const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '300',
+  fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
   subsets: ['latin'],
   weight: '700',
+  fallback: ["sans-serif"],
 });
 
 const DigitalSolutions = () => {
@@ -34,7 +36,7 @@ const DigitalSolutions = () => {
 
           {/* Right Column */}
           <div className="space-y-6 text-gray-300">
-            <p className={`${styles["digital-description"]} text-semi-white`}>
+            <p className={`${styles["digital-description"]} font-helveticaneue text-semi-white mt-[16px] mb-[25px]`}>
               Our top-notch content services cover a variety of offerings that focus on developing,
               organizing, and optimizing digital content for brands which ranges from creating
               content like blogs, articles, videos and social media posts customized to captivate

@@ -33,10 +33,9 @@ const InsightSection = () => {
             </div>
           </div>
           
-          {/* Connect button */}
-          <button className={` px-6 py-2 bg-black border ${styles["connect"]} border-gray-700 rounded-full text-white   whitespace-nowrap `}>
-            Connect
-          </button>
+          <div className={`${styles["connect"]}`}>
+        <a href="/contact-us" className="text-center font-helveticaneue">Connect</a>
+          </div>
         </div>
       </div>
     </div>

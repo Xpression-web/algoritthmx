@@ -23,11 +23,11 @@
 
             {/* Right Section - Content */}
             <div className="w-full lg:w-1/2 space-y-2">
-                <h1 className={`text-[36px] leading-[1.1] ${monsterfont.className} `}>
+                <h1 className={`text-[36px] leading-[1.1] font-helveticaneue `}>
                 Enterprise SEO That Works in Tandem with Your Marketing Channels
                 </h1>
                 
-                <p className={`text-[16px] leading-[22px] font-[Helvetica] text-semi-white`}>
+                <p className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white`}>
                 Unlock the power of integrated digital marketing. Our enterprise SEO consultants collaborate with your team to 
                 develop strategies that work across all channels—from social media to content marketing and beyond. This holistic
                 approach aligns SEO efforts with your brand’s voice, ensuring consistent messaging and an optimized user experience.
