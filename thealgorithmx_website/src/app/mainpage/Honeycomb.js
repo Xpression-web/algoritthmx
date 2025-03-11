@@ -150,7 +150,7 @@ const ParticleAnimation = () => {
             {/* Content Container */}
             <div className="relative z-10 w-full h-full flex justify-center items-center">
             <div
-  className="max-w-[1200px] w-full mx-auto p-[20px] md:p-8 rounded-lg"
+  className="max-w-[1200px] w-full mx-auto p-[14px] md:p-8 rounded-lg"
   style={{
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     backdropFilter: "blur(1px)",
@@ -168,7 +168,7 @@ const ParticleAnimation = () => {
                         </div>
 
                         {/* Vertical Line */}
-                        <div className="h-36 md:h-32 w-[2px] bg-white"></div>
+                        <div className="h-[185px] md:h-32 w-[2px] bg-white ml-[2px]"></div>
 
                         {/* Right Side - Image & Text */}
                         <div className="flex flex-row items-start md:gap-6">

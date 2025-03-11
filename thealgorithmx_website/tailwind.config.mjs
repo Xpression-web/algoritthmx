@@ -35,6 +35,7 @@ export default {
       colors: {
         'semi-white': 'rgba(255, 255, 255, 0.5)',
         'semii-white': 'rgba(255, 255, 255, 0.6)',
+        'policy-text' :'rgba(255, 255, 255, 0.7)',
         'nav-bar-text':'rgba(255, 255, 255, 0.8)',
         'dark': '#0f0f0f',
         

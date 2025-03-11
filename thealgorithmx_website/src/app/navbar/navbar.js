@@ -200,8 +200,8 @@ const Navbar = () => {
                         { name: 'SEO Copywriting', href: '/seo-copywriting', icon: faSnowflake},
                     ]
                 },
-                { category: 'App Store', href: '/app-store' },
-                { category: 'Conversion Rate(CRO)', href: '/conversion-rate-optimization' },
+                { category: 'App Store Optimization', href: '/app-store' },
+                { category: 'Conversion Rate Optimization', href: '/conversion-rate-optimization' },
                 { category: 'Public Relations', href: '/public-relations' },
                 { category: 'Franchise', href: '/franchise-marketing' },
                 { category: 'Influencer', href: '/influencer-marketing' },
@@ -244,7 +244,7 @@ const Navbar = () => {
                     dropdownVisible.current = false;
                     setActiveDropdown(null);
                     setActiveCategory(null);
-                }, 500);
+                },500);
                 return;
             }
     
@@ -383,9 +383,10 @@ const Navbar = () => {
         }
         
         .mobile-menu {
-            background: #434d50;
+            background: #0a2127;
             z-index: 50; /* Ensure mobile menu stays above overlay */
         }
+        
         .page-overlay {
         position: fixed;
         top: 0;
@@ -558,14 +559,14 @@ transform: translateY(0);
                     className="flex items-center justify-between py-3 text-black cursor-pointer"
                     onClick={() => toggleMobileSubmenu(index)}
                 >
-                    <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-[#C4EAC1] whitespace-nowrap`}>{item.name}</span>
+                    <span className={`text-[20px] leading-[28px] font-[400] font-[Helvetica] text-[rgb(146,226,232)] whitespace-nowrap`}>{item.name}</span>
                     <ChevronDown 
                         className={`transform transition-transform ${mobileSubmenuOpen === index ? 'rotate-180' : ''}`} 
                         size={20} 
                     />
                 </div>
             ) : (
-                <Link href={item.href} className={`block py-3 text-[20px] leading-[28px] font-[400] font-[Helvetica] text-[#C4EAC1] whitespace-nowrap`}>
+                <Link href={item.href} className={`block py-3 text-[20px] leading-[28px] font-[400] font-[Helvetica] text-[rgb(146,226,232)] whitespace-nowrap`}>
                     {item.name}
                 </Link>
             )}
@@ -576,7 +577,7 @@ transform: translateY(0);
                         <div key={category.category} className="pl-4">
                             {category.items ? (
                                 <div 
-                                    className="flex items-center justify-between py-2 text-[#E2EEFF] text-[14px] leading-[28px] font-[600] font-[Helvetica] cursor-pointer"
+                                    className="flex items-center justify-between py-2 text-[rgb(136, 199, 231)] text-[14px] leading-[28px] font-[600] font-[Helvetica] cursor-pointer"
                                     onClick={() => toggleMobileCategory(categoryIndex)}
                                 >
                                     <span>{category.category}</span>
@@ -586,7 +587,7 @@ transform: translateY(0);
                                     />
                                 </div>
                             ) : (
-                                <Link href={category.href} className={`block py-2 text-[#E2EEFF] text-[14px] leading-[28px] font-[600] font-[Helvetica]  whitespace-nowrap  `}>
+                                <Link href={category.href} className={`block py-2 text-[rgb(136, 199, 231)] text-[14px] leading-[28px] font-[600] font-[Helvetica]  whitespace-nowrap  `}>
                                     {category.category}
                                 </Link>
                             )}
@@ -597,7 +598,7 @@ transform: translateY(0);
                                         <Link 
                                             key={subItem.name} 
                                             href={subItem.href}
-                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[400] font-[Helvetica] text-[#F2D7D5] whitespace-nowrap`}
+                                            className={`block py-2 pl-2 text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white  whitespace-nowrap`}
                                         >
                                             {subItem.name}
                                         </Link>
@@ -655,7 +656,7 @@ transform: translateY(0);
                                                         </Link>
                                                     ))}
                                                 </div>
-                                                <div className="flex-1 pl-8">
+                                                <div className="flex-1 pl-[90px]">
                                                 <div className="grid grid-cols-1 md:grid-cols-2  md:gap-x-2 md:grid-flow-col md:auto-cols-fr">
                                                         {activeCategory !== null && 
                                                             navItems[activeDropdown].subItems[activeCategory]?.items?.map((item, index) => {

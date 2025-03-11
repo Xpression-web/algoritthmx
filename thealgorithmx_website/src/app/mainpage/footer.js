@@ -1,5 +1,7 @@
 import React from 'react';
 import './shooting.css';
+import Link from "next/link";
+
 import { Montserrat } from 'next/font/google';
 
 const monsterfont1 = Montserrat({
@@ -44,7 +46,7 @@ const Footer = () => {
                   className="object-contain mt-10"
                 />
               </div>
-              <div className="space-y-1 text-[12px] font-[Helvetica] text-semi-white">
+              <div className="space-y-1 text-[12px] font-helvveticaneue text-semi-white">
                 <p>2810 N Church St, PMB 15369,</p>
                 <p>Wilmington, DE 19802</p>
                 <p>AlgorithmX Inc</p>
@@ -64,7 +66,7 @@ const Footer = () => {
                   className="object-contain mt-10"
                 />
               </div>
-              <div className="space-y-1 text-[12px] font-[Helvetica] text-semi-white ">
+              <div className="space-y-1 text-[12px] font-helvveticaneue text-semi-white ">
                 <p>Operation Control Center</p>
                 <p>Cyber City, Sector 24, Gurgaon,</p>
                 <p>Haryana, India AlgorithmX Inc</p>
@@ -116,12 +118,18 @@ const Footer = () => {
 
         {/* Bottom Links */}
         <div className=" pt-4 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[12px] font-[Helvetica] text-white">©2024 AlgorithmX. All rights reserved.</p>
+          <p className="text-[12px] font-helvveticaneue text-white">©2024 AlgorithmX. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-blue-500 transition-colors text-[12px] font-[Helvetica] text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-blue-500 transition-colors text-[12px] font-[Helvetica] text-white">Terms of use</a>
-            <a href="#" className="hover:text-blue-500 transition-colors text-[12px] font-[Helvetica] text-white">Sitemap</a>
-          </div>
+      <Link href="/privacy-policy" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
+        Privacy Policy
+      </Link>
+      <Link href="/terms-and-conditions" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
+        Terms of Use
+      </Link>
+      <Link href="#" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
+        Sitemap
+      </Link>
+    </div>
         </div>
       </div>
     </footer>
