@@ -1,7 +1,7 @@
-'use client'
-import { useState } from 'react';
-import './style.css'
-import { Mail, MapPin, Phone, Twitter, Instagram, Linkedin,Facebook } from 'lucide-react';
+"use client";
+import { useState } from "react";
+import "./style.css";
+import { Mail, MapPin, Phone, Twitter, Instagram, Linkedin, Facebook } from "lucide-react";
 import { Montserrat } from "next/font/google";
 
 const monsterfont = Montserrat({
@@ -17,22 +17,42 @@ const monsterfont1 = Montserrat({
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    question: ''
+    name: "",
+    email: "",
+    question: "",
   });
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("Email sent successfully!");
+        setFormData({ name: "", email: "", question: "" });
+      } else {
+        alert("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Something went wrong. Please try again later.");
+    }
+
+    setLoading(false);
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -40,17 +60,14 @@ const ContactPage = () => {
       <div className="max-w-6xl mx-auto relative">
         {/* Logo positioned on the right side */}
         <div className="absolute top-0 right-0 w-16 md:w-24">
-          {/* Placeholder for your logo */}
           <div className="text-right">
-            {/* Replace this div with your actual logo image */}
             <div className="w-16 md:w-24 h-16 md:h-24 inline-block -ml-6">
-                <img 
+              <img 
                 src="images/logo-slide.png" 
                 alt="Logo" 
                 className="w-full h-full object-contain"
-                />
+              />
             </div>
-
           </div>
         </div>
 
@@ -72,6 +89,7 @@ const ContactPage = () => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
+                  required
                   className="w-1/2 bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors"
                 />
                 <input
@@ -80,47 +98,49 @@ const ContactPage = () => {
                   placeholder="Your Mail"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                   className="w-1/2 bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors"
                 />
               </div>
-              <div>
-                <textarea
-                  name="question"
-                  placeholder="Your Question"
-                  value={formData.question}
-                  onChange={handleChange}
-                  rows="4"
-                  className="w-full bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                />
-              </div>
-              <div className="fancy mt-10">
-<a href="contact-us" className="text-center">Contact Us</a>
-</div>
+              <textarea
+                name="question"
+                placeholder="Your Question"
+                value={formData.question}
+                onChange={handleChange}
+                required
+                rows="4"
+                className="w-full bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+              />
+              <button type="submit" className="fancy1 mt-10" disabled={loading}>
+                <span>{loading ? "Sending..." : "Contact Us"}</span>
+              </button>
             </form>
           </div>
 
           {/* Find Us Section */}
-          <div className="bg-black p-10  contact-card">
+          <div className="bg-black p-10 contact-card">
             <h3 className={`text-[24px] leading-[28px] mb-[60px] ${monsterfont1.className}`}>Find Us</h3>
             <div className="">
               <div className="flex items-center gap-4">
                 <Mail className="w-4 h-4 text-blue-500" />
-                <a href="mailto:connect@thealgorithmx.com" className={`text-[14px] leading-[18px]  font-[Helvetica] font-[700] mb-3 hover:underline`}>
+                <a href="mailto:connect@thealgorithmx.com" className={`text-[14px] leading-[18px] font-[Helvetica] font-[700] mb-3 hover:underline`}>
                   connect@thealgorithmx.com
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-4 h-4 text-blue-500" />
-                <p className={`text-[14px] leading-[18px]  font-[Helvetica] font-[700] mb-3 hover:underline`}>2810 N Church St. PMB 15369, Wilmington, DE 19802</p>
+                <p className={`text-[14px] leading-[18px] font-[Helvetica] font-[700] mb-3 hover:underline`}>
+                  2810 N Church St. PMB 15369, Wilmington, DE 19802
+                </p>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-4 h-4 text-blue-500" />
-                <a href="tel:+14255776660" className={`text-[14px] leading-[18px]  font-[Helvetica] font-[500] hover:underline`}>
+                <a href="tel:+14255776660" className={`text-[14px] leading-[18px] font-[Helvetica] font-[500] hover:underline`}>
                   +1-425-577-6660
                 </a>
               </div>
               <div className="flex gap-1 mt-[80px]">
-                <a href="http://x.com/algorithmxinc"  target="_blank" className="hover:text-blue-500 transition-colors">
+                <a href="http://x.com/algorithmxinc" target="_blank" className="hover:text-blue-500 transition-colors">
                   <Twitter className="w-4 h-4" />
                 </a>
                 <a href="https://www.instagram.com/thealgorithmx/" target="_blank" className="hover:text-blue-500 transition-colors">

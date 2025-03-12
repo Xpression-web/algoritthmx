@@ -156,9 +156,9 @@ const ParticleAnimation = () => {
     backdropFilter: "blur(1px)",
   }}
 >
-                    <div className="flex flex-row justify-between items-center gap-0">
+                    <div className="flex flex-row max-sm:justify-between  items-center md:gap-4">
                         {/* Text Content */}
-                        <div className="flex-1 text-white">
+                        <div className="max-sm:flex-1  text-white">
                             <h1 className={`${monsterfont1.className} text-[31px]  leading-[35px] md:text-[46.5px] md:leading-[24px] md:leading-[50px] md:mb-4`}>
                                 From Concept to Market Dominance!
                             </h1>
@@ -171,13 +171,13 @@ const ParticleAnimation = () => {
                         <div className="h-[185px] md:h-32 w-[2px] bg-white ml-[2px]"></div>
 
                         {/* Right Side - Image & Text */}
-                        <div className="flex flex-row items-start md:gap-6">
+                        <div className="flex flex-row items-start md:gap-4">
                             <img 
                                 src="images/logo-slide.png" 
                                 alt="Placeholder" 
                                 className="w-16 md:w-24 h-auto object-contain"
                             />
-                            <div className={`${monsterfont.className} text-white text-[16px] md:text-[24px] leading-[24px] md:leading-[32px]`}>
+                            <div className={`${monsterfont.className} text-white text-[16px] md:text-[20px] max-sm:leading-[24px] `}>
                                 esthetic
                                 <br />
                                 gile

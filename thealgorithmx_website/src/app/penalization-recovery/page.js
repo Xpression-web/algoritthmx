@@ -7,6 +7,7 @@
     import PenaltyAndWarningAlerts from './handling'
     import InsightSection from '../graphics/insight'
 import Footer from '../mainpage/footer';
+import Periodic from './periodic'
 
     const page = () => {
     return (
@@ -18,6 +19,8 @@ import Footer from '../mainpage/footer';
         <PenguinSection/>
         <PenaltyAndWarningAlerts/>
         <InsightSection/>
+        <Periodic/>
+        
         <Footer/>
        
         
