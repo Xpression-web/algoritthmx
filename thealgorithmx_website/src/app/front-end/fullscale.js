@@ -26,9 +26,21 @@ const monsterfont3 = Montserrat({
 
 const WebDevServices = () => {
   const [inView, setInView] = useState(false); // To track visibility
+  const [isMobile, setIsMobile] = useState(false); // Track mobile state
   const ref = useRef(null); // Reference for the component
 
   useEffect(() => {
+    // Set initial mobile state
+    setIsMobile(window.innerWidth < 1024);
+    
+    // Add resize listener
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Observer for animations
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -36,7 +48,7 @@ const WebDevServices = () => {
           observer.disconnect(); // Disconnect observer after triggering once
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
@@ -44,6 +56,7 @@ const WebDevServices = () => {
     }
 
     return () => {
+      window.removeEventListener('resize', handleResize);
       if (ref.current) observer.disconnect(); // Clean up observer
     };
   }, []);
@@ -104,27 +117,26 @@ const WebDevServices = () => {
               transition-all duration-300 group hover:shadow-[0px_0px_50px_15px_rgba(42,201,235,0.2)] overflow-hidden w-full h-80`}
             >
               <div className="flex flex-col items-center justify-center h-full text-center">
-              <div
-  className={`${styles["animate-slideDown"]} mb-4 ${
-    inView && window.innerWidth >= 1024 ? styles["start-animation"] : ""
-  }`}
->
-  {service.icon}
-</div>
+                <div
+                  className={`${styles["animate-slideDown"]} mb-4 ${
+                    inView ? styles["start-animation"] : ""
+                  }`}
+                >
+                  {service.icon}
+                </div>
 
-<div
-  className={`${styles["animate-slideUp"]} ${
-    inView && window.innerWidth >= 1024 ? styles["start-animation"] : ""
-  }`}
->
-  <h3 className={`${styles["scale-title"]} ${monsterfont3.className}  mb-4`}>
-    {service.title}
-  </h3>
-  <p className={`${styles["scale-description"]} font-helveticaneue`}>
-    {service.description}
-  </p>
-</div>
-
+                <div
+                  className={`${styles["animate-slideUp"]} ${
+                    inView ? styles["start-animation"] : ""
+                  }`}
+                >
+                  <h3 className={`${styles["scale-title"]} ${monsterfont3.className}  mb-4`}>
+                    {service.title}
+                  </h3>
+                  <p className={`${styles["scale-description"]} font-helveticaneue`}>
+                    {service.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

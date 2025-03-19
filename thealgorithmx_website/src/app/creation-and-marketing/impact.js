@@ -306,7 +306,7 @@ const ContentMarketingImpact = () => {
           {impactData.map((item, index) => (
             <div
               key={index}
-              className={`relative p-6 max-h-[260px] rounded-[21px] bg-black transition-all duration-700 transform
+              className={`relative p-6 max-h-[310px] md:max-h-[260px] rounded-[21px] bg-black transition-all duration-700 transform
                 ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}
               `}
               style={{

@@ -65,7 +65,7 @@ const BigcommerceFeatures = () => {
       <h1 className={`${styles["choose-text"]} ${monsterfont.className} `}>
         Choose
       </h1>
-      <h1 className={`${styles["choose-text"]} ${monsterfont.className} mb-16`}>
+      <h1 className={`text-[40px] md:text-[48px] md:leading-[68px] ${monsterfont.className} mb-16`}>
         BigCommerce?
       </h1>
       

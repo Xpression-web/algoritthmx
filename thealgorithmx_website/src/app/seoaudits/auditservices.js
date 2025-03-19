@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './style.module.css';
 import { Montserrat } from "next/font/google";
+
 import { 
     faFileLines, 
     faLink, 
@@ -123,34 +124,35 @@ const AuditServices = () => {
                     <p className={`text-[21px] leading-[26px] ${monsterfont1.className} text-semi-white text-center`}>IMPACTING YOUR RANKING</p>
                 </div>
 
-                <div className="w-full overflow-x-auto pb-4 p-2 mb-8">
-                    <div
-                        className={`grid grid-cols-3 md:grid-cols-6 gap-1 max-w-4xl mx-auto bg-black ${styles["box-design"]}`}
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => {
-                            setIsHovered(false);
-                            setHoveredTab(null);
-                        }}
-                    >
+                <div className="w-full overflow-x-auto pb-4 p-2 mb-8 flex">
+  <div
+    className={`flex md:grid md:grid-cols-6 gap-1 max-w-4xl mx-auto bg-black ${styles["box-design"]}`}
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => {
+      setIsHovered(false);
+      setHoveredTab(null);
+    }}
+  >
                         {tabs.map((tab) => (
                             <button
-                                key={tab.id}
-                                onClick={() => setActiveTab(tab.id)}
-                                onMouseEnter={() => setHoveredTab(tab.id)}
-                                onMouseLeave={() => setHoveredTab(null)}
-                                className={`
-                                    flex flex-col items-center py-4 px-2
-                                    transition-all duration-300
-                                    ${isHovered 
-                                        ? hoveredTab === tab.id
-                                            ? 'bg-black/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
-                                            : 'text-[#a2a2a2] hover:bg-white/5'
-                                        : activeTab === tab.id
-                                            ? 'bg-black/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
-                                            : 'text-[#a2a2a2] hover:bg-white/5'
-                                    }
-                                `}
-                            >
+                            key={tab.id}
+                            onClick={() => setActiveTab(tab.id)}
+                            onMouseEnter={() => setHoveredTab(tab.id)}
+                            onMouseLeave={() => setHoveredTab(null)}
+                            className={`
+                              flex flex-col items-center py-4 px-2
+                              min-w-[100px] /* Ensure minimum width */
+                              transition-all duration-300
+                              ${isHovered 
+                                ? hoveredTab === tab.id
+                                  ? 'bg-black/5 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                  : 'text-[#a2a2a2] hover:bg-white/5'
+                                : activeTab === tab.id
+                                  ? 'bg-black/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                  : 'text-[#a2a2a2] hover:bg-white/5'
+                              }
+                            `}
+                          >
                             <FontAwesomeIcon icon={tab.icon} className="mb-2 w-[30px] h-[40px]"  />
 
                                 <span className={`text-[15.2px] leading-[26px] tracking-[0.01em] ${monsterfont2.className} text-center`}>

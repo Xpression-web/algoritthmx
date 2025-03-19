@@ -10,6 +10,11 @@ const monsterfont = Montserrat({
   weight: '400',
   fallback: ["sans-serif"],
 });
+const monsterfont1 = Montserrat({
+  subsets: ['latin'],
+  weight: '200',
+  fallback: ["sans-serif"],
+});
 const monsterfont2 = Montserrat({
   subsets: ['latin'],
   weight: '600',
@@ -110,8 +115,8 @@ const CRMServices = () => {
 
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-8">
-      <h1 className={`${styles["services-text"]} ${monsterfont.className} mb-8 md:mb-16 text-center text-3xl`}>
-        CRM Services
+      <h1 className={`text-[38.4px] leading-[42px] md:text-[64px] md:leading-[68px] ${monsterfont.className} mb-8 md:mb-16 text-center text-3xl`}>
+      Discover our End-to-End <br/> <span className={`${monsterfont1.className}`}>Software Development <br/> Services</span>
       </h1>
 
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row">
@@ -152,7 +157,7 @@ const CRMServices = () => {
         </div>
 
         <div className={`md:w-2/3 ${!isMobile && 'md:pl-[100px]'} mt-6 md:mt-0`}>
-          <div className={`pt-6 pr-10 pl-10 ${styles["box-border1"]} rounded w-full h-[410px] md:h-[300px]`}>
+          <div className={`md:pt-6 pt-2 pr-2 pl-2 md:pr-10 md:pl-10  ${styles["box-border1"]} rounded w-full h-[450px] md:h-[300px]`}>
             <h2 className={`${styles["right-title"]} ${monsterfont.className}`}>
               {isMobile ? activeService.title : hoveredService.title}
             </h2>

@@ -81,33 +81,31 @@ const CRMTechStack = () => {
         <h2 className={` ${styles["tech-subtitle"]} ${monsterfont.className  }`}>EXPERTISE</h2>
       </div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         {technologies.map((tech, index) => (
           <div 
-          key={index} 
-          className="mb-8 md:mb-12 pb-8"
-          style={{
-                  borderBottom: index !== technologies.length - 1 ? "1px solid #dee2e6" : "none"
-                }}
-        >
-            <div className="grid grid-cols-2 md:grid-cols-[200px,1fr] gap-10 items-start">
+                              key={index} 
+                              className="mb-8 md:mb-12 pb-8"
+                              style={{
+                                borderBottom: index !== technologies.length - 1 ? "1px solid #dee2e6" : "none"
+                              }}
+                    >
+            <div className="grid grid-cols-[1fr,2fr] md:grid-cols-[150px,1fr] gap-4 items-start">
               <h3 className={` ${styles["tech-subtitle1"]} ${monsterfont.className  }`}>{tech.title}</h3>
               
-              <div className="flex flex-wrap gap-x-10 gap-y-4">
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
                 {tech.items.map((item, itemIndex) => (
-                <div 
-                key={itemIndex} 
-                className={`${styles["box"]} inline-flex items-center gap-2 hover:bg-black transition-colors`}
-              >
-                <img 
-                  src={item.icon} 
-                  alt={item.name} 
-                  className="w-6 h-6"
-                />
-                <span className={`${styles["tech-description"]} ${monsterfont.className} text-semi-white`}>
-                  {item.name}
-                </span>
-              </div>
+                  <div 
+                    key={itemIndex} 
+                    className={`${styles["box"]} p-3 flex items-center gap-2 hover:bg-black transition-colors`}
+                  >
+                    <img 
+                      src={item.icon} 
+                      alt={item.name} 
+                      className="w-6 h-6"
+                    />
+                    <span className={`${styles["tech-description"]} ${monsterfont.className} text-semi-white`}>{item.name}</span>
+                  </div>
                 ))}
               </div>
             </div>

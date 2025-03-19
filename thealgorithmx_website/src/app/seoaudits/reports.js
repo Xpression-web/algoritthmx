@@ -83,7 +83,7 @@ const SEOReports = () => {
   return (
     <div className="bg-black text-white min-h-screen p-8 flex items-center justify-center  ">
          <div className="max-w-[1200px] mx-auto  mb-16">
-      <h1 className={`text-[64px] leading-[68px] text-center ${monsterfont.className}`}>
+      <h1 className={`text-[50px] leading-[60px] md:text-[64px] md:leading-[68px] text-center ${monsterfont.className}`}>
       Get Comprehensive
       </h1>
       <h1 className={`text-[44px] leading-[68px] text-center ${monsterfont1.className}`}>

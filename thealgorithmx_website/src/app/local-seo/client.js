@@ -55,7 +55,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
                     </li>
                     <li className="flex items-start gap-2">
                         <FontAwesomeIcon icon={faCheck} className="text-gray-400 mb-[10px]" />
-                        <span  className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white  `}>hCard microformat/schema HTML tags addition to address on website</span>
+                        <span  className={`text-[16px] leading-[22px] font-helveticaneue text-semi-white  `}>Card microformat/schema HTML tags addition to address on website</span>
                     </li>
 
                     

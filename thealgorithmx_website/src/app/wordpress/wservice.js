@@ -86,7 +86,7 @@ const WordPressServices = () => {
     <div className="min-h-screen bg-black p-4 sm:p-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className={`${styles["development-text"]} ${monsterfont2.className} mb-2`}>WORDPRESS DEVELOPMENT</h1>
+          <h1 className={`text-[40px] leading-[44px] md:text-[56px] md:leading-[60px] tracking-[0.06em] ${monsterfont2.className} mb-2`}>WORDPRESS DEVELOPMENT</h1>
           <h2 className={`${styles["development-text"]} ${monsterfont.className} mb-2`}>SERVICES</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
         </div>

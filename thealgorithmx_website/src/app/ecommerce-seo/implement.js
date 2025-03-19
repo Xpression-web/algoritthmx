@@ -163,96 +163,99 @@ v-14.91H29.26V28.694z M30.638,13.949H17.687V8.515h11.397c0.858,0,1.554,0.698,1.5
             setTimeout(() => setIsAnimating(false), 300);
         }
     };
-    const contentClasses = `
-    transform transition-all duration-300 ease-in-out
-    ${isAnimating ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`;
 
+    const contentClasses = `
+        transform transition-all duration-300 ease-in-out
+        ${isAnimating ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`;
 
     return (
         <div className='p-4 md:p-8 bg-black text-white md:min-h-screen flex items-center justify-center'>
-        <div className="max-w-6xl mx-auto w-full">
-        <div className="text-center mb-8 md:mb-12">
-            <div className={`text-[#2775ff] leading-[18px] font-[18px] ${monsterfont2.className} text-center`}>WHY IMPLEMENT</div>
-            <h1 className={`leading-[40px] text-[36px] md:text-[56px] mt-[20px]  text-center  ${monsterfont1.className} `}>ECOMMERCE SEO</h1>
-            <div className="mx-auto w-[35px] h-[2px] bg-[#2775ff] mt-5"></div>
-
-            </div>
-
-            <div className="border border-red-500 w-full h-auto md:h-[500px] max-w-[900px] mx-auto">
-            {/* Mobile Layout */}
-            <div className="md:hidden flex flex-col h-full">
-                <div className="overflow-x-auto p-4 border-b border-red-500">
-                <div className="flex space-x-6 min-w-min">
-                    {Object.entries(content).map(([key, value]) => (
-                    <button
-                        key={key}
-                        className={`flex items-center gap-2 transition-colors duration-300 whitespace-nowrap ${
-                        activeTab === key ? "text-red-500" : "text-gray-400"
-                        }`}
-                        onClick={() => handleTabChange(key)}
-                    >
-                        <span className="w-6 h-6">{value.icon}</span>
-                        <span className='font-helveticaneue text-[15px] leading-[22px] '>{value.mainTitle}</span>
-                    </button>
-                    ))}
-                </div>
-                </div>
-                <div className="flex-1 overflow-y-auto p-4">
-                <div key={activeTab} className={contentClasses}>
-                <h3 className={`text-[34px] leading-[42px] ${monsterfont.className} mb-5`}>{content[activeTab].boxTitle}</h3>
-                    <div className={`${styles["box-title"]} text-semi-white whitespace-pre-line`}>
-                    {content[activeTab].description}
-                </div>
-                </div>
-                </div>
-            </div>
-
-            {/* Desktop Layout */}
-            <div className="hidden md:flex h-full p-6">
-                {/* Left Section */}
-                <div className=" flex flex-col space-y-8 pr-6 justify-center">
-                {Object.entries(content).map(([key, value]) => (
-                    <button
-                    key={key}
-                    className={`flex items-center gap-4 transition-colors duration-300 text-left ${
-                        activeTab === key ? "text-red-500" : "text-gray-400"
-                    }`}
-                    onClick={() => handleTabChange(key)}
-                    >
-                    <span className="w-6 h-6">{value.icon}</span>
-                    <span className='font-helveticaneue text-[15px] leading-[22px] '>{value.mainTitle}</span>
-                    </button>
-                ))}
+            <div className="max-w-6xl mx-auto w-full">
+                <div className="text-center mb-8 md:mb-12">
+                    <div className="text-blue-400 font-['Helvetica'] leading-[18px] text-[18px] text-center">HOW WE</div>
+                    <h1 className={`leading-[40px] text-[36px] md:text-[56px] mt-[20px] text-center ${monsterfont1.className}`}>DRIVE REVENUE</h1>
                 </div>
 
-                <div className={`relative  ${style["revline"]} flex items-center justify-center` }>
-                <div
-                    className="absolute w-1 bg-red-500 transition-all duration-300"
-                    style={{
-                    top: `${Object.keys(content).indexOf(activeTab) * 5}rem`,
-                    height: "4rem",
-                    }}
-                />
-                </div>
-
-                {/* Right Content Section */}
-                <div className="flex-1 pl-6 overflow-hidden">
-                <div className="h-full overflow-y-auto pr-4">
-                    <div className="transition-all duration-500 transform">
-                    <div key={activeTab} className={contentClasses}>
-                    <h3 className={`text-[34px] leading-[42px] ${monsterfont.className} `}>{content[activeTab].boxTitle}</h3>
-                    <div className={`${styles["box-title"]} text-semi-white whitespace-pre-line`}>
-                        {content[activeTab].description}
+                <div className="border border-red-500 w-full h-auto md:h-[500px] max-w-[900px] mx-auto">
+                    {/* Mobile Layout */}
+                    <div className="md:hidden flex flex-col h-full">
+                        <div className="overflow-x-auto p-4 border-b border-red-500">
+                            <div className="flex space-x-6 min-w-min">
+                                {Object.entries(content).map(([key, value]) => (
+                                    <button
+                                    key={key}
+                                    className={`flex items-center gap-2 transition-colors duration-300 whitespace-nowrap ${activeTab !== key ? 'group' : ''}`}
+                                    onClick={() => handleTabChange(key)}
+                                >
+                                    <span className={`w-6 h-6 transition-colors duration-300 ${activeTab === key ? 'text-red-500' : 'text-semi-white'}`}>
+                                        {value.icon}
+                                    </span>
+                                    <span className={`font-helveticaneue text-[15px] leading-[22px]  ${activeTab === key ? 'text-white' : 'text-gray-400 group-hover:text-white'}`}>
+                                        {value.mainTitle}
+                                    </span>
+                                </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex-1 overflow-y-auto p-4">
+                            <div key={activeTab} className={contentClasses}>
+                                <h3 className={`text-[34px] leading-[42px] font-helveticaneue font-[300]`}>{content[activeTab].boxTitle}</h3>
+                                <div className={`${styles["box-title"]} font-helveticaneue text-semi-white whitespace-pre-line`}>
+                                    {content[activeTab].description}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
+
+                    {/* Desktop Layout */}
+                    <div className="hidden md:flex h-full p-4">
+                        {/* Left Section */}
+                        <div className="flex flex-col space-y-8 pr-14 justify-center">
+                            {Object.entries(content).map(([key, value]) => (
+                                <button
+                                key={key}
+                                className={`flex items-center gap-2 transition-colors duration-300 text-left ${activeTab !== key ? 'group' : ''}`}
+                                onClick={() => handleTabChange(key)}
+                            >
+                                <span className={`w-6 h-6 transition-colors duration-300 ${activeTab === key ? 'text-red-500' : 'text-gray-400 group-hover:text-white'}`}>
+                                    {value.icon}
+                                </span>
+                                <span className={`font-helveticaneue text-[15px] leading-[22px] ml-[8px] ${activeTab === key ? 'text-white' : 'text-[#FFFFFF80] group-hover:text-white'}`}>
+                                    {value.mainTitle}
+                                </span>
+                            </button>
+                            ))}
+                        </div>
+
+                        <div className={`relative  ${style["revline"]} flex items-center justify-center`}>
+                            <div
+                                className="absolute w-1 bg-red-500 transition-all duration-300"
+                                style={{
+                                    top: `${Object.keys(content).indexOf(activeTab) * 5}rem`,
+                                    height: "4rem",
+                                }}
+                            />
+                        </div>
+
+                        {/* Right Content Section */}
+                        <div className="flex-1 pl-6 overflow-hidden">
+                            <div className="h-full overflow-y-auto pr-4">
+                                <div key={activeTab} className={contentClasses}>
+                                    <div className="transition-all duration-500 transform">
+                                        <h3 className={`text-[34px] leading-[42px] font-helveticanue `}>{content[activeTab].boxTitle}</h3>
+                                        <div className={`${styles["box-title"]} font-helveticaneue text-semi-white whitespace-pre-line`}>
+                                            {content[activeTab].description}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-            </div>
-        </div>
         </div>
     );
-    };
+};
+
 
     export default EcommerceImplementation;

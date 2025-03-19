@@ -59,7 +59,7 @@ useEffect(() => {
 
 return (
     <div className="min-h-screen bg-black text-gray-300 p-4 flex justify-center items-center">
-    <div className="max-w-[1200px] mx-auto p-8">
+    <div className="max-w-[1200px] mx-auto md:p-8">
         <div className="mb-16 text-center space-y-2">
         <div className="relative z-10">
             <h2 className={`${styles["description"]} ${monsterfont1.className} mt-6 md:-mt-[60px] text-white`}>
@@ -122,7 +122,7 @@ return (
             onMouseLeave={() => setHoverTab(null)}
           >
             <div className="flex justify-end items-center">
-              <span className={`flex justify-end font-helveticaneue font-[700] text-[16px] tracking-[0.05em] items-center gap-1 ${hoverTab === 'organic' || (!hoverTab && activeTab === 'organic') ? 'text-white' : 'text-[#a2ed56]'}`}>
+              <span className={`flex justify-end font-helveticaneue font-[700] text-[12px] md:text-[16px] tracking-[0.05em] items-center gap-1 ${hoverTab === 'organic' || (!hoverTab && activeTab === 'organic') ? 'text-white' : 'text-[#a2ed56]'}`}>
                 <FontAwesomeIcon icon={faGem} className=" w-[18px] h-[16.8px]" />
                 SOCIAL STRATEGY CONSULTING
               </span>
@@ -136,7 +136,7 @@ return (
             onMouseLeave={() => setHoverTab(null)}
           >
             <div className="flex justify-start items-center">
-              <span className={`flex items-center font-helveticaneue font-[700] text-[16px] tracking-[0.05em] gap-2 ${hoverTab === 'paid' || (!hoverTab && activeTab === 'paid') ? 'text-white' : 'text-[#a2ed56]'}`}>
+              <span className={`flex items-center font-helveticaneue font-[700] text-[12px] md:text-[16px] tracking-[0.05em] gap-2 ${hoverTab === 'paid' || (!hoverTab && activeTab === 'paid') ? 'text-white' : 'text-[#a2ed56]'}`}>
                 <FontAwesomeIcon icon={faGem} className="w-[18px] h-[16.8px]" />
                 ADVERTISING STRATEGY
               </span>

@@ -39,7 +39,7 @@ const CRMSystem = () => {
             observer.disconnect(); // Disconnect observer after triggering once
           }
         },
-        { threshold: 0.5 } // Trigger when 50% of the component is visible
+        { threshold: 0.1 } // Trigger when 50% of the component is visible
       );
   
       if (ref.current) {

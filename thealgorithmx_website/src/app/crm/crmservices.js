@@ -155,7 +155,7 @@ const CRMServices = () => {
         </div>
 
         <div className={`md:w-2/3 ${!isMobile && 'md:pl-[100px]'} mt-6 md:mt-0`}>
-          <div className={`pt-6 pr-10 pl-10 ${styles["box-border1"]} rounded w-full h-[410px] md:h-[300px]`}>
+          <div className={`pt-6 pr-10 pl-10 ${styles["box-border1"]} rounded w-full h-[480px] md:h-[300px]`}>
             <h2 className={`${styles["right-title"]} ${monsterfont.className}`}>
               {isMobile ? activeService.title : hoveredService.title}
             </h2>

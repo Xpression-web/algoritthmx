@@ -75,13 +75,13 @@ const InfluencerSection = () => {
             />
           <div>
           <span
-  className={` text-[85px] leading-[90px]  ${monsterfont2.className} tracking-wider bg-white-500 block`}
+  className={`   ${styles["title"]}  ${monsterfont2.className} tracking-wider bg-white-500 block`}
 >
 
         INFLUENCER
   </span>
   <span
-    className={` text-[85px] leading-[90px] ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
+    className={`  ${styles["title"]} ${monsterfont1.className} tracking-wider bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent ml-2`}
   >
    MARKETING
   </span>

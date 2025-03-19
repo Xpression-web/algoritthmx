@@ -21,7 +21,7 @@ const QualityBanner = () => {
         {/* Background "ALGORITHM X" text */}
         <div className="absolute inset-0 flex  justify-center pointer-events-none">
           <span
-            className={` mb-6 ${styles["algorithmx-text"]} ${monsterfont.className}  text-gray-600/20 transform transition-transform duration-700 `}
+            className={` mb-6 text-[48px] leading-[1.1] md:text-[54px] ${monsterfont.className}  text-gray-600/20 transform transition-transform duration-700 `}
             >
             ALGORITHMX
           </span>

@@ -112,10 +112,10 @@ const SeoFactors = () => {
                                     className={`flex items-center gap-2 transition-colors duration-300 whitespace-nowrap ${activeTab !== key ? 'group' : ''}`}
                                     onClick={() => handleTabChange(key)}
                                 >
-                                    <span className={`w-6 h-6 transition-colors duration-300 ${activeTab === key ? 'text-red-500' : 'text-gray-400 group-hover:text-white'}`}>
+                                    <span className={`w-6 h-6 transition-colors duration-300 ${activeTab === key ? 'text-red-500' : 'text-semi-white group-hover:text-white'}`}>
                                         {value.icon}
                                     </span>
-                                    <span className={`font-helveticaneue text-[15px] leading-[22px]  ${activeTab === key ? 'text-white' : 'text-gray-400 group-hover:text-white'}`}>
+                                    <span className={`font-helveticaneue text-[15px] leading-[22px]  ${activeTab === key ? 'text-white' : 'text-semi-white group-hover:text-white'}`}>
                                         {value.mainTitle}
                                     </span>
                                 </button>
