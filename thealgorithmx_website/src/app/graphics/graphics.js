@@ -161,7 +161,7 @@ const ServicesGrid = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black p-8">
+    <div className="min-h-screen bg-black md:p-8">
       <div className="max-w-[1100px] mx-auto">
         <div ref={headerRef} className="text-center mb-12 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

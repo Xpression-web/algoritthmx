@@ -383,7 +383,7 @@ const Navbar = () => {
         }
         
         .mobile-menu {
-            background: #0a2127;
+            background: #1e3b43;
             z-index: 50; /* Ensure mobile menu stays above overlay */
         }
         
