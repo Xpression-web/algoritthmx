@@ -4,6 +4,7 @@ import TestingSection from './home'
 import TestingServices from './testing'
 import QAProcessDiagram from './quality'
 import TestingBenefits from './choose'
+import InsightSection from '../graphics/insight'
 import Footer from '../mainpage/footer'
 
 
@@ -15,6 +16,7 @@ const page = () => {
     <TestingServices/>
     <QAProcessDiagram/>
     <TestingBenefits/>
+    <InsightSection/>
     <Footer/>
     </div>
   )

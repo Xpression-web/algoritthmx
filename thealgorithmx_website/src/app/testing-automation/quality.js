@@ -30,13 +30,13 @@ const QAProcessDiagram = () => {
               {/* Grid for mobile and desktop */}
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 {step.rows.map((item, index) => (
-                  <div 
+                  <div
                     key={index} 
                     className="border border-gray-700 rounded-lg p-4 text-center 
-                               bg-black 
+                               bg-black
                                flex flex-col items-center justify-center
                                transition-all duration-300 ease-in-out
-                               hover:-translate-y-2 
+                               hover:-translate-y-2
                                hover:shadow-lg hover:shadow-blue-500/50
                                hover:border-blue-500"
                   >
