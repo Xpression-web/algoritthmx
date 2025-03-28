@@ -57,7 +57,7 @@ const IoTDevelopmentPage = () => {
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
           {/* Mobile & Desktop Left Section - Clickable Items */}
-          <div className="md:w-1/3 space-y-4  rounded-[20px] md:bg-blue-700">
+          <div className="md:w-1/3 space-y-4  rounded-[20px] ">
             {Object.entries(sections).map(([key, section]) => (
               <button
                 key={key}
@@ -99,7 +99,7 @@ const IoTDevelopmentPage = () => {
 
           {/* Mobile Description Section */}
           <div className="md:hidden">
-            <div className=" border-[1px] border-blue-700 rounded-lg p-6">
+            <div className=" border-[1px]  rounded-lg p-6">
               <div className="flex items-center space-x-4 mb-4">
                 {sections[activeSection].icon}
                 <h2 className="text-xl font-bold font-helveticaneue">{sections[activeSection].title}</h2>

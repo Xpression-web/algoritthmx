@@ -56,7 +56,7 @@ const BiConsultingPage = () => {
 
       <div className="w-full max-w-[1200px] flex flex-col md:flex-row rounded-[20px] overflow-hidden shadow-2xl">
         {/* Services Navigation - Inline on Mobile, Full Width on Desktop */}
-        <div className="w-full md:w-1/2 bg-blue-600 overflow-x-auto">
+        <div className="w-full md:w-1/2  overflow-x-auto">
           <div className="flex md:flex-col space-x-4 md:space-x-0 md:space-y-4 md:p-8 p-4 text-center overflow-x-auto">
             {services.map((service,index) => (
               <div key={service.id} className="relative">
@@ -66,13 +66,13 @@ const BiConsultingPage = () => {
                 className={`inline-block md:w-full p-4 rounded-lg transition-all duration-300 text-left text-[18px] font-helveticaneue font-[600] 
                   ${activeService === service.id
                     ? ' text-white '
-                    : 'text-semi-white hover:bg-blue-500/50 hover:text-white/60'}`}
+                    : 'text-semi-white hover:text-white/60'}`}
               >
                 {service.title}
               </button>
               {/* Dividing line - hidden on mobile */}
               {index < services.length - 1 && (
-                  <div className="hidden md:block absolute bottom-0 left-0 right-0 h-[1px] bg-white/20"></div>
+                  <div className="hidden md:block absolute bottom-0 left-0 right-0 h-[1px] bg-green-700"></div>
                 )}
               </div>
             ))}
@@ -80,7 +80,7 @@ const BiConsultingPage = () => {
         </div>
 
         {/* Content Area with Blue Border */}
-        <div className="w-full md:flex-1 bg-black p-6 md:p-12 border-2 border-blue-500 rounded-b-[20px] md:rounded-r-[20px] md:rounded-bl-none">
+        <div className="w-full md:flex-1 bg-black p-6 md:p-12  md:rounded-bl-none">
           <div className="bg-black w-full">
             <div className="flex items-start space-x-4 mb-6">
               <div>
