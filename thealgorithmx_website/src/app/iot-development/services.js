@@ -76,7 +76,7 @@ const IOTPage = () => {
                   className={`inline-block md:w-full p-4 rounded-lg transition-all duration-300 text-left text-[18px] font-helveticaneue font-[600] 
                     ${activeService === service.id
                       ? ' text-white '
-                      : 'text-semi-white  hover:text-white/60'}`}
+                      : 'text-semi-white  hover:text-white/80'}`}
                 >
                   {service.title}
                 </button>
