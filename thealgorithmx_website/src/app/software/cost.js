@@ -57,8 +57,8 @@ const CostEstimation = () => {
   return (
     <div className="min-h-screen bg-black p-6">
       <div className="max-w-[1200px] mx-auto">
-        <h1 className={`${style["cost-title"]} ${monsterfont.className}`}>Cost</h1>
-        <h2 className={`${style["cost-title"]} ${monsterfont1.className} mb-8`}>Estimations</h2>
+        <h1 className={`${style["cost-title"]} ${monsterfont.className} text-white`}>Cost</h1>
+        <h2 className={`${style["cost-title"]} ${monsterfont1.className} text-white mb-8`}>Estimations</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {estimates.slice(0, 3).map((item, index) => (
@@ -74,7 +74,7 @@ const CostEstimation = () => {
                   item.icon // Render FontAwesome icon
                 )}
               </div>
-              <div className={`${styles["cost-price"]} ${monsterfont2.className} text-center`}>
+              <div className={`${styles["cost-price"]} ${monsterfont2.className} text-white text-center`}>
                 {item.price}
               </div>
               <p className={`${style["cost-description"]} font-helveticaneue mt-4 text-semi-white`}>
@@ -90,7 +90,7 @@ const CostEstimation = () => {
               <div className="mb-4 mt-[30px]">
                 {item.icon} {/* Render FontAwesome icon */}
               </div>
-              <div className={`${styles["cost-price"]} ${monsterfont2.className} text-center`}>
+              <div className={`${styles["cost-price"]} ${monsterfont2.className} text-white text-center`}>
                 {item.price}
               </div>
               <p className={`${style["cost-description"]}  font-helveticaneue  mt-4 text-semi-white`}>

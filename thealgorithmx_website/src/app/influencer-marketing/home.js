@@ -75,7 +75,7 @@ const InfluencerSection = () => {
             />
           <div>
           <span
-  className={`   ${styles["title"]}  ${monsterfont2.className} tracking-wider bg-white-500 block`}
+  className={`   ${styles["title"]}  ${monsterfont2.className} tracking-wider text-white block`}
 >
 
         INFLUENCER

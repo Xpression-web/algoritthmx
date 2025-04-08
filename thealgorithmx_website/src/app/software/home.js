@@ -76,7 +76,7 @@ const ContentSection = () => {
               className="w-12 h-12 md:w-24 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
             />
             <h1
-          className={` ${style["title"]} font-glock font-[400] tracking-[8px] text-center md:text-start bg-white-500 block`}>
+          className={` ${style["title"]} font-glock font-[400] tracking-[8px] text-center md:text-start text-white block`}>
             SOFTWARE
           </h1>
             <h1 className={`${styles["development-text"]} ${monsterfont.className} tracking-[8px] bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>

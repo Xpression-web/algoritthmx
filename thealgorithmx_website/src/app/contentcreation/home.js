@@ -75,7 +75,7 @@ const ContentSection = () => {
             />
           <div>
         <span
-          className={` ${styles["title"]} ${monsterfont2.className} tracking-[8px] bg-white-500 block`}
+          className={` ${styles["title"]} ${monsterfont2.className} tracking-[8px] text-white block`}
       >
     CONTENT
   </span>

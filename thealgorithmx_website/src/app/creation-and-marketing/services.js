@@ -118,7 +118,7 @@ import React, { useEffect, useRef, useState } from 'react';
                     alt={service.alt} 
                     className={` object-contain rounded-lg  ${styles["indus-card-figure"]}  `}
                 />
-                <h3 className={` text-[24px] leading-[1.1] my-[20px] font-[600] font-helveticaneue  transition-colors duration-300 `}>
+                <h3 className={` text-white text-[24px] leading-[1.1] my-[20px] font-[600] font-helveticaneue  transition-colors duration-300 `}>
                     {service.title}
                 </h3>
                 <p className={`text-semi-white text-[14px] leading-[24px] font-helveticaneue transition-colors duration-300`}>

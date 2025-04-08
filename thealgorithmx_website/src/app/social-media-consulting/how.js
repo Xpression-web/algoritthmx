@@ -74,7 +74,7 @@ const cards =
 return (
     <div className="min-h-screen bg-black relative" ref={containerRef}>
     <h1
-        className={` md:text-[56px] text-[38px] leading-[40px] md:leading-[50px] md:tracking-[0.06em] ${monsterfont.className} text-center py- z-10`}
+        className={` text-white md:text-[56px] text-[38px] leading-[40px] md:leading-[50px] md:tracking-[0.06em] ${monsterfont.className} text-center py- z-10`}
     >
         HOW ALGORITHM MAKES SOCIAL <br/> 
         MEDIA CAMPAIGNS THAT WORK

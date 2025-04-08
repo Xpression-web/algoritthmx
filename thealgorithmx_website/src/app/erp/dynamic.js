@@ -19,7 +19,7 @@ const DynamicSolutionsHero = () => {
         
         {/* Main content */}
         <div className="px-4 py-16">
-          <h1 className={`${style["dynamic-text"]} ${monsterfont.className}`}>
+          <h1 className={`${style["dynamic-text"]} text-white ${monsterfont.className}`}>
             DYNAMIC SOLUTIONS
           </h1>
           

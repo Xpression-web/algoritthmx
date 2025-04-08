@@ -139,7 +139,7 @@ const InstagramCarousel = () => {
 
     return (
         <div className="w-full mx-auto px-4 py-8 bg-black relative">
-            <h1 className={`${styles["erp-text"]} ${monsterfont1.className} mb-12`}>
+            <h1 className={`${styles["erp-text"]} ${monsterfont1.className} text-white mb-12`}>
                 How It Works
             </h1>
             <div 
@@ -171,7 +171,7 @@ const InstagramCarousel = () => {
                                         alt={item.title}
                                         className="w-[50px] h-[50px] object-contain mt-6"
                                     />
-                                    <h3 className={`${styles["erp-title"]} ${monsterfont.className} text-center mt-6`}>
+                                    <h3 className={`${styles["erp-title"]} ${monsterfont.className} text-center text-white mt-6`}>
                                         {item.title.split(" ").map((word, idx) => (
                                             <span key={`${item.id}-word-${idx}`} className="block">{word}</span>
                                         ))}

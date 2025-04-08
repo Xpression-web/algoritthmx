@@ -124,10 +124,10 @@ const BusinessModules = () => {
 
           {/* Main titles */}
           <div className="relative z-10">
-            <h2 className={`${styles['outcome-subtitle']} ${monsterfont.className} mt-16`}>
+            <h2 className={`${styles['outcome-subtitle']} ${monsterfont.className} mt-16 text-white`}>
             MAKE DATA-DRIVEN DECISIONS WITH
             </h2>
-            <h3 className={`${styles['outcome-subtitle']} ${monsterfont1.className}`}>
+            <h3 className={`${styles['outcome-subtitle']} ${monsterfont1.className} text-white`}>
               BUSINESS INTELLIGENCE
             </h3>
           </div>
@@ -159,7 +159,7 @@ const ModuleCard = ({ title, description, imageSrc }) => (
         />
       </div>
       <div className="flex-1">
-        <h3 className={`${style['modules-title']} ${monsterfont1.className}`}>{title}</h3>
+        <h3 className={`${style['modules-title']} ${monsterfont1.className} text-white`}>{title}</h3>
         <p className={`${style['modules-description']} text-semi-white`}>{description}</p>
       </div>
     </div>

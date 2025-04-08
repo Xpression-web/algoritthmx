@@ -112,10 +112,10 @@ const InfluencerModules = () => {
 
           {/* Main titles */}
           <div className="relative z-10">
-            <h2 className={`${styles['outcome-subtitle']} ${monsterfont.className} mt-16`}>
+            <h2 className={`${styles['outcome-subtitle']} text-white ${monsterfont.className} mt-16`}>
             INFLUENCER MARKETING SERVICES
             </h2>
-            <h3 className={`${styles['outcome-subtitle']} ${monsterfont1.className}`}>
+            <h3 className={`${styles['outcome-subtitle']} text-white ${monsterfont1.className}`}>
             WE OFFER
             </h3>
           </div>
@@ -147,7 +147,7 @@ const ModuleCard = ({ title, description, imageSrc }) => (
         />
       </div>
       <div className="flex-1" style={{ borderBottom: '1px solid gray', paddingBottom: '20px' }}>
-  <h3 className={`${style['modules-title']} font-helveticaneue font-[700]`}>{title}</h3>
+  <h3 className={`${style['modules-title']} font-helveticaneue font-[700] text-white`}>{title}</h3>
   <p className={`${style['modules-description']} font-helveticaneue text-semi-white`}>
     {description}
   </p>

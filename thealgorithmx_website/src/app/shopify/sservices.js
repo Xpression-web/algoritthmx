@@ -83,7 +83,7 @@ const ShopifyServices = () => {
     <div className="min-h-screen bg-black p-4 sm:p-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className={` text-[40px] leading-[44px] md:text-[56px] md:leading-[60px] tracking-[0.06em] ${monsterfont2.className} mb-2`}>SHOPIFY DEVELOPMENT</h1>
+          <h1 className={` text-[40px] leading-[44px] md:text-[56px] md:leading-[60px] tracking-[0.06em] ${monsterfont2.className} mb-2 text-white`}>SHOPIFY DEVELOPMENT</h1>
           <h2 className={`${styles["development-text"]} ${monsterfont.className} mb-2`}>SERVICES</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
         </div>
@@ -105,7 +105,7 @@ const ShopifyServices = () => {
                 />
               </div>
               <div className="flex-1">
-                <h3 className={`${styles["development-title"]} font-helveticaneue  mb-[18px]`}>
+                <h3 className={`${styles["development-title"]} font-helveticaneue  mb-[18px] text-white`}>
                   {service.title}
                 </h3>
                 <p className={`${styles["development-description"]} font-helveticaneue  text-semi-white`}>

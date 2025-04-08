@@ -16,7 +16,7 @@ const BlockchainHero = () => {
 
       {/* Content container with max-w-6xl */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 py-20 text-center">
-        <h1 className={`${styles["design-title"]} ${monsterfont.className}`}>
+        <h1 className={`${styles["design-title"]} text-white ${monsterfont.className}`}>
           Blockchain Design & Development Platforms
         </h1>
 

@@ -134,7 +134,7 @@ const TiktokCarousel = () => {
 
     return (
         <div className="w-full mx-auto px-4 py-8 bg-black relative">
-            <h1 className={`${styles["erp-text"]} ${monsterfont.className} mb-12`}>
+            <h1 className={`${styles["erp-text"]} text-white ${monsterfont.className} mb-12`}>
                 How It Works
             </h1>
             <div 
@@ -166,7 +166,7 @@ const TiktokCarousel = () => {
                                         alt={item.title}
                                         className="w-12 h-12 object-contain mt-6"
                                     />
-                                    <h3 className={`${styles["erp-title"]} ${monsterfont.className} text-center mt-6`}>
+                                    <h3 className={`${styles["erp-title"]} ${monsterfont.className} text-white text-center mt-6`}>
                                         {item.title.split(" ").map((word, idx) => (
                                             <span key={`${item.id}-word-${idx}`} className="block">{word}</span>
                                         ))}

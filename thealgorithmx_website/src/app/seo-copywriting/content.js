@@ -104,7 +104,7 @@ return (
           <div className="mb-6">
             {step.icon}
           </div>
-          <h3 className={`text-[24px] leading-[1.5] mb-[20px]  ${monsterfont4.className} `}>{step.title}</h3>
+          <h3 className={`text-[24px] leading-[1.5] mb-[20px] text-white ${monsterfont4.className} `}>{step.title}</h3>
           <p className={`text-[16px] leading-[28px]  font-[400] font-helveticaneue  text-semi-white`}>{step.description}</p>
         </div>
       ))}

@@ -70,7 +70,7 @@
                 alt="Cylindrical Branding Icon"
                 className="w-12 h-12 md:w-24 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
                 />
-                <h1 className={`${styles["crm-text"]} ${monsterfont2.className} `}>
+                <h1 className={`${styles["crm-text"]} ${monsterfont2.className} text-white`}>
                 APP STORE
                 </h1>
                 <h1 className={`${styles["development-text"]} ${monsterfont.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>

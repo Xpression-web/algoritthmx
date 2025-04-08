@@ -21,7 +21,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
         className="w-full py-4 pl-10 flex justify-between items-center text-left border-b border-white mb-4"
         onClick={onClick}
       >
-        <h3 className={`text-[16px] tracking-[0.02em] leading-[16px] ${monsterfont1.className}  `}>{title}</h3>
+        <h3 className={`text-[16px] tracking-[0.02em] leading-[16px] ${monsterfont1.className} text-white  `}>{title}</h3>
         {isOpen ? (
           <ChevronUp className="h-5 w-5 text-white" />
         ) : (
@@ -83,10 +83,10 @@ const Accordion = () => {
         <div className="lg:w-[40%] mt-8 lg:mt-0">
           <div className={`${styles["box-design"]}`}>
             <h2 className="text-white font-helveticaneue leading-[18px] font-[18px] font-[700]  text-center">Why Choose</h2>
-            <h1 className={`leading-[40px] text-[36px] mb-10 mt-12 text-center  ${monsterfont.className} `}>
+            <h1 className={`leading-[40px] text-[36px] mb-10 mt-12 text-white text-center  ${monsterfont.className} `}>
               ALGORITHMX FOR YOUR SOCIAL MEDIA AUDIT?
             </h1>
-            <p className="font-helveticaneue leading-[28px] font-[16px] m-[30px] mt-[30px]">
+            <p className="font-helveticaneue leading-[28px] font-[16px] m-[30px] mt-[30px] text-white">
               To qualify for a free social media audit covering Facebook, Instagram, TikTok, and more, we only require temporary read-only access to your Facebook Ads account and Google Analytics. We will guide you through the process of granting this access.
             </p>
             <button className="bg-[#272727] text-[14px] font-opensans font-[600] text-[#f7f5ef] px-6 py-2 rounded-[100px]  flex justify-center items-center mx-auto">

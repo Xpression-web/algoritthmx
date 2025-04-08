@@ -24,7 +24,7 @@ fallback : ["sans-serif"],
 const ServiceCard = ({ title, description }) => (
 <div className={`relative  bg-black ${style["border-design"]} `}>
     <div className="absolute -top-4 left-20 bg-black md:px-4 p-[5px]">
-    <h3 className={`text-[22.4px] font-helveticaneue leading-[24px] font-[400]`}>{title}</h3>
+    <h3 className={`text-[22.4px] font-helveticaneue leading-[24px] font-[400] text-white`}>{title}</h3>
     </div>
     <div className="mt-4">
     <p className={`text-[16px] font-helveticaneue leading-[28px] text-semi-white text-center`}>

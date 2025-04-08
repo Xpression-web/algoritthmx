@@ -66,7 +66,7 @@ const FeatureCard = ({ Icon, title, description, isHighlighted }) => (
     <div className="mb-4 flex justify-center items-center">
       <Icon />
     </div>
-    <h3 className= {`algo-line-height-24 letter-spacing-100 font-size-14 ${monsterfont2.className} mt-4`}>{title}</h3>
+    <h3 className= {`algo-line-height-24 letter-spacing-100 font-size-14 text-white ${monsterfont2.className} mt-4`}>{title}</h3>
     <p className={`font-size-14 text-semi-white font-opensans mt-4`}>{description}</p>
   </div>
 );

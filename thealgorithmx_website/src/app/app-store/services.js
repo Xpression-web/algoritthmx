@@ -23,7 +23,7 @@ const monsterfont2 = Montserrat({
 const ServiceCard = ({ title, description }) => (
   <div className={`relative bg-black ${style["border-design"]} `}>
     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black text-center ">
-      <h3 className={`text-[22.4px] p-[5px] leading-[1.1] ${monsterfont2.className}`}>
+      <h3 className={`text-[22.4px] p-[5px] leading-[1.1] text-white ${monsterfont2.className}`}>
         {title}
       </h3>
     </div>

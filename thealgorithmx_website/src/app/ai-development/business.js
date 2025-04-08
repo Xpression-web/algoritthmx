@@ -83,7 +83,7 @@ const AIBusinessSection = () => {
 
           {/* Main titles */}
           <div className="relative z-10">
-            <h2 className={`text-[64px] leading-[68px] ${monsterfont.className} mt-16`}>
+            <h2 className={`text-[64px] leading-[68px] text-white ${monsterfont.className} mt-16`}>
             Is Your Business Ready for AI?
             </h2>
             <h3 className={`text-[21px] leading-[1.1] text-semi-white ${monsterfont1.className}`}>
@@ -118,7 +118,7 @@ const ModuleCard = ({ title, description, imageSrc }) => (
         />
       </div>
       <div className="flex-1">
-        <h3 className={`${style['modules-title']} ${monsterfont1.className}`}>{title}</h3>
+        <h3 className={`${style['modules-title']} ${monsterfont1.className} text-white`}>{title}</h3>
         <p className={`${style['modules-description']} text-semi-white`}>{description}</p>
       </div>
     </div>
