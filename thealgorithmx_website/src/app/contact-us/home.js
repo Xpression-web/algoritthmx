@@ -19,9 +19,12 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    countryCode: "+1",
+    phone: "",
+    service: "",
     question: "",
   });
-
+  
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -39,7 +42,7 @@ const ContactPage = () => {
 
       if (res.ok) {
         alert("Email sent successfully!");
-        setFormData({ name: "", email: "", question: "" });
+        setFormData({ name: "", email: "", phone: "", service: "", question: "" });
       } else {
         alert("Failed to send email. Please try again.");
       }
@@ -58,7 +61,6 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-black text-white p-8 pt-[100px] md:pt-[100px]">
       <div className="max-w-6xl mx-auto relative">
-        {/* Logo positioned on the right side */}
         <div className="absolute top-0 right-0 w-16 md:w-24">
           <div className="text-right">
             <div className="w-16 md:w-24 h-16 md:h-24 inline-block -ml-6">
@@ -78,47 +80,91 @@ const ContactPage = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-10">
-          {/* Contact Form */}
           <div className="space-y-6">
             <h3 className={`text-[24px] leading-[28px] mb-[10px] ${monsterfont1.className}`}>Send a Request</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="flex gap-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-1/2 bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Mail"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-1/2 bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors"
-                />
-              </div>
-              <textarea
-                name="question"
-                placeholder="Your Question"
-                value={formData.question}
-                onChange={handleChange}
-                required
-                rows="4"
-                className="w-full bg-transparent border-b border-gray-600 px-2 py-3 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-              />
-              <button type="submit" className="fancy1 mt-10" disabled={loading}>
-                <span>{loading ? "Sending..." : "Contact Us"}</span>
-              </button>
-            </form>
+  <div className="flex gap-4">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      value={formData.name}
+      onChange={handleChange}
+      required
+      className="w-1/2 bg-transparent border-b border-gray-600 px-2 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Mail"
+      value={formData.email}
+      onChange={handleChange}
+      required
+      className="w-1/2 bg-transparent border-b border-gray-600 px-2 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+    />
+  </div>
+
+  {/* Mobile Number with Country Code */}
+  <div className="flex gap-4">
+    <select
+      name="countryCode"
+      value={formData.countryCode || "+1"}
+      onChange={handleChange}
+      className="w-[20%] bg-transparent border-b border-gray-600 px-2 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+    >
+      <option value="+1" className="bg-black text-white">+1 (US)</option>
+      <option value="+91" className="bg-black text-white">+91 (IN)</option>
+      <option value="+44" className="bg-black text-white">+44 (UK)</option>
+      <option value="+61" className="bg-black text-white">+61 (AU)</option>
+      {/* Add more as needed */}
+    </select>
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Mobile Number"
+      value={formData.phone || ""}
+      onChange={handleChange}
+      required
+      className="w-[80%] bg-transparent border-b border-gray-600 px-2 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+    />
+  </div>
+
+  {/* Services Dropdown */}
+  <select
+    name="service"
+    value={formData.service || ""}
+    onChange={handleChange}
+    required
+    className="w-full bg-transparent border-b border-gray-600 px-2 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+  >
+    <option value="" disabled className="bg-black text-gray-400">
+      Select a Service
+    </option>
+    <option value="Website Development" className="bg-black text-white">Website Development</option>
+    <option value="App Development" className="bg-black text-white">App Development</option>
+    <option value="IoT Development" className="bg-black text-white">IoT Development</option>
+    <option value="UI/UX Design" className="bg-black text-white">UI/UX Design</option>
+    <option value="Custom Software Solutions" className="bg-black text-white">Custom Software Solutions</option>
+  </select>
+
+  <textarea
+    name="question"
+    placeholder="Your Question"
+    value={formData.question}
+    onChange={handleChange}
+    required
+    rows="4"
+    className="w-full bg-transparent border-b border-gray-600 px-2 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+  />
+  <button type="submit" className="fancy1 mt-10" disabled={loading}>
+    <span>{loading ? "Sending..." : "Contact Us"}</span>
+  </button>
+</form>
+
           </div>
 
-          {/* Find Us Section */}
-          <div className="bg-black p-10 contact-card">
+          <div className="bg-black px-10 py-[80px] contact-card">
+
             <h3 className={`text-[24px] leading-[28px] mb-[60px] ${monsterfont1.className}`}>Find Us</h3>
             <div className="">
               <div className="flex items-center gap-4">

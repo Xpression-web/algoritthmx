@@ -6,11 +6,13 @@ const monsterfont = Montserrat({
   subsets: ['latin'],
   weight: '600',
   fallback: ["sans-serif"],
+  preload: true,
 });
 const monsterfont1 = Montserrat({
     subsets: ['latin'],
     weight: '200',
     fallback: ["sans-serif"],
+    preload: true,
   });
 
 const MachinePage = () => {
@@ -29,36 +31,37 @@ const MachinePage = () => {
   const serviceDescriptions = {
     1: {
       title: 'Machine Learning Consulting',
-      description: 'Our skilled ML consultants provide expert guidance in developing and implementing machine learning strategies tailored to your business needs. We help organizations leverage cutting-edge AI technologies to drive innovation and competitive advantage.'
+      description: 'Our ML experts offer strategic consulting to help you identify high-impact AI opportunities. We evaluate your data, infrastructure, and business goals to design machine learning roadmaps that deliver measurable results and drive innovation.'
     },
     2: {
       title: 'Machine Learning Development',
-      description: 'We specialize in developing custom machine learning solutions that transform your data into powerful predictive models. Our team creates scalable, intelligent systems that adapt and learn from your unique business challenges.'
+      description: 'We build tailored machine learning models that turn raw data into actionable insights. From supervised learning to reinforcement learning, our solutions are scalable, adaptable, and optimized for performance in real-world environments.'
     },
     3: {
       title: 'Neural Network Development',
-      description: 'Advanced neural network solutions designed to tackle complex computational problems. We build sophisticated deep learning architectures that can process and analyze intricate data patterns with unprecedented accuracy.'
+      description: 'We design and train deep neural networks for tasks like image recognition, NLP, and time-series forecasting. Leveraging architectures like CNNs, RNNs, and transformers, we enable your systems to learn complex patterns with high accuracy.'
     },
     4: {
       title: 'Machine Learning Engineering',
-      description: 'Comprehensive machine learning engineering services that bridge the gap between theoretical models and practical implementation. We ensure your ML solutions are robust, efficient, and seamlessly integrated into your existing infrastructure.'
+      description: 'We bridge the gap between ML research and production with strong ML engineering practices. Our team ensures robust model training, versioning, testing, and integration into production pipelines with minimal downtime and high reliability.'
     },
     5: {
       title: 'Machine Learning Implementation',
-      description: 'End-to-end machine learning implementation services that transform your data strategy. From model selection to deployment, we provide full-cycle support to ensure your AI initiatives deliver tangible business value.'
+      description: 'From model deployment to integration with existing systems, we provide end-to-end implementation services. We ensure your ML solutions are production-ready, secure, and aligned with your data and infrastructure workflows.'
     },
     6: {
-        title: 'MLOps',
-        description: 'MLOps (Machine Learning Operations) is a set of practices that combines machine learning (ML), DevOps, and data engineering to automate and streamline the lifecycle of machine learning models. It focuses on deploying, monitoring, and maintaining ML models in production reliably and efficiently.'
-      },
+      title: 'MLOps',
+      description: 'MLOps combines machine learning, DevOps, and data engineering to automate and monitor the entire ML lifecycle. We implement CI/CD for models, ensure reproducibility, manage model drift, and enable scalable ML deployment and monitoring in production.'
+    },
   };
+  
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center p-4">
       {/* Heading and Description */}
       <div className="max-w-[1200px] text-center mb-8 px-4">
         <h1 className={`text-[40px] leading-[48px] ${monsterfont.className}  text-white mb-4`}>
-          Machine Learning Services
+          ML & AI Services
         </h1>
         <p className={`text-[20px] leading-[24px] ${monsterfont1.className}  text-semi-white `}>
           Unlock the power of artificial intelligence with our comprehensive machine learning solutions. 

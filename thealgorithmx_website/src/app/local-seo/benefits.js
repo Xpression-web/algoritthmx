@@ -3,10 +3,12 @@ import { Montserrat } from 'next/font/google';
 
 
 const monsterfont = Montserrat({
+  subsets: ['latin'],
   weight: '700',
   fallback: ['sans-serif'],
 });
 const monsterfont1 = Montserrat({
+  subsets: ['latin'],
   weight: '100',
   fallback: ['sans-serif'],
 });

@@ -4,6 +4,7 @@ import Scalable from './need'
 import IntelligentBenefits from './choose'
 import IntelligentServices from './services'
 import IntelligentInsightSection from './insight'
+import Footer from '../mainpage/footer'
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
     <IntelligentServices/>
     <IntelligentBenefits/>
     <IntelligentInsightSection/>
+    <Footer/>
     </div>
   )
 }

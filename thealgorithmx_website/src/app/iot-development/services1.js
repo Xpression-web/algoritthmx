@@ -3,6 +3,18 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { Montserrat } from 'next/font/google';
+
+const monsterfont = Montserrat({
+  subsets: ['latin'],
+  weight: '600',
+  fallback: ["sans-serif"],
+});
+const monsterfont1 = Montserrat({
+    subsets: ['latin'],
+    weight: '200',
+    fallback: ["sans-serif"],
+  });
 
 export default function Home() {
   const [activeService, setActiveService] = useState(0);
@@ -54,8 +66,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-5xl font-bold mb-6">Design services that we provide</h1>
-            <p className="text-lg text-gray-300 max-w-2xl">
+            <h1 className={`text-[40px] leading-[44px] ${monsterfont.className}  text-white mb-4`}>Design services that we provide</h1>
+            <p className="text-[18px] leading-[24px]  font-[500] text-semi-white font-helveticaneue">
               Explore our range of design services designed to go beyond aesthetics.
               We specialize in crafting purposeful experiences that align with your
               brand's vision and goals.
@@ -76,8 +88,8 @@ export default function Home() {
                 }`}
                 onMouseEnter={() => setActiveService(index)}
               >
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-400 text-sm">{service.description}</p>
+                  <h3 className="text-[20px] leading-[24px]  font-[700] text-white font-helveticaneue mb-4">{service.title}</h3>
+                  <p className="text-[16px] leading-[20px]  font-[500]  font-helveticaneue text-semi-white">{service.description}</p>
                 </div>
               ))}
             </div>

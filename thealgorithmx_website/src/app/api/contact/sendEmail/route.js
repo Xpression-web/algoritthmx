@@ -2,13 +2,13 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { name, email, question } = await req.json();
+    const { name, email, countryCode, phone, service, question } = await req.json();
 
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
         user: "roshansingh910286@gmail.com",
-        pass: "ubtl ctmo bbaa qsab",
+        pass: "ubtl ctmo bbaa qsab", // Consider using environment variables in production
       },
     });
 
@@ -16,10 +16,14 @@ export async function POST(req) {
       from: `"Contact Form" <roshansingh910286@gmail.com>`,
       to: "roshansingh910286@gmail.com",
       subject: "New Contact Form Submission",
-      html: `<h2>New Message from Contact Form</h2>
+      html: `
+        <h2>New Message from Contact Form</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${question}</p>`,
+        <p><strong>Phone:</strong> ${countryCode} ${phone}</p>
+        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Message:</strong> ${question}</p>
+      `,
     };
 
     await transporter.sendMail(mailOptions);

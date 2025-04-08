@@ -79,7 +79,7 @@ export default function MachineTech() {
           <div className="flex flex-col md:flex-col lg:flex-col ">
             <span className={`text-[64px] leading-[68px]   text-white ${monsterfont1.className}`}>Explore Our</span>
             <div className="space-x-2">
-              <span className={`text-[50px] leading-[54px] ${monsterfont.className} text-white`}>ML</span>
+              <span className={`text-[50px] leading-[54px] ${monsterfont.className} text-white`}>ML & AI</span>
             </div>
             <div>
               <span className={`text-[40px] leading-[44px] ${monsterfont.className} text-white`}>App</span>

@@ -1,102 +1,116 @@
-    import React from 'react';
-    import { Montserrat } from 'next/font/google';
-    
-    
-    const monsterfont = Montserrat({
-      subsets: ['latin'],
-      weight: '700',
-      fallback: ['sans-serif'],
-    });
-    const monsterfont1 = Montserrat({
-      subsets: ['latin'],
-      weight: '100',
-      fallback: ['sans-serif'],
-    });
-    const monsterfont2 = Montserrat({
-      subsets: ['latin'],
-      weight: '400',
-      fallback: ["sans-serif"],
-    });
+'use client'
+import React, { useState } from 'react';
+import { Award, Link, Layers, Shield } from 'lucide-react';
+import Image from 'next/image';
+import { Montserrat } from 'next/font/google';
 
+const monsterfont = Montserrat({
+  subsets: ['latin'],
+  weight: '600',
+  fallback: ["sans-serif"],
+});
+const monsterfont1 = Montserrat({
+    subsets: ['latin'],
+    weight: '200',
+    fallback: ["sans-serif"],
+  });
 
-    const BenefitsCard = ({ title, description, imageSrc }) => (
-    <div className="bg-black/5 backdrop-blur-sm p-6 rounded-lg flex flex-col items-start text-start transition-transform">
-        <div className="mb-4 bg-black/10 p-4 rounded-full">
-        <img
-            src={imageSrc}
-            alt={title}
-            className="w-[339px] h-[236px] object-cover rounded-md"
-        />
-        </div>
-        <h3 className={`text-[22px] leading-[1.1] ${monsterfont2.className} mt-[10px] mb-[10px]`}>{title}</h3>
-        <p className={`text-[13px] leading-[2] font-helveticaneue text-semi-white`}>{description}</p>
-    </div>
-    );
+const BigDataChoosePage = () => {
+  const [activeSection, setActiveSection] = useState('robustSecurity');
 
-    const BigDataBenefits = () => {
-    const benefits = [
-        {
-        imageSrc: '/images/Focus-on-What Matters.webp',
-        title: 'Data-Driven Decision-Making',
-        description:
-            'We excel at harnessing AI and Big Data to uncover hidden patterns in customer behavior, market trends, and operational performance. By transforming complex datasets into clear, actionable insights, we enable you to make smarter, data-driven decisions that optimize operations and fuel strategic growth.',
-        },
-        {
-        imageSrc: '/images/Search-Rankings.webp',
-        title: 'Competitive Advantage',
-        description:
-            'Stay ahead of the curve with our cutting-edge data expertise. By leveraging the latest AI-powered tools and Big Data analytics solutions, we extract key insights from large, complex datasets, giving you a distinct competitive edge. This empowers you to make proactive decisions that drive growth and position your business as a leader in your industry.',
-        },
-        {
-        imageSrc: '/images/Maximize-Your-ROI.webp',
-        title: 'Enhanced Efficiency​',
-        description:
-            'Maximize efficiency and streamline operations with our data-driven approach. Using AI and Big Data, we identify areas for automation, eliminate redundancies, and optimize workflows. By reallocating resources effectively, we help you achieve higher productivity levels, ultimately boosting your bottom line.',
-        },
-    ];
+  const sections = {
+    robustSecurity: {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Data-Driven Decision-Making',
+      description: 'We excel at harnessing AI and Big Data to uncover hidden patterns in customer behavior, market trends, and operational performance. By transforming complex datasets into clear, actionable insights, we enable you to make smarter, data-driven decisions that optimize operations and fuel strategic growth.',
+      image: '/images/a1.png'
+    },
+    reliableConnectivity: {
+      icon: <Link className="w-6 h-6" />,
+      title: 'Competitive Advantage',
+      description: 'Stay ahead of the curve with our cutting-edge data expertise. By leveraging the latest AI-powered tools and Big Data analytics solutions, we extract key insights from large, complex datasets, giving you a distinct competitive edge. This empowers you to make proactive decisions that drive growth and position your business as a leader in your industry.',
+      image: '/images/Why.webp'
+    },
+    prioritizingUsability: {
+      icon: <Layers className="w-6 h-6" />,
+      title: 'Enhanced Efficiency​',
+      description: 'Maximize efficiency and streamline operations with our data-driven approach. Using AI and Big Data, we identify areas for automation, eliminate redundancies, and optimize workflows. By reallocating resources effectively, we help you achieve higher productivity levels, ultimately boosting your bottom line.',
+      image: '/images/a1.png'
+    },
+    scalability: {
+      icon: <Award className="w-6 h-6" />,
+      title: 'Transparency & Ongoing Support',
+      description: 'At AlgoritmX, we value transparent communication and long-term collaboration. Our commitment extends beyond implementation, offering continuous support to ensure your AI automation tools continue to deliver optimal performance. We work alongside you to maximize the value of your investment and drive sustained success.',
+     image: '/images/Why.webp'
+    }
+  };
 
-    return (
-        <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center ">
-        <div className="max-w-[1200px] mx-auto">
-            <div className="text-center mb-4 relative pt-20 pb-8 w-full">
-        {/* Background text */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className={`text-[46px] md:text-[100px] leading-[1.1] ${monsterfont.className} text-gray-600/20 select-none`}>
-            WHY CHOOSE 
-          </span>
-        </div>
+  return (
+    <div className="min-h-screen bg-black text-white flex justify-center">
+      <div className="w-full max-w-[1200px] px-4 py-12">
+        <h1 className={`text-[40px] leading-[48px] ${monsterfont.className}  text-white mb-4`}>
+          Why Choose AlgorithmX as Your Big Data Analysis  Company?
+        </h1>
+        <p className={`text-[16px] leading-[20px] ${monsterfont1.className}  text-semi-white mb-4`}>
+          As a trusted development company, we have proven ourselves as the leading Big Data  Analytics development company by providing user-centric applications for top brands. Being a premium IoT software development company, we focus on bridging the gap between the real and digital world and providing our clients with the most innovative and usable IoT environment.
+        </p>
 
-        {/* Main titles */}
-        <div className="relative z-10 mt-8">
-          <h2 className={`text-[40px] leading-[48px] ${monsterfont2.className}  text-white `}>
-            OUR INTELLIGENT
-          </h2>
-          <h3 className={`text-[40px] leading-[48px] ${monsterfont1.className}  text-white `}>
-            AUTOMATION SERVICES
-          </h3>
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+          {/* Mobile & Desktop Left Section - Clickable Items */}
+          <div className="md:w-1/3 space-y-4  rounded-[20px] ">
+            {Object.entries(sections).map(([key, section]) => (
+              <button
+                key={key}
+                onClick={() => setActiveSection(key)}
+                className={`w-full flex items-center space-x-4 p-4 rounded-lg transition-colors duration-300 ${
+                  activeSection === key 
+                    ? ' text-white ' 
+                    : 'bg-transparent text-semi-white '
+                }`}
+              >
+                {section.icon}
+                <span className="font-semibold font-helveticaneue ">{section.title}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Desktop Right Section - Description with Image */}
+          <div className="hidden md:grid md:w-2/3 rounded-lg p-8 grid-cols-2 gap-8">
+            <div className="w-full h-[200px] relative">
+              <Image 
+                src={sections[activeSection].image}
+                alt={sections[activeSection].title}
+                fill
+                className="object-cover rounded-lg w-full]"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center space-x-4 mb-4">
+                {sections[activeSection].icon}
+                <h2 className="text-2xl font-bold font-helveticaneue">
+                  {sections[activeSection].title}
+                </h2>
+              </div>
+              <p className="text-semi-white font-helveticaneue">
+                {sections[activeSection].description}
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile Description Section */}
+          <div className="md:hidden">
+            <div className=" border-[1px]  rounded-lg p-6">
+              <div className="flex items-center space-x-4 mb-4">
+                {sections[activeSection].icon}
+                <h2 className="text-xl font-bold font-helveticaneue">{sections[activeSection].title}</h2>
+              </div>
+              <p className="text-semi-white font-helveticaneue">{sections[activeSection].description}</p>
+            </div>
+          </div>
         </div>
       </div>
-            <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-                {benefits.map((benefit, index) => (
-                <div
-                    key={index}
-                    className={`${
-                        index === 1 || index === 2 ? 'md:border-l border-gray-700' : ''
-                    }`}
-                >
-                    <BenefitsCard
-                    imageSrc={benefit.imageSrc}
-                    title={benefit.title}
-                    description={benefit.description}
-                    />
-                </div>
-                ))}
-            </div>
-            </div>
-        </div>
-        </div>
-    );
-    };
+    </div>
+  );
+};
 
-    export default BigDataBenefits;
+export default BigDataChoosePage;

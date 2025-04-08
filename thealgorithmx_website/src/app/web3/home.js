@@ -17,17 +17,16 @@ const monsterfont2 = Montserrat({
   weight: '400',
   fallback: ["sans-serif"],
 });
-
-const MachineSection = () => {
+const Web3Section = () => {
   return (
     <div className="min-h-screen bg-black pt-[100px]">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-2 py-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
           {/* Left side - Image */}
           <div className="w-full md:w-1/3">
             <div className="relative">
               <img
-                src="images/Mobile-App-dev.webp"
+                src="images/CRM.webp"
                 alt="Branding process with color swatches"
                 className={`w-4/5  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
               />
@@ -38,7 +37,7 @@ const MachineSection = () => {
                 className="w-4/5 h-auto shadow-lg mx-auto"
               />
               {/* Explore Section */}
-              <div className="flex justify-center items-center mt-4 md:absolute md:bottom-[180px] md:left-[-20]">
+              <div className="flex justify-center items-center mt-4 md:absolute md:bottom-[180px] md:left-7">
                 <div className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center mr-2">
                   <svg
                     className="w-4 h-4 text-white/60"
@@ -72,8 +71,8 @@ const MachineSection = () => {
               alt="Cylindrical Branding Icon"
               className="w-12 h-12 md:w-24 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
             />
-            <h1 className={` text-[30px] text-center md:text-[75px]  md:tracking-[8px] md:text-start text-white ${monsterfont2.className} `}>
-            ML & AI
+            <h1 className={`${styles["crm-text"]} ${monsterfont2.className} `}>
+            Web3
             </h1>
             <h1 className={`${styles["development-text"]} ${monsterfont.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>
             DEVELOPMENT
@@ -83,7 +82,7 @@ const MachineSection = () => {
         {/* Description below branding */}
         <div className="mt-8 md:mt-12 text-center">
           <p className={`${styles["crm-description"]} ${monsterfont.className} text-semi-white `}>
-          At AlgorithmX, we harness the power of Machine Learning and Artificial Intelligence to drive intelligent automation and scalable innovation. By integrating advanced model evaluation techniques, automated pipelines, and continuous learning systems, we deliver high-accuracy, low-latency AI solutions. Our approach minimizes risks, enhances operational efficiency, and ensures seamless deployment—future-proofing businesses for success in the AI-driven era.
+          AlgorithmX delivers innovative Web3 solutions, enabling businesses to decentralize, scale, and lead in the digital era. Through blockchain, smart contracts, and dApps, we help organizations enhance transparency, build trustless systems, and unlock new opportunities in the decentralized economy.
           </p>
         </div>
       </div>
@@ -91,4 +90,4 @@ const MachineSection = () => {
   );
 };
 
-export default MachineSection;
+export default Web3Section;

@@ -21,10 +21,9 @@ const page = () => {
     <Navbar/>
     <IOTSection/>
     <Home/>
-    <IoTTechStack/>
     <IoTDevelopmentPage/>
     <StackCardAnimation/>
-    <IoTProcess/>
+    <IoTTechStack/>
     <IndustriesGrid/>
     <InsightSection/>
     <Footer/>

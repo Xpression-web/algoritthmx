@@ -73,10 +73,10 @@ const AIOptmmizationSection = () => {
               className="w-12 h-12 md:w-24 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
             />
             <h1 className={` text-[30px] text-center md:text-[85px]  md:tracking-[8px] md:text-start text-white ${monsterfont2.className} `}>
-            AI
+            ARCHITECTURE
             </h1>
-            <h1 className={`${styles["development-text"]} ${monsterfont.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>
-            OPTIMIZATION
+            <h1 className={`text-[30px] text-center md:text-[70px]  md:tracking-[8px] md:text-start ${monsterfont.className} bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent `}>
+            RE-ENGINEERING
             </h1>
           </div>
         </div>

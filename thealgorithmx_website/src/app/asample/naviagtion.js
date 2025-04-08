@@ -12,10 +12,10 @@ const menuData = {
   'Creative Assets': {
     type: 'dropdown',
     items: [
-      { name: 'Branding', href: '/creative/design-templates' },
-      { name: 'Graphics', href: '/creative/stock-photos' },
-      { name: 'Video', href: '/creative/video-assets' },
-      { name: 'Content Creation', href: '/creative/audio-resources' },
+      { name: 'Branding', href: '/creative/design-templates', icon: 'fa-pen-nib' },
+      { name: 'Graphics', href: '/creative/stock-photos', icon: 'fa-image' },
+      { name: 'Video', href: '/creative/video-assets', icon: 'fa-video' },
+      { name: 'Content Creation', href: '/creative/audio-resources', icon: 'fa-microphone' },
     ]
   },
   '</Code>': {
@@ -25,73 +25,72 @@ const menuData = {
         name: 'Web', 
         href: null,
         subItems: [
-          { name: 'Frontend Development', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'Backend Development', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'Frontend Development', href: '/code/android', icon: 'fa-code' },
+          { name: 'Backend Development', href: '/code/ios', icon: 'fa-database' },
         ]
       },
       { 
         name: 'CMS', 
         href: null,
         subItems: [
-          { name: 'Wordpress', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'Magento', href: '/code/ios', icon: 'fa-apple' },
-          { name: 'Shopify', href: '/code/ios', icon: 'fa-apple' },
-          { name: 'Big Commerce', href: '/code/ios', icon: 'fa-apple' },
-          { name: 'Drupal', href: '/code/ios', icon: 'fa-apple' },
-          { name: 'HubSpot', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'Wordpress', href: '/code/android', icon: 'fa-wordpress' },
+          { name: 'Magento', href: '/code/ios', icon: 'fa-shopping-cart' },
+          { name: 'Shopify', href: '/code/ios', icon: 'fa-store' },
+          { name: 'Big Commerce', href: '/code/ios', icon: 'fa-store' },
+          { name: 'Drupal', href: '/code/ios', icon: 'fa-droplet' },
+          { name: 'HubSpot', href: '/code/ios', icon: 'fa-hubspot' },
         ]
       },
       {
         name: 'Product', 
         href: null,
-        subItems: [
-        ]
+        subItems: []
       },
       { 
         name: 'AI & Automation', 
         href: null,
         subItems: [
-          { name: 'AI Development', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'Gen AI', href: '/code/ios', icon: 'fa-apple' },
-          { name: 'Intelligent Automation', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'AI Development', href: '/code/android', icon: 'fa-robot' },
+          { name: 'Gen AI', href: '/code/ios', icon: 'fa-brain' },
+          { name: 'Intelligent Automation', href: '/code/ios', icon: 'fa-gears' },
         ]
       },
       { 
         name: 'Enterprise Solutions',
         href: null,
         subItems: [
-          { name: 'CRM', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'ERP', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'CRM', href: '/code/android', icon: 'fa-users' },
+          { name: 'ERP', href: '/code/ios', icon: 'fa-network-wired' },
         ]
       },
       { 
         name: 'Data Analytics',
         href: null,
         subItems: [
-          { name: 'Business Intelligence Services', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'Big Data', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'Business Intelligence Services', href: '/code/android', icon: 'fa-chart-line' },
+          { name: 'Big Data', href: '/code/ios', icon: 'fa-database' },
         ]
       },
       { 
         name: 'Next Gen',
         href: null,
         subItems: [
-          { name: 'Blockchain', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'Metaverse', href: '/code/ios', icon: 'fa-apple' },
-          { name: 'Web3', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'Blockchain', href: '/code/android', icon: 'fa-cubes' },
+          { name: 'Metaverse', href: '/code/ios', icon: 'fa-vr-cardboard' },
+          { name: 'Web3', href: '/code/ios', icon: 'fa-globe' },
         ]
       },
       { 
         name: 'Platform Engineering',
         href: null,
         subItems: [
-          { name: 'Cloud & Devops', href: '/code/android', icon: 'fa-snowflake' },
-          { name: 'Architecture Re-engineering', href: '/code/ios', icon: 'fa-apple' },
+          { name: 'Cloud & Devops', href: '/code/android', icon: 'fa-cloud' },
+          { name: 'Architecture Re-engineering', href: '/code/ios', icon: 'fa-drafting-compass' },
         ]
       },
-      { name: 'Integration & Middleware', href: '/leads/crm-tools' },
-      { name: 'Testing & Automation', href: '/leads/crm-tools' },
-      { name: 'Software Development', href: '/leads/crm-tools' },
+      { name: 'Integration & Middleware', href: '/leads/crm-tools', icon: 'fa-plug' },
+      { name: 'Testing & Automation', href: '/leads/crm-tools', icon: 'fa-vial' },
+      { name: 'Software Development', href: '/leads/crm-tools', icon: 'fa-laptop-code' },
     ]
   },
   'Leads & Revenue': {
@@ -101,73 +100,74 @@ const menuData = {
         name: 'SEO', 
         href: null,
         subItems: [
-          { name: 'SEO Audits', href: '/seoaudits', icon: 'fa-snowflake' },
-                                  { name: 'Local SEO', href: '/local-seo', icon: 'fa-snowflake' },
-                                  { name: 'Ecommerce SEO', href: '/ecommerce-seo', icon: 'fa-snowflake' },
-                                  { name: 'SEO Consulting', href: '/seo-consulting', icon: 'fa-snowflake' },
-                                  { name: ' Link Building', href: '/link-building', icon: 'fa-snowflake' },
-                                  { name: 'Technical SEO Audit', href: '/technical-seo-audit', icon: 'fa-snowflake' },
-                                  { name: 'National SEO', href: '/national-seo', icon: 'fa-snowflake' },
-                                  { name: 'Mobile SEO', href: '/mobile-seo', icon: 'fa-snowflake' },
-                                  { name: 'Global/International SEO', href: '/global-seo', icon: 'fa-snowflake' },
-                                  { name: 'Enterprise SEO', href: '/enterprise-seo', icon: 'fa-snowflake' },
-                                  { name: 'Amazon SEO', href: '/amazon-seo', icon: 'fa-snowflake' },
-                                  { name: 'Penalization Recovery', href: '/penalization-recovery',icon: 'fa-snowflake' },
+          { name: 'SEO Audits', href: '/seoaudits', icon: 'fa-search' },
+          { name: 'Local SEO', href: '/local-seo', icon: 'fa-map-marker-alt' },
+          { name: 'Ecommerce SEO', href: '/ecommerce-seo', icon: 'fa-shopping-cart' },
+          { name: 'SEO Consulting', href: '/seo-consulting', icon: 'fa-comments' },
+          { name: ' Link Building', href: '/link-building', icon: 'fa-link' },
+          { name: 'Technical SEO Audit', href: '/technical-seo-audit', icon: 'fa-tools' },
+          { name: 'National SEO', href: '/national-seo', icon: 'fa-flag-usa' },
+          { name: 'Mobile SEO', href: '/mobile-seo', icon: 'fa-mobile-alt' },
+          { name: 'Global/International SEO', href: '/global-seo', icon: 'fa-globe' },
+          { name: 'Enterprise SEO', href: '/enterprise-seo', icon: 'fa-building' },
+          { name: 'Amazon SEO', href: '/amazon-seo', icon: 'fa-amazon' },
+          { name: 'Penalization Recovery', href: '/penalization-recovery', icon: 'fa-exclamation-triangle' },
         ]
       },
       { 
         name: 'Social Media', 
         href: null,
         subItems: [
-        { name: 'Social Media Audit', href: '/social-media-audit', icon: 'fa-snowflake' },
-                                { name: 'Facebook Management', href: '/facebook-management', icon: 'fa-snowflake'},
-                                { name: 'Instagram Management', href: '/instagram-management', icon: 'fa-snowflake'},
-                                { name: 'Linkedin Management', href: '/linkedin-management', icon: 'fa-snowflake'},
-                                { name: 'Twitter Management', href: '/twitter-management', icon: 'fa-snowflake'},
-                                { name: 'Youtube Management', href: '/youtube-management', icon: 'fa-snowflake'},
-                                { name: 'Tiktok Management', href: '/tiktok-management', icon: 'fa-snowflake'},
-                                { name: 'Social Media Consulting', href: '/social-media-consulting', icon: 'fa-snowflake'},
+          { name: 'Social Media Audit', href: '/social-media-audit', icon: 'fa-search' },
+          { name: 'Facebook Management', href: '/facebook-management', icon: 'fa-facebook' },
+          { name: 'Instagram Management', href: '/instagram-management', icon: 'fa-instagram' },
+          { name: 'Linkedin Management', href: '/linkedin-management', icon: 'fa-linkedin' },
+          { name: 'Twitter Management', href: '/twitter-management', icon: 'fa-twitter' },
+          { name: 'Youtube Management', href: '/youtube-management', icon: 'fa-youtube' },
+          { name: 'Tiktok Management', href: '/tiktok-management', icon: 'fa-tiktok' },
+          { name: 'Social Media Consulting', href: '/social-media-consulting', icon: 'fa-comments' },
         ]
       },
       { 
         name: 'PPC Advertising', 
         href: null,
         subItems: [
-        { name: 'Google Ads', href: '/google-ads', icon: 'fa-snowflake' },
-                                { name: 'Bing Ads', href: '/bing-ads', icon: 'fa-snowflake'},
-                                { name: 'Ads Audit', href: '/ads-audit', icon: 'fa-snowflake'},
-                                { name: 'Ads Suspension Recovery', href: '/ads-suspension-recovery', icon: 'fa-snowflake'},
-                                { name: 'Facebook Ads', href: '/facebook-ads', icon: 'fa-snowflake'},
-                                { name: 'Instagram Ads', href: '/instagram-ads', icon: 'fa-snowflake'},
-                                { name: 'Linkedin Ads', href: '/linkedin-ads', icon: 'fa-snowflake'},
-                                { name: 'Landing Page Design', href: '/landing-page-design', icon: 'fa-snowflake'},
-                                { name: 'X/Twitter Ads', href: '/twitter-ads', icon: 'fa-snowflake'},
-                                { name: 'Youtube Ads', href: '/youtube-ads', icon: 'fa-snowflake'},
-                                { name: 'Tiktok Ads', href: '/tiktok-ads', icon: 'fa-snowflake'},
-                                { name: 'Snapchat Ads', href: '/snapchat-ads', icon: 'fa-snowflake'},
-                                { name: 'Amazon Ads', href: '/amazon-ads', icon: 'fa-snowflake'},
-                                { name: 'Display Ads', href: '/display-ads', icon: 'fa-snowflake'},
-                                { name: 'Remarketing', href: '/remarketing', icon: 'fa-snowflake'},
-                                { name: 'Ecommerce Advertising', href: '/ecommerce-advertising', icon: 'fa-snowflake'},
+          { name: 'Google Ads', href: '/google-ads', icon: 'fa-google' },
+          { name: 'Bing Ads', href: '/bing-ads', icon: 'fa-microsoft' },
+          { name: 'Ads Audit', href: '/ads-audit', icon: 'fa-search-dollar' },
+          { name: 'Ads Suspension Recovery', href: '/ads-suspension-recovery', icon: 'fa-ban' },
+          { name: 'Facebook Ads', href: '/facebook-ads', icon: 'fa-facebook' },
+          { name: 'Instagram Ads', href: '/instagram-ads', icon: 'fa-instagram' },
+          { name: 'Linkedin Ads', href: '/linkedin-ads', icon: 'fa-linkedin' },
+          { name: 'Landing Page Design', href: '/landing-page-design', icon: 'fa-file-alt' },
+          { name: 'X/Twitter Ads', href: '/twitter-ads', icon: 'fa-twitter' },
+          { name: 'Youtube Ads', href: '/youtube-ads', icon: 'fa-youtube' },
+          { name: 'Tiktok Ads', href: '/tiktok-ads', icon: 'fa-tiktok' },
+          { name: 'Snapchat Ads', href: '/snapchat-ads', icon: 'fa-snapchat' },
+          { name: 'Amazon Ads', href: '/amazon-ads', icon: 'fa-amazon' },
+          { name: 'Display Ads', href: '/display-ads', icon: 'fa-ad' },
+          { name: 'Remarketing', href: '/remarketing', icon: 'fa-redo' },
+          { name: 'Ecommerce Advertising', href: '/ecommerce-advertising', icon: 'fa-shopping-bag' },
         ]
       },
       { 
         name: 'Content', 
         href: null,
         subItems: [
-        { name: 'Creation & Marketing', href: '/creation-and-marketing', icon: 'fa-snowflake' },
-        { name: 'SEO Copywriting', href: '/seo-copywriting', icon: 'fa-snowflake'},
+          { name: 'Creation & Marketing', href: '/creation-and-marketing', icon: 'fa-pencil-alt' },
+          { name: 'SEO Copywriting', href: '/seo-copywriting', icon: 'fa-keyboard' },
         ]
       },
-      { name: 'App Store Optimization', href: '/leads/crm-tools' },
-      { name: 'Conversion Rate Optimization', href: '/leads/sales-funnel' },
-      { name: 'Public Relations', href: '/leads/analytics' },
-      { name: 'Franchise', href: '/leads/analytics' },
-      { name: 'Influencer', href: '/leads/analytics' },
+      { name: 'App Store Optimization', href: '/leads/crm-tools', icon: 'fa-mobile' },
+      { name: 'Conversion Rate Optimization', href: '/leads/sales-funnel', icon: 'fa-percentage' },
+      { name: 'Public Relations', href: '/leads/analytics', icon: 'fa-bullhorn' },
+      { name: 'Franchise', href: '/leads/analytics', icon: 'fa-store-alt' },
+      { name: 'Influencer', href: '/leads/analytics', icon: 'fa-user' },
     ]
   },
   'Resources': { type: 'link', href: '/resources' },
-}
+};
+
 
 // Apple-style menu data for the iPad section (only used in Code section)
 const appleMenuData = {
@@ -661,180 +661,173 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Full width dropdown menu with smooth height transition - desktop only */}
         <div 
-          ref={dropdownRef}
-          className="fixed top-16 left-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-md text-white z-20 shadow-xl overflow-hidden transition-all duration-300 ease-in-out md:block hidden"
-          style={{ 
-            height: isOpen ? `${contentHeight + 32}px` : '0px', // 32px for padding
-            opacity: isOpen ? 1 : 0
-          }}
+  ref={dropdownRef}
+  className="fixed top-16 left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out md:block hidden"
+  style={{
+    height: isOpen ? `${contentHeight + 32}px` : '0px',
+    opacity: isOpen ? 1 : 0
+  }}
+>
+  <div className="py-6 px-6 md:px-0 w-full">
+    {Object.keys(menuData).map((menuName) => (
+      menuData[menuName].type === 'dropdown' && (
+        <div 
+          key={menuName}
+          ref={el => menuItemRefs.current[menuName] = el}
+          className={`transition-opacity duration-300 ${activeMenu === menuName ? 'opacity-100' : 'opacity-0 hidden'}`}
         >
-          <div className="  py-4 md:pl-[280px] sm:px-6">
-            {/* Content for each menu */}
-            {Object.keys(menuData).map((menuName) => (
-              menuData[menuName].type === 'dropdown' && (
-                <div 
-                  key={menuName}
-                  ref={el => menuItemRefs.current[menuName] = el}
-                  className={`transition-opacity duration-300 ${activeMenu === menuName ? 'opacity-100' : 'opacity-0 hidden'}`}
-                >
-                  {/* Check if this is the code menu to display Apple-style menu */}
-                  {menuName === '</Code>' ? (
-                    <div className="flex">
-                      {/* Left column - Main categories code section */}
-                      <div className="w-1/4 pr-8 ">
-                        <ul className="space-y-2"> 
-                          {menuData[menuName].items.map((item) => (
-                            <li 
-                              key={item.name}
-                              onMouseEnter={() => handleSubMenuHover(item.name)}
-                              className="flex flex-col"
-                            >
-                              {/* Display primary item without icon */}
-                              {!item.subItems && item.href ? (
-                                <Link 
-                                  href={item.href}
-                                  className={`text-lg font-medium cursor-pointer ${activeSubMenu === item.name ? 'text-blue-400' : 'text-red-500 hover:text-blue-400'}`}
-                                >
-                                  {item.name}
-                                </Link>
-                              ) : (
-                                <div
-                                  className={`text-lg font-medium cursor-pointer ${activeSubMenu === item.name ? 'text-blue-400' : 'text-red-500 hover:text-blue-400'}`}
-                                >
-                                  {item.name}
-                                </div>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Right column - Subcategory items in column format */}
-                      <div className="w-3/4 pl-8">
-                        {/* Only show subitems when specific submenu is active */}
-                        {activeSubMenu && 
-                         menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems && (
-                          <div className="flex">
-                            {chunkArray(
-                              menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems || [], 
-                              8
-                            ).map((chunk, index) => (
-                              <div key={`col-${index}`} className="flex flex-col space-y-2 mr-8">
-                                {chunk.map((subItem) => (
-                                  <Link 
-                                    key={subItem.name} 
-                                    href={subItem.href} 
-                                    className="flex items-center space-x-3 text-yellow-300 hover:text-blue-400"
-                                  >
-                                    <div className="text-blue-400">
-                                      <i className={getIconClass(subItem.icon)}></i>
-                                    </div>
-                                    <span>{subItem.name}</span>
-                                  </Link>
-                                ))}
-                              </div>
-                            ))}
-                          </div>
-                        )}
+          <div className="relative flex w-full overflow-hidden shadow-xl shadow-blue-900/30 backdrop-blur-sm px-[50px]">
+            {/* Background glow effects */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-600/10 rounded-full blur-3xl pointer-events-none" />
+
+            {/* Center Glowing Divider - Fixed to extend full height for all sections */}
+            <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-green-500/50 via-blue-500/40 to-green-500/50 pointer-events-none z-10 drop-shadow-[0_0_3px_rgba(74,222,128,0.5)]" />
+
+            {/* Left side - Categories */}
+            <div className="w-1/3 bg-gradient-to-br from-[#0a0a0a] to-[#111827] z-20">
+              <div className="grid grid-cols-2 h-full">
+                {chunkArray(menuData[menuName].items, 5).map((chunk, chunkIndex) => (
+                  <div key={`chunk-${chunkIndex}`} className="flex flex-col divide-y divide-gray-800/70 border-r last:border-r-0 border-gray-800/70">
+                    {chunk.map((item) => (
+                      <div
+                        key={item.name}
+                        onMouseEnter={() => handleSubMenuHover(item.name)}
+                        className="px-4 py-3 hover:bg-gray-900/50 transition-all duration-200 group relative overflow-hidden"
+                      >
+                        {/* Subtle hover highlight effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 to-blue-500/0 group-hover:from-green-500/5 group-hover:to-blue-500/5 transition-all duration-300" />
                         
-                        {/* Show apple-style menu for Product submenu specifically */}
-                        {activeSubMenu === 'Product' && (
-                          <div className="flex">
-                            {Object.keys(appleMenuData).map((headerName) => (
-                              <div key={headerName} className="mr-16">
-                                {/* Non-clickable header */}
-                                <h3 className="text-sm font-normal text-gray-400 mb-4">{headerName}</h3>
-                                <ul className="space-y-3">
-                                  {appleMenuData[headerName].items.map((item) => (
-                                    <li key={item.name}>
-                                      {item.isClickable ? (
-                                        <Link 
-                                          href={item.href}
-                                          className="text-base font-medium text-white hover:text-blue-400"
-                                        >
-                                          {item.name}
-                                        </Link>
-                                      ) : (
-                                        <span className="text-base font-medium text-gray-300">
-                                          {item.name}
-                                        </span>
-                                      )}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  ) : (
-                    /* For other menus, use standard layout */
-                    <div className="flex">
-                      {/* Left column - Categories */}
-                      <div className="w-1/4 pr-8">
-                        <ul className="space-y-2">
-                          {menuData[menuName].items.map((item) => (
-                            <li 
-                              key={item.name}
-                              onMouseEnter={() => handleSubMenuHover(item.name)}
+                        {!item.subItems ? (
+                          <Link
+                            href={item.href}
+                            className="text-base font-medium text-green-400 hover:text-blue-400 block transition-colors duration-200 relative"
+                          >
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <>
+                            <span
+                              className={`text-base font-medium block cursor-pointer transition-colors duration-200 relative ${
+                                activeSubMenu === item.name
+                                  ? 'text-blue-400'
+                                  : 'text-green-400 group-hover:text-blue-400'
+                              }`}
                             >
-                              {!item.subItems ? (
-                                <Link 
-                                  href={item.href}
-                                  className="text-lg font-medium text-green-400 hover:text-blue-400"
-                                >
-                                  {item.name}
-                                </Link>
-                              ) : (
-                                <div
-                                  className={`text-lg font-medium cursor-pointer ${activeSubMenu === item.name ? 'text-blue-400' : 'text-green-400 hover:text-blue-400'}`}
-                                >
-                                  {item.name}
-                                </div>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Right area - Subcategory items */}
-                      <div className="w-3/4 pl-8">
-                        {/* Show subitems when specific submenu is active */}
-                        {activeSubMenu && 
-                         menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems && (
-                          <div className="flex">
-                            {chunkArray(
-                              menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems || [], 
-                              8
-                            ).map((chunk, index) => (
-                              <div key={`col-${index}`} className="flex flex-col space-y-2 mr-8">
-                                {chunk.map((subItem) => (
-                                  <Link 
-                                    key={subItem.name} 
-                                    href={subItem.href} 
-                                    className="flex items-center space-x-3 text-yellow-300 hover:text-blue-400"
-                                  >
-                                    <div className="text-blue-400">
-                                      <i className={getIconClass(subItem.icon)}></i>
-                                    </div>
-                                    <span>{subItem.name}</span>
-                                  </Link>
-                                ))}
-                              </div>
-                            ))}
-                          </div>
+                              {item.name}
+                            </span>
+                            {activeSubMenu === item.name && (
+                              <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-green-400 to-blue-500"></div>
+                            )}
+                          </>
                         )}
+                      </div>
+                    ))}
+                    <div className="grow border-t border-gray-800/70" />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right side - Subitems with improved styling */}
+            <div className="w-2/3 min-h-[300px] bg-gradient-to-br from-[#0c1220] via-[#111827] to-[#0a0f1a] relative z-20">
+              {activeSubMenu &&
+                menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems && (() => {
+                  const subItems = menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems || [];
+                  const columnCount = Math.min(3, Math.ceil(subItems.length / 4));
+                  const colLength = Math.ceil(subItems.length / columnCount);
+                  const evenlyChunked = Array.from({ length: columnCount }, (_, i) =>
+                    subItems.slice(i * colLength, (i + 1) * colLength)
+                  );
+
+                  // Special handling for "Creative Assets" sections to ensure vertical line appears
+                  const isCreativeAssets = activeSubMenu === "Branding" || activeSubMenu === "Video" || 
+                                          activeSubMenu === "Creative Assets" || activeSubMenu === "Media";
+
+                  return (
+                    <div className="grid h-full" style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}>
+                      {evenlyChunked.map((col, colIndex) => (
+                        <div
+                          key={colIndex}
+                          className={`flex flex-col divide-y divide-gray-800/40 h-full ${
+                            colIndex !== evenlyChunked.length - 1 ? 'border-r border-gray-800/40' : ''
+                          }`}
+                        >
+                          {col.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="flex items-center gap-3 px-5 py-4 hover:bg-gray-800/30 transition-all duration-200 group relative"
+                            >
+                              {/* Subtle hover effect */}
+                              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-green-500/5 to-blue-500/10 transition-opacity duration-300" />
+                              
+                              <span className="text-green-400 group-hover:text-blue-400 transition-colors duration-200 relative">
+                                <i className={`drop-shadow-[0_0_2px_rgba(74,222,128,0.5)] transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_3px_rgba(59,130,246,0.6)] ${getIconClass(subItem.icon)}`}></i>
+                              </span>
+                              <span className="font-medium text-gray-300 group-hover:text-blue-200 transition-colors duration-200 relative">{subItem.name}</span>
+                            </Link>
+                          ))}
+                          <div className="grow border-t border-gray-800/40" />
+                        </div>
+                      ))}
+                      
+                      {/* Enhanced vertical lines for all columns */}
+                      {evenlyChunked.length > 1 && evenlyChunked.map((_, colIndex) => (
+                        colIndex < evenlyChunked.length - 1 && (
+                          <div 
+                            key={`divider-${colIndex}`} 
+                            className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-green-500/40 via-blue-500/30 to-green-500/40 z-10"
+                            style={{ left: `${((colIndex + 1) / evenlyChunked.length) * 100}%` }}
+                          />
+                        )
+                      ))}
+                    </div>
+                  );
+                })()}
+
+              {/* Default content when no submenu is selected or for Creative Assets category */}
+              {(!activeSubMenu || (menuName === "Creative Assets" && !menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems)) && (
+                <div className="flex flex-col items-center justify-center h-full p-8 text-center">
+                  <div className="w-16 h-16 mb-4 text-green-400">
+                    <i className={`text-4xl drop-shadow-[0_0_3px_rgba(74,222,128,0.6)] ${
+                      menuName === "Creative Assets" ? "fas fa-palette" : "fas fa-arrow-left"
+                    }`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-400 mb-2">
+                    {menuName === "Creative Assets" ? "Creative Resources" : "Select a Category"}
+                  </h3>
+                  <p className="text-gray-300 max-w-md">
+                    {menuName === "Creative Assets" 
+                      ? "Explore our comprehensive suite of creative tools and resources to enhance your brand presence and content creation capabilities."
+                      : "Select a category from the left to view available resources and tools."}
+                  </p>
+                  {menuName === "Creative Assets" && (
+                    <div className="mt-6 grid grid-cols-3 gap-4 w-full max-w-lg">
+                      <div className="p-3 bg-gray-800/30 rounded-lg border border-gray-700/40 flex flex-col items-center">
+                        <span className="text-green-400 mb-2"><i className="fas fa-images"></i></span>
+                        <span className="text-sm text-gray-300">Graphics</span>
+                      </div>
+                      <div className="p-3 bg-gray-800/30 rounded-lg border border-gray-700/40 flex flex-col items-center">
+                        <span className="text-green-400 mb-2"><i className="fas fa-video"></i></span>
+                        <span className="text-sm text-gray-300">Videos</span>
+                      </div>
+                      <div className="p-3 bg-gray-800/30 rounded-lg border border-gray-700/40 flex flex-col items-center">
+                        <span className="text-green-400 mb-2"><i className="fas fa-pencil-alt"></i></span>
+                        <span className="text-sm text-gray-300">Templates</span>
                       </div>
                     </div>
                   )}
                 </div>
-              )
-            ))}
+              )}
+            </div>
           </div>
         </div>
+      )
+    ))}
+  </div>
+</div>
       </nav>
     </div>
   )

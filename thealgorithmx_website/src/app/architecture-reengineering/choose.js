@@ -15,32 +15,32 @@ const monsterfont1 = Montserrat({
     fallback: ["sans-serif"],
   });
 
-const IntelligentChoosePage = () => {
+const AREPage = () => {
   const [activeSection, setActiveSection] = useState('robustSecurity');
 
   const sections = {
     robustSecurity: {
       icon: <Shield className="w-6 h-6" />,
-      title: ' Expertise & Results-Driven Approach',
-      description: 'Our team of automation specialists brings years of experience in executing successful digital transformation strategies across various industries. We focus on delivering tangible, measurable results, ensuring that your investment in AI-powered Process Automation leads to meaningful business growth and a strong return on investment.',
+      title: 'Robust Security Practices',
+      description: 'With each IoT development project, we prioritize data governance and security best practices. Our approach ensures the seamless functionality and protection of your IoT application through comprehensive security measures.',
       image: '/images/a1.png'
     },
     reliableConnectivity: {
       icon: <Link className="w-6 h-6" />,
-      title: 'Cutting-Edge Technology &  Solutions',
-      description: 'Our experts harnesses the power of the latest advancements in Robotic Process Automation (RPA), Artificial Intelligence (AI), and Optical Character Recognition (OCR). These technologies enable us to design robust, scalable automation solutions that grow with your business needs, providing long-term flexibility and adaptability.',
+      title: 'Reliable Connectivity',
+      description: 'We develop IoT solutions with robust connectivity protocols that ensure consistent and dependable communication between devices. Our expertise guarantees minimal downtime and optimal performance for your IoT ecosystem.',
       image: '/images/Why.webp'
     },
     prioritizingUsability: {
       icon: <Layers className="w-6 h-6" />,
-      title: 'Integration & Enhanced  Experience',
-      description: 'Our AI-driven Intelligent Workflow Automation solutions integrate smoothly with your existing infrastructure, minimizing disruption and ensuring a seamless transition. We prioritize user adoption by designing intuitive interfaces and empowering your teams to fully leverage the benefits of automation with ease.',
+      title: 'Prioritizing Usability',
+      description: 'User experience is at the core of our IoT development strategy. We design intuitive interfaces and streamline interactions to make complex IoT systems accessible and easy to use for end-users.',
       image: '/images/a1.png'
     },
     scalability: {
       icon: <Award className="w-6 h-6" />,
-      title: 'Transparency & Ongoing Support',
-      description: 'At Copper Digital, we value transparent communication and long-term collaboration. Our commitment extends beyond implementation, offering continuous support to ensure your AI automation tools continue to deliver optimal performance. We work alongside you to maximize the value of your investment and drive sustained success.',
+      title: 'Scalability',
+      description: 'Our IoT solutions are architected to grow with your business. We build flexible and adaptable systems that can seamlessly scale, accommodate future technological advancements, and meet evolving business requirements.',
      image: '/images/Why.webp'
     }
   };
@@ -113,4 +113,4 @@ const IntelligentChoosePage = () => {
   );
 };
 
-export default IntelligentChoosePage;
+export default AREPage;

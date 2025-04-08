@@ -1,64 +1,53 @@
 .custom-rounded-tr {
-    border-top-right-radius: 10rem; /* Adjust the radius as needed */
-  }
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  /* Scrollbar track */
-  ::-webkit-scrollbar-track {
-    background: rgba(238, 235, 223, 0.3); /* Yellowish background */
-  }
-  
-  /* Scrollbar thumb */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(31, 31, 30, 0.8); /* Green thumb */
-  }
-  
-  /* Hover effect on scrollbar thumb */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 255, 0, 1); /* Darker green on hover */
-  }
-  /*3rd*/
-  .solution-title{
-    font-size: 56px;
+  border-top-right-radius: 10rem; /* Adjust the radius as needed */
+}
+
+
+/*3rd*/
+.solution-title {
+  font-size: 56px;
   line-height: 60px;
   letter-spacing: 0.06em;
+}
 
-  }
-  .solution-subtitle{
-    font-size: 16px;
+.solution-subtitle {
+  font-size: 16px;
   line-height: 24px;
-  }
-  .solution-description{
-    font-size: 18px;
-    line-height: 1.1;
-    font-weight: 500;
-  }
-  /*4th*/
-  .design-title{
-    font-size: 60px;
-    line-height: 1.1;
-  }
-  .design-description{
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: 500;
-  }
-  @media (max-width: 768px) {
-    .solution-title{
-      font-size: 38.4px;
+}
+
+.solution-description {
+  font-size: 18px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+/*4th*/
+.design-title {
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.design-description {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .solution-title {
+    font-size: 38.4px;
     line-height: 60px;
     letter-spacing: 0.06em;
-  
-    }
-    .solution-description{
-      font-size: 15px;
-      line-height: 1.1;
-      font-weight: 500;
-    }
-    .design-title{
-      font-size: 38.4px;
-      line-height: 1.1;
-    }
   }
+
+  .solution-description {
+    font-size: 15px;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  .design-title {
+    font-size: 38.4px;
+    line-height: 1.1;
+  }
+}

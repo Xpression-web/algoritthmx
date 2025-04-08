@@ -3,7 +3,7 @@ import BigDataSection from './home'
 import BigDataGrid from './solution'
 import DevelopmentProcess from './steps'
 import BigDataTechnologyToolbox from './techstack'
-import BigDataBenefits from './choose'
+import BigDataChoosePage from './choose'
 import BigDataInsightSection from './insight'
 const page = () => {
   return (
@@ -11,7 +11,7 @@ const page = () => {
     <BigDataSection/>
     <BigDataGrid/>
     <DevelopmentProcess/>
-    <BigDataBenefits/>
+    <BigDataChoosePage/>
     <BigDataTechnologyToolbox/>
     <BigDataInsightSection/>
     </div>

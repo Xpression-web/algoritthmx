@@ -3,7 +3,7 @@ import Navbar from '../navbar/navbar'
 import TestingSection from './home'
 import TestingServices from './testing'
 import QAProcessDiagram from './quality'
-import TestingBenefits from './choose'
+import TestingChoosePage from './choose'
 import InsightSection from '../graphics/insight'
 import Footer from '../mainpage/footer'
 
@@ -15,7 +15,7 @@ const page = () => {
     <TestingSection/>
     <TestingServices/>
     <QAProcessDiagram/>
-    <TestingBenefits/>
+    <TestingChoosePage/>
     <InsightSection/>
     <Footer/>
     </div>

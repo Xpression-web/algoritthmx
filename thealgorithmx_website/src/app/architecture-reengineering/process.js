@@ -21,45 +21,46 @@ const StackCardAnimation = () => {
   const cards = [
     { 
       id: 1, 
-      title: "Identifying the Issue", 
-      description: "Our journey begins with a thorough assessment of your current technology infrastructure. We analyze your existing systems, processes, and IT landscape to identify areas that require improvement. The review includes an evaluation of performance bottlenecks, security vulnerabilities, and scalability limitations."
+      title: "Legacy System Assessment", 
+      description: "We begin by thoroughly analyzing your existing architecture—evaluating outdated components, performance issues, security risks, and integration gaps that hinder scalability and innovation."
     },
     { 
       id: 2, 
-      title: "Strategic Planning", 
-      description: "Based on our findings, we develop a comprehensive strategic plan tailored to your specific needs and business goals. This roadmap outlines the technological changes required, along with timelines and resource allocations."
+      title: "Goal Definition & Requirement Mapping", 
+      description: "Clear re-engineering goals are set in alignment with your business objectives. We map requirements based on performance, modularity, maintainability, and cost-effectiveness."
     },
     { 
       id: 3, 
-      title: "Implementation", 
-      description: "Our expert team executes the transformation plan with precision, implementing new systems, migrating data, and optimizing processes while ensuring minimal disruption to your ongoing operations."
+      title: "Architecture Blueprinting", 
+      description: "Our architects craft a detailed blueprint of the new architecture, leveraging modern principles such as microservices, containerization, cloud-native strategies, and domain-driven design."
     },
     { 
       id: 4, 
-      title: "Training & Support", 
-      description: "We provide comprehensive training for your team to ensure smooth adoption of new technologies and processes. Our ongoing support ensures that you can maximize the benefits of your transformed digital environment."
+      title: "Technology Stack Modernization", 
+      description: "We replace or upgrade legacy technologies with modern frameworks, APIs, and platforms that align with your long-term scalability, performance, and security goals."
     },
     { 
       id: 5, 
-      title: "Continuous Improvement", 
-      description: "Digital transformation is not a one-time event but a continuous journey. We establish monitoring mechanisms and feedback loops to help you adapt to changing market conditions and technological advancements."
+      title: "Modular Redesign & Refactoring", 
+      description: "Applications are broken into modular, decoupled components. Redundant or monolithic codebases are refactored to ensure clean separation of concerns and easy maintainability."
     },
     { 
       id: 6, 
-      title: "Business Integration", 
-      description: "We help integrate the new technologies with your existing business processes, ensuring a seamless transition and maximum benefit realization across departments."
+      title: "Cloud & DevOps Integration", 
+      description: "To support CI/CD and elastic scalability, we integrate cloud-native environments (AWS, Azure, GCP) with DevOps pipelines, ensuring automated testing, deployment, and monitoring."
     },
     { 
       id: 7, 
-      title: "Performance Analytics", 
-      description: "Our advanced analytics tools provide real-time insights into your systems' performance, helping you make data-driven decisions to optimize operations and resource allocation."
+      title: "Validation, Testing & Performance Tuning", 
+      description: "The re-engineered system undergoes rigorous testing—from load and integration testing to code validation and real-world simulation—to ensure it meets performance and quality benchmarks."
     },
     { 
       id: 8, 
-      title: "Future Roadmapping", 
-      description: "We work with you to develop a forward-looking technology roadmap, anticipating future challenges and opportunities to keep your business competitive in the digital landscape."
+      title: "Sustained Evolution & Governance", 
+      description: "Post-deployment, we establish governance policies, performance dashboards, and feedback loops to support continuous evolution and adherence to architecture best practices."
     },
   ];
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,15 +130,15 @@ const StackCardAnimation = () => {
         {/* Left side content - becomes sticky only on desktop */}
         <div className={`md:w-1/2 ${!isMobile ? 'sticky top-32' : ''} h-fit md:pr-12 mb-12 md:mb-0`}>
   <div className="max-w-lg">
+  <h2 className={`text-[28px] leading-[32px] ${monsterfont.className}  text-white mb-4`}>
+  Our Comprehensive Approach To 
+    </h2>
     <h2 className={`text-[30px] leading-[32px] ${monsterfont.className}  text-white mb-4`}>
-      IoT Development Process
+    Architecture Re-engineering
     </h2>
     <p className="text-[16px] leading-[24px] font-[500] font-helveticaneue text-semi-white">
-      Our Agile IoT Development Process is visually demonstrated through a dynamic scroll-based animation. 
-      As you navigate through the section, cards smoothly stack up on the right while the left content 
-      remains fixed, offering an engaging storytelling experience. Each card reveals a key phase of our 
-      development cycle, ensuring clarity and depth. Once the final card appears, the page resumes its 
-      normal scroll behavior, seamlessly guiding users through our innovative approach.
+    Our Architecture Re-engineering process transforms legacy systems into modern, scalable, and modular solutions.
+    We analyze existing architectures, identify limitations, and implement modern patterns like microservices, cloud integration, and API-driven design. This ensures better performance, agility, and future-readiness—aligned with your evolving business needs.
     </p>
   </div>
 </div>

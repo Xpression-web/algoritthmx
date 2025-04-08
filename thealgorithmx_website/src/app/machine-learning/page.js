@@ -4,7 +4,7 @@ import MachineSection from './home'
 import MachinePage from './services'
 import MachineTech from './technologies'
 import MLTechStack from './techstack'
-import MachineLearningBenefits from './choose'
+import AIMLPage from './choose'
 import IndustriesGrid from '../branding/industries'
 import MLProcess from './process'
 import InsightSection from '../graphics/insight'
@@ -17,8 +17,8 @@ const page = () => {
     <MachinePage/>
     <MachineTech/>
     <MLTechStack/>
-    <MachineLearningBenefits/>
-    <MLProcess/>
+    <AIMLPage/>  
+      <MLProcess/>
     <IndustriesGrid/>
     <InsightSection/>
     <Footer/>
