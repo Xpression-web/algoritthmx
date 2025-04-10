@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import TwitterSection from './home'
 import TwitterHeroSection from './engagement'
 import TwitterGrowHeroSection from './multimedia'

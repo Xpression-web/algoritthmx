@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import CopywritingSection from './home'
 import CopywritingServicesGrid from './services'
 import CopywritingMarketingSection from './win'

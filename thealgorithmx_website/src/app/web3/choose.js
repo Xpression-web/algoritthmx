@@ -10,10 +10,10 @@ const monsterfont = Montserrat({
   fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
-    subsets: ['latin'],
-    weight: '200',
-    fallback: ["sans-serif"],
-  });
+  subsets: ['latin'],
+  weight: '200',
+  fallback: ["sans-serif"],
+});
 
 const Web3DevelopmentPage = () => {
   const [activeSection, setActiveSection] = useState('robustSecurity');
@@ -21,43 +21,42 @@ const Web3DevelopmentPage = () => {
   const sections = {
     robustSecurity: {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Innovation focused',
-      description: '1200+ industry-grade developers, 250+ successful projects, and more. Our global team of experienced, certified consultants and developers is well-versed with the latest tools, technologies, and platforms.',
+      title: 'Secure Smart Contracts',
+      description: 'Our blockchain experts craft secure, efficient, and thoroughly audited smart contracts to ensure transparency and prevent vulnerabilities in your decentralized applications.',
       image: '/images/a1.png'
     },
     reliableConnectivity: {
       icon: <Link className="w-6 h-6" />,
-      title: 'Flexible engagement models',
-      description: 'Our partnership with you is completely flexible – scale teams up and down as you need, or opt for fixed cost or the T&M model.',
+      title: 'Seamless Decentralized Integration',
+      description: 'We build interoperable systems that connect decentralized networks with legacy platforms, enabling smooth data flow, enhanced performance, and robust connectivity across Web3 ecosystems.',
       image: '/images/Why.webp'
     },
     prioritizingUsability: {
       icon: <Layers className="w-6 h-6" />,
-      title: 'Dedicated OSDC',
-      description: 'We meet you where you are with our dedicated global open science data Cloud, available on-site, near-shore, off-shore, or as a hybrid model.',
+      title: 'Intuitive Web3 UX',
+      description: 'We design blockchain-based interfaces that are user-centric, ensuring mass adoption by simplifying wallet connections, transaction signing, and Web3 onboarding flows.',
       image: '/images/a1.png'
     },
     scalability: {
       icon: <Award className="w-6 h-6" />,
-      title: 'Deeply experienced team',
-      description: 'Our experience is informed by a number of successful Web3 projects for Fortune 500 companies, startups, and everyone in between.',
-     image: '/images/Why.webp'
+      title: 'Scalable Blockchain Solutions',
+      description: 'Our team builds scalable dApps using Layer-2 solutions, modular blockchain frameworks, and optimized architecture to support millions of users without compromising speed or security.',
+      image: '/images/Why.webp'
     }
   };
 
   return (
     <div className="min-h-screen bg-black text-white flex justify-center">
       <div className="w-full max-w-[1200px] px-4 py-12">
-        <h1 className={`text-[40px] leading-[48px] ${monsterfont.className}  text-white mb-4`}>
-          Why Choose AlgorithmX as Your IoT Development Company?
+        <h1 className={`text-[40px] leading-[48px] ${monsterfont.className} text-white mb-4`}>
+          Why Choose AlgorithmX as Your Web3 Development Partner?
         </h1>
-        <p className={`text-[16px] leading-[20px] ${monsterfont1.className}  text-semi-white mb-4`}>
-          As a trusted IoT application development company, we have proven ourselves as the leading IoT application development company by providing user-centric applications for top brands. Being a premium IoT software development company, we focus on bridging the gap between the real and digital world and providing our clients with the most innovative and usable IoT environment.
+        <p className={`text-[16px] leading-[20px] ${monsterfont1.className} text-semi-white mb-4`}>
+          AlgorithmX brings deep expertise in blockchain, DeFi, NFTs, and DAOs to deliver cutting-edge decentralized solutions. Our Web3 developers focus on building secure, scalable, and user-friendly dApps that empower the future of the internet.
         </p>
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-          {/* Mobile & Desktop Left Section - Clickable Items */}
-          <div className="md:w-1/3 space-y-4  rounded-[20px] ">
+          <div className="md:w-1/3 space-y-4 rounded-[20px] ">
             {Object.entries(sections).map(([key, section]) => (
               <button
                 key={key}
@@ -74,7 +73,6 @@ const Web3DevelopmentPage = () => {
             ))}
           </div>
 
-          {/* Desktop Right Section - Description with Image */}
           <div className="hidden md:grid md:w-2/3 rounded-lg p-8 grid-cols-2 gap-8">
             <div className="w-full h-[200px] relative">
               <Image 
@@ -97,9 +95,8 @@ const Web3DevelopmentPage = () => {
             </div>
           </div>
 
-          {/* Mobile Description Section */}
           <div className="md:hidden">
-            <div className=" border-[1px]  rounded-lg p-6">
+            <div className="border-[1px] rounded-lg p-6">
               <div className="flex items-center space-x-4 mb-4">
                 {sections[activeSection].icon}
                 <h2 className="text-xl font-bold font-helveticaneue">{sections[activeSection].title}</h2>

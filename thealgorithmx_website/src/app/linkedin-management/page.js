@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import LinkedinSection from './home'
 import LinkedinHeroSection from './connect'
 import LinkedinGrowHeroSection from './optimize'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import WordPressSection from './home'
 import WordPressServices from './wservice'
 import WordpressFeatures from './wchoose'

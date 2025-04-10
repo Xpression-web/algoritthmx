@@ -18,38 +18,38 @@ const MetaverseProcess = () => {
   const steps = [
     {
       number: 1,
-      title: "Requirement Gathering",
-      description: "Our journey begins with a thorough assessment of your current technology infrastructure. We analyze your existing systems, processes, and IT landscape to identify areas that require improvement. The review includes an evaluation of performance bottlenecks, security vulnerabilities, and scalability limitations."
+      title: "Requirement Analysis",
+      description: "We begin by understanding your vision for the Metaverse. This involves identifying business goals, key user interactions, preferred virtual environments, and immersive experiences that align with your brand and objectives.",
     },
     {
       number: 2,
-      title: "UI/UX Design",
-      description: "We develop a strategic plan tailored to your business goals based on the assessment findings. We collaborate closely with your team to align the re-engineering process with your specific needs and objectives."
+      title: "Conceptualization & UI/UX Design",
+      description: "Our creative team crafts intuitive and immersive user interfaces for virtual environments. This stage ensures the user journey is smooth, engaging, and designed to foster interaction within the Metaverse.",
     },
     {
       number: 3,
-      title: "Prototype",
-      description: "Once we have a good plan, we start designing the new tech setup. Our experts make detailed drawings and plans, showing how everything will work. This ensures our new system matches your long-term goals and can change as your business grows."
+      title: "Interactive Prototype",
+      description: "We develop a working prototype to demonstrate key features of your Metaverse solution. This helps you visualize the environment and interaction flow before full-scale development begins.",
     },
     {
       number: 4,
-      title: "Development",
-      description: "Once the design is approved, our development team takes over. We employ agile development methodologies to build and implement the new architecture iteratively. This approach allows continuous feedback and adjustments to ensure the re-engineered system aligns with evolving business needs."
+      title: "Metaverse Development",
+      description: "Using cutting-edge tools like Unity, Unreal Engine, and WebXR, our developers build the Metaverse solution with blockchain integration, smart contracts, and 3D assets tailored to your needs.",
     },
     {
-        number: 5,
-        title: "Testing",
-        description: "We carefully plan and execute data migration from your legacy systems to the new architecture. Our team ensures a seamless transition, minimizing downtime and data loss. We also focus on integrating the re-engineered system with your existing software and processes to maintain workflow continuity."
+      number: 5,
+      title: "Quality Testing",
+      description: "Our QA experts rigorously test performance, security, usability, and cross-platform compatibility to ensure a seamless and bug-free Metaverse experience.",
     },
     {
-        number: 6,
-        title: "Deployment ",
-        description: "Rigorous testing is an integral part of our process. We conduct various tests, including performance testing, security testing, and user acceptance testing, to ensure that the re-engineered system meets all functional and non-functional requirements. Quality assurance is paramount to guarantee a reliable and robust solution."
+      number: 6,
+      title: "Deployment",
+      description: "We deploy your Metaverse application on the desired platform—whether VR, AR, web, or mobile—ensuring smooth rollout with minimal downtime and optimal performance.",
     },
     {
-        number: 7,
-        title: "Post Release Support",
-        description: "After successful testing, we deploy the re-engineered architecture into your production environment. We provide training and support to your team to ensure a smooth transition and optimal utilization of the new system. Copper Digital is committed to ensuring your team is well-prepared to leverage the enhanced technology."
+      number: 7,
+      title: "Ongoing Support & Optimization",
+      description: "AlgorithmX provides continuous post-launch support, performance monitoring, and iterative improvements to keep your Metaverse experience engaging, scalable, and future-ready.",
     },
   ];
 
@@ -59,9 +59,7 @@ const MetaverseProcess = () => {
         <div className="text-center mb-16">
           <h1 className={`${styles["main-text"]} ${monsterfont1.className} `}>Metaverse Software Development Approach  </h1>
           <h2 className={`${styles["main-text"]} ${monsterfont.className}  text-white `}>
-        Ensures End to End  Efficiency
-
-
+            Ensures End to End  Efficiency
           </h2>
         </div>
 

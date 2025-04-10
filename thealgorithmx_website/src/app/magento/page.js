@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import MagentoSection from './home';
 import MagentoServices from './mservices'
 import MagentoFeatures from './mchoose';

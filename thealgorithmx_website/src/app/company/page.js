@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../navbar/navbar';
+import Navbar from '../asample/naviagtion';
 import Aboutus from './aboutus';
 import AboutSection from'./aboutsection';
 import PrinciplesSection from './principles';

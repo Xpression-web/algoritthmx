@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import BigCommerceSection from './home'
 import BigcommerceServices from './bservices'
 import BigcommerceFeatures from './bchoose'

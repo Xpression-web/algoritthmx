@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import SEOMobileSection from './home'
 import MobileServices from './mobileservices'
 import MobileStrategy from './opportunity'

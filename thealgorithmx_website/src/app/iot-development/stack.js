@@ -127,8 +127,9 @@ const StackCardAnimation = () => {
     <div className="bg-black text-white min-h-screen w-full" ref={containerRef}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row px-6 pt-16">
         {/* Left side content - becomes sticky only on desktop */}
-        <div className={`md:w-1/2 ${!isMobile ? 'sticky top-32' : ''} h-fit md:pr-12 mb-12 md:mb-0`}>
+        <div className={`md:w-1/2 ${!isMobile ? 'sticky top-32' : ''} h-[calc(100vh-8rem)] md:pr-12 mb-12 md:mb-0 flex items-center`}>
   <div className="max-w-lg">
+
     <h2 className={`text-[30px] leading-[32px] ${monsterfont.className}  text-white mb-4`}>
       IoT Development Process
     </h2>

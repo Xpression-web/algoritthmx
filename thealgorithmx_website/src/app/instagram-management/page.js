@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import InstagramSection from './home'
 import InstagramHeroSection from './reach'
 import InstagramGrowHeroSection from './grow'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import IntegrationSection from './home'
 import IntegrationStrategyGrid from './what'
 import IntegrationServices from './solution'

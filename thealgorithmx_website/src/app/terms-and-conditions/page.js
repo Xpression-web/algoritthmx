@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import TermsSection from './home'
 import Terms from './content'
 import Footer from '../mainpage/footer'

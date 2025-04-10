@@ -21,35 +21,33 @@ export default function Home() {
   
   const services = [
     {
-      title: "IoT Consulting",
-      description: "At AlphaCrease Creations, we focus on delivering more than just designs.",
+      title: "Smart Device Integration",
+      description: "We seamlessly integrate your devices into smart ecosystems to optimize performance and connectivity.",
       image: "/images/portrait-person-ai-robot.jpg"
-      
     },
     {
-      title: "IoT App Development",
-      description: "At AlphaCrease Creations, we focus on delivering more than just designs.",
+      title: "Custom IoT Software",
+      description: "We build tailor-made software solutions that connect hardware and cloud systems effectively.",
       image: "/images/ai44.avif"
-      
     },
     {
-      title: "IoT Wearable Connectivity",
-      description: "At AlphaCrease Creations, we focus on delivering more than just designs.",
+      title: "Wearable Tech Solutions",
+      description: "From fitness trackers to medical wearables, we create solutions for real-time monitoring and interaction.",
       image: "/images/digital-environment-scene.jpg"
     },
     {
-      title: "IoT Testing",
-      description: "At AlphaCrease Creations, we focus on delivering more than just designs.",
+      title: "Automated QA & Testing",
+      description: "Ensure reliability and stability with our robust IoT testing framework and automation solutions.",
       image: "/images/ai11.avif"
     },
     {
-      title: "AIoT",
-      description: "At AlphaCrease Creations, we focus on delivering more than just designs.",
+      title: "AI + IoT Integration",
+      description: "Empower your IoT systems with AI capabilities for smarter decision-making and automation.",
       image: "/images/ai22.avif"
     },
     {
-      title: "IIoT",
-      description: "At AlphaCrease Creations, we focus on delivering more than just designs.",
+      title: "Industrial IoT (IIoT)",
+      description: "We provide IIoT solutions to enhance productivity, safety, and efficiency in industrial environments.",
       image: "/images/ai33.avif"
     }
   ];
@@ -57,20 +55,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
-        <title>Design Services</title>
-        <meta name="description" content="Our design services" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Our IoT Services</title>
+        <meta name="description" content="Explore IoT and AI-powered solutions for your business" />
       </Head>
 
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-12">
-            <h1 className={`text-[40px] leading-[44px] ${monsterfont.className}  text-white mb-4`}>Design services that we provide</h1>
+            <h1 className={`text-[40px] leading-[44px] ${monsterfont.className}  text-white mb-4`}>Explore our IoT Service Offerings</h1>
             <p className="text-[18px] leading-[24px]  font-[500] text-semi-white font-helveticaneue">
-              Explore our range of design services designed to go beyond aesthetics.
-              We specialize in crafting purposeful experiences that align with your
-              brand's vision and goals.
+              Discover innovative IoT and AI solutions designed to connect devices, streamline operations,
+              and transform your business through intelligent automation and data-driven insights.
             </p>
           </div>
 
@@ -80,14 +76,14 @@ export default function Home() {
             <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
               {services.map((service, index) => (
                 <div
-                key={index}
-                className={`p-6 border rounded-lg cursor-pointer transition-all duration-300 ${
-                  activeService === index 
-                    ? 'border-blue-500  shadow-md shadow-blue-500' 
-                    : 'border-gray-700 hover:border-gray-500 hover:shadow-md hover:shadow-blue-500'
-                }`}
-                onMouseEnter={() => setActiveService(index)}
-              >
+                  key={index}
+                  className={`p-6 border rounded-lg cursor-pointer transition-all duration-300 ${
+                    activeService === index 
+                      ? 'border-blue-500  shadow-md shadow-blue-500' 
+                      : 'border-gray-700 hover:border-gray-500 hover:shadow-md hover:shadow-blue-500'
+                  }`}
+                  onMouseEnter={() => setActiveService(index)}
+                >
                   <h3 className="text-[20px] leading-[24px]  font-[700] text-white font-helveticaneue mb-4">{service.title}</h3>
                   <p className="text-[16px] leading-[20px]  font-[500]  font-helveticaneue text-semi-white">{service.description}</p>
                 </div>

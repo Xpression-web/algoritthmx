@@ -10,10 +10,10 @@ const monsterfont = Montserrat({
   fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
-    subsets: ['latin'],
-    weight: '200',
-    fallback: ["sans-serif"],
-  });
+  subsets: ['latin'],
+  weight: '200',
+  fallback: ["sans-serif"],
+});
 
 const AIMLPage = () => {
   const [activeSection, setActiveSection] = useState('robustSecurity');
@@ -21,27 +21,27 @@ const AIMLPage = () => {
   const sections = {
     robustSecurity: {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Proven Expertise and Track Record',
-      description: "Our team comprises seasoned experts who have consistently delivered transformative solutions for businesses across various industries. By choosing Copper Digital, you're partnering with a trusted ally with a history of driving tangible results for businesses.",
+      title: 'Proven Expertise in AI & ML',
+      description: "Our team consists of AI and ML professionals with a deep understanding of algorithms, data engineering, and real-world implementations. With a proven record of delivering AI-driven transformation, we ensure intelligent solutions tailored to your business needs.",
       image: '/images/a1.png'
     },
     reliableConnectivity: {
       icon: <Link className="w-6 h-6" />,
-      title: 'Maximized ROI and Cost Efficiency',
-      description: 'We develop IoT solutions with robust connectivity protocols that ensure consistent and dependable communication between devices. Our expertise guarantees minimal downtime and optimal performance for your IoT ecosystem.',
+      title: 'Data-Driven Efficiency & ROI',
+      description: 'We help businesses unlock the full potential of their data through intelligent automation and predictive analytics. Our AI & ML solutions reduce operational costs, optimize workflows, and deliver measurable ROI by automating complex tasks and uncovering hidden insights.',
       image: '/images/Why.webp'
     },
     prioritizingUsability: {
       icon: <Layers className="w-6 h-6" />,
-      title: 'Tailored Solutions',
-      description: 'User experience is at the core of our IoT development strategy. We design intuitive interfaces and streamline interactions to make complex IoT systems accessible and easy to use for end-users.',
+      title: 'Customized AI Solutions',
+      description: 'We develop custom AI & ML models designed to solve specific business challenges. Whether it’s recommendation systems, natural language processing, or computer vision, our solutions are tailored for scalability, usability, and performance.',
       image: '/images/a1.png'
     },
     scalability: {
       icon: <Award className="w-6 h-6" />,
-      title: 'Scalability',
-      description: 'Our AI & ML solutions are architected to grow with your business. We build flexible and adaptable systems that can seamlessly scale, accommodate future technological advancements, and meet evolving business requirements.',
-     image: '/images/Why.webp'
+      title: 'Scalable Architecture ',
+      description: 'Our AI platforms are built for scalability and continuous learning. As your data grows and business evolves, our models adapt, learn, and stay relevant—ensuring long-term success with evolving technological landscapes.',
+      image: '/images/Why.webp'
     }
   };
 
@@ -52,11 +52,10 @@ const AIMLPage = () => {
           Why Choose AlgorithmX as Your AI & ML Development Company?
         </h1>
         <p className={`text-[16px] leading-[20px] ${monsterfont1.className}  text-semi-white mb-4`}>
-        As a trusted AI & ML development company, we have established ourselves as a leading provider of intelligent solutions by delivering data-driven, user-centric applications for top brands. As a premium AI & ML technology partner, we focus on bridging the gap between raw data and smart automation—empowering our clients with innovative, scalable, and efficient AI environments that drive business growth and decision-making excellence.
+          As a trusted AI & ML development company, we have established ourselves as a leading provider of intelligent solutions by delivering data-driven, user-centric applications for top brands. As a premium AI & ML technology partner, we focus on bridging the gap between raw data and smart automation—empowering our clients with innovative, scalable, and efficient AI environments that drive business growth and decision-making excellence.
         </p>
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-          {/* Mobile & Desktop Left Section - Clickable Items */}
           <div className="md:w-1/3 space-y-4  rounded-[20px] ">
             {Object.entries(sections).map(([key, section]) => (
               <button
@@ -74,7 +73,6 @@ const AIMLPage = () => {
             ))}
           </div>
 
-          {/* Desktop Right Section - Description with Image */}
           <div className="hidden md:grid md:w-2/3 rounded-lg p-8 grid-cols-2 gap-8">
             <div className="w-full h-[200px] relative">
               <Image 
@@ -97,7 +95,6 @@ const AIMLPage = () => {
             </div>
           </div>
 
-          {/* Mobile Description Section */}
           <div className="md:hidden">
             <div className=" border-[1px]  rounded-lg p-6">
               <div className="flex items-center space-x-4 mb-4">

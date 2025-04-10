@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import MobileSection from './home'
 import MobileAppServices from './services'
 import BenefitsSection from './benefits'

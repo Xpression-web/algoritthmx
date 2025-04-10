@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../asample/naviagtion'
 import IntelligentSection from './home'
 import Scalable from './need'
 import IntelligentBenefits from './choose'
@@ -9,6 +10,7 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
+      <Navbar/>
     <IntelligentSection/>
     <Scalable/>
     <IntelligentServices/>

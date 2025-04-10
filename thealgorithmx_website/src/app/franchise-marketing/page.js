@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import FranchiseSection from './home'
 import FranchiseServices from './services'
 import FranchiseStrategy from './who'

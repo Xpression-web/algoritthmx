@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import AIOptmmizationSection from './home'
 import AiOptmizationServices from './solutions'
 import StackCardAnimation from './process'

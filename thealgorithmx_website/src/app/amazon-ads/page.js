@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import AmazonAds from './home'
 import AmazonBoostAds from './drive'
 import ServicesAccordion from './services'

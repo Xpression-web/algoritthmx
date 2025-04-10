@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import MetaverseSection from './home'
 import MetaverseServicesGrid from './services'
 import MetaverseDevelopmentPage from './choose'

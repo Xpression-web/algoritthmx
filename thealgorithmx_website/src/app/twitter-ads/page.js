@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import TwitterAds from './home'
 import TwitterBoostAds from './amplify'
 import ServicesAccordion from './services'

@@ -27,7 +27,7 @@ const MetaverseSection = () => {
           <div className="w-full md:w-1/3">
             <div className="relative">
               <img
-                src="images/Mobile-App-dev.webp"
+                src="images/metaverse.avif"
                 alt="Branding process with color swatches"
                 className={`w-4/5  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
               />

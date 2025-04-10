@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import Carousel from './erpservices'
 import ERPProcess from './erpdevelopment'
 import ERPModules from './erpmodule'

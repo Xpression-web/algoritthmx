@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import MachineSection from './home'
 import MachinePage from './services'
 import MachineTech from './technologies'

@@ -73,12 +73,14 @@ const NativeServicesGrid = () => {
   
             {/* Full-width box for the 4th item */}
             <div 
-              className={`bg-black ${styles["box"]} `}>
-              <img 
-                src={services[3].image} 
-                alt={services[3].alt} 
-                className={` object-contain rounded-lg  ${styles["indus-card-figure"]}  `}
-              />
+  className={`bg-black ${styles["box"]} col-span-1 md:col-span-2 lg:col-span-3 md:text-center`}>
+
+<img 
+  src={services[3].image} 
+  alt={services[3].alt} 
+  className={`object-contain rounded-lg mx-auto ${styles["indus-card-figure"]}`}
+/>
+
               <h3 className={`${styles["and-title2"]}  transition-colors duration-300 `}>
                 {services[3].title}
               </h3>

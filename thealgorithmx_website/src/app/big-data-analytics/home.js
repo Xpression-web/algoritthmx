@@ -20,14 +20,14 @@ const monsterfont2 = Montserrat({
 
 const BigDataSection = () => {
   return (
-    <div className="min-h-screen bg-black pt-[100px]">
+    <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1200px] mx-auto px-4 md:px-2 py-10">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
           {/* Left side - Image */}
           <div className="w-full md:w-1/3">
             <div className="relative">
               <img
-                src="images/Mobile-App-dev.webp"
+                src="images/Big-Data.avif"
                 alt="Branding process with color swatches"
                 className={`w-4/5  h-auto shadow-lg mx-auto ${styles["custom-rounded-tr"]} filter grayscale-[30%] sepia-[20%] `}
               />

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../navbar/navbar';
+import Navbar from '../asample/naviagtion';
 import BrandingSection from './Home';
 import ServicesSection from './Services';
 import BrandingProcess from'./process';

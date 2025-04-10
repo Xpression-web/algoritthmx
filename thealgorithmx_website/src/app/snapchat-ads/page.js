@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import SnapchatAds from './home'
 import SnapchatBoostAds from './engage'
 import ServicesAccordion from './services'

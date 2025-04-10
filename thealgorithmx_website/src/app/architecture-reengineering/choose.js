@@ -10,10 +10,10 @@ const monsterfont = Montserrat({
   fallback: ["sans-serif"],
 });
 const monsterfont1 = Montserrat({
-    subsets: ['latin'],
-    weight: '200',
-    fallback: ["sans-serif"],
-  });
+  subsets: ['latin'],
+  weight: '200',
+  fallback: ["sans-serif"],
+});
 
 const AREPage = () => {
   const [activeSection, setActiveSection] = useState('robustSecurity');
@@ -21,27 +21,27 @@ const AREPage = () => {
   const sections = {
     robustSecurity: {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Robust Security Practices',
-      description: 'With each IoT development project, we prioritize data governance and security best practices. Our approach ensures the seamless functionality and protection of your IoT application through comprehensive security measures.',
+      title: 'Modernized Architecture',
+      description: 'We revamp legacy systems into modern, scalable architectures by adopting cutting-edge technologies and proven design patterns, enabling better performance, maintainability, and adaptability for future needs.',
       image: '/images/a1.png'
     },
     reliableConnectivity: {
       icon: <Link className="w-6 h-6" />,
-      title: 'Reliable Connectivity',
-      description: 'We develop IoT solutions with robust connectivity protocols that ensure consistent and dependable communication between devices. Our expertise guarantees minimal downtime and optimal performance for your IoT ecosystem.',
+      title: 'Seamless System Integration',
+      description: 'Our architecture re-engineering ensures seamless integration of components and services, aligning business goals with technology for improved interoperability and faster data flow across platforms.',
       image: '/images/Why.webp'
     },
     prioritizingUsability: {
       icon: <Layers className="w-6 h-6" />,
-      title: 'Prioritizing Usability',
-      description: 'User experience is at the core of our IoT development strategy. We design intuitive interfaces and streamline interactions to make complex IoT systems accessible and easy to use for end-users.',
+      title: 'Improved System Usability',
+      description: 'We restructure systems with a focus on usability and clarity. Our solutions simplify complex workflows and enhance user experience through intuitive design and efficient process flows.',
       image: '/images/a1.png'
     },
     scalability: {
       icon: <Award className="w-6 h-6" />,
-      title: 'Scalability',
-      description: 'Our IoT solutions are architected to grow with your business. We build flexible and adaptable systems that can seamlessly scale, accommodate future technological advancements, and meet evolving business requirements.',
-     image: '/images/Why.webp'
+      title: 'Future-Ready Scalability',
+      description: 'We build re-engineered systems to support growth and expansion. With modular architecture and cloud-native principles, our solutions scale effortlessly to meet evolving business demands.',
+      image: '/images/Why.webp'
     }
   };
 
@@ -49,10 +49,10 @@ const AREPage = () => {
     <div className="min-h-screen bg-black text-white flex justify-center">
       <div className="w-full max-w-[1200px] px-4 py-12">
         <h1 className={`text-[40px] leading-[48px] ${monsterfont.className}  text-white mb-4`}>
-          Why Choose AlgorithmX as Your IoT Development Company?
+          Why Choose AlgorithmX for Architecture Re-engineering?
         </h1>
         <p className={`text-[16px] leading-[20px] ${monsterfont1.className}  text-semi-white mb-4`}>
-          As a trusted IoT application development company, we have proven ourselves as the leading IoT application development company by providing user-centric applications for top brands. Being a premium IoT software development company, we focus on bridging the gap between the real and digital world and providing our clients with the most innovative and usable IoT environment.
+          As a leading provider of architecture re-engineering services, AlgorithmX transforms outdated, inefficient systems into streamlined, high-performance digital ecosystems. We focus on aligning technology with your evolving business goals by modernizing architecture without disrupting operations.
         </p>
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">

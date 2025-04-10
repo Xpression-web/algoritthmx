@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../navbar/navbar';
+import Navbar from '../asample/naviagtion';
 import DiagonalGridWithText from './rotate';
 import ResponsiveGrid from './design';
 import PlatformPerformance from './button';

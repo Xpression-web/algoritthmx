@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import BusinessIntelligenceSection from './home'
 import BiConsultingPage from './services'
 import BusinessModules from './decision'

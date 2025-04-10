@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import SEOLinkSection from './home'
 import LinkServices from './linkservices'
 import LinkStrategy from './reach'

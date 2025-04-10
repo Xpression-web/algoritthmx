@@ -20,19 +20,24 @@ const ResultsRow = () => {
         </div>
 
         {/* Right Side - Gradient Background */}
-        <div className="w-1/2 bg-gradient-to-r from-[rgba(40,0,0,0%)] to-[#b70f3a] p-8 flex items-center justify-center">
-          <span className={`text-[224px] leading-[1] text-rose-500 ${monsterfont3.className}`}>
+        <div
+          className="w-1/2 p-8 flex items-center justify-center"
+          style={{
+            background: "linear-gradient(to right, #000000 0%, #7a0024 40%, #f83365 100%)",
+          }}
+        >
+          <span className={`text-[224px] leading-[1] text-[#f83365] ${monsterfont3.className}`}>
             90%
           </span>
         </div>
       </div>
 
       {/* Mobile Layout - Hidden on Desktop */}
-      <div className="flex md:hidden flex-col w-full min-h-[200px] items-center justify-center space-y-4 p-8 bg-gradient-to-r from-black to-[#b70f3a]">
+      <div className="flex md:hidden flex-col w-full min-h-[200px] items-center justify-center space-y-4 p-8 bg-gradient-to-r from-black via-[#7a0024] to-[#f83365]">
         <h1 className={`text-white text-[62px] leading-[0.875] -tracking-[0.02em] ${monsterfont3.className}`}>
           Results
         </h1>
-        <span className={`text-[124px] leading-[1] text-rose-500 ${monsterfont3.className}`}>
+        <span className={`text-[124px] leading-[1] text-[#f83365] ${monsterfont3.className}`}>
           90%
         </span>
       </div>

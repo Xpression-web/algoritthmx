@@ -21,40 +21,41 @@ const StackCardAnimation = () => {
   const cards = [
     { 
       id: 1, 
-      title: "Discuss", 
-      description: "Our journey begins with a thorough assessment of your current technology infrastructure. We analyze your existing systems, processes, and IT landscape to identify areas that require improvement. The review includes an evaluation of performance bottlenecks, security vulnerabilities, and scalability limitations."
+      title: "Discover", 
+      description: "Begin by identifying business problems where AI/ML can drive value. Engage with stakeholders to gather requirements, define goals, and ensure alignment with business strategy." 
     },
     { 
       id: 2, 
       title: "Define", 
-      description: "Based on our findings, we develop a comprehensive strategic plan tailored to your specific needs and business goals. This roadmap outlines the technological changes required, along with timelines and resource allocations."
+      description: "Clearly outline the scope, success criteria, and expected outcomes. Select appropriate ML techniques based on problem type — classification, regression, clustering, etc." 
     },
     { 
       id: 3, 
       title: "Design", 
-      description: "Our expert team executes the transformation plan with precision, implementing new systems, migrating data, and optimizing processes while ensuring minimal disruption to your ongoing operations."
+      description: "Create a solution blueprint including data sources, pipeline architecture, model selection approach, evaluation metrics, and deployment strategy." 
     },
     { 
       id: 4, 
-      title: "Data Integration", 
-      description: "We provide comprehensive training for your team to ensure smooth adoption of new technologies and processes. Our ongoing support ensures that you can maximize the benefits of your transformed digital environment."
+      title: "Data Preparation", 
+      description: "Gather, clean, and preprocess data. Handle missing values, perform feature engineering, and ensure data quality for optimal model performance." 
     },
     { 
       id: 5, 
       title: "Develop", 
-      description: "Digital transformation is not a one-time event but a continuous journey. We establish monitoring mechanisms and feedback loops to help you adapt to changing market conditions and technological advancements."
+      description: "Train and fine-tune machine learning models using frameworks like TensorFlow, PyTorch, or Scikit-learn. Optimize hyperparameters to improve accuracy and robustness." 
     },
     { 
       id: 6, 
       title: "Debug", 
-      description: "We help integrate the new technologies with your existing business processes, ensuring a seamless transition and maximum benefit realization across departments."
+      description: "Evaluate models using validation datasets. Analyze confusion matrices, learning curves, and feature importance to identify and resolve performance issues." 
     },
     { 
       id: 7, 
       title: "Deploy", 
-      description: "Our advanced analytics tools provide real-time insights into your systems' performance, helping you make data-driven decisions to optimize operations and resource allocation."
+      description: "Integrate the trained model into production environments using REST APIs or batch processing pipelines. Monitor performance and retrain as needed." 
     },
   ];
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,7 +129,7 @@ const StackCardAnimation = () => {
       7 D's OF 
     </h2>
     <h2 className={`text-[30px] leading-[32px] ${monsterfont.className}  text-white mb-4 text-center`}>
-      MACHINE LEARNING
+      AI & ML
     </h2>
     <p className="text-[16px] leading-[24px] font-[500] font-helveticaneue text-semi-white text-center">
     At AlgorithmX, our AI and Machine Learning solutions are designed to empower businesses with intelligent, data-driven capabilities. We specialize in building predictive models, natural language processing systems, and computer vision applications tailored to real-world challenges. From collecting and cleaning large datasets to training, evaluating, and deploying models, our end-to-end approach ensures high accuracy, scalability, and performance. By integrating AI/ML into core operations, we help organizations automate processes, uncover insights, and drive smarter decision-making across industries.

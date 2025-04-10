@@ -1,21 +1,21 @@
 'use client'
-
+import { FaPhone } from 'react-icons/fa';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Phone, Twitter, Instagram, Facebook, Linkedin, ChevronDown, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion'
 
-// Menu data with added icons for nested items only
 const menuData = {
   'Company': { type: 'link', href: '/company' },
   'Creative Assets': {
     type: 'dropdown',
     items: [
-      { name: 'Branding', href: '/creative/design-templates', icon: 'fa-pen-nib' },
-      { name: 'Graphics', href: '/creative/stock-photos', icon: 'fa-image' },
-      { name: 'Video', href: '/creative/video-assets', icon: 'fa-video' },
-      { name: 'Content Creation', href: '/creative/audio-resources', icon: 'fa-microphone' },
+      { name: 'Branding', href: '/branding', icon: 'fa-pen-nib' },
+      { name: 'Graphics', href: '/graphics', icon: 'fa-image' },
+      { name: 'Video', href: '/video', icon: 'fa-video' },
+      { name: 'Content Creation', href: '/contentcreation', icon: 'fa-microphone' },
     ]
   },
   '</Code>': {
@@ -25,72 +25,78 @@ const menuData = {
         name: 'Web', 
         href: null,
         subItems: [
-          { name: 'Frontend Development', href: '/code/android', icon: 'fa-code' },
-          { name: 'Backend Development', href: '/code/ios', icon: 'fa-database' },
+          { name: 'Frontend Development', href: '/front-end', icon: 'fa-code' },
+          { name: 'Backend Development', href: '/back-end', icon: 'fa-database' },
         ]
       },
       { 
         name: 'CMS', 
         href: null,
         subItems: [
-          { name: 'Wordpress', href: '/code/android', icon: 'fa-wordpress' },
-          { name: 'Magento', href: '/code/ios', icon: 'fa-shopping-cart' },
-          { name: 'Shopify', href: '/code/ios', icon: 'fa-store' },
-          { name: 'Big Commerce', href: '/code/ios', icon: 'fa-store' },
-          { name: 'Drupal', href: '/code/ios', icon: 'fa-droplet' },
-          { name: 'HubSpot', href: '/code/ios', icon: 'fa-hubspot' },
+          { name: 'Wordpress', href: '/wordpress', icon: 'fa-wordpress' },
+          { name: 'Magento', href: '/magento', icon: 'fa-shopping-cart' },
+          { name: 'Shopify', href: '/shopify', icon: 'fa-store' },
+          { name: 'Big Commerce', href: '/bigcommerce', icon: 'fa-store' },
+          { name: 'Drupal', href: '/drupal', icon: 'fa-droplet' },
+          { name: 'HubSpot', href: '/hubspot', icon: 'fa-hubspot' },
         ]
       },
       {
         name: 'Product', 
         href: null,
-        subItems: []
+        subItems: [
+          { name: 'Andriod', href: '/android-app', icon: 'fa-android' },
+          { name: 'Ios', href: '/iphone-app', icon: 'fa-apple' },
+          { name: 'Flutter', href: '/flutter', icon: 'fa-flutter' },
+          { name: 'React Native', href: '/react-native', icon: 'fa-react' }, // Use fa-react for React Native
+          { name: 'Xamarin', href: '/xamarin', icon: 'fa-tint' }, // Use fa-xamarin for Xamarin
+          { name: 'IoT Development', href: '/iot-development', icon: 'fa-snowflake' }, // Use fa-iot for IoT
+        ]
       },
       { 
         name: 'AI & Automation', 
         href: null,
         subItems: [
-          { name: 'AI Development', href: '/code/android', icon: 'fa-robot' },
-          { name: 'Gen AI', href: '/code/ios', icon: 'fa-brain' },
-          { name: 'Intelligent Automation', href: '/code/ios', icon: 'fa-gears' },
+          { name: 'AI Development', href: '/ai-development', icon: 'fa-university' },
+          { name: 'Intelligent Automation', href: '/intelligent-automation', icon: 'fa-gears' },
         ]
       },
       { 
         name: 'Enterprise Solutions',
         href: null,
         subItems: [
-          { name: 'CRM', href: '/code/android', icon: 'fa-users' },
-          { name: 'ERP', href: '/code/ios', icon: 'fa-network-wired' },
+          { name: 'CRM', href: '/crm', icon: 'fa-users' },
+          { name: 'ERP', href: '/erp', icon: 'fa-network-wired' },
         ]
       },
       { 
         name: 'Data Analytics',
         href: null,
         subItems: [
-          { name: 'Business Intelligence Services', href: '/code/android', icon: 'fa-chart-line' },
-          { name: 'Big Data', href: '/code/ios', icon: 'fa-database' },
+          { name: 'Business Intelligence Services', href: '/business-intelligence', icon: 'fa-chart-line' },
+          { name: 'Big Data', href: '/big-data-analytics', icon: 'fa-database' },
         ]
       },
       { 
         name: 'Next Gen',
         href: null,
         subItems: [
-          { name: 'Blockchain', href: '/code/android', icon: 'fa-cubes' },
-          { name: 'Metaverse', href: '/code/ios', icon: 'fa-vr-cardboard' },
-          { name: 'Web3', href: '/code/ios', icon: 'fa-globe' },
+          { name: 'Blockchain', href: '/blockchain', icon: 'fa-cubes' },
+          { name: 'Metaverse', href: '/metaverse-development', icon: 'fa-vr-cardboard' },
+          { name: 'Web3', href: '/web3', icon: 'fa-globe' },
         ]
       },
       { 
         name: 'Platform Engineering',
         href: null,
         subItems: [
-          { name: 'Cloud & Devops', href: '/code/android', icon: 'fa-cloud' },
-          { name: 'Architecture Re-engineering', href: '/code/ios', icon: 'fa-drafting-compass' },
+          { name: 'Cloud & Devops', href: '/cloud-and-devops', icon: 'fa-cloud' },
+          { name: 'Architecture Re-engineering', href: '/architecture-reengineering', icon: 'fa-drafting-compass' },
         ]
       },
-      { name: 'Integration & Middleware', href: '/leads/crm-tools', icon: 'fa-plug' },
-      { name: 'Testing & Automation', href: '/leads/crm-tools', icon: 'fa-vial' },
-      { name: 'Software Development', href: '/leads/crm-tools', icon: 'fa-laptop-code' },
+      { name: 'Integration & Middleware', href: '/integration-middleware', icon: 'fa-plug' },
+      { name: 'Testing & Automation', href: '/testing-automation', icon: 'fa-vial' },
+      { name: 'Software Development', href: '/software', icon: 'fa-laptop-code' },
     ]
   },
   'Leads & Revenue': {
@@ -132,7 +138,7 @@ const menuData = {
         name: 'PPC Advertising', 
         href: null,
         subItems: [
-          { name: 'Google Ads', href: '/google-ads', icon: 'fa-google' },
+          { name: 'Google Ads', href: '/google-ads', icon: 'fab fa-google' },
           { name: 'Bing Ads', href: '/bing-ads', icon: 'fa-microsoft' },
           { name: 'Ads Audit', href: '/ads-audit', icon: 'fa-search-dollar' },
           { name: 'Ads Suspension Recovery', href: '/ads-suspension-recovery', icon: 'fa-ban' },
@@ -158,54 +164,54 @@ const menuData = {
           { name: 'SEO Copywriting', href: '/seo-copywriting', icon: 'fa-keyboard' },
         ]
       },
-      { name: 'App Store Optimization', href: '/leads/crm-tools', icon: 'fa-mobile' },
-      { name: 'Conversion Rate Optimization', href: '/leads/sales-funnel', icon: 'fa-percentage' },
-      { name: 'Public Relations', href: '/leads/analytics', icon: 'fa-bullhorn' },
-      { name: 'Franchise', href: '/leads/analytics', icon: 'fa-store-alt' },
-      { name: 'Influencer', href: '/leads/analytics', icon: 'fa-user' },
+      { name: 'App Store Optimization', href: '/app-store', icon: 'fa-mobile' },
+      { name: 'Conversion Rate Optimization', href: '/conversion-rate-optimization', icon: 'fa-percentage' },
+      { name: 'Public Relations', href: '/public-relations', icon: 'fa-bullhorn' },
+      { name: 'Franchise', href: '/franchise-marketing', icon: 'fa-store-alt' },
+      { name: 'Influencer', href: '/influencer-marketing', icon: 'fa-user' },
     ]
   },
   'Resources': { type: 'link', href: '/resources' },
 };
-
-
-// Apple-style menu data for the iPad section (only used in Code section)
 const appleMenuData = {
   'App Development': {
-    type: 'header', // Non-clickable header
+    type: 'header',
     items: [
-          { name: 'Android Development', href: '/ipad-support', isClickable: true},
-          { name: 'iPhone/iPad Development', href: '/ipad-support', isClickable: true },
-          { name: 'Xamarin Development', href: '/ipad-support', isClickable: true },
-          { name: 'Flutter Development', href: '/ipad-support', isClickable: true },
-          { name: 'React Native Development', href: '/ipad-support', isClickable: true}
+      { name: 'Android Development', href: '/android-app', isClickable: true, icon: 'fa-android' },
+      { name: 'iPhone/iPad Development', href: '/iphone-app', isClickable: true, icon: 'fa-apple' },
+      { name: 'Xamarin Development', href: '/xamarin', isClickable: true, icon: 'fa-tint' },
+      { name: 'Flutter Development', href: '/flutter', isClickable: true, icon: 'fa-flutter' },
+      { name: 'React Native Development', href: '/react-native', isClickable: true, icon: 'fa-react' }, // React Native icon
+      { name: 'IoT Development', href: '/iot-development', isClickable: true, icon: 'fa-iot' }, // IoT Development icon
     ]
   },
-  'IOT ': {
-    type: 'header', // Non-clickable header
-    items: [
-      { name: 'IOT Development', href: '/ipad-support', isClickable: true },
-    ]
-  }
-}
-
-// Get icon class including prefix handling
+};
 const getIconClass = (iconName) => {
   if (!iconName) return 'fas fa-chevron-right'; // Default icon
   
   // Check if iconName already has a prefix
   if (iconName.startsWith('fa-')) {
-    // Determine correct prefix based on icon name
-    if (iconName === 'fa-react' || iconName === 'fa-vuejs' || 
-        iconName === 'fa-angular' || iconName === 'fa-android' || 
-        iconName === 'fa-apple') {
-      return `fab ${iconName}`;
+    // Common brand icons that should use 'fab' prefix
+    const brandIcons = [
+      'fa-react', 'fa-vuejs', 'fa-angular', 'fa-android', 'fa-apple',
+      'fa-facebook', 'fa-twitter', 'fa-instagram', 'fa-linkedin',
+      'fa-wordpress', 'fa-shopify', 'fa-amazon', 'fa-microsoft',
+      'fa-google', 'fa-youtube', 'fa-tiktok', 'fa-snapchat',
+      'fa-hubspot', 'fa-droplet', 'fa-flutter', 'fa-react-native', 'fa-xamarin',
+      'fa-dart', 'fa-git', 'fa-python', 'fa-ruby', 'fa-node', 'fa-sass', 'fa-javascript'
+      // Add any other brand icons you use here
+    ];
+    
+    if (brandIcons.includes(iconName)) {
+      return `fab ${iconName}`;  // Return with 'fab' prefix for brand icons
     }
-    return `fas ${iconName}`;
+    
+    return `fas ${iconName}`;  // For solid icons
   }
   
-  return `fas fa-${iconName}`;
+  return `fas fa-${iconName}`;  // For icons without the 'fa-' prefix
 };
+
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null)
@@ -218,13 +224,24 @@ export default function Navbar() {
   const menuItemRefs = useRef({})
   const [contentHeight, setContentHeight] = useState(0)
   const dropdownRef = useRef(null)
-  
+  const [scrolled, setScrolled] = useState(false);
+
   // Close dropdown when hovering away from navbar and dropdown
   const handleMouseLeave = () => {
     setIsOpen(false)
     setActiveMenu(null)
     setActiveSubMenu(null)
   }
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); // change threshold as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   // Monitor active menu height changes
   useEffect(() => {
@@ -428,7 +445,7 @@ export default function Navbar() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"
+            className="fixed inset-0 bg-[#0F172A] bg-opacity-30 backdrop-blur-sm z-10"
             style={{ pointerEvents: isMobileMenuOpen ? 'auto' : 'none' }}
             onClick={() => isMobileMenuOpen ? setIsMobileMenuOpen(false) : null}
           />
@@ -571,7 +588,7 @@ export default function Navbar() {
 
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${isOpen ? 'bg-opacity-80 backdrop-blur-md' : 'bg-black'}`}>
-        <div className="px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-6 md:px-4 md:py-1">
           <div className="flex items-center h-16">
             {/* Mobile menu toggle button - only visible on small screens */}
             <div className="md:hidden flex items-center">
@@ -585,7 +602,7 @@ export default function Navbar() {
             
             {/* Left side - Navigation Items - hidden on mobile */}
             <div className="hidden md:flex flex-1 justify-start">
-              <div className="flex items-center space-x-6 flex-nowrap">
+              <div className="flex items-center space-x-2 flex-nowrap">
                 {Object.keys(menuData).map((menuName) => (
                   <div 
                     key={menuName}
@@ -595,13 +612,13 @@ export default function Navbar() {
                     {menuData[menuName].type === 'link' ? (
                       <Link
                         href={menuData[menuName].href}
-                        className="text-white hover:text-gray-300 px-2 py-2 text-sm font-medium"
+                        className="text-[#FFFFFFCC] hover:text-gray-300 px-2 py-2 text-[14px] font-helveticaneue font-medium "
                       >
                         {menuName}
                       </Link>
                     ) : (
                       <div
-                        className={`text-white hover:text-gray-300 px-2 py-2 text-sm font-medium cursor-pointer ${activeMenu === menuName && isOpen ? 'text-blue-400' : ''}`}
+                        className={`text-[#FFFFFFCC] hover:text-gray-300 px-2 py-2 text-[14px] font-helveticaneue font-medium cursor-pointer ${activeMenu === menuName && isOpen ? 'text-white' : ''}`}
                       >
                         {menuName}
                       </div>
@@ -616,12 +633,12 @@ export default function Navbar() {
               className="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2 md:static md:left-auto md:transform-none md:flex-1 md:flex md:justify-center"
               onMouseEnter={handleCloseDropdown}
             >
-              <Link href="/" className="text-white">
+              <Link href="/mainpage" className="text-white">
                 <Image 
                   src="/images/logo5.png" 
                   alt="Logo"
-                  width={40}
-                  height={40}
+                  width={52}
+                  height={50}
                   priority
                 />
               </Link>
@@ -629,21 +646,21 @@ export default function Navbar() {
 
             {/* Right side - Connect Button & Social Icons - hidden on mobile */}
             <div 
-              className="hidden md:flex flex-1 justify-end items-center space-x-4"
+              className="hidden md:flex flex-1 justify-end items-center gap-[15px]"
               onMouseEnter={handleCloseDropdown}
             >
-              <div className="relative">
-                <a href="/contact-us" className="flex items-center pr-8 pl-6 py-3 rounded-full bg-black text-white border border-gray-600 hover:border-gray-400 transition">
-                  <span className={`text-[14px] leading-[22px] font-[400] font-[Helvetica] text-white whitespace-nowrap mr-6`}>Connect</span>
-                  <div className="absolute left-[91px] top-1/2 -translate-y-1/2">
-                    <div className="bg-blue-500 p-3.5 rounded-full">
-                      <Phone size={15} />
-                    </div>
-                  </div>
-                </a>
-              </div>
+            <div className="relative">
+      <a href="/contact-us" className="flex items-center pr-8 pl-6 py-2 rounded-full bg-black text-white border border-gray-600 hover:border-gray-400 transition">
+        <span className="text-[14px] leading-[22px] font-[400] font-helveticaneue text-white whitespace-nowrap mr-5">Connect</span>
+        <div className="absolute left-[91px] top-1/2 -translate-y-1/2">
+          <div className={`p-[11.2px] rounded-full transition duration-300 ${scrolled ? 'bg-blue-500' : 'bg-white'}`}>
+            <FaPhone size={16} className={`-scale-x-100 ${scrolled ? 'text-white' : 'text-blue-500'}  transition duration-300`}  />
+          </div>
+        </div>
+      </a>
+    </div>
               {/* Social Icons */}
-              <div className="flex items-center space-x-3">
+              <div className="flex gap-[32px] ">
                 <Link href="/twitter" className="text-white hover:text-blue-400">
                   <i className="fab fa-twitter"></i>
                 </Link>
@@ -666,7 +683,8 @@ export default function Navbar() {
   className="fixed top-16 left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out md:block hidden"
   style={{
     height: isOpen ? `${contentHeight + 32}px` : '0px',
-    opacity: isOpen ? 1 : 0
+    opacity: isOpen ? 1 : 0,
+    marginTop: '-25px' // Slight negative margin to eliminate visual gap
   }}
 >
   <div className="py-6 px-6 md:px-0 w-full">
@@ -678,144 +696,178 @@ export default function Navbar() {
           className={`transition-opacity duration-300 ${activeMenu === menuName ? 'opacity-100' : 'opacity-0 hidden'}`}
         >
           <div className="relative flex w-full overflow-hidden shadow-xl shadow-blue-900/30 backdrop-blur-sm px-[50px]">
-            {/* Background glow effects */}
-            <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-600/10 rounded-full blur-3xl pointer-events-none" />
+            {/* Background glow effects - more subtle */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-teal-600/5 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Center Glowing Divider - Fixed to extend full height for all sections */}
-            <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-green-500/50 via-blue-500/40 to-green-500/50 pointer-events-none z-10 drop-shadow-[0_0_3px_rgba(74,222,128,0.5)]" />
+            {/* Center Glowing Divider - subtle glow */}
+            <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-teal-500/30 via-blue-500/20 to-teal-500/30 pointer-events-none z-10 drop-shadow-[0_0_2px_rgba(45,212,191,0.3)]" />
 
             {/* Left side - Categories */}
             <div className="w-1/3 bg-gradient-to-br from-[#0a0a0a] to-[#111827] z-20">
               <div className="grid grid-cols-2 h-full">
-                {chunkArray(menuData[menuName].items, 5).map((chunk, chunkIndex) => (
-                  <div key={`chunk-${chunkIndex}`} className="flex flex-col divide-y divide-gray-800/70 border-r last:border-r-0 border-gray-800/70">
-                    {chunk.map((item) => (
+                {/* First column: Items without nested subitems and additional text */}
+                <div className="flex flex-col divide-y divide-gray-800/50 border-r border-gray-800/50">
+                  {menuData[menuName].items
+                    .filter(item => !item.subItems)
+                    .map((item) => (
+                      <div
+                        key={item.name}
+                        onMouseEnter={() => setActiveSubMenu(null)} 
+                        className="px-4 py-3 hover:bg-gray-900/50 transition-all duration-200 group relative overflow-hidden"
+                      >
+                        {/* Subtle hover highlight effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/0 to-blue-500/0 group-hover:from-teal-500/5 group-hover:to-blue-500/5 transition-all duration-300" />
+                        
+                        <Link
+                          href={item.href}
+                          className="text-base font-medium text-gray-300 hover:text-teal-300 block transition-colors duration-200 relative"
+                        >
+                          {item.name}
+                        </Link>
+                      </div>
+                    ))}
+                  <div 
+                    className="grow border-t border-gray-800/50 p-4"
+                    onMouseEnter={() => setActiveSubMenu(null)} 
+                  >
+                    <h3 className="text-sm font-medium text-teal-400 mb-2">AlgorithmX</h3>
+                    <p className="text-xs text-gray-400">
+                    Empower your digital presence with essential tools and insights. Elevate marketing, simplify development.
+                    </p>
+
+                  </div>
+                </div>
+
+                {/* Second column: Items with nested subitems */}
+                <div className="flex flex-col divide-y divide-gray-800/50">
+                  {menuData[menuName].items
+                    .filter(item => item.subItems)
+                    .map((item) => (
                       <div
                         key={item.name}
                         onMouseEnter={() => handleSubMenuHover(item.name)}
                         className="px-4 py-3 hover:bg-gray-900/50 transition-all duration-200 group relative overflow-hidden"
                       >
                         {/* Subtle hover highlight effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 to-blue-500/0 group-hover:from-green-500/5 group-hover:to-blue-500/5 transition-all duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/0 to-blue-500/0 group-hover:from-teal-500/5 group-hover:to-blue-500/5 transition-all duration-300" />
                         
-                        {!item.subItems ? (
-                          <Link
-                            href={item.href}
-                            className="text-base font-medium text-green-400 hover:text-blue-400 block transition-colors duration-200 relative"
-                          >
-                            {item.name}
-                          </Link>
-                        ) : (
-                          <>
-                            <span
-                              className={`text-base font-medium block cursor-pointer transition-colors duration-200 relative ${
-                                activeSubMenu === item.name
-                                  ? 'text-blue-400'
-                                  : 'text-green-400 group-hover:text-blue-400'
-                              }`}
-                            >
-                              {item.name}
-                            </span>
-                            {activeSubMenu === item.name && (
-                              <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-green-400 to-blue-500"></div>
-                            )}
-                          </>
+                        <span
+                          className={`text-base font-medium block cursor-pointer transition-colors duration-200 relative ${
+                            activeSubMenu === item.name
+                              ? 'text-blue-300'
+                              : 'text-gray-300 group-hover:text-teal-300'
+                          }`}
+                        >
+                          {item.name}
+                        </span>
+                        {activeSubMenu === item.name && (
+                          <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-400/70 to-blue-400/70"></div>
                         )}
                       </div>
                     ))}
-                    <div className="grow border-t border-gray-800/70" />
-                  </div>
-                ))}
+                  <div 
+                    className="grow border-t border-gray-800/50"
+                    onMouseEnter={() => setActiveSubMenu(null)} 
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Right side - Subitems with improved styling */}
-            <div className="w-2/3 min-h-[300px] bg-gradient-to-br from-[#0c1220] via-[#111827] to-[#0a0f1a] relative z-20">
-              {activeSubMenu &&
-                menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems && (() => {
-                  const subItems = menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems || [];
-                  const columnCount = Math.min(3, Math.ceil(subItems.length / 4));
-                  const colLength = Math.ceil(subItems.length / columnCount);
-                  const evenlyChunked = Array.from({ length: columnCount }, (_, i) =>
-                    subItems.slice(i * colLength, (i + 1) * colLength)
-                  );
+            {/* Right side - Subitems with fill-first column approach */}
+<div 
+  className="w-2/3 min-h-[300px] bg-gradient-to-br from-[#0c1220] via-[#111827] to-[#0a0f1a] relative z-20"
+  onMouseLeave={() => setActiveSubMenu(null)}
+>
+  {activeSubMenu &&
+    menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems && (() => {
+      const subItems = menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems || [];
+      const maxItemsPerColumn = 6; // Maximum number of items in a column
+      
+      // Calculate how many columns we need
+      const totalColumns = Math.ceil(subItems.length / maxItemsPerColumn);
+      
+      // Prepare an array of column contents
+      const columns = [];
+      
+      for (let i = 0; i < totalColumns; i++) {
+        // For each column, take up to maxItemsPerColumn items
+        const startIndex = i * maxItemsPerColumn;
+        const columnItems = subItems.slice(startIndex, startIndex + maxItemsPerColumn);
+        columns.push(columnItems);
+      }
 
-                  // Special handling for "Creative Assets" sections to ensure vertical line appears
-                  const isCreativeAssets = activeSubMenu === "Branding" || activeSubMenu === "Video" || 
-                                          activeSubMenu === "Creative Assets" || activeSubMenu === "Media";
+      return (
+        <div className="flex h-full">
+          {columns.map((columnItems, colIndex) => (
+            <div
+              key={colIndex}
+              className={`flex-1 flex flex-col divide-y divide-gray-800/30 h-full ${
+                colIndex !== columns.length - 1 ? 'border-r border-gray-800/30' : ''
+              }`}
+            >
+              {columnItems.map((subItem) => (
+                <Link
+                  key={subItem.name}
+                  href={subItem.href}
+                  className="flex items-center gap-3 px-5 py-4 hover:bg-gray-800/30 transition-all duration-200 group relative"
+                >
+                  {/* Subtle hover effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-teal-500/5 to-blue-500/5 transition-opacity duration-300" />
+                  
+                  <span className=" text-blue-500 group-hover:text-blue-600 transition-colors duration-200 relative">
+                    <i className={`drop-shadow-[0_0_1px_rgba(45,212,191,0.3)] transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_2px_rgba(59,130,246,0.4)] ${getIconClass(subItem.icon)}`}></i>
+                  </span>
+                  <span className="font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-200 relative">{subItem.name}</span>
+                </Link>
+              ))}
+              <div className="grow border-t border-gray-800/30" />
+            </div>
+          ))}
+          
+          {/* Enhanced vertical lines for all columns - more subtle */}
+          {columns.length > 1 && columns.map((_, colIndex) => (
+            colIndex < columns.length - 1 && (
+              <div 
+                key={`divider-${colIndex}`} 
+                className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-teal-500/20 via-blue-500/15 to-teal-500/20 z-10"
+                style={{ left: `${((colIndex + 1) / columns.length) * 100}%` }}
+              />
+            )
+          ))}
+        </div>
+      );
+    })()}
 
-                  return (
-                    <div className="grid h-full" style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}>
-                      {evenlyChunked.map((col, colIndex) => (
-                        <div
-                          key={colIndex}
-                          className={`flex flex-col divide-y divide-gray-800/40 h-full ${
-                            colIndex !== evenlyChunked.length - 1 ? 'border-r border-gray-800/40' : ''
-                          }`}
-                        >
-                          {col.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
-                              className="flex items-center gap-3 px-5 py-4 hover:bg-gray-800/30 transition-all duration-200 group relative"
-                            >
-                              {/* Subtle hover effect */}
-                              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-green-500/5 to-blue-500/10 transition-opacity duration-300" />
-                              
-                              <span className="text-green-400 group-hover:text-blue-400 transition-colors duration-200 relative">
-                                <i className={`drop-shadow-[0_0_2px_rgba(74,222,128,0.5)] transition-all duration-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_3px_rgba(59,130,246,0.6)] ${getIconClass(subItem.icon)}`}></i>
-                              </span>
-                              <span className="font-medium text-gray-300 group-hover:text-blue-200 transition-colors duration-200 relative">{subItem.name}</span>
-                            </Link>
-                          ))}
-                          <div className="grow border-t border-gray-800/40" />
-                        </div>
-                      ))}
-                      
-                      {/* Enhanced vertical lines for all columns */}
-                      {evenlyChunked.length > 1 && evenlyChunked.map((_, colIndex) => (
-                        colIndex < evenlyChunked.length - 1 && (
-                          <div 
-                            key={`divider-${colIndex}`} 
-                            className="absolute top-0 bottom-0 w-px bg-gradient-to-b from-green-500/40 via-blue-500/30 to-green-500/40 z-10"
-                            style={{ left: `${((colIndex + 1) / evenlyChunked.length) * 100}%` }}
-                          />
-                        )
-                      ))}
-                    </div>
-                  );
-                })()}
-
-              {/* Default content when no submenu is selected or for Creative Assets category */}
+              {/* Default content when no submenu is selected */}
               {(!activeSubMenu || (menuName === "Creative Assets" && !menuData[menuName].items.find(item => item.name === activeSubMenu)?.subItems)) && (
                 <div className="flex flex-col items-center justify-center h-full p-8 text-center">
-                  <div className="w-16 h-16 mb-4 text-green-400">
-                    <i className={`text-4xl drop-shadow-[0_0_3px_rgba(74,222,128,0.6)] ${
-                      menuName === "Creative Assets" ? "fas fa-palette" : "fas fa-arrow-left"
+                  <div className="w-16 h-16 mb-4 text-teal-400/80">
+                    <i className={`text-4xl drop-shadow-[0_0_2px_rgba(45,212,191,0.3)] ${
+                      menuName === "Creative Assets" ? "fas fa-palette" : ""
                     }`}></i>
                   </div>
-                  <h3 className="text-xl font-bold text-blue-400 mb-2">
-                    {menuName === "Creative Assets" ? "Creative Resources" : "Select a Category"}
+                  <h3 className="text-xl font-bold text-blue-300 mb-2">
+                    {menuName === "Creative Assets" ? "Creative Resources" : ""}
                   </h3>
-                  <p className="text-gray-300 max-w-md">
+                  <p className="text-gray-400 max-w-md">
                     {menuName === "Creative Assets" 
                       ? "Explore our comprehensive suite of creative tools and resources to enhance your brand presence and content creation capabilities."
-                      : "Select a category from the left to view available resources and tools."}
+                      : ""}
                   </p>
                   {menuName === "Creative Assets" && (
                     <div className="mt-6 grid grid-cols-3 gap-4 w-full max-w-lg">
-                      <div className="p-3 bg-gray-800/30 rounded-lg border border-gray-700/40 flex flex-col items-center">
-                        <span className="text-green-400 mb-2"><i className="fas fa-images"></i></span>
-                        <span className="text-sm text-gray-300">Graphics</span>
+                      <div className="p-3 bg-gray-800/20 rounded-lg border border-gray-700/30 flex flex-col items-center">
+                        <span className="text-teal-400/80 mb-2"><i className="fas fa-images"></i></span>
+                        <span className="text-sm text-gray-400">Graphics</span>
                       </div>
-                      <div className="p-3 bg-gray-800/30 rounded-lg border border-gray-700/40 flex flex-col items-center">
-                        <span className="text-green-400 mb-2"><i className="fas fa-video"></i></span>
-                        <span className="text-sm text-gray-300">Videos</span>
+                      <div className="p-3 bg-gray-800/20 rounded-lg border border-gray-700/30 flex flex-col items-center">
+                        <span className="text-teal-400/80 mb-2"><i className="fas fa-video"></i></span>
+                        <span className="text-sm text-gray-400">Videos</span>
                       </div>
-                      <div className="p-3 bg-gray-800/30 rounded-lg border border-gray-700/40 flex flex-col items-center">
-                        <span className="text-green-400 mb-2"><i className="fas fa-pencil-alt"></i></span>
-                        <span className="text-sm text-gray-300">Templates</span>
+                      <div className="p-3 bg-gray-800/20 rounded-lg border border-gray-700/30 flex flex-col items-center">
+                        <span className="text-teal-400/80 mb-2"><i className="fas fa-pencil-alt"></i></span>
+                        <span className="text-sm text-gray-400">Templates</span>
                       </div>
                     </div>
                   )}

@@ -194,7 +194,7 @@ export default function Home() {
       <Head>
         <title>SEO Periodic Table</title>
         <meta name="description" content="Interactive SEO Periodic Table" />
-        <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
       <main className="p-8 max-w-[1200px] mx-auto">

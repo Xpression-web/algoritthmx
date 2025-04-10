@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import WebSection from './home'
 import WebAppServices from './services'
 import BenefitsWebSection from './benefits'

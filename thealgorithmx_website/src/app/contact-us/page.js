@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import ContactPage from './home'
 import SupportSection from './contact'
 import Footer from '../mainpage/footer'

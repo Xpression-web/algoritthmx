@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import ContentSection from './home';
 import InteractiveBox from "./method";
 import CostEstimation from './cost';

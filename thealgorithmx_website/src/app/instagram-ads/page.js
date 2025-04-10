@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import InstagramAds from './home'
 import InstaBoostAds from './boost'
 import ServicesAccordion from './services'

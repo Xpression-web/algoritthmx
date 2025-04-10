@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import VideoSection from './home';
 import VideoServices from './videoservices';
 import  DevelopmentProcess from './craftmanship';

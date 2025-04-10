@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import TechnicalSEOSection from './home'
 import TechnicalServices from './technicalservices'
 import TechnicalStrategy from './confidence'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import CMSSection from './home'
 import ContentMarketingCMS from './utilize'
 import CMSServicesGrid from './gains'

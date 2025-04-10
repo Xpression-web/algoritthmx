@@ -17,7 +17,7 @@ const monsterfont = Montserrat({
 const GraphicsSection = () => {
   return (
     <div className="min-h-screen bg-black pt-[100px]">
-      <div className="max-w-[1200px] mx-auto py-16 px-4">
+      <div className="max-w-[1200px] mx-auto px-4 md:py-0 md:px-0">
         <div className="flex flex-col md:flex-row md:items-center ">
           {/* Left side - Image */}
           <div className="w-full md:w-1/2">
@@ -62,15 +62,15 @@ const GraphicsSection = () => {
           </div>
 
           {/* Right side - BRANDING and description */}
-          <div className="w-full md:w-1/2 flex flex-col md:items-start items-center text-center md:text-left">
+          <div className="w-full md:w-1/2 flex flex-col md:items-start items-center text-center ">
             {/* Cylindrical image above branding (hidden on phones) */}
             <img
               src="images/g1.png"
               alt="Cylindrical Branding Icon"
-              className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full shadow-lg hidden md:block"
+              className="w-12 h-12 md:w-[94px] md:h-[70px] object-cover rounded-full shadow-lg hidden md:block"
             />
             <h1
-  className={`text-4xl md:text-[85px] md:leading-[90px] md:tracking[8px] ${monsterfont1.className} bg-clip-text text-transparent`}
+  className={`text-4xl md:text-[85px] md:leading-[90px] md:tracking-[8px] ${monsterfont1.className} bg-clip-text text-transparent`}
   style={{
     backgroundImage: "linear-gradient(90deg, #ffbd12 0, #e03d3d 53.72%, #cd21e9 101.11%)"
   }}

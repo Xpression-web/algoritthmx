@@ -9,27 +9,27 @@ const MetaverseDevelopmentPage = () => {
   const sections = {
     robustSecurity: {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Deeply experienced team',
-      description: 'Our experience is informed by a number of successful virtual reality projects for Fortune 500 companies, startups, and everyone in between.',
+      title: 'Immersive Experience Design',
+      description: 'We create highly engaging and interactive virtual environments using cutting-edge AR/VR tools to deliver a fully immersive metaverse experience tailored to your brand.',
       image: '/images/a1.png'
     },
     reliableConnectivity: {
       icon: <Link className="w-6 h-6" />,
-      title: 'Innovation focused',
-      description: 'Our global team of experienced, certified consultants and developers is well-versed with the latest tools, technologies, and platforms.',
+      title: 'Seamless Cross-Platform Integration',
+      description: 'Our team ensures your metaverse solutions are integrated seamlessly across web, mobile, and VR devices, offering users a consistent and accessible experience.',
       image: '/images/Why.webp'
     },
     prioritizingUsability: {
       icon: <Layers className="w-6 h-6" />,
-      title: 'Dedicated OSDC',
-      description: 'We meet you where you are with our dedicated global open science data cloud, available on-site, near-shore, off-shore, or as a hybrid model.',
+      title: 'Custom Avatars & Virtual Assets',
+      description: 'We develop custom avatars, digital assets, and tokenized economies (NFTs) to help your brand stand out and enable meaningful engagement in virtual spaces.',
       image: '/images/a1.png'
     },
     scalability: {
       icon: <Award className="w-6 h-6" />,
-      title: 'Flexible engagement models',
-      description: 'Our partnership with you is completely flexible – scale teams up and down as you need, or opt for a fixed cost or T&M model.',
-     image: '/images/Why.webp'
+      title: 'Scalable & Secure Metaverse Solutions',
+      description: 'From initial prototype to global deployment, we build scalable metaverse platforms with enterprise-grade security, ready to grow with your vision.',
+      image: '/images/Why.webp'
     }
   };
 
@@ -37,15 +37,15 @@ const MetaverseDevelopmentPage = () => {
     <div className="min-h-screen bg-black text-white flex justify-center">
       <div className="w-full max-w-[1200px] px-4 py-12">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">
-          Why Choose AlgorithmX as Your IoT Development Company?
+          Why Choose AlgorithmX for Metaverse Development?
         </h1>
         <p className="text-gray-300 mb-8">
-          As a trusted IoT application development company, we have proven ourselves as the leading IoT application development company by providing user-centric applications for top brands. Being a premium IoT software development company, we focus on bridging the gap between the real and digital world and providing our clients with the most innovative and usable IoT environment.
+          At AlgorithmX, we are passionate about shaping the future of digital interaction. Our Metaverse development team combines creativity, technical expertise, and innovation to help businesses build virtual ecosystems that drive engagement, collaboration, and new revenue opportunities.
         </p>
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
           {/* Mobile & Desktop Left Section - Clickable Items */}
-          <div className="md:w-1/3 space-y-4   rounded-[20px]">
+          <div className="md:w-1/3 space-y-4 rounded-[20px]">
             {Object.entries(sections).map(([key, section]) => (
               <button
                 key={key}

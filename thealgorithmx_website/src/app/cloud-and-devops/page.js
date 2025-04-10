@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../asample/naviagtion'
 import CloudSection from './home'
 import CloudGrid from './downtime'
 import CloudDesignProcess from './process'
@@ -10,6 +11,7 @@ import InsightSection from '../graphics/insight'
 const page = () => {
   return (
     <div>
+    <Navbar/>
     <CloudSection/>
     <CloudGrid/>
     <CloudDesignProcess/>

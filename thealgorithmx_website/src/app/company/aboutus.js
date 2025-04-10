@@ -16,11 +16,11 @@ const Aboutus = () => {
   return (
     <section className="relative w-full min-h-screen bg-black text-gray-300 flex items-center justify-center p-8 ">
       <div className="max-w-6xl mx-auto text-center space-y-0 ">
-        <h1 className={`algo-line-height-1 md:font-size-60 text-[50px] ${monsterfont.className} text-white font-helvetica mb-8`}>
+        <h1 className={`leading-[64px] md:text-[60px] text-[50px] ${monsterfont.className} text-white font-helvetica mb-[10px]`}>
           Introduction
         </h1>
         
-        <p className={`algo-line-height-24  text-center text-lg font-helveticaneue font-[300] text-semi-white`}>
+        <p className={`text-[18px]   text-center leading-[1.5] font-helveticaneue font-[300] text-semi-white`}>
           Welcome to AlgorithmX, where technology meets excellence. As a leading end-to-end digital agency, 
           we are dedicated to transforming your business with a personalized approach as we align your business 
           goals with the right strategies, utilizing the latest tools and technologies to deliver measurable results.

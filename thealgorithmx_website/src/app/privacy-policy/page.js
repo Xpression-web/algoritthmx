@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import PrivacySection from './home'
 import Introduction from './content'
 import Footer from '../mainpage/footer'

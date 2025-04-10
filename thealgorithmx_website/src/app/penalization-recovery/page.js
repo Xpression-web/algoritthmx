@@ -1,5 +1,5 @@
     import React from 'react'
-    import Navbar from '../navbar/navbar'
+    import Navbar from '../asample/naviagtion'
     import SEOPenalizationSection from './home'
     import SeoStrategy from './longterm'
     import PenalizationSection from './panda'

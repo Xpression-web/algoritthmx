@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import MediaSection from './home'
 import WhatSection from './what'
 import SocialMediaAudit from './key'

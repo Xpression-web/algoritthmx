@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar';
+import Navbar from '../asample/naviagtion';
 import CRMServices from './crmservices'
 import CRMDashboard from './development'
 import CRMSection from './home'

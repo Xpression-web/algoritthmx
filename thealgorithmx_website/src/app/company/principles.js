@@ -104,9 +104,9 @@ const GuidingPrinciples = () => {
               }}
             >
               <div className="flex flex-col h-full">
-                <div className={`flex items-start ${monsterfont1.className} mb-2`}>
+                <div className={`flex items-start ${monsterfont1.className} mb-2 text-white`}>
                   {principle.title}
-                  <p className={`text-gray-600 ${monsterfont1.className} text-lg ml-2 mb-2`}>
+                  <p className={`text-semi-white ${monsterfont1.className} text-lg ml-2 mb-2`}>
                     {principle.number}
                   </p>
                 </div>
@@ -119,7 +119,7 @@ const GuidingPrinciples = () => {
                   />
                 </div>
 
-                <p className={`text-gray-500 text-sm font-helvetica leading-relaxed`}>
+                <p className={`text-semi-white text-sm font-helvetica leading-relaxed`}>
                   {principle.description}
                 </p>
               </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../navbar/navbar';
+import Navbar from '../asample/naviagtion';
 import AndriodSection from './home';
 import AppGrid from './multiface';
 import ServicesGrid from './development';

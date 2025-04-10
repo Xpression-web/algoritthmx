@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import InfluencerSection from './home'
 import InfluencerMasterySection from './influencer'
 import InfluencerModules from './services'

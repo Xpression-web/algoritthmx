@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import HubSpotSection from './home'
 import HubspotServices from './hservices'
 import HubSpotFeatures from './hchoose'

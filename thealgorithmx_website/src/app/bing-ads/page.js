@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import BingAds from './home'
 import Targeted from './transform'
 import ServicesAccordion from './services'

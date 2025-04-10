@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/navbar'
+import Navbar from '../asample/naviagtion'
 import RemarketinginAds from './home'
 import RemarketingBenefits from './benefits'
 import SmoothScrollStack from './approach'
