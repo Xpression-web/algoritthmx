@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import styles from './style.module.css'
 import { Montserrat } from 'next/font/google';
+import Link from 'next/link'; 
 
 const monsterfont1 = Montserrat({
   subsets: ["latin"],
@@ -89,9 +90,11 @@ const Accordion = () => {
             <p className="font-helveticaneue leading-[28px] font-[16px] m-[30px] mt-[30px] text-white">
               To qualify for a free social media audit covering Facebook, Instagram, TikTok, and more, we only require temporary read-only access to your Facebook Ads account and Google Analytics. We will guide you through the process of granting this access.
             </p>
-            <button className="bg-[#272727] text-[14px] font-opensans font-[600] text-[#f7f5ef] px-6 py-2 rounded-[100px]  flex justify-center items-center mx-auto">
-  CONTACT US
-</button>
+            <Link href="/contact-us">
+  <button className="bg-[#272727] text-[14px] font-opensans font-[600] text-[#f7f5ef] px-6 py-2 rounded-[100px]  flex justify-center items-center mx-auto">
+    CONTACT US
+  </button>
+</Link>
 
           </div>
         </div>

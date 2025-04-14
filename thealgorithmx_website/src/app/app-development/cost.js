@@ -47,8 +47,8 @@ const CostMob = () => {
   return (
     <div className="min-h-screen bg-black p-6">
       <div className="max-w-[1200px] mx-auto">
-        <h1 className={`${style["cost-title"]} ${monsterfont.className}`}>Cost</h1>
-        <h2 className={`${style["cost-title"]} ${monsterfont1.className} mb-8`}>Estimations</h2>
+        <h1 className={`${style["cost-title"]} ${monsterfont.className} text-white`}>Cost</h1>
+        <h2 className={`${style["cost-title"]} ${monsterfont1.className} mb-8 text-white`}>Estimations</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* First two cards in top row */}
@@ -64,7 +64,7 @@ const CostMob = () => {
               <div className={`text-[20px]  ${monsterfont2.className} text-center`}>
                 {item.title}
               </div>
-              <div className={`text-[20px] ${monsterfont2.className} text-center`}>
+              <div className={`text-[20px] ${monsterfont2.className} text-center text-white`}>
                 {item.price}
               </div>
               <p className={`${style["cost-description"]} font-helveticaneue mt-4 text-white`}>
@@ -84,7 +84,7 @@ const CostMob = () => {
                 className="mx-auto mb-4 w-[56px] h-[52px] object-cover"
               />
             </div>
-            <div className={`${styles["cost-price"]} ${monsterfont2.className} text-center`}>
+            <div className={`${styles["cost-price"]} ${monsterfont2.className} text-center text-white`}>
               {estimates[2].price}
             </div>
             <p className={`${style["cost-description"]} font-helveticaneue mt-4 text-white`}>

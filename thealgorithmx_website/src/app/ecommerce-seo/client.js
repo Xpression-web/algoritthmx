@@ -19,10 +19,10 @@ const DeliverablesSection = () => {
     <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8 md:mb-16">
-          <h1 className={`text-[40px] md:text-[64px] leading-[68px] ${monsterfont.className}`}>
+          <h1 className={`text-[40px] md:text-[64px] leading-[68px] ${monsterfont.className} text-white`}>
             Deliverables
           </h1>
-          <h2 className={`text-[40px] md:text-[64px] ${monsterfont1.className}`}>
+          <h2 className={`text-[40px] md:text-[64px] ${monsterfont1.className} text-white`}>
             To Clients
           </h2>
         </div>

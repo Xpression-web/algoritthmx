@@ -68,7 +68,7 @@ const MarketingServices = () => {
                 </div>
 
                 {/* Arrow Button - Between content and image */}
-                <div className="absolute z-20 left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                <div className="absolute z-10 left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                   <button className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white transform transition-transform hover:scale-110">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

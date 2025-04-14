@@ -78,58 +78,171 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Media Links */}
+          {/* Resources Links - Replacing Social Media Links */}
           <div className='md:ml-[100px]'>
-          <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-4 md:ml-5`}>FOLLOW US</h3>
-            <div className="flex gap-4">
-            <a href="https://www.facebook.com/algorithmxinc" target="_blank" className="transition-opacity">
-            <img src="/images/icons8-facebook.svg" alt="Facebook" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
-            </a>
-            <a href="http://x.com/algorithmxinc" target="_blank" className="transition-opacity">
-              <img src="/images/icons8-twitter.svg" alt="Twitter" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
-            </a>
-            <a href="https://www.instagram.com/thealgorithmx/" target="_blank" className="transition-opacity">
-              <img src="/images/icons8-instagram.svg" alt="Instagram" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
-            </a>
-            <a href="https://www.linkedin.com/company/algorithmxinc" target="_blank" className="transition-opacity">
-              <img src="/images/icons8-linkedin.svg" alt="LinkedIn" className="w-6 h-6 hover:filter hover:brightness-0 hover:saturate-100 hover:invert-[31%] hover:sepia-[100%] hover:saturate-[1000%] hover:hue-rotate-[190deg] hover:brightness-[100%] hover:contrast-[100%]" />
-            </a>
+            <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-4 `}>RESOURCES</h3>
+            <div className="flex flex-col gap-2">
+              <Link href="/blog" className="text-white hover:text-blue-500 transition-colors">
+                Blogs
+              </Link>
+              <Link href="/press-release" className="text-white hover:text-blue-500 transition-colors">
+                Knowledge Base
+              </Link>
+              <Link href="/guides" className="text-white hover:text-blue-500 transition-colors">
+                Case Studies
+              </Link>
+              <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
+                Brand Audits
+              </Link>
+              <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
+                Product Audits
+              </Link>
+              <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
+                Ebooks/Whitepapers
+              </Link>
+              <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
+                Shorts
+              </Link>
             </div>
           </div>
 
-
-          {/* Newsletter Subscription */}
+          {/* Reviews section - Replacing Newsletter Subscription */}
           <div>
-            <h3 className={`text-[16px] ${monsterfont1.className}  text-white  mb-2`}>ALGORITHMX NEWSLETTER</h3>
-            <p className={`text-[14px] ${monsterfont1.className}  text-white  mb-4`}>From Concept To Market Dominance</p>
-            <div className="space-y-3">
-              <input
-                type="email"
-                placeholder="enter-your@mail.com"
-                className="w-full px-6 py-3 rounded-full bg-white text-black focus:outline-none focus:ring-2 focus:ring-gray-400"
-              />
-              {/* Replace the button with the fancy animation */}
-              <div className="fancy mt-10">
-                <a href="/contact-us" className="text-center">Subscribe</a>
+            <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-6`}>REVIEWS:</h3>
+            <div className="flex flex-nowrap gap-4 items-start overflow-x-auto">
+  <div className="w-20 h-20 relative flex-shrink-0">
+    <img src="/images/trustpilot.png" alt="Trustpilot" className="object-contain" />
+  </div>
+  <div className="w-20 h-20 relative flex-shrink-0">
+    <img src="/images/google-reviews.png" alt="Google Reviews" className="object-contain" />
+  </div>
+  <div className="w-20 h-20 relative flex-shrink-0">
+    <img src="/images/capterra.png" alt="Capterra" className="object-contain" />
+  </div>
+  <div className="w-20 h-20 relative flex-shrink-0">
+    <img src="/images/capterra.png" alt="Capterra" className="object-contain" />
+  </div>
+</div>
+          </div>
+        </div>
+
+        {/* Certificates Section */}
+        <div className="mt-12 py-6 border-t border-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Certificates */}
+            <div>
+              <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-6`}>CERTIFICATES:</h3>
+              <div className="flex gap-8 items-start">
+                <div className="w-[50px] h-[50px] relative">
+                  <img 
+                    src="/images/b-corp.png" 
+                    alt="B Corp Certificate" 
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-20 h-20 relative">
+                  <img 
+                    src="/images/nord.png" 
+                    alt="ISO Certificate" 
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Partnerships */}
+            <div>
+              <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-6`}>PARTNERSHIPS:</h3>
+              <div className="flex flex-wrap gap-6 items-start">
+                <div className="w-24 h-20 relative">
+                  <img 
+                    src="/images/microsoft.png" 
+                    alt="Microsoft" 
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-[50px] h-[50px] relative">
+                  <img 
+                    src="/images/aws (1).png" 
+                    alt="AWS Partner" 
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-24 h-20 relative">
+                  <img 
+                    src="/images/Mendix.png" 
+                    alt="Mendix" 
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-24 h-20 relative">
+                  <img 
+                    src="/images/gcp.png" 
+                    alt="Google Cloud Partner" 
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Recognition Section */}
+        <div className="mt-12 py-6 border-t border-gray-700">
+          <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-6`}>RECOGNIZED BY:</h3>
+          <div className="flex flex-wrap gap-8 items-center justify-between">
+            <div className="w-24 h-20 relative">
+              <img 
+                src="/images/4 (1).png" 
+                alt="Clutch" 
+                className="object-contain"
+              />
+            </div>
+            <div className="w-24 h-20 relative">
+              <img 
+                src="/images/awwwards1.png" 
+                alt="Awwwards" 
+                className="object-contain"
+              />
+            </div>
+            <div className="w-24 h-20 relative">
+              <img 
+                src="/images/inc5000.png" 
+                alt="Inc 5000" 
+                className="object-contain"
+              />
+            </div>
+            <div className="w-24 h-20 relative">
+              <img 
+                src="/images/entrepreneur.png" 
+                alt="Entrepreneur of the Year" 
+                className="object-contain"
+              />
+            </div>
+            <div className="w-24 h-20 relative">
+              <img 
+                src="/images/forbes.png" 
+                alt="Forbes" 
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Links */}
-        <div className=" pt-4 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-4 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[12px] font-helvveticaneue text-white">©2024 AlgorithmX. All rights reserved.</p>
           <div className="flex gap-6">
-      <Link href="/privacy-policy" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
-        Privacy Policy
-      </Link>
-      <Link href="/terms-and-conditions" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
-        Terms of Use
-      </Link>
-      <Link href="#" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
-        Sitemap
-      </Link>
-    </div>
+            <Link href="/privacy-policy" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-and-conditions" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
+              Terms of Use
+            </Link>
+            <Link href="#" className="hover:text-blue-500 transition-colors text-[12px] font-helvveticaneue text-white">
+              Sitemap
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

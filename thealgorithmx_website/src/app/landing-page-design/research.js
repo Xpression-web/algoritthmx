@@ -67,7 +67,7 @@ const LandingServices = () => {
       id: '04',
       title: 'A/B Testing',
       description: 'From headlines to form fields, we constantly test and refine your page for optimal performance, because there’s always room to improve.',
-      image: '/images/Creative-Copywriting.png.png',
+      image: '/images/Creative-Copywriting.png',
     },
     {
       id: '05',

@@ -87,7 +87,7 @@ const PPCAudit = () => {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col lg:flex-row ">
           {/* Left Side - Icons */}
-          <div className="lg:w-1/2 ml-[150px]">
+          <div className="lg:w-1/2 ml-[50px]">
             <div className="grid gap-6">
             {auditItems.map((item, index) => (
                 <div key={index} className="flex items-center gap-1">

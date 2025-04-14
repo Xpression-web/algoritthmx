@@ -117,9 +117,9 @@ const InteractiveBox = () => {
                     setActiveContent({ title: icon.title, content: icon.content });
                     setActiveId(icon.id);
                   }}
-                  className={`group transition-colors duration-300 bg-black hover:bg-[rgba(217,48,45,0.1)] focus:outline-none ${activeId === icon.id ? 'bg-[rgba(217,48,45,0.1)]' : ''}`}
+                  className={`w-full transition-colors duration-300 ${activeId === icon.id ? 'bg-[rgba(217,48,45,0.1)]' : 'bg-black hover:bg-[rgba(217,48,45,0.1)]'} focus:outline-none`}
                 >
-                  <div className="p-5 md:ml-[100px] md:mr-[100px]">
+                  <div className="p-5 md:mx-[100px]">
                     <img
                       src={icon.src}
                       alt={icon.alt}

@@ -395,7 +395,7 @@ export default function Navbar() {
       <div className="bg-[#0a1518] pl-4">
         {/* App Development Section */}
         <div className="mb-3">
-          <div className="text-xs text-gray-500 px-4 py-2">app</div>
+          <div className="text-xs text-gray-500 px-4 py-2"></div>
           <div className="pl-2">
             {appleMenuData['App Development'].items.map((item) => (
               <Link 
@@ -411,21 +411,7 @@ export default function Navbar() {
         </div>
         
         {/* IOT Section */}
-        <div className="mb-2">
-          <div className="text-xs text-gray-500 px-4 py-2">IOT</div>
-          <div className="pl-2">
-            {appleMenuData['IOT '].items.map((item) => (
-              <Link 
-                key={item.name}
-                href={item.href}
-                className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
+       
       </div>
     );
   };
@@ -587,7 +573,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${isOpen ? 'bg-opacity-80 backdrop-blur-md' : 'bg-black'}`}>
+     <nav className="fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-black">
         <div className="px-4 sm:px-6 md:px-4 md:py-1">
           <div className="flex items-center h-16">
             {/* Mobile menu toggle button - only visible on small screens */}
@@ -600,33 +586,37 @@ export default function Navbar() {
               </button>
             </div>
             
-            {/* Left side - Navigation Items - hidden on mobile */}
-            <div className="hidden md:flex flex-1 justify-start">
-              <div className="flex items-center space-x-2 flex-nowrap">
-                {Object.keys(menuData).map((menuName) => (
-                  <div 
-                    key={menuName}
-                    className="relative whitespace-nowrap"
-                    onMouseEnter={() => handleMenuHover(menuName)}
-                  >
-                    {menuData[menuName].type === 'link' ? (
-                      <Link
-                        href={menuData[menuName].href}
-                        className="text-[#FFFFFFCC] hover:text-gray-300 px-2 py-2 text-[14px] font-helveticaneue font-medium "
-                      >
-                        {menuName}
-                      </Link>
-                    ) : (
-                      <div
-                        className={`text-[#FFFFFFCC] hover:text-gray-300 px-2 py-2 text-[14px] font-helveticaneue font-medium cursor-pointer ${activeMenu === menuName && isOpen ? 'text-white' : ''}`}
-                      >
-                        {menuName}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+           {/* Left side - Navigation Items - hidden on mobile */}
+<div className="hidden md:flex flex-1 justify-start">
+  <div className="flex items-center space-x-2 flex-nowrap">
+    {Object.keys(menuData).map((menuName) => (
+      <div 
+        key={menuName}
+        className="relative whitespace-nowrap"
+        onMouseEnter={() => handleMenuHover(menuName)}
+      >
+        {menuData[menuName].type === 'link' ? (
+          <Link
+            href={menuData[menuName].href}
+            className={`px-2 py-2 text-[14px] font-helveticaneue font-medium transition-colors duration-200 ${
+              activeMenu === menuName ? 'text-white' : 'text-[#FFFFFFCC] hover:text-white'
+            }`}
+          >
+            {menuName}
+          </Link>
+        ) : (
+          <div
+            className={`px-2 py-2 text-[14px] font-helveticaneue font-medium cursor-pointer transition-colors duration-200 ${
+              activeMenu === menuName && isOpen ? 'text-white' : 'text-[#FFFFFFCC] hover:text-white'
+            }`}
+          >
+            {menuName}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
             
             {/* Center - Logo */}
             <div 

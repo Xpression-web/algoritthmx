@@ -82,7 +82,7 @@ const CRMOutcomes = () => {
 
   return (
     <div className="min-h-screen bg-black text-white p-2">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <span
