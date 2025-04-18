@@ -171,7 +171,14 @@ const menuData = {
       { name: 'Influencer', href: '/influencer-marketing', icon: 'fa-user' },
     ]
   },
-  'Resources': { type: 'link', href: '/resources' },
+  'Resources': {
+    type: 'dropdown',
+    items: [
+      { name: 'Blog', href: '/branding', icon: 'fa-pen-nib' },
+      { name: 'Ebook', href: '/graphics', icon: 'fa-image' },
+     
+    ]
+  },
 };
 const appleMenuData = {
   'App Development': {
@@ -225,6 +232,7 @@ export default function Navbar() {
   const [contentHeight, setContentHeight] = useState(0)
   const dropdownRef = useRef(null)
   const [scrolled, setScrolled] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   // Close dropdown when hovering away from navbar and dropdown
   const handleMouseLeave = () => {
@@ -235,9 +243,11 @@ export default function Navbar() {
   
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10); // change threshold as needed
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 10); // for navbar background change
+      setShowAnnouncement(scrollPosition < 50); // hide announcement after scrolling a bit
     };
-
+  
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -422,6 +432,20 @@ export default function Navbar() {
       className="relative"
       onMouseLeave={handleMouseLeave}
     >
+      {/* Announcement bar 
+<div 
+  className={`bg-blue-600 text-white py-2 px-4 text-center transition-all duration-300 ${
+    showAnnouncement ? 'opacity-100 h-auto' : 'opacity-0 h-0 overflow-hidden'
+  }`}
+>
+<div className="container mx-auto flex justify-center items-center text-center">
+  <p className="text-sm max-w-[800px]">
+    Uncover proof of AlgorithmX impact across 3000+ digital deliveries for 35+ industries.
+  </p>
+  <a href="#" className="text-sm underline ml-2">Explore Now &gt;</a>
+</div> 
+</div>
+*/}
       {/* Backdrop overlay when dropdown is open */}
       <AnimatePresence>
         {(isOpen || isMobileMenuOpen) && (
@@ -573,7 +597,9 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Navbar */}
-     <nav className="fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-black">
+      <nav className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-black ${
+  !showAnnouncement ? 'top-0' : 'top-auto'
+}`}>
         <div className="px-4 sm:px-6 md:px-4 md:py-1">
           <div className="flex items-center h-16">
             {/* Mobile menu toggle button - only visible on small screens */}
@@ -845,6 +871,7 @@ export default function Navbar() {
                       ? "Explore our comprehensive suite of creative tools and resources to enhance your brand presence and content creation capabilities."
                       : ""}
                   </p>
+                  
                   {menuName === "Creative Assets" && (
                     <div className="mt-6 grid grid-cols-3 gap-4 w-full max-w-lg">
                       <div className="p-3 bg-gray-800/20 rounded-lg border border-gray-700/30 flex flex-col items-center">

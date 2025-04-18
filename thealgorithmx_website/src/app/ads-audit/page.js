@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import AdsAudit from './home'
 import PPCAuditSection from './what'
 import ServicesAccordion from './include'
@@ -12,6 +13,7 @@ const page = () => {
   return (
     <div>
     <Navbar/>
+    <CookieConsent/>
     <AdsAudit/>
     <PPCAuditSection/>
     <ServicesAccordion/>

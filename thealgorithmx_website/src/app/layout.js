@@ -1,8 +1,6 @@
-
 import "./globals.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
-
+import ExitIntentPopup from "./popup";
 
 export const metadata = {
   title: "AlgorithmX | Next-Gen Product Development And Disruptive Market Positioning",
@@ -20,10 +18,9 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body
-        className={``}
-      >
+      <body>
         {children}
+     
       </body>
     </html>
   );
