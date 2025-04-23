@@ -9,7 +9,6 @@ import D1CaseStudyCard from './CaseStudyCard1';
 import D3CaseStudyCard from './CaseStudyCard2';
 import D4CaseStudyCard from './CaseStudyCard3';
 import CTABanner from './CtaBanner';
-
 // Import data
 import { caseStudies } from './CaseStudyData';
 
@@ -49,6 +48,11 @@ export default function Industries() {
     }
   };
 
+  // Determine if there are more case studies to load
+  const hasMoreToLoad = activeFilter.value === 'Show All' 
+    ? visibleCount.showAll < filteredCaseStudies.length
+    : visibleCount.filtered < filteredCaseStudies.length;
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -57,53 +61,109 @@ export default function Industries() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-auto px-4 py-8" style={{ maxWidth: '1300px' }}>
+      <main className="mx-auto px-4 py-8" >
+
         {/* Filter Tabs */}
+        <div className='max-w-[1300px] mx-auto'>
         <FilterTabs onFilterChange={handleFilterChange} activeFilter={activeFilter} />
+        </div>
 
         {/* Case Studies Display */}
         {activeFilter.value === 'Show All' ? (
           <>
-            {/* D1 Layout - Top 3 case studies with video background */}
+          <div className='max-w-[1300px] mx-auto'>
+            {/* Top 3 case studies with video on left, content on right */}
             <div className="mb-16">
-              {displayedCaseStudies.slice(0, 3).map((study) => (
+              {displayedCaseStudies.slice(0, 3).map((study, index) => (
                 <D1CaseStudyCard key={study.id} study={study} />
               ))}
             </div>
-
-            {/* CTA Banner */}
+            </div>
+            {/* First CTA Banner after top 3 */}
             <CTABanner />
 
-            {/* D3 Layout - 2-column grid layout */}
+            <div className='max-w-[1300px] mx-auto'>
+            {/* 2-column grid layout (first 3 rows = 6 items) */}
             {displayedCaseStudies.length > 3 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                {displayedCaseStudies.slice(3).map((study) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 mt-12">
+                {displayedCaseStudies.slice(3, 9).map((study) => (
                   <D3CaseStudyCard key={study.id} study={study} />
                 ))}
               </div>
             )}
+            </div>
+
+
+            {/* CTA Banner after 6 grid items (9 total case studies) */}
+            {displayedCaseStudies.length >= 9 && (
+              <div className="mt-12">
+                <CTABanner position="before-load-more" />
+              </div>
+            )}
+            
+            <div className='max-w-[1300px] mx-auto'>
+            {/* Additional case studies after load more (beyond the first 9) */}
+            {displayedCaseStudies.length > 9 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 mt-12">
+                {displayedCaseStudies.slice(9).map((study) => (
+                  <D3CaseStudyCard key={study.id} study={study} />
+                ))}
+              </div>
+            )}
+            </div>
+
+            {/* Load More Button - only show if there are more case studies to load */}
+            {hasMoreToLoad && (
+              <div className="text-center mt-8 mb-16">
+                <button 
+                  onClick={loadMore}
+                  className="border border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
           </>
         ) : (
-          /* D4 Layout - For filtered categories */
-          <div className="mb-16">
-            {displayedCaseStudies.map((study) => (
-              <D4CaseStudyCard key={study.id} study={study} />
-            ))}
-          </div>
+          <>
+            <div className='max-w-[1300px] mx-auto'>
+            {/* First 4 case studies for filtered view */}
+            <div className="mb-16">
+              {filteredCaseStudies.slice(0, 4).map((study) => (
+                <D4CaseStudyCard key={study.id} study={study} />
+              ))}
+            </div>
+            </div>
+            {/* Different CTA Banners based on filter type after first 4 case studies */}
+            {filteredCaseStudies.length > 0 && (
+              activeFilter.type === 'Industries' ? <CTABanner type="industries" /> : 
+              activeFilter.type === 'Regions' ? <CTABanner type="regions" /> : 
+              <CTABanner />
+            )}
+            
+            <div className='max-w-[1300px] mx-auto'>
+            {/* Additional case studies beyond the first 4 (after "Load More") */}
+            {displayedCaseStudies.length > 4 && (
+              <div className="mt-12 mb-16">
+                {displayedCaseStudies.slice(4).map((study) => (
+                  <D4CaseStudyCard key={study.id} study={study} />
+                ))}
+              </div>
+            )}
+            </div>
+            {/* Load More Button - only show if there are more case studies to load */}
+            {hasMoreToLoad && (
+              <div className="text-center mt-8 mb-16">
+                <button 
+                  onClick={loadMore}
+                  className="border border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+          </>
         )}
-
-        {/* Load More Button */}
-        {(activeFilter.value === 'Show All' && visibleCount.showAll < filteredCaseStudies.length) || 
-         (activeFilter.value !== 'Show All' && visibleCount.filtered < filteredCaseStudies.length) ? (
-          <div className="text-center mt-8 mb-16">
-            <button 
-              onClick={loadMore}
-              className="border border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition"
-            >
-              Load More
-            </button>
-          </div>
-        ) : null}
       </main>
     </div>
   );

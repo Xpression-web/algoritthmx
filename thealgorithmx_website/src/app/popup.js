@@ -1,13 +1,22 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Home() {
+  const pathname = usePathname();
   const [showPopup, setShowPopup] = useState(false);
-  const [hasClosedPopup, setHasClosedPopup] = useState(false);
+  const [popupKey, setPopupKey] = useState(null); // Initially null to avoid SSR mismatch
 
   useEffect(() => {
+    const key = `popupClosed-${pathname}`;
+    setPopupKey(key); // Set key client-side only  
+
+    // Reset popup status on refresh or re-visit
+    sessionStorage.removeItem(key);
+
     const handleMouseLeave = (e) => {
-      if (e.clientY <= 0 && !hasClosedPopup) {
+      const hasClosed = sessionStorage.getItem(key);
+      if (e.clientY <= 0 && !hasClosed) {
         setShowPopup(true);
       }
     };
@@ -16,17 +25,17 @@ export default function Home() {
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [hasClosedPopup]);
+  }, [pathname]);
 
   const closePopup = () => {
     setShowPopup(false);
-    setHasClosedPopup(true); // Hide popup until refresh
+    if (popupKey) {
+      sessionStorage.setItem(popupKey, 'true');
+    }
   };
 
   return (
     <div className="flex items-center justify-center">
-    
-
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm text-center">
