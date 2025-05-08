@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import MediaSection from './home'
 import WhatSection from './what'
 import SocialMediaAudit from './key'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <MediaSection/>
     <WhatSection/>
     <SocialMediaAudit/>

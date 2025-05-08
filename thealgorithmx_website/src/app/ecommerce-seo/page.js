@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import EcommerceSEOSection from './home'
 import EcommerceServices from './ecommerceservices'
 import EcommerceStrategy from './opportunity'
@@ -15,7 +16,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
         <EcommerceSEOSection />
         <EcommerceServices />
         <EcommerceStrategy />

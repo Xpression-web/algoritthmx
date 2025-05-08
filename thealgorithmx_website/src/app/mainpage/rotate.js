@@ -46,9 +46,9 @@ const DiagonalGridWithText = () => {
     { path: "/images/Insta.png", border: "#336791" }, // PostgreSQL - blue
     { path: "/images/iOS.png", border: "#4479A1" }, // MySQL - blue
     { path: "/images/java.png", border: "#DC382D" }, // Redis - red
-    { path: "/images/Javascript.png", border: "#E10098" }, // GraphQL - pink
-    { path: "/images/Kubernets.png", border: "#FFCA28" }, // Firebase - yellow
-    { path: "/images/MailChimp.png", border: "#F05032" }, // Git - orange
+    { path: "/images/Javascript.png", border:  "#F7DF1E"  }, // GraphQL - pink
+    { path: "/images/Kubernets.png", border: "#4285F4" }, // Firebase - yellow
+    { path: "/images/MailChimp.png", border: "#F7DF1E"  }, // Git - orange
     { path: "/images/Meta.png", border: "#D24939" }, // Jenkins - red
     { path: "/images/Moz.png", border: "#F24E1E" }, // Figma - orange
     { path: "/images/MSSQL.png", border: "#007ACC" }, // VSCode - blue

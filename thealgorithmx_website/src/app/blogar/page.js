@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import BlogarHome from './home';
 import Innovation from './innovation';
 import TrendingTopics from './topics';
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const Page = () => {
   return (
     <div >
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
         <BlogarHome/>
         <Innovation/>
         <TrendingTopics/>

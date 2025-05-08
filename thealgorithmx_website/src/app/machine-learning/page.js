@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import MachineSection from './home'
 import MachinePage from './services'
 import MachineTech from './technologies'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <MachineSection/>
     <MachinePage/>
     <MachineTech/>

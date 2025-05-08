@@ -24,7 +24,7 @@ const Vision = () => {
             <img
               src="images/vision.webp"
               alt="Core Value 3"
-              className="w-full h-auto md:max-w-xl  object-cover rounded-lg shadow-lg md:p-4 ml-[135px] md:ml-0 "
+              className="w-full h-auto md:max-w-xl  object-cover rounded-lg shadow-lg md:p-4 md:ml-[135px] md:ml-0 "
             />
           </div>
           <div className="flex-1 text-white px-4 order-1 md:order-2">

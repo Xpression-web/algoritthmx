@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import BackEndSection from './home';
 import HeroSection from './consistency';
 import BackEndTechStack from './btechstack'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <BackEndSection/>
       <BackServicesGrid/>
       <HeroSection/>

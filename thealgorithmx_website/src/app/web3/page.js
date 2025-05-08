@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import Web3Section from './home'
 import Web3ServicesGrid from './services'
 import Web3DevelopmentPage from './choose'
@@ -10,7 +11,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
         <Web3Section />
         <Web3ServicesGrid/>
         <Web3DevelopmentPage/>

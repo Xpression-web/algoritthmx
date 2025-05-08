@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import CRMServices from './crmservices'
 import CRMDashboard from './development'
 import CRMSection from './home'
@@ -15,7 +16,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <CRMSection/>
       <CRMServices/>
       <CRMSystem/>

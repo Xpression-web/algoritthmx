@@ -116,11 +116,13 @@ export default function Industries() {
             {hasMoreToLoad && (
               <div className="text-center mt-8 mb-16">
                 <button 
-                  onClick={loadMore}
-                  className="border border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition"
-                >
-                  Load More
-                </button>
+  onClick={loadMore}
+  className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group hover:bg-white hover:text-black"
+>
+  <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-out transform translate-x-full bg-white group-hover:-translate-x-0"></span>
+  <span className="relative z-10">Load More</span>
+</button>
+
               </div>
             )}
           </>
@@ -155,11 +157,12 @@ export default function Industries() {
             {hasMoreToLoad && (
               <div className="text-center mt-8 mb-16">
                 <button 
-                  onClick={loadMore}
-                  className="border border-white px-8 py-3 rounded-md hover:bg-white hover:text-black transition"
-                >
-                  Load More
-                </button>
+  onClick={loadMore}
+  className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white transition duration-300 ease-out border-2 border-white rounded-full shadow-md group hover:bg-white hover:text-black"
+>
+  <span className="absolute inset-0 w-full h-full transition-transform duration-300 ease-out transform translate-x-full bg-white group-hover:-translate-x-0"></span>
+  <span className="relative z-10">Load More</span>
+</button>
               </div>
             )}
           </>

@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import BlockContentSection from './home'
 import BlockchainSolutions from './blocksolution'
 import BlockServices from './blockservices'
@@ -11,7 +12,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <BlockContentSection/>
       <BlockServices/>
       <BlockchainSolutions/>

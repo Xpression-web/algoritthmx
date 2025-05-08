@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import TwitterAds from './home'
 import TwitterBoostAds from './amplify'
 import ServicesAccordion from './services'
@@ -13,7 +14,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <TwitterAds/>
     <TwitterBoostAds/>
     <ServicesAccordion/>

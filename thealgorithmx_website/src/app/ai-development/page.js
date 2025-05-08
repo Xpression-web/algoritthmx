@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import AISection from './home'
 import AIServices from './services'
 import AIBusinessSection from './business'
@@ -11,7 +12,8 @@ import AIInsightSection from './insight'
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <AISection/>
     <AIServicesGrid/>
     <AIBusinessSection/>

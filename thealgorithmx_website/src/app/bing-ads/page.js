@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import BingAds from './home'
 import Targeted from './transform'
 import ServicesAccordion from './services'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <BingAds/>
     <Targeted/>
     <ServicesAccordion/>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import AndriodSection from './home';
 import AppGrid from './multiface';
 import ServicesGrid from './development';
@@ -11,7 +12,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <AndriodSection/>
       <AppGrid/>
       <ServicesGrid/>

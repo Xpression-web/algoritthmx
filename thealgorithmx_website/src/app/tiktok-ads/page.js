@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import TiktokAds from './home'
 import TiktokBoostAds from './capture'
 import ServicesAccordion from './services'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <TiktokAds/>
     <TiktokBoostAds/>
     <ServicesAccordion/>

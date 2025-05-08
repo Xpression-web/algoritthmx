@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import HubSpotSection from './home'
 import HubspotServices from './hservices'
 import HubSpotFeatures from './hchoose'
@@ -11,7 +12,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <HubSpotSection/>
       <HubspotServices/>
       <HubSpotFeatures/>

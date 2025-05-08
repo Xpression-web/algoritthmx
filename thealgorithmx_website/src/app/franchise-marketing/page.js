@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import FranchiseSection from './home'
 import FranchiseServices from './services'
 import FranchiseStrategy from './who'
@@ -14,7 +15,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
         <FranchiseSection/>
         <FranchiseServices/>
         <FranchiseStrategy/>

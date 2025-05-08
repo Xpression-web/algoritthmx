@@ -12,7 +12,7 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
     <CookieConsent/>
     <AdsAudit/>
     <PPCAuditSection/>

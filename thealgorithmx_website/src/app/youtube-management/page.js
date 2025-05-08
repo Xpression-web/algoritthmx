@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import YoutubeSection from './home'
 import YoutubeHeroSection from './increase'
 import YoutubeGrowHeroSection from './connect'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <YoutubeSection/>
     <YoutubeHeroSection/>
     <YoutubeGrowHeroSection/>

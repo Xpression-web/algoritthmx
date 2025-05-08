@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import BigCommerceSection from './home'
 import BigcommerceServices from './bservices'
 import BigcommerceFeatures from './bchoose'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <BigCommerceSection/>
       <BigcommerceServices/>
       <BigcommerceFeatures/>

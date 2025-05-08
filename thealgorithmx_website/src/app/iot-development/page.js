@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import IOTSection from './home'
 import IOTPage from './services'
 import IoTBenefits from './choose'
@@ -18,7 +19,8 @@ import StackCardAnimation from './stack'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <IOTSection/>
     <Home/>
     <IoTDevelopmentPage/>

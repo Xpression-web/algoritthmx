@@ -174,8 +174,21 @@ const menuData = {
   'Resources': {
     type: 'dropdown',
     items: [
-      { name: 'Blog', href: '/branding', icon: 'fa-pen-nib' },
-      { name: 'Ebook', href: '/graphics', icon: 'fa-image' },
+      { name: 'Blogs', href: '/blogar', icon: 'fa-pen-nib' },
+      { name: 'Ebook', href: '/ebooks', icon: 'fa-image' },
+      { 
+        name: 'Audits', 
+        href: null,
+        subItems: [
+          { name: 'Brand Audits', href: '/brand-audits', icon: 'fa-pencil-alt' },
+          { name: 'Product Audits', href: '/brand-audits', icon: 'fa-keyboard' },
+        ]
+      },
+      { name: 'Our Clients', href: '/portfolio', icon: 'fa-image' },
+      { name: 'Guides', href: '/guides', icon: 'fa-image' },
+      { name: 'Impact Stories', href: '/shorts', icon: 'fa-image' },
+      { name: 'Knowledge Base', href: '/knowledge-base', icon: 'fa-image' },
+      { name: 'Press Release', href: '/knowledge-base', icon: 'fa-image' },
      
     ]
   },
@@ -242,6 +255,11 @@ export default function Navbar() {
   }
   
   useEffect(() => {
+     // Check if we should show the announcement on initial load
+  const initialScrollPosition = window.scrollY;
+  setScrolled(initialScrollPosition > 10);
+  setShowAnnouncement(initialScrollPosition < 50);
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setScrolled(scrollPosition > 10); // for navbar background change
@@ -432,20 +450,20 @@ export default function Navbar() {
       className="relative"
       onMouseLeave={handleMouseLeave}
     >
-      {/* Announcement bar 
+     
 <div 
   className={`bg-blue-600 text-white py-2 px-4 text-center transition-all duration-300 ${
-    showAnnouncement ? 'opacity-100 h-auto' : 'opacity-0 h-0 overflow-hidden'
+    showAnnouncement ? 'opacity-100 h-auto' : 'opacity-0 h-0 py-0 overflow-hidden absolute'
   }`}
 >
 <div className="container mx-auto flex justify-center items-center text-center">
   <p className="text-sm max-w-[800px]">
-    Uncover proof of AlgorithmX impact across 3000+ digital deliveries for 35+ industries.
+    Uncover proof of AlgorithmX impact across 3000+ digital deliveries for 35+ industries.<span> <a href="#" className="text-sm underline ml-2">Explore Now &gt;</a></span>
   </p>
-  <a href="#" className="text-sm underline ml-2">Explore Now &gt;</a>
+  
 </div> 
 </div>
-*/}
+
       {/* Backdrop overlay when dropdown is open */}
       <AnimatePresence>
         {(isOpen || isMobileMenuOpen) && (
@@ -597,9 +615,9 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-black ${
-  !showAnnouncement ? 'top-0' : 'top-auto'
-}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${
+  scrolled ? 'bg-black' : 'bg-transparent'
+} ${!showAnnouncement ? 'top-0' : 'top-auto'}`}>
         <div className="px-4 sm:px-6 md:px-4 md:py-1">
           <div className="flex items-center h-16">
             {/* Mobile menu toggle button - only visible on small screens */}
@@ -696,8 +714,9 @@ export default function Navbar() {
 
         <div 
   ref={dropdownRef}
-  className="fixed top-16 left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out md:block hidden"
+  className="fixed left-0 w-full z-50 overflow-hidden transition-all duration-300 ease-in-out md:block hidden"
   style={{
+    top: showAnnouncement ? '105px' : '66px', // Adjust top position based on announcement visibility
     height: isOpen ? `${contentHeight + 32}px` : '0px',
     opacity: isOpen ? 1 : 0,
     marginTop: '-25px' // Slight negative margin to eliminate visual gap
@@ -709,9 +728,9 @@ export default function Navbar() {
         <div 
           key={menuName}
           ref={el => menuItemRefs.current[menuName] = el}
-          className={`transition-opacity duration-300 ${activeMenu === menuName ? 'opacity-100' : 'opacity-0 hidden'}`}
+          className={`transition-opacity duration-300 bg-black ${activeMenu === menuName ? 'opacity-100' : 'opacity-0 hidden'}`}
         >
-          <div className="relative flex w-full overflow-hidden shadow-xl shadow-blue-900/30 backdrop-blur-sm px-[50px]">
+          <div className="relative flex w-full overflow-hidden shadow-xl shadow-blue-900/30 backdrop-blur-sm px-[30px]">
             {/* Background glow effects - more subtle */}
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-teal-600/5 rounded-full blur-3xl pointer-events-none" />

@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import ShopifyFeatures from './choose'
 import ShopifyServices from './sservices'
 import QualityBanner from './quality'
@@ -10,7 +11,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <ShopifySection/>
       <ShopifyServices/>
       <ShopifyFeatures/>

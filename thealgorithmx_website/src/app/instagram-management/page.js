@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import InstagramSection from './home'
 import InstagramHeroSection from './reach'
 import InstagramGrowHeroSection from './grow'
@@ -13,7 +14,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <InstagramSection/>
     <InstagramHeroSection/>
     <InstagramGrowHeroSection/>

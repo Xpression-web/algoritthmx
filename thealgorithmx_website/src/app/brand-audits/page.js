@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import ExploreComponent from './home';
 import OutdoorActivitiesLarge from './tabs';
 import Featuredarticle from './featuredarticles';
@@ -8,7 +9,8 @@ import Footer from '../mainpage/footer';
 const Page = () => {
   return (
     <div >
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
         <ExploreComponent/>
         <OutdoorActivitiesLarge/>
        <Featuredarticle/>

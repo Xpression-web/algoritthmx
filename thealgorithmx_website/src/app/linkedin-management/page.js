@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import LinkedinSection from './home'
 import LinkedinHeroSection from './connect'
 import LinkedinGrowHeroSection from './optimize'
@@ -15,7 +16,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <LinkedinSection/>
     <LinkedinHeroSection/>
     <LinkedinGrowHeroSection/>

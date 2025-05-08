@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import Carousel from './erpservices'
 import ERPProcess from './erpdevelopment'
 import ERPModules from './erpmodule'
@@ -14,7 +15,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <ERPContentSection/>
       <Carousel/>
       <ERPModules/>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import SEOGlobalSection from './home'
 import GlobalServices from './globalservices'
 import GlobalStrategy from './expandopp'
@@ -13,7 +14,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <SEOGlobalSection/>
     <GlobalServices/>
     <GlobalStrategy/>

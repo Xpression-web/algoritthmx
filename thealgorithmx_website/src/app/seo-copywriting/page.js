@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import CopywritingSection from './home'
 import CopywritingServicesGrid from './services'
 import CopywritingMarketingSection from './win'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <CopywritingSection/>
     <CopywritingServicesGrid/>
     <CopywritingMarketingSection/>

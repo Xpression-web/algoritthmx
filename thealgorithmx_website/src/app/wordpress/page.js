@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import WordPressSection from './home'
 import WordPressServices from './wservice'
 import WordpressFeatures from './wchoose'
@@ -11,7 +12,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <WordPressSection/>
       <WordPressServices/>
       <WordpressFeatures/>

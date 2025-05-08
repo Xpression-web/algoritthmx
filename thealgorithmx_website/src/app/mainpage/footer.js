@@ -89,7 +89,7 @@ const Footer = () => {
                 Knowledge Base
               </Link>
               <Link href="/guides" className="text-white hover:text-blue-500 transition-colors">
-                Case Studies
+                Press Release
               </Link>
               <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
                 Brand Audits
@@ -98,32 +98,39 @@ const Footer = () => {
                 Product Audits
               </Link>
               <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
-                Ebooks/Whitepapers
+                Ebooks & Whitepapers
               </Link>
               <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
-                Shorts
+                Press Release
+              </Link>
+              <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
+                Our Clients
+              </Link>
+              <Link href="/ebooks" className="text-white hover:text-blue-500 transition-colors">
+                Impact Stories 
               </Link>
             </div>
           </div>
 
           {/* Reviews section - Replacing Newsletter Subscription */}
-          <div>
-            <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-6`}>REVIEWS:</h3>
-            <div className="flex flex-nowrap gap-4 items-start overflow-x-auto">
-  <div className="w-20 h-20 relative flex-shrink-0">
-    <img src="/images/trustpilot.png" alt="Trustpilot" className="object-contain" />
-  </div>
-  <div className="w-20 h-20 relative flex-shrink-0">
-    <img src="/images/google-reviews.png" alt="Google Reviews" className="object-contain" />
-  </div>
-  <div className="w-20 h-20 relative flex-shrink-0">
-    <img src="/images/capterra.png" alt="Capterra" className="object-contain" />
-  </div>
-  <div className="w-20 h-20 relative flex-shrink-0">
-    <img src="/images/capterra.png" alt="Capterra" className="object-contain" />
+<div>
+  <h3 className={`text-[16px] ${monsterfont1.className} text-white mb-6`}>REVIEWS:</h3>
+  <div className="flex flex-wrap gap-4 items-center justify-start">
+    <div className="w-20 h-20 relative">
+      <img src="/images/trustpilot.png" alt="Trustpilot" className="object-contain w-full h-full" />
+    </div>
+    <div className="w-20 h-20 relative">
+      <img src="/images/google-reviews.png" alt="Google Reviews" className="object-contain w-full h-full" />
+    </div>
+    <div className="w-20 h-20 relative">
+      <img src="/images/capterra.png" alt="Capterra" className="object-contain w-full h-full" />
+    </div>
+    <div className="w-20 h-20 relative">
+      <img src="/images/capterra.png" alt="Capterra" className="object-contain w-full h-full" />
+    </div>
   </div>
 </div>
-          </div>
+
         </div>
 
         {/* Certificates Section */}

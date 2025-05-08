@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import BigDataSection from './home'
 import BigDataGrid from './solution'
 import DevelopmentProcess from './steps'
@@ -9,7 +10,8 @@ import BigDataInsightSection from './insight'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <BigDataSection/>
     <BigDataGrid/>
     <DevelopmentProcess/>

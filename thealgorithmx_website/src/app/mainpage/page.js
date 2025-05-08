@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../asample/naviagtion';
+import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie';
 import DiagonalGridWithText from './rotate';
 import ResponsiveGrid from './design';
 import PlatformPerformance from './button';
@@ -16,9 +17,9 @@ import Footer from '../mainpage/footer';
 const Page = () => {
   return (
     <div >
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <ParticleAnimation/>
-      
       <ResponsiveGrid/>
       <Hexagon/>
       <ServicesSection/>

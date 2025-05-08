@@ -4,7 +4,8 @@ import Navbar from './navbar'
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     </div>
   )
 }

@@ -85,21 +85,46 @@ export default function ExploreComponent() {
 
       {/* Keyframes for panel floating */}
       <style jsx>{`
-        @keyframes floatEven {
-          0%, 100% { transform: translateY(55px); }
-          50% { transform: translateY(-54px); }
-        }
-        @keyframes floatOdd {
-          0%, 100% { transform: translateY(-50px); }
-          50% { transform: translateY(50px); }
-        }
-        .animate-float-even {
-          animation: floatEven 4s ease-in-out infinite;
-        }
-        .animate-float-odd {
-          animation: floatOdd 4s ease-in-out infinite;
-        }
-      `}</style>
+  @keyframes floatEven {
+    0%, 100% { transform: translateY(55px); }
+    50% { transform: translateY(-54px); }
+  }
+
+  @keyframes floatOdd {
+    0%, 100% { transform: translateY(-50px); }
+    50% { transform: translateY(50px); }
+  }
+
+  .animate-float-even {
+    animation: floatEven 4s ease-in-out infinite;
+  }
+
+  .animate-float-odd {
+    animation: floatOdd 4s ease-in-out infinite;
+  }
+
+  /* Mobile styles (max-width: 768px) */
+  @media (max-width: 768px) {
+    @keyframes floatEvenMobile {
+      0%, 100% { transform: translateY(30px); }
+      50% { transform: translateY(-30px); }
+    }
+
+    @keyframes floatOddMobile {
+      0%, 100% { transform: translateY(-28px); }
+      50% { transform: translateY(28px); }
+    }
+
+    .animate-float-even {
+      animation: floatEvenMobile 3s ease-in-out infinite;
+    }
+
+    .animate-float-odd {
+      animation: floatOddMobile 3s ease-in-out infinite;
+    }
+  }
+`}</style>
+
     </div>
   );
 }

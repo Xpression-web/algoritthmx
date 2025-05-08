@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import AIOptmmizationSection from './home'
 import AiOptmizationServices from './solutions'
 import StackCardAnimation from './process'
@@ -10,7 +11,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <AIOptmmizationSection/>
     <AiOptmizationServices/>
     <StackCardAnimation/>

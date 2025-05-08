@@ -6,173 +6,172 @@ import Link from 'next/link';
 export default function Section1() {
   return (
     <div className='bg-black'>
-    <div className="max-w-[1300px] mx-auto px-4 mt-[100px]">
-      
-      <main className="flex flex-col lg:flex-row">
-        {/* Left side (75%) */}
-        <div className="w-full lg:w-3/4 pr-0 lg:pr-6">
-          {/* Hero Banner */}
-          <div className="relative mb-8 overflow-hidden">
-            <div className="relative">
-              <Image 
-                src="/images/banner-01.png" 
-                alt="Kitchen Appliances"
-                width={800} 
-                height={300}
-                layout="responsive"
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Article Cards */}
-          {articles.map((article, index) => (
-            <div key={index} className="flex mb-8 border-b pb-8 group">
-              <div className=" w-[100%] md:w-1/3 mr-4 overflow-hidden">
-                <div className="relative h-40 md:h-48 overflow-hidden rounded-lg">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="group-hover:scale-110 transition-transform duration-300 "
-                  />
-                </div>
-              </div>
-              <Link href={article.url}>
-              <div className=" w-[100%] md:w-2/3">
-                <div className="text-xs font-semibold text-pink-500 mb-2">
-                  
-                    {article.category}
-                </div>
-                <h3 className="md:text-lg md:text-xl font-bold mb-2">
-                  <Link href={article.url} className="bg-gradient-to-r from-current to-current bg-bottom bg-no-repeat bg-[length:0%_2px] group-hover:bg-[length:100%_2px] transition-all duration-500">
-                    {article.title}
-                  </Link>
-                </h3>
-                <div className="flex items-center mb-2">
-                  <p className="text-sm font-medium">{article.author}</p>
-                </div>
-                <p className="text-xs text-gray-500">
-                  {article.date} • {article.readTime} min read
-                </p>
-                <div className="flex mt-4">
-                  <Link href="#" className="mr-2">
-                    <Image src="/facebook.svg" width={20} height={20} alt="Facebook" />
-                  </Link>
-                  <Link href="#" className="mr-2">
-                    <Image src="/twitter.svg" width={20} height={20} alt="Twitter" />
-                  </Link>
-                  <Link href="#" className="mr-2">
-                    <Image src="/link.svg" width={20} height={20} alt="Share" />
-                  </Link>
-                </div>
-              </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* Right side (25%) */}
-        <div className="w-full lg:w-1/4">
-          {/* Categories */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            <Link href="/category/tech">
-              <CategoryButton icon="/images/category-image-01.jpg" label="Tech" />
-            </Link>
-            <Link href="/category/style">
-              <CategoryButton icon="/images/category-image-02.jpg" label="Style" />
-            </Link>
-            <Link href="/category/travel">
-              <CategoryButton icon="/images/category-image-01.jpg" label="Travel" />
-            </Link>
-            <Link href="/category/food">
-              <CategoryButton icon="/images/category-image-02.jpg" label="Food" />
-            </Link>
-          </div>
-
-          {/* Search */}
-          <div className="mb-8">
-            <h3 className="text-lg font-bold mb-4 text-center">Search</h3>
-            <div className="relative">
-              <input 
-                type="text" 
-                placeholder="Search" 
-                className="w-full p-2 pl-10 border rounded-md"
-              />
-              <div className="absolute left-3 top-3">
-                <Image src="/search.svg" width={16} height={16} alt="Search" />
+      <div className="max-w-[1300px] mx-auto px-4 mt-[100px]">
+        <main className="flex flex-col lg:flex-row">
+          {/* Left side (75%) */}
+          <div className="w-full lg:w-3/4 pr-0 lg:pr-6">
+            {/* Hero Banner */}
+            <div className="relative mb-8 overflow-hidden">
+              <div className="relative">
+                <Image 
+                  src="/images/banner-01.png"
+                  alt="Kitchen Appliances"
+                  width={800}
+                  height={300}
+                  className="object-cover w-full h-auto"
+                  priority
+                />
               </div>
             </div>
-          </div>
 
-          {/* Popular on Blogar */}
-          <div className="mb-8">
-            <h3 className="text-lg font-bold mb-4 text-center">Popular on Blogar</h3>
-            {popularPosts.map((post, index) => (
-              <div key={index} className="flex items-start mb-4 group">
-                <div className="w-1/3 mr-4 overflow-hidden">
-                  <div className="relative h-20 overflow-hidden rounded-lg">
-                    <Link href={post.url}>
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </Link>
-                  </div>
-                </div>
-                <div className="w-2/3">
-                  <h4 className="text-sm font-medium">
-                    <Link href={post.url} className="bg-gradient-to-r from-current to-current bg-bottom bg-no-repeat bg-[length:0%_2px] group-hover:bg-[length:100%_2px] transition-all duration-500">
-                      {post.title}
-                    </Link>
-                  </h4>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {post.date} • {post.views} Views
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Stay In Touch */}
-          <div className="mb-8">
-            <h3 className="text-lg font-bold mb-4 text-center">Stay In Touch</h3>
-            <div className="flex space-x-3">
-              <SocialIcon icon="/facebook.svg" />
-              <SocialIcon icon="/instagram.svg" />
-              <SocialIcon icon="/twitter.svg" />
-              <SocialIcon icon="/pinterest.svg" />
-              <SocialIcon icon="/linkedin.svg" />
-            </div>
-          </div>
-
-          {/* Instagram */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-center">Instagram</h3>
-            <div className="grid grid-cols-3 gap-2">
-              {instagramPosts.map((post, index) => (
-                <Link href="#" key={index}>
-                  <div className="relative h-24 overflow-hidden group rounded-lg">
+            {/* Article Cards */}
+            {articles.map((article, index) => (
+              <div key={index} className="flex mb-8 border-b pb-8 group">
+                <div className="w-[100%] md:w-1/3 mr-4 overflow-hidden">
+                  <div className="relative h-40 md:h-48 overflow-hidden rounded-lg">
                     <Image
-                      src={post}
-                      alt="Instagram post"
+                      src={article.image}
+                      alt={article.title}
                       layout="fill"
                       objectFit="cover"
                       className="group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                </Link>
+                </div>
+                <div className="w-[100%] md:w-2/3">
+                  <div className="text-xs font-semibold text-pink-500 mb-2">
+                    {article.category}
+                  </div>
+                  <h3 className="md:text-lg md:text-xl font-bold mb-2">
+                    <Link href={article.url}>
+                      <span className="bg-gradient-to-r from-current to-current bg-bottom bg-no-repeat bg-[length:0%_2px] group-hover:bg-[length:100%_2px] transition-all duration-500">
+                        {article.title}
+                      </span>
+                    </Link>
+                  </h3>
+                  <div className="flex items-center mb-2">
+                    <p className="text-sm font-medium">{article.author}</p>
+                  </div>
+                  <p className="text-xs text-gray-500">
+                    {article.date} • {article.readTime} min read
+                  </p>
+                  <div className="flex mt-4">
+                    <Link href="#" className="mr-2">
+                      <Image src="/facebook.svg" width={20} height={20} alt="Facebook" />
+                    </Link>
+                    <Link href="#" className="mr-2">
+                      <Image src="/twitter.svg" width={20} height={20} alt="Twitter" />
+                    </Link>
+                    <Link href="#" className="mr-2">
+                      <Image src="/link.svg" width={20} height={20} alt="Share" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right side (25%) */}
+          <div className="w-full lg:w-1/4">
+            {/* Categories */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <Link href="/category/tech" className="block">
+                <CategoryButton icon="/images/category-image-01.jpg" label="Tech" />
+              </Link>
+              <Link href="/category/style" className="block">
+                <CategoryButton icon="/images/category-image-02.jpg" label="Style" />
+              </Link>
+              <Link href="/category/travel" className="block">
+                <CategoryButton icon="/images/category-image-01.jpg" label="Travel" />
+              </Link>
+              <Link href="/category/food" className="block">
+                <CategoryButton icon="/images/category-image-02.jpg" label="Food" />
+              </Link>
+            </div>
+
+            {/* Search */}
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-4 text-center">Search</h3>
+              <div className="relative">
+                <input 
+                  type="text" 
+                  placeholder="Search" 
+                  className="w-full p-2 pl-10 border rounded-md"
+                />
+                <div className="absolute left-3 top-3">
+                  <Image src="/search.svg" width={16} height={16} alt="Search" />
+                </div>
+              </div>
+            </div>
+
+            {/* Popular on Blogar */}
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-4 text-center">Popular on Blogar</h3>
+              {popularPosts.map((post, index) => (
+                <div key={index} className="flex items-start mb-4 group">
+                  <div className="w-1/3 mr-4 overflow-hidden">
+                    <div className="relative h-20 overflow-hidden rounded-lg">
+                      <Link href={post.url}>
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          layout="fill"
+                          objectFit="cover"
+                          className="group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="w-2/3">
+                    <h4 className="text-sm font-medium">
+                      <Link href={post.url}>
+                        <span className="bg-gradient-to-r from-current to-current bg-bottom bg-no-repeat bg-[length:0%_2px] group-hover:bg-[length:100%_2px] transition-all duration-500">
+                          {post.title}
+                        </span>
+                      </Link>
+                    </h4>
+                    <p className="text-xs text-gray-500 mt-1">
+                      {post.date} • {post.views} Views
+                    </p>
+                  </div>
+                </div>
               ))}
             </div>
+
+            {/* Stay In Touch */}
+            <div className="mb-8">
+              <h3 className="text-lg font-bold mb-4 text-center">Stay In Touch</h3>
+              <div className="flex space-x-3">
+                <SocialIcon icon="/facebook.svg" />
+                <SocialIcon icon="/instagram.svg" />
+                <SocialIcon icon="/twitter.svg" />
+                <SocialIcon icon="/pinterest.svg" />
+                <SocialIcon icon="/linkedin.svg" />
+              </div>
+            </div>
+
+            {/* Instagram */}
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-center">Instagram</h3>
+              <div className="grid grid-cols-3 gap-2">
+                {instagramPosts.map((post, index) => (
+                  <Link href="#" key={index} className="block">
+                    <div className="relative h-24 overflow-hidden group rounded-lg">
+                      <Image
+                        src={post}
+                        alt="Instagram post"
+                        layout="fill"
+                        objectFit="cover"
+                        className="group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-        
-      </main>
-    </div>
+        </main>
+      </div>
     </div>
   );
 }

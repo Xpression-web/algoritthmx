@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import BusinessIntelligenceSection from './home'
 import BiConsultingPage from './services'
 import BusinessModules from './decision'

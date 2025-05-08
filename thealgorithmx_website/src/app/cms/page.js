@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import CMSSection from './home'
 import ContentMarketingCMS from './utilize'
 import CMSServicesGrid from './gains'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <CMSSection/>
     <ContentMarketingCMS/>
     <CMSServicesGrid/>

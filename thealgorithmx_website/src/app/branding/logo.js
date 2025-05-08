@@ -29,7 +29,7 @@ const LogoTypes = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 md:px-8 lg:px-16 py-12">
+    <div className="min-h-screen bg-black text-white px-4 md:px-8 lg:px-16 py-12 ">
       {/* Header Section */}
       <div className="text-center mb-16">
         <p className={`text-blue-500 font-size-18 ${monsterfont.className} mb-4`}>WE ARE AWESOME</p>

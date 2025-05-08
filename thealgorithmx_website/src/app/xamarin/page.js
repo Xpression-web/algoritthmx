@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import XamarinSection from './home';
 import AppGrid from '../android-app/multiface';
 import XamarinServicesGrid from './xdevelopment';
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
         <XamarinSection/>
         <AppGrid/>
         <XamarinServicesGrid/>

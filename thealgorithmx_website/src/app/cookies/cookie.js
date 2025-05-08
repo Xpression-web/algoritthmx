@@ -72,7 +72,7 @@ export default function CookieConsent() {
 
       {/* Cookie Consent Popup */}
       {isOpen && (
-        <div className="fixed bottom-0 left-0 z-50 ml-4 mb-20">
+        <div className="fixed bottom-0 left-0 z-50 md:ml-4 ml-[2px] mb-20">
           <div 
             className="bg-white rounded-lg shadow-xl overflow-hidden w-96 max-w-full transform transition-transform duration-300 translate-x-0 animate-slide-in"
             style={{animation: "slideIn 0.3s ease-out"}}

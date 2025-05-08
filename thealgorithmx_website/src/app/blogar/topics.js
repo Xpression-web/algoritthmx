@@ -70,7 +70,7 @@ const TrendingTopics = () => {
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
                 />
               </div>
-              <h3 className="absolute bottom-3 left-3 right-3 text-white font-medium text-center z-20">
+              <h3 className="absolute bottom-3 left-3 right-3 text-white font-medium text-center z-10">
                 {topic.title}
               </h3>
             </div>

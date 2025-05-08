@@ -3,7 +3,8 @@ import Navbar from './naviagtion'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     </div>
   )
 }

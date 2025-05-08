@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import AmazonAds from './home'
 import AmazonBoostAds from './drive'
 import ServicesAccordion from './services'
@@ -13,7 +14,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-        <Navbar/>
+         <Navbar/>
+    <CookieConsent/>
         <AmazonAds/>
         <AmazonBoostAds/>
         <ServicesAccordion/>

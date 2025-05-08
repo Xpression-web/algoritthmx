@@ -127,11 +127,11 @@ const StackCardAnimation = () => {
     <div className="bg-black text-white min-h-screen w-full" ref={containerRef}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row px-6 pt-16">
         {/* Left side content - becomes sticky only on desktop */}
-        <div className={`md:w-1/2 ${!isMobile ? 'sticky top-32' : ''} h-[calc(100vh-8rem)] md:pr-12 mb-12 md:mb-0 flex items-center`}>
+        <div className={`md:w-1/2 ${!isMobile ? 'sticky top-20' : ''} h-[calc(100vh-8rem)] md:pr-12 mb-12 md:mb-0 flex items-center`}>
   <div className="max-w-lg">
 
-    <h2 className={`text-[30px] leading-[32px] ${monsterfont.className}  text-white mb-4`}>
-      IoT Development Process
+    <h2 className={`text-[30px] md:text-[50px] md:leading-[60px] ${monsterfont.className}  text-white mb-4`}>
+      IoT <br/> DEVELOPMENT <br/> PROCESS
     </h2>
     <p className="text-[16px] leading-[24px] font-[500] font-helveticaneue text-semi-white">
       Our Agile IoT Development Process is visually demonstrated through a dynamic scroll-based animation. 
@@ -150,7 +150,7 @@ const StackCardAnimation = () => {
           {cards.map((card, index) => (
   <div
   key={card.id}
-  className={`relative backdrop-blur-md bg-[#2a0e61]/70 border border-green-400/30 rounded-3xl p-8 shadow-xl w-full h-[340px] 
+  className={`relative backdrop-blur-md bg-[#000000b3]/70 border border-green-400/30 rounded-3xl p-8 shadow-xl w-full h-[340px] 
     ${index !== cards.length - 1 ? 'mb-[40px]' : ''} 
     overflow-hidden flex flex-col justify-center transition-transform duration-300 hover:scale-[1.02]
     ${!isMobile ? 'sticky top-[150px]' : ''}`}

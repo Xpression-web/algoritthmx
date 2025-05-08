@@ -207,7 +207,7 @@ export default function Innovation() {
       {/* Innovation & Tech Section */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Hero Banner Section */}
-      <Link href="/kitchen-appliances" className="block relative mb-[10px]">
+      <Link href="/graphics" className="block relative mb-[10px]">
         <div className="w-full h-[11rem] relative overflow-hidden">
           <Image 
             src="/images/banner-03.png" 
@@ -215,19 +215,6 @@ export default function Innovation() {
             fill 
             className="object-cover"
           />
-        {/* Hero Banner Section 
-
-          <div className="absolute inset-0 flex flex-col justify-center px-8 bg-gradient-to-r from-black/30 to-transparent">
-            <div className="bg-orange-500 text-white text-sm font-bold px-2 py-1 w-fit mb-2">60% OFF</div>
-            <h2 className="text-4xl font-bold text-black">Kitchen Appliances</h2>
-            <p className="text-black font-medium mt-1">FOR A PERFECT KITCHEN.</p>
-            <div className="absolute right-8 bottom-8">
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
-                Shop Now
-              </button>
-            </div>
-          </div>
-          */}
         </div>
         
       </Link>

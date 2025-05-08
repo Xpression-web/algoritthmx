@@ -8,7 +8,7 @@ export async function POST(req) {
       service: "Gmail",
       auth: {
         user: "roshansingh910286@gmail.com",
-        pass: "ubtl ctmo bbaa qsab", // Consider using environment variables in production
+        pass: "gymu txmu ffng zakm", // Consider using environment variables in production
       },
     });
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import PublicContentSection from './home'
 import PublicServices from './publicservices'
 import PublicEnhancedSection from './enhanced'
@@ -13,7 +14,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
       <PublicContentSection/>
         <PublicServices/>
         <PublicEnhancedSection/>

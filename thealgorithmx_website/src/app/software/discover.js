@@ -128,17 +128,24 @@ const CRMServices = () => {
           <div className={`${isMobile ? 'flex space-x-0 min-w-max' : 'space-y-2'} ${styles["crm-scrollbar"]}`}>
             {crmServices.map((service) => (
               <div
-                key={service.id}
-                className={`cursor-pointer
-                  ${isMobile ? 'flex-shrink-0 min-w-[100px]' : 'w-full'}
-                  ${(isMobile ? activeService.id === service.id : hoveredService.id === service.id)
+              key={service.id}
+              className={`cursor-pointer
+                ${isMobile ? 'flex-shrink-0 min-w-[100px]' : 'w-full'}
+                ${
+                  isMobile
+                    ? activeService.id === service.id
+                      ? 'border-b border-green-500 shadow-[ -1px_1px_5px_7px_rgba(19,169,135,0.1)]'
+                      : ''
+                    : hoveredService.id === service.id
                     ? styles["box-border"]
-                    : "border-black"}
-                  rounded`}
-                onClick={() => isMobile && handleServiceInteraction(service)}
-                onMouseEnter={() => !isMobile && handleServiceInteraction(service)}
-                onMouseLeave={handleMouseLeave}
-              >
+                    : "border-black"
+                }
+                rounded`}
+              onClick={() => isMobile && handleServiceInteraction(service)}
+              onMouseEnter={() => !isMobile && handleServiceInteraction(service)}
+              onMouseLeave={handleMouseLeave}
+            >
+            
                 <div className={`flex items-center md:pl-8 inline-block ${isMobile ? 'flex-col items-start' : 'w-full relative'}`}>
                   <span className={`md:mr-6 transition-colors  w-[14.4px] ${isIconGreen(service.id) ? 'text-green-500' : 'text-white'}`}>
                     {service.icon}

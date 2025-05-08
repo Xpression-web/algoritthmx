@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import LandingDesign from './home'
 import LandingServices from './research'
 import ServicesPage from './services'
@@ -10,7 +11,8 @@ import Footer from '../mainpage/footer'
 const page = () => {
   return (
     <div>
-    <Navbar/>
+     <Navbar/>
+    <CookieConsent/>
     <LandingDesign/>
     <LandingServices/>
     <ServicesPage/>

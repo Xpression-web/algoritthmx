@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import TiktokSection from './home'
 import TiktokHeroSection from './dgital'
 import TiktokGrowHeroSection from './connect'
@@ -12,7 +13,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <TiktokSection/>
     <TiktokHeroSection/>
     <TiktokGrowHeroSection/>

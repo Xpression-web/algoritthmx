@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../asample/naviagtion'
+import CookieConsent from '../cookies/cookie'
 import SocialConsultingSection from './home'
 import MarketingSection from './services'
 import ConsultingSmoothScrollStack from './how'
@@ -14,7 +15,8 @@ import Footer from '../mainpage/footer';
 const page = () => {
   return (
     <div>
-      <Navbar/>
+       <Navbar/>
+    <CookieConsent/>
     <SocialConsultingSection/>
     <MarketingSection/>
     <ConsultingSmoothScrollStack/>

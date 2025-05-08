@@ -117,12 +117,12 @@ const Carousel = () => {
     };
 
     const getItemStyle = (position) => {
-        if (isMobile) return 'opacity-100 scale-100 z-20';
+        if (isMobile) return 'opacity-100 scale-100 z-10';
         const isCenter = position === 0;
         const isAdjacent = Math.abs(position) === 1;
         const isOuter = Math.abs(position) === 2;
 
-        return `${isCenter ? 'z-20 opacity-100 scale-100' : ''} 
+        return `${isCenter ? 'z-10 opacity-100 scale-100' : ''} 
                 ${isAdjacent ? 'z-10 opacity-80 scale-90' : ''} 
                 ${isOuter ? 'z-0 opacity-30 scale-70' : ''}`;
     };
@@ -136,7 +136,7 @@ const Carousel = () => {
             </h1>
             <div 
                 ref={carouselRef}
-                className="relative flex items-center justify-center w-full h-[500px] md:h-[780px] overflow-hidden cursor-grab active:cursor-grabbing"
+                className="relative flex items-center justify-center w-full h-[550px] md:h-[780px] overflow-hidden cursor-grab active:cursor-grabbing"
                 onMouseDown={handleMouseDown}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
