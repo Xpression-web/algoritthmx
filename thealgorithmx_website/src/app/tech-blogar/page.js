@@ -9,7 +9,7 @@ import Section2 from './popular';
 import ReviewsSection from './reviews';
 
 
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const Page = () => {
   return (
     <div >

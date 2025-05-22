@@ -9,7 +9,7 @@ import SEOFactors from './seofactor'
 import SEOReports from './reports'
 import  SEOChecklist from './profiling'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

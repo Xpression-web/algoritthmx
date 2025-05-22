@@ -9,7 +9,7 @@ import TechnologyToolbox from './toolbox'
 import RemarketingSection from './retargeting'
 import AudienceSection from './audeience'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 
 const page = () => {

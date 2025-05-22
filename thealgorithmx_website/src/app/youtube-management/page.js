@@ -8,7 +8,7 @@ import YoutubeSmoothScrollStack from './solutions'
 import YoutubeServicesGrid from './help'
 import YoutubeBusinessSection from './need'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

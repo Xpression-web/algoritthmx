@@ -8,7 +8,7 @@ import Scalable from'./scalable';
 import  TechnologyToolbox from './toolbox';
 import ResponsiveHero from './experience';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 

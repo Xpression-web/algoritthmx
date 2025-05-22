@@ -10,7 +10,7 @@ import CRMDevelopmentTimeline from './crmtimeline'
 import CRMOutcomes from './outcomes'
 import CostEstimations from './crmcost'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

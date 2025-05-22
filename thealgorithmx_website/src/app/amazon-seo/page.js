@@ -9,7 +9,7 @@ import CookieConsent from '../cookies/cookie'
     import AmazonRevenueSection from './revenue'
     import AmazonReachSection from './ambiations'
     import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
     const page = () => {
     return (

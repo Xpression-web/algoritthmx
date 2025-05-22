@@ -7,7 +7,7 @@ import BlockServices from './blockservices'
 import BlockchainHero from './blockdesign'
 import BlockTechStack from './blocktechstack'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

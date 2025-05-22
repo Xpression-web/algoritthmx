@@ -9,7 +9,7 @@ import EssentialSection from './essential'
 import FranchiseProcessVisualization from './process'
 import ElevateSection from './elevate'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

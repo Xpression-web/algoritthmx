@@ -9,7 +9,7 @@ import ResponsiveHero from '../graphics/experience'
 import ServicesGrid from './benefits'
 import SEOTechnologyToolbox from './seotoolbox'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

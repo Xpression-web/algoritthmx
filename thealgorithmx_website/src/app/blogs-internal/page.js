@@ -4,7 +4,7 @@ import GuidesGrid from './main';
 import CookieConsent from '../cookies/cookie';
 import Home from './home';
 
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const Page = () => {
   return (
     <div >

@@ -7,7 +7,7 @@ import BusinessModules from './decision'
 import BusinessDevelopment from './offer'
 import IndustriesGrid from '../branding/industries'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 const page = () => {
   return (

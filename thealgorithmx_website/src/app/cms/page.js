@@ -8,7 +8,7 @@ import CMSServices from './how'
 import IndustriesGrid from '../branding/industries'
 import CMSTechStack from './techstack'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 const page = () => {
   return (

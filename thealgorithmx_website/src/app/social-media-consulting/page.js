@@ -8,7 +8,7 @@ import ConsultingWorthySection from './strategy'
 import ConsultingImplementation from './customized'
 import ConsultingStayingSection from './staying'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 

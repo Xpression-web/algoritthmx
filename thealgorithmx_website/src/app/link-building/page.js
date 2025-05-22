@@ -9,7 +9,7 @@ import LinkBuildingSection from './linkbuilding'
 import LinkProcess from './buildingtimeline'
 import LinkTrafficSection from './traffic'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

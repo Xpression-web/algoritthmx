@@ -9,7 +9,7 @@ import ERPTechStack from './erptechstack'
 import Solution from './erpsolution'
 import DynamicSolutionsHero from './dynamic'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

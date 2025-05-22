@@ -7,7 +7,7 @@ import ServicesPage from './services'
 import LandingPageBenefits from './benefits'
 import LandingSection from './attract'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 const page = () => {
   return (
     <div>

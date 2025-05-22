@@ -8,7 +8,7 @@ import ContentDevelopmentProcess from './craftmanship'
 import ContentFeatures from './importance'
 import ServicesSection from './growth'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

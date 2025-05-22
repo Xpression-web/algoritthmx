@@ -6,7 +6,7 @@ import AiOptmizationServices from './solutions'
 import StackCardAnimation from './process'
 import AREPage from './choose'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 const page = () => {
   return (

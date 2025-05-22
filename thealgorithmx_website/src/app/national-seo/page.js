@@ -9,7 +9,7 @@ import NationalMarketingSection from './marketing'
 import NationalRevenueSection from './revenue'
 import NationalRiseSection from './rise'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

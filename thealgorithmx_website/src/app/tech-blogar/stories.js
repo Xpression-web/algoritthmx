@@ -152,7 +152,7 @@ export default function TopStories() {
       <Head>
         <title>Tech News Portal</title>
         <meta name="description" content="Latest tech news and stories" />
-        <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
       <main className="max-w-[1200px] mx-auto px-4 py-8">

@@ -9,7 +9,7 @@ import MobileMarketingSection from './speed'
 import MobileRevenueSection from './revenue'
 import MobileReachSection from './reach'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

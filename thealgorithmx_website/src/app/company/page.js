@@ -5,7 +5,7 @@ import Aboutus from './aboutus';
 import AboutSection from'./aboutsection';
 import PrinciplesSection from './principles';
 import Vision from './vision'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const Page = () => {
   return (

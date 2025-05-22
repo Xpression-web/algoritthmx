@@ -7,7 +7,7 @@ import HubSpotFeatures from './hchoose'
 import QualityBanner from './hquality'
 import HubspotDevelopmentTimeline from './htimeline'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

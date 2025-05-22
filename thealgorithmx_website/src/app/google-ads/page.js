@@ -8,7 +8,7 @@ import ResponsiveExperience from './experience'
 import TechnologyToolbox from './toolbox'
 import GoogleServices from './benefits'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 const page = () => {
   return (

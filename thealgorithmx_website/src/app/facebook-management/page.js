@@ -9,7 +9,7 @@ import SmoothScrollStack from './sticky1'
 import FacebookImplementation from './choose'
 import BusinessSection from './business'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

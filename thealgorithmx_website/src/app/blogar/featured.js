@@ -9,7 +9,7 @@ export default function FeaturedContent() {
       <Head>
         <title>Featured Videos</title>
         <meta name="description" content="Featured videos showcase" />
-        <link rel="icon" href="/favicon.ico" />
+       
       </Head>
 
       <main className="max-w-[1300px] mx-auto px-4 py-10">

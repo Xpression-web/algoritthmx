@@ -8,7 +8,7 @@ import TwitterSmoothScrollStack from './solution'
 import TwitterServicesGrid from './business'
 import TwitterBusinessSection from './grow'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

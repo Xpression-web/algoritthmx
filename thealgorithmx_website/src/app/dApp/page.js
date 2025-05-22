@@ -7,7 +7,7 @@ import Offer from './offer';
 import DAppDevelopmentPage from './choose';
 import DAppTechStack from './techstack';
 import IndustriesGrid from '../branding/industries';
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

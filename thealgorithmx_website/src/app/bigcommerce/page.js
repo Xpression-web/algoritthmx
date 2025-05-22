@@ -7,7 +7,7 @@ import BigcommerceFeatures from './bchoose'
 import QualityBanner from './bquality'
 import BigcommerceDevelopmentTimeline from './btimeline'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

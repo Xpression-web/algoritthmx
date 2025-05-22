@@ -7,7 +7,7 @@ import WordpressFeatures from './wchoose'
 import QualityBanner from './wquality'
 import WordPressDevelopmentTimeline from './wtimeline'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

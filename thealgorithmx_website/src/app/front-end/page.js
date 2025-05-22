@@ -8,7 +8,7 @@ import HeroSection from './consistency';
 import TechStack from './techstack';
 import FrontDesignProcess from './fdynamic';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

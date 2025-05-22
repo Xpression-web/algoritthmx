@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../asample/naviagtion'
 import CookieConsent from '../cookies/cookie'
 import GuidesHome from './home';
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 

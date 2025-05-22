@@ -38,9 +38,7 @@ export default function CaseStudies() {
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Dominos</h2>
-                  <p className="text-white">
-                    Learn how we redefined the app UX strategy to increase their conversion rate by 23%.
-                  </p>
+                 
                 </div>
               </a>
   
@@ -55,9 +53,7 @@ export default function CaseStudies() {
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Pizza Hut</h2>
-                  <p className="text-white">
-                    Engaging users through a robust and visually appealing food delivery mobile app.
-                  </p>
+                  
                 </div>
               </a>
             </div>

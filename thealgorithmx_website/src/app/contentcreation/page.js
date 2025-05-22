@@ -8,7 +8,7 @@ import IndustriesGrid from '../branding/industries';
 import TechnologyToolbox from './toolbox';
 import StrategyGrid from './strategy';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 

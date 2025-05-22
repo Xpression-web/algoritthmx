@@ -9,7 +9,7 @@ import ConsultingBrandSection from './brand'
 import ConsultingSolutionSection from './solution'
 import ConsultingPartner from './partner'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 const page = () => {
   return (

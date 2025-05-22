@@ -9,7 +9,7 @@ import PRProcessVisualization from './prprocess'
 import PublicPressSection from './press'
 import PublicSeizeSection from './seize'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

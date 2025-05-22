@@ -7,7 +7,7 @@ import MagentoFeatures from './mchoose';
 import QualityBanner from './mquality';
 import MagentoDevelopmentTimeline from './mtimeline';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

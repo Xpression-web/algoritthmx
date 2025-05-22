@@ -13,7 +13,7 @@ import ProjectGoals from './projectgoals';
 import AccordionWithImage from './Helping';
 import Results from './theresults';
 import CaseStudies from './morecase';
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const Page = () => {
   return (
     <div >

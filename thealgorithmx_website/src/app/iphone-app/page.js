@@ -8,7 +8,7 @@ import IosDevelopmentTimeline from './dynamictimeline';
 import TechGrid from '../android-app/technologies';
 import IndustriesGrid from '../android-app/industries';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

@@ -8,7 +8,7 @@ import CROStrategies from './solution'
 import PRProcessVisualization from './prprocess'
 import CROTechnologyToolbox from './crotoolbox'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

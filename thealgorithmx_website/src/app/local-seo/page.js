@@ -10,7 +10,7 @@ import SeoResults from './result'
 import LocalBusinessSection from './audience2'
 import Deliverables from './client'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

@@ -8,7 +8,7 @@ import TechnicalBenefits from './benefit'
 import TechnicalLeaveSection from './leave'
 import TechnicalIdentifySection from './identify'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 
 const page = () => {

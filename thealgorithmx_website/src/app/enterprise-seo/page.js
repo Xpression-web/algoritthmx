@@ -9,7 +9,7 @@ import EnterpriseMarketingSection from './marketing'
 import EnterpriseRevenueSection from './revenue'
 import EnterpriseReachSection from './quantifyng'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

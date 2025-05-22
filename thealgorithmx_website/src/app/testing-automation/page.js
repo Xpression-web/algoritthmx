@@ -6,7 +6,7 @@ import TestingServices from './testing'
 import QAProcessDiagram from './quality'
 import TestingChoosePage from './choose'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 
 
 const page = () => {

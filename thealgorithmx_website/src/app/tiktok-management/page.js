@@ -8,7 +8,7 @@ import TiktokSmoothScrollStack from './solutions'
 import TiktokCarousel from './strategies'
 import TiktokWorthySection from './impact'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

@@ -7,7 +7,7 @@ import QualityBanner from './quality'
 import ShopifySection from './home'
 import ShopifyDevelopmentTimeline from './stimeline'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const page = () => {
   return (
     <div>

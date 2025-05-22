@@ -9,7 +9,7 @@ import ResponsiveHero from '../graphics/experience'
 import PPCServicesGrid from './leverage'
 import PPCTechnologyToolbox from './ppctoolbox'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const page = () => {
   return (

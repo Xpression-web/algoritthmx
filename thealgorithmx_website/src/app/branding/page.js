@@ -8,7 +8,7 @@ import LogoTypes from './logo';
 import MarketingFeatures from'./better';
 import IndustriesGrid from './industries';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 const Page = () => {
   return (

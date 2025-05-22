@@ -9,7 +9,7 @@ import Section1 from './section';
 import TabbedContent from './most';
 import FeaturedContent from './featured';
 
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const Page = () => {
   return (
     <div >

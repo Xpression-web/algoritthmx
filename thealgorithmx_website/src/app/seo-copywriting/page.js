@@ -7,7 +7,7 @@ import CopywritingMarketingSection from './win'
 import CopywritingMarketingApproach from './content'
 import CopywritingMarketingImpact from './impact'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 const page = () => {

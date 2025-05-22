@@ -9,7 +9,7 @@ import IoTDevelopmentPage from './choose1'
 import IoTProcess from './process'
 import IoTTechStack from './techstack'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 import Home from './services1'
 import StackCardAnimation from './stack'
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function TestimonialSection() {
   return (
-    <section className="relative min-h-screen bg-black flex items-center justify-center px-4 py-16 overflow-hidden">
+    <section className="relativ bg-black flex items-center justify-center px-4 py-16  overflow-hidden">
         
-      <div className="relative max-w-7xl w-full mx-auto flex flex-col md:flex-row">
+      <div className="relative max-w-7xl w-full mx-auto flex flex-col md:flex-row mb-[80px]">
         {/* Left side - Profile (30%) */}
         <div className="w-full md:w-1/3 flex flex-col items-center justify-center mb-8 md:mb-0">
           <div className="w-24 h-24 rounded-full overflow-hidden mb-4">

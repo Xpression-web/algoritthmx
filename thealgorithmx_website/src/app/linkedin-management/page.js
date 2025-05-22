@@ -9,7 +9,7 @@ import LinkedinSmoothScrollStack from './marketing'
 import LinkedinContent from './scrolling'
 import BusinessSection from './place'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 

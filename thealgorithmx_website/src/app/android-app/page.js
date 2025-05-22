@@ -8,7 +8,7 @@ import DevelopmentTimeline from './dynamic';
 import IndustriesGrid from './industries';
 import TechGrid from './technologies';
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const page = () => {
   return (
     <div>

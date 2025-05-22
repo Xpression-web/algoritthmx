@@ -667,7 +667,7 @@ export default function Navbar() {
               className="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2 md:static md:left-auto md:transform-none md:flex-1 md:flex md:justify-center"
               onMouseEnter={handleCloseDropdown}
             >
-              <Link href="/mainpage" className="text-white">
+              <Link href="/" className="text-white">
                 <Image 
                   src="/images/logo5.png" 
                   alt="Logo"

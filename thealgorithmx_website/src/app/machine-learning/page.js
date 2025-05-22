@@ -9,7 +9,7 @@ import AIMLPage from './choose'
 import IndustriesGrid from '../branding/industries'
 import MLProcess from './process'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 const page = () => {
   return (
     <div>

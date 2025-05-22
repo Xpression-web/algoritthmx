@@ -5,7 +5,7 @@ import ExploreComponent from './home';
 import OutdoorActivitiesLarge from './tabs';
 import Featuredarticle from './featuredarticles';
 import LatestArticle from './latestarticle';
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 const Page = () => {
   return (
     <div >

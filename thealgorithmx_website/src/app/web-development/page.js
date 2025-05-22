@@ -9,7 +9,7 @@ import WebAccordion from './best'
 import CostWeb from './cost'
 import WebTechStack from './techstack'
 import InsightSection from '../graphics/insight'
-import Footer from '../mainpage/footer'
+import Footer from '../(mainpage)/footer'
 const page = () => {
   return (
     <div>

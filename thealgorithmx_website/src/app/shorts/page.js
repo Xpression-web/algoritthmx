@@ -5,7 +5,7 @@ import ShortsHome from './home';
 import VideoGallery from './recent';
 import TopVideo from './topvideo';
 import Uploads from './uploads';
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 

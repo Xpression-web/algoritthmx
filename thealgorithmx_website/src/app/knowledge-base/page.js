@@ -3,7 +3,7 @@ import Navbar from '../asample/naviagtion'
 import CookieConsent from '../cookies/cookie'
 import GlossaryHeader from './header';
 import Glossary from './home';
-import Footer from '../mainpage/footer';
+import Footer from '../(mainpage)/footer';
 
 
 
